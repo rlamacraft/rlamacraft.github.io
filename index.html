@@ -1,8 +1,125 @@
+<!DOCTYPE html>
 <html>
+
   <head>
-    <title>Hello World!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Robert Lamacraft </title>
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/grayscale.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,700' rel='stylesheet' type='text/css'>
+
   </head>
-  <body>
-    <h1>Hello World!</h1>
-  </body>
+
+  <!-- <body> -->
+
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+      <!-- Navigation -->
+      <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+
+            </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                  <ul class="nav navbar-nav">
+                      <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                      <li class="hidden">
+                          <a href="#page-top"></a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="#" id="current-location">Home</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="aboutMe.html">About Me</a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="projects.html">Projects</a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container -->
+      </nav>
+
+      <!-- Intro Header -->
+      <header class="intro">
+          <div class="into-color-box">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h1 class="brand-heading">Robert Lamacraft</h1>
+                            <p class="intro-text home-intro-text">Programmer, Nerd and Functional Minimalist.</p>
+                            <ul class="list-inline banner-social-buttons">
+                                <li>
+                                    <a href="https://github.com/rlamacraft" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                                </li>
+                                <li>
+                                    <a href="mailto:rlamacraft@gmail.com" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-envelope-o fa-fw"></i> <span class="network-name">Email</span></a>
+                                </li>
+                            </ul>
+                            <a href="#main" class="btn btn-circle page-scroll">
+                                <i class="fa fa-chevron-circle-down"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </header>
+
+      <!-- Recent Projects Section -->
+      <section id="main" class="container content-section text-center">
+          <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                  <h2>Recent Projects</h2>
+                  <p class="intro-text recent-subheading">Some of my recent projects.</p>
+
+                  <!-- loops over 3 most recent project posts -->
+                  <div id="recent-projects">
+
+                      <div class="project" id="project-0">
+                        <h2 class="project-title"> <a href="http://rlamacraft.co.uk/projects.html#project-0"> Hello World </a> </h2> <!-- Bit of hack to jump down all projects page -->
+                          <div class="project-tags">
+                            <p class="tag">#helloWorld</p>
+                            <div class="text-divider"></div>
+                            <p class="date"> 2015-08-08 </p>
+                            <div class="text-divider"></div>
+                            <p class="more-link"> <a href="projects.html#project-0"> more... </a> </p>
+                          </div>
+                          <div class="project-desc">
+                            <p>
+                              It's taken a while, but after putting this site together in April I've finally got it up.
+                              The plan is to post some of things I work on here, but we'll see how that goes.
+                              I'm not making any promises.
+                            </p>
+                          </div>
+
+                    </div>
+
+              </div>
+
+              <a href="projects.html" class="btn btn-default btn-lg" id="all-projects-btn">All My Projects</a>
+          </div>
+      </section>
+
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/test.js"></script>
+
+    </body>
+
+  <!-- </body> -->
 </html>
