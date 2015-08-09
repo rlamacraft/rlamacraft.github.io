@@ -348,6 +348,13 @@ ul.banner-social-buttons {
   content: "-";
 }
 
+.project-anchor {
+  display: block;
+  top: -100px;
+  position: relative;
+  visibility: hidden;
+}
+
 /***
 ** About Me
 ***/
