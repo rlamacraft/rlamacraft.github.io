@@ -23,15 +23,25 @@ $(window).scroll(function() {
         btn.addClass("fa-chevron-circle-down");
         pageScrollDown = true;
     }
+    if( $(".navbar").offset().top + 50 > $(".intro-color-box").height() ) {
+      $(".page-scroll-btn").css({
+          "position": "fixed",
+          "top" : "15px",
+      });
+    } else {
+      $(".page-scroll-btn").css({
+          "position": "absolute",
+          "top" : "260px",
+      });
+    }
 });
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
     $('a.page-scroll').bind('click', function(event) {
       if(pageScrollDown) {
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
+            scrollTop: $($anchor.attr('href')).offset().top - 90
         }, 1500);
         event.preventDefault();
       } else {
