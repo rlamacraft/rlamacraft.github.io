@@ -306,7 +306,7 @@ a:focus {
 .btn-circle i:hover {
   cursor: pointer;
   box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 3px 5px rgba(0,0,0,0.24);
-  color: rgba(92, 145, 138, 0.81);
+  color: rgb(60, 170, 156);
 }
 
 ul.banner-social-buttons {
