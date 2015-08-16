@@ -164,23 +164,15 @@ a:focus {
   }
 }
 
-/*.navbar-custom li a {
-  color: #3CAA9C;
-  border-bottom: 2px solid transparent;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: 5px;
-  margin-right: 5px;
-}*/
-
 .navbar-custom li a:hover {
   background-color: inherit;
   color: #8edad0;
 }
 
 .navbar-custom li a:focus {
-  border-bottom: 2px solid #3CAA9C;
+  border-bottom: none;
   outline-width: 0px;
+  border-radius: 3px;
 }
 
 .navbar-custom li:after {
@@ -210,25 +202,69 @@ a:focus {
   color: #3CAA9C;
 }
 
-@media(min-width:768px) {
-    .navbar-custom {
-        padding: 10px 0;
-        border-bottom: 0;
-        letter-spacing: 1px;
-        background: 0 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-    }
+.navbar-custom {
+    padding: 10px 0;
+    border-bottom: 0;
+    letter-spacing: 1px;
+    background: 0 0;
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+}
 
-    .navbar-custom.top-nav-collapse {
-        padding: 0;
-        border-bottom: 1px solid rgba(255,255,255,.3);
-    }
+.navbar-custom.top-nav-collapse {
+    padding: 0;
+    border-bottom: 1px solid rgba(255,255,255,.3);
 }
 
 .navbar-custom.top-nav-collapse {
   background-color: #fcffff;
+}
+
+/* Disable hamburger menu */
+.navbar-nav>li {
+  float: left;
+}
+
+.navbar-nav {
+  float: left;
+  margin: 7px 10px 0 0;
+}
+
+.navbar-right {
+  float: right;
+  margin-right: -15px;
+}
+
+.nav>li>a {
+  padding: 10px 20px;
+}
+
+.non-mobile {
+  display: none;
+}
+
+.mobile {
+  display: block;
+}
+
+.nav a {
+  font-size: 1.5em;
+}
+
+@media(min-width: 768px) {
+  .non-mobile {
+    display: block !important;
+  }
+
+  .mobile {
+    display: none !important;
+  }
+
+  .nav a {
+    font-size: 1em;
+  }
+
 }
 
 /***
@@ -303,12 +339,6 @@ a:focus {
   font-size: 1.5em;
 }
 
-.btn-circle i:hover {
-  cursor: pointer;
-  box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 3px 5px rgba(0,0,0,0.24);
-  color: rgb(60, 170, 156);
-}
-
 ul.banner-social-buttons {
     margin-top: 10px;
     margin-bottom: 40px;
@@ -326,6 +356,12 @@ ul.banner-social-buttons {
 
 .page-scroll-btn {
   z-index: 1500;
+}
+
+.btn-highlight i {
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 3px 5px rgba(0,0,0,0.24);
+  color: rgb(60, 170, 156);
 }
 
 /***

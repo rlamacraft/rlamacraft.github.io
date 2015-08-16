@@ -1,15 +1,8 @@
 // jQuery to collapse the navbar on scroll
-/*$(window).scroll(function() {
-    if ($(".navbar").offset().top > 50) {
-        $(".navbar-fixed-top").addClass("top-nav-collapse");
-    } else {
-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
-    }
-});*/
 pageScrollDown = true;
 
 $(window).scroll(function() {
-    btn = $(".page-scroll i");
+    btn = $("#scroll-btn i");
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
         $(".content-section").css("opacity", "1.0");
@@ -36,8 +29,10 @@ $(window).scroll(function() {
     }
 });
 
+//scroll button
 $(function() {
-    $('a.page-scroll').bind('click', function(event) {
+    $('#scroll-btn').bind('click', function(event) {
+      $('#scroll-btn').addClass('btn-highlight');
       if(pageScrollDown) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -49,6 +44,9 @@ $(function() {
             scrollTop: 0
         }, 1500);
       }
+      window.setTimeout(function() {
+        $('#scroll-btn').removeClass('btn-highlight');
+      }, 1500);
       pageScrollDown = !pageScrollDown;
     });
 });
@@ -60,4 +58,10 @@ $('.navbar-collapse ul li a').click(function() {
 
 $(document).ready( function() {
     $(".content-section").css("display", "block");
+
+    $('#scroll-btn').hover(function() {
+      $('#scroll-btn').addClass('btn-highlight');
+    }, function() {
+      $('#scroll-btn').removeClass('btn-highlight');
+    });
 });

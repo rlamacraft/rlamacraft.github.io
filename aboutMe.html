@@ -20,30 +20,34 @@
     <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
       <!-- Navigation -->
+      <!-- Navigation -->
       <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
           <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-
-            </div>
 
               <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+              <div class="navbar-right">
                   <ul class="nav navbar-nav">
                       <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                       <li class="hidden">
                           <a href="#page-top"></a>
                       </li>
                       <li>
-                          <a class="page-scroll" href="index.html">Home</a>
+                          <a class="page-scroll" href="index.html">
+                            <span class="non-mobile"> Home </span>
+                            <i class="mobile fa fa-home"></i>
+                          </a>
                       </li>
                       <li id="current-location">
-                          <a class="page-scroll" href="#">About Me</a>
+                          <a class="page-scroll" href="#">
+                            <span class="non-mobile">About Me</span>
+                            <i class="mobile fa fa-user"></i>
+                          </a>
                       </li>
                       <li>
-                          <a class="page-scroll" href="projects.html">Projects</a>
+                          <a class="page-scroll" href="projects.html">
+                            <span class="non-mobile"> Projects </span>
+                            <i class="mobile fa fa-lightbulb-o"></i>
+                          </a>
                       </li>
                   </ul>
               </div>
@@ -61,7 +65,7 @@
                       <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Hi! :)</h1>
                         <p class="intro-text"> I'm an avid programmer, second-year Computer Science student at King's College London and, currently, an intern at Goldman Sachs.</p>
-                        <a href="#main" class="btn btn-circle page-scroll page-scroll-btn">
+                        <a id="scroll-btn" href="#main" class="btn btn-circle page-scroll page-scroll-btn">
                             <i class="fa fa-chevron-circle-down"></i>
                         </a>
                       </div>
