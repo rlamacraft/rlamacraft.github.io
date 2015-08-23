@@ -65,6 +65,10 @@ p {
  p, .project {
    font-weight: 300 !important;
  }
+
+ .input-group-addon {
+   font-weight: 200 !important;
+ }
 }
 
 @media(min-width:768px) {
@@ -440,7 +444,7 @@ ul.banner-social-buttons {
 
 .input-group-addon {
   background: none;
-  font-weight: 200;
+  font-weight: 400;
   border: none;
   border-radius: 0;
   font-size: 20px;
