@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> KCL Module Calculator | Robert Lamacraft </title>
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/gradeCalculator.css" rel="stylesheet">
+
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,000' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+      <!-- Navigation -->
+      <nav class="navbar navbar-custom navbar-fixed-top transition" role="navigation">
+          <div class="container">
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="navbar-right">
+                  <ul class="nav navbar-nav">
+                      <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                      <li class="hidden">
+                          <a href="#page-top"></a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="index.html">
+                            <span class="non-mobile"> Home </span>
+                            <i class="mobile fa fa-home"></i>
+                          </a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="aboutMe.html">
+                            <span class="non-mobile">About Me</span>
+                            <i class="mobile fa fa-user"></i>
+                          </a>
+                      </li>
+                      <li>
+                          <a class="page-scroll" href="projects.html">
+                            <span class="non-mobile"> Projects </span>
+                            <i class="mobile fa fa-lightbulb-o"></i>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+          </div>
+          <!-- /.container -->
+      </nav>
+
+      <!-- Intro Header -->
+      <header class="intro">
+        <div class="intro-color-box">
+          <div class="intro-body">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-md-8 col-md-offset-2">
+                          <h1 class="brand-heading">KCL Module Calculator</h1>
+                          <p class="intro-text home-intro-text">
+                            A simple grade calculator for King's College London's Computer Science (standard BSc) course.
+                            This is in no way supported or endorsed by King's College London.
+                          </p>
+                          <a id="scroll-btn" href="#main" class="btn btn-circle page-scroll page-scroll-btn">
+                              <i class="fa fa-chevron-circle-down shadow"></i>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Year Selection Section -->
+      <section id="main" class="content-section text-center">
+
+        <!-- Year select -->
+        <div class="content-panel container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <h1>What is your current year of the course?</h1>
+              <div class="btn-group btn-group-lg space-top space-bottom full-width" role="group" aria-label="Year Selection">
+                <button type="button" class="btn btn-default yearSelect col-xs-4" data-year='1'>Year 1</button>
+                <button type="button" class="btn btn-default yearSelect col-xs-4" data-year='2'>Year 2</button>
+                <button type="button" class="btn btn-default yearSelect col-xs-4" data-year='3'>Year 3</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- First year modules -->
+        <div class="content-panel container transition yearBlock white" id="year1">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+            <h1>Enter your module marks for year one.</h1>
+            <div class="row row-enable-spacing space-top space-bottom" role="group" aria-label="First year modules">
+
+              <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">CS1</span>
+                  <input type="text" class="form-control" placeholder="00" aria-describedby="Computer Systems 1 mark">
+                </div>
+              </div>
+
+              <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">DST</span>
+                  <input type="text" class="form-control" placeholder="00" aria-describedby="Data Structures mark">
+                </div>
+              </div>
+
+              <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">ELA</span>
+                  <input type="text" class="form-control" placeholder="00" aria-describedby="Elementary Logic with Applications mark">
+                </div>
+              </div>
+
+              <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">FC1</span>
+                  <input type="text" class="form-control" placeholder="00" aria-describedby="Foundations of Computing One mark">
+                </div>
+              </div>
+
+              <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">IAI</span>
+                  <input type="text" class="form-control" placeholder="00" aria-describedby="Introduction to Artificial Intelligence mark">
+                </div>
+              </div>
+
+              <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">PEP</span>
+                  <input type="text" class="form-control" placeholder="00" aria-describedby="Practical Experiences of Programming mark">
+                </div>
+              </div>
+
+              <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">PRA</span>
+                  <input type="text" class="form-control" placeholder="00" aria-describedby="Programming Applications mark">
+                </div>
+              </div>
+
+              <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+                <div class="input-group">
+                  <span class="input-group-addon" id="basic-addon1">PRP</span>
+                  <input type="text" class="form-control" placeholder="00" aria-describedby="Programming Practice mark">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second year modules -->
+      <div class="content-panel container transition yearBlock" id="year2">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+          <h1>Enter your module marks for year two.</h1>
+          <div class="row row-enable-spacing space-top space-bottom" role="group" aria-label="Second year modules">
+
+            <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">DB</span>
+                <input type="text" class="form-control" placeholder="00" aria-describedby="Database Systems mark">
+              </div>
+            </div>
+
+            <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">CSL</span>
+                <input type="text" class="form-control" placeholder="00" aria-describedby="Computer Science Logic mark">
+              </div>
+            </div>
+
+            <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">FC2</span>
+                <input type="text" class="form-control" placeholder="00" aria-describedby="Foundations of Computing 2 mark">
+              </div>
+            </div>
+
+            <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">OSC</span>
+                <input type="text" class="form-control" placeholder="00" aria-describedby="Operating Systems and Concurrency mark">
+              </div>
+            </div>
+
+            <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">OSD</span>
+                <input type="text" class="form-control" placeholder="00" aria-describedby="Object-Oriented Specification and Design mark">
+              </div>
+            </div>
+
+            <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">PLD</span>
+                <input type="text" class="form-control" placeholder="00" aria-describedby="Programming Language Design Paradigms mark">
+              </div>
+            </div>
+
+            <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+              <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">SEG</span>
+                <input type="text" class="form-control" placeholder="00" aria-describedby="Software Engineering Group Project mark">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third year modules -->
+    <div class="content-panel container transition yearBlock white" id="year3">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+        <h1>Enter your module marks for year three.</h1>
+        <div class="row row-enable-spacing space-top space-bottom" role="group" aria-label="Third year modules">
+
+          <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">#1</span>
+              <input type="text" class="form-control" placeholder="00" aria-describedby="Optional module 1 mark">
+            </div>
+          </div>
+
+          <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">#2</span>
+              <input type="text" class="form-control" placeholder="00" aria-describedby="Optional module 2 mark">
+            </div>
+          </div>
+
+          <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">#3</span>
+              <input type="text" class="form-control" placeholder="00" aria-describedby="Optional module 3 mark">
+            </div>
+          </div>
+
+          <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">#4</span>
+              <input type="text" class="form-control" placeholder="00" aria-describedby="Optional module 4 mark">
+            </div>
+          </div>
+
+          <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">#5</span>
+              <input type="text" class="form-control" placeholder="00" aria-describedby="Optional module 5 mark">
+            </div>
+          </div>
+
+          <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">#6</span>
+              <input type="text" class="form-control" placeholder="00" aria-describedby="Optional module 6 mark">
+            </div>
+          </div>
+
+          <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
+            <div class="input-group">
+              <span class="input-group-addon" id="basic-addon1">PRJ</span>
+              <input type="text" class="form-control" placeholder="00" aria-describedby="Computer Science Project mark">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Output -->
+  <div class="content-panel container change-background">
+    <div class="calculate space-top">
+      <div class='row'>
+        <div class="col-md-8 col-md-offset-2">
+          <button type="button" class="btn btn-default full-width col-xs-4 space-top space-bottom" id="done">Done</button>
+        </div>
+      </div>
+    </div>
+
+    <div class='output space-top'>
+      <div class="row">
+        <div class="col-md-3 col-md-offset-2">
+          <h1 id="avgOutput" class="ultra-big-text">81%</h1>
+          <h4 id="wordsOutput" >You're on track for a first.</h2>
+        </div>
+        <div class="col-md-3 col-md-offset-1">
+          <h1 id="maxOutput" class="big-text">99</h1>
+          <h4>Your highest module</h2>
+          <h1 id="minOutput" class="big-text">78</h1>
+          <h4>Your lowest module</h2>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  </section>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/scrollingStuff.js"></script>
+  <script type="text/javascript" src="js/gradeCalculator.js"></script>
+
+  </body>
+</html>

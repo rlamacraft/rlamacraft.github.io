@@ -42,7 +42,7 @@ h6 {
 h1, h2 {
   font-size: 2.5em;
   font-weight: 300;
-  margin-bottom: 0;
+  margin-bottom: 15px;
 }
 
 p {
@@ -82,13 +82,43 @@ a:focus {
     font-decoration: underline;
 }
 
+.space-top {
+  margin-top: 15px;
+}
+
 .space-bottom {
   margin-bottom: 15px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.shadow {
+  box-shadow: 1px 1px 6px #ddd;
+}
+
+.transition {
+  -webkit-transition: all 1s ease-in-out !important;
+  -moz-transition: all 1s ease-in-out !important;
+  transition: all 1s ease-in-out !important;
+}
+
+.ultra-big-text {
+  font-size: 150px;
+}
+
+.big-text {
+  font-size: 50px;
 }
 
 /***
 ** Main containers
 ***/
+
+.row-enable-spacing {
+  display: inline-block;
+}
 
 .container {
   width: 100%;
@@ -105,7 +135,8 @@ a:focus {
 .intro {
     display: table;
     width: 100%;
-    height: 600px;
+    /*height: 600px;*/
+    height: 545px;
     text-align: left;
     color: #fff;
 }
@@ -116,6 +147,7 @@ a:focus {
 
 .intro .intro-body .brand-heading {
     font-size: 40px;
+    margin-bottom: 0;
 }
 
 .intro .intro-body .intro-text {
@@ -139,10 +171,19 @@ a:focus {
 .content-section {
   opacity: 0;
   transition: opacity 2s ease;
-  height: 100%; /*93%;*/
-  min-height: calc(100% - 350px);
+  min-height: calc(100% - 42px);
   display: none;
   text-align: left;
+  padding-top: 50px;
+}
+
+.content-panel {
+  /*padding: 20px 0;*/
+  padding: 10px 20px 0 20px;
+}
+
+.content-panel.white {
+  background-color: #FCFFFF;
 }
 
 /***
@@ -288,7 +329,8 @@ a:focus {
 }
 
 .btn-default:hover,
-.btn-default:focus {
+.btn-default:focus,
+.btn-default.selected {
     border: 2px solid #3CAA9C;
     outline: 0;
     color: #EFEFEF;
@@ -365,6 +407,59 @@ ul.banner-social-buttons {
 }
 
 /***
+** Other Form Elements
+***/
+
+.input-group {
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  z-index: 50;
+}
+
+.input-group:focus {
+  outline-width: 0;
+}
+
+.focus-underline:after {
+  content: '';
+	display: block;
+	margin: auto;
+	height: 2px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+  position: relative;
+  z-index: 100;
+  margin-top: -1px;
+}
+
+.focus-underline.focused:after {
+  width: 100%;
+  background: #3CAA9C;
+}
+
+.input-group-addon {
+  background: none;
+  font-weight: 200;
+  border: none;
+  border-radius: 0;
+  font-size: 20px;
+  min-width: 65px;
+}
+
+input.form-control {
+  font-size: 18px;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  background: none;
+}
+
+input.form-control:focus {
+  box-shadow: none;
+}
+
+/***
 ** Projects
 ***/
 
@@ -389,6 +484,10 @@ ul.banner-social-buttons {
   top: -100px;
   position: relative;
   visibility: hidden;
+}
+
+.project-title {
+  margin: 0;
 }
 
 /***

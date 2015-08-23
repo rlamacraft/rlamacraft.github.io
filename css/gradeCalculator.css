@@ -1,0 +1,12 @@
+.yearBlock {
+  opacity: 0;
+  display: none;
+}
+
+.output {
+  display: none;
+}
+
+.calculate {
+  display: none;
+}
