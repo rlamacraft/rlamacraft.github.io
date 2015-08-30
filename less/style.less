@@ -1,3 +1,5 @@
+// out: ../css/style.css
+
 @import "variables.less";
 @import "functions.less";
 @import "utilities.less";
@@ -236,8 +238,7 @@ p {
   color: @colour-accent;
 }
 
-
-// INTERACTIVE THINGS
+// COMPONENTS - BUTTONS
 .btn {
   .rounded-corners;
   .transition;
@@ -245,7 +246,7 @@ p {
     @family:       @font-family-standard,
     @colour:       @font-colour-accent,
     @kerning:      @font-spacing-standard,
-    @size:         @font-size-button,
+    @size:         @font-size-interactable,
     @line-height:  @font-lineheight-btn,
   );
   border: @border-accent;
@@ -313,6 +314,62 @@ p {
 
 #scroll-btn {
   z-index: @z-floating-btn;
+}
+
+//COMPONENTS - FORMS
+.input-group:focus {
+  .ignore-default-focus;
+}
+
+.focus-underline:after {
+  content: '';
+	display: block;
+	margin: auto;
+	height: 2px;
+	width: 0px;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+  position: relative;
+  z-index: 100;
+  margin-top: -1px;
+}
+
+.focus-underline.focused:after {
+  width: 100%;
+  background: #3CAA9C;
+}
+
+.input-group-addon {
+  .font(
+      @size: @font-size-interactable,
+      @line-height: @font-lineheight-less,
+      @weight: @font-weight-semibold,
+  );
+  border-radius: 0;
+  border-left: none;
+  border-top: none;
+  background-color: transparent;
+}
+
+.input-group-addon.degree-module-initialism {
+    min-width: 65px;
+}
+
+input.form-control {
+  .font(
+      @size: @font-size-interactable,
+  );
+  box-shadow: none;
+  background-color: transparent;
+  border-radius: 0;
+  border-right: none;
+  border-top: none;
+}
+
+input.form-control:focus {
+  .ignore-default-focus;
+  box-shadow: none;
+  border-left: @border-accent;
 }
 
 /***

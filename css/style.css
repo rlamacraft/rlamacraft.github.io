@@ -5,19 +5,19 @@
 ** Spacing Utility Classes
 ***/
 .adding-margin {
-  display: inline-block !important;
+  display: inline-block;
 }
 .space-top {
-  display: inline-block !important;
+  display: inline-block;
   margin-top: 15px;
 }
 .space-bottom {
-  display: inline-block !important;
+  display: inline-block;
   margin-bottom: 15px;
 }
 .space-vertical {
   margin-top: 15px;
-  display: inline-block !important;
+  display: inline-block;
   margin-bottom: 15px;
 }
 /***
@@ -25,6 +25,15 @@
 ***/
 .full-width {
   width: 100%;
+}
+/***
+** Font Stuff
+***/
+.ultra-big-text {
+  font-size: 10em;
+}
+.big-text {
+  font-size: 5em;
 }
 /***
 ** Icons, Symbols and Placeholders
@@ -110,6 +119,7 @@ h2 {
   font-size: 2.5em;
   line-height: 1.1;
   text-transform: none;
+  margin-bottom: 10px;
 }
 h3 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -119,7 +129,7 @@ h3 {
   font-size: 2.5em;
   line-height: 1.1;
   text-transform: none;
-  display: inline-block !important;
+  display: inline-block;
   margin-top: 15px;
 }
 h4 {
@@ -139,7 +149,7 @@ p {
   font-size: 1.4em;
   line-height: 1.4;
   text-transform: none;
-  display: inline-block !important;
+  display: inline-block;
   margin-bottom: 15px;
 }
 /***
@@ -378,13 +388,67 @@ p {
 #scroll-btn {
   z-index: 1050;
 }
+.input-group:focus {
+  outline: 0;
+}
+.focus-underline:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+  position: relative;
+  z-index: 100;
+  margin-top: -1px;
+}
+.focus-underline.focused:after {
+  width: 100%;
+  background: #3CAA9C;
+}
+.input-group-addon {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #777777;
+  letter-spacing: 0px;
+  font-size: 1.3em;
+  line-height: 1.1;
+  text-transform: none;
+  border-radius: 0;
+  border-left: none;
+  border-top: none;
+  background-color: transparent;
+}
+.input-group-addon.degree-module-initialism {
+  min-width: 65px;
+}
+input.form-control {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #777777;
+  letter-spacing: 0px;
+  font-size: 1.3em;
+  line-height: 1.4;
+  text-transform: none;
+  box-shadow: none;
+  background-color: transparent;
+  border-radius: 0;
+  border-right: none;
+  border-top: none;
+}
+input.form-control:focus {
+  outline: 0;
+  box-shadow: none;
+  border-left: 2px solid #3caa9c;
+}
 /***
 ** Page Specifics
 ***/
 .project {
   margin: 15px 0;
   margin-top: 15px;
-  display: inline-block !important;
+  display: inline-block;
   margin-bottom: 15px;
 }
 .project-tags * {
