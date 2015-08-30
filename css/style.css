@@ -16,8 +16,9 @@
   margin-bottom: 15px;
 }
 .space-vertical {
+  margin-top: 15px;
   display: inline-block !important;
-  margin: 15px 0;
+  margin-bottom: 15px;
 }
 /***
 ** Size Utilities
@@ -83,12 +84,23 @@ h6 > a {
 }
 h1 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   color: #777777;
   letter-spacing: 1px;
   font-size: 3.6em;
   line-height: 1.1;
   text-transform: uppercase;
+}
+@media only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  h1 {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    color: #777777;
+    letter-spacing: 1px;
+    font-size: 3.6em;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
 }
 h2 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -116,7 +128,7 @@ h4 {
   color: #777777;
   letter-spacing: 0px;
   font-size: 1.8em;
-  line-height: 1.1;
+  line-height: 1.4;
   text-transform: none;
 }
 p {
@@ -127,6 +139,8 @@ p {
   font-size: 1.4em;
   line-height: 1.4;
   text-transform: none;
+  display: inline-block !important;
+  margin-bottom: 15px;
 }
 /***
 **  Custom stuff
@@ -156,10 +170,10 @@ p {
   -ms-transition: opacity, 2s, ease;
   transition: opacity, 2s, ease;
   opacity: 0;
-  min-height: calc( 100%  -  42px );
+  min-height: calc( 100%  -  50px );
   display: none;
   text-align: left;
-  padding-top: 42px;
+  padding-top: 50px;
 }
 .content-panel {
   padding: 10px 20px 0px 20px;
@@ -229,8 +243,33 @@ p {
 .mobile {
   display: block;
 }
-.page-scroll i {
+@media (min-width: 768px) {
+  .non-mobile {
+    display: block !important;
+  }
+  .mobile {
+    display: none !important;
+  }
+}
+.nav > li > a.page-scroll {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
   color: #777777;
+  letter-spacing: 0px;
+  font-size: 1.5em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .nav > li > a.page-scroll {
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    color: #777777;
+    letter-spacing: 0px;
+    font-size: 1em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
 }
 #current-location {
   border-bottom: 2px solid #3caa9c;
@@ -343,8 +382,10 @@ p {
 ** Page Specifics
 ***/
 .project {
-  display: inline-block !important;
   margin: 15px 0;
+  margin-top: 15px;
+  display: inline-block !important;
+  margin-bottom: 15px;
 }
 .project-tags * {
   display: inline;

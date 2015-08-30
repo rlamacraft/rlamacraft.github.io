@@ -1,14 +1,15 @@
 //sizing
 @size-full: 100%;
 @size-header-height: 545px; //should be a %?
-@size-nav-height: 42px;
+@size-nav-height: 50px;
 @size-circle-btn: 70px;
 @size-circle-btn-i: 62px;
 @size-circle-btn-top: 260px;
 @size-content-min-height: ~"calc(" (@size-full) ~" - " (@size-nav-height) ~")";
+@size-content-top-space: (@size-circle-btn / 2) + @spacing-standard;
 
 //colours
-@colour-base:         #E5E8E8; //EFEFEF;
+@colour-base:         #E5E8E8;
 @colour-section-alt:  #FCFFFF;
 @colour-accent:       #3CAA9C;
 @colour-accent-light: #8EDAD0;
@@ -38,14 +39,15 @@
 @font-spacing-thin:     0.5px;
 @font-spacing-thick:    1.0px;
 
-@font-size-button:      1.3em;
-@font-size-standard:    1.4em;
-@font-size-circlebtn-i: 1.5em;
-@font-size-subheading:  1.8em;
-@font-size-heading:     2.5em;
-@font-size-large:       3.6em;
-
-@font-size-circlebtn:   3.5em;
+@font-size-navbar-small:  1.0em;
+@font-size-button:        1.3em;
+@font-size-standard:      1.4em;
+@font-size-circlebtn-i:   1.5em;
+@font-size-navbar-large:  1.5em;
+@font-size-subheading:    1.8em;
+@font-size-heading:       2.5em;
+@font-size-circlebtn:     3.5em;
+@font-size-large:         3.6em;
 
 @font-lineheight-circlebtn: 0.87;
 @font-lineheight-less:      1.1;
