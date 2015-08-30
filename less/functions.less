@@ -1,0 +1,39 @@
+.rounded-corners(
+  @radius: 3px,
+) {
+  -webkit-border-radius:  @radius;
+  -moz-border-radius:     @radius;
+  -ms-border-radius:      @radius;
+  border-radius:          @radius;
+}
+
+.transition( @effect: all .5s ease) {
+  -webkit-transition:   @effect;
+  -moz-transition:      @effect;
+  -ms-transition:       @effect;
+  transition:           @effect;
+}
+
+.shadow(@effect: @shadow-default) {
+  -moz-box-shadow:      @effect;
+  -webkit-box-shadow:   @effect;
+  box-shadow:           @effect;
+}
+
+.font(
+  @family:      @font-family-standard,
+  @weight:      @font-weight-standard,
+  @colour:      @font-colour-standard,
+  @kerning:     @font-spacing-standard,
+  @size:        @font-size-standard,
+  @line-height: @font-lineheight-standard,
+  @transform:   @font-transform-none,
+) {
+  font-family: @family;
+  font-weight: @weight;
+  color: @colour;
+  letter-spacing: @kerning;
+  font-size: @size;
+  line-height: @line-height;
+  text-transform: @transform;
+}

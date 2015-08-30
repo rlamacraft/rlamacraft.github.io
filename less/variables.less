@@ -1,0 +1,72 @@
+//sizing
+@size-full: 100%;
+@size-header-height: 545px; //should be a %?
+@size-nav-height: 42px;
+@size-circle-btn: 70px;
+@size-circle-btn-i: 62px;
+@size-circle-btn-top: 260px;
+@size-content-min-height: ~"calc(" (@size-full) ~" - " (@size-nav-height) ~")";
+
+//colours
+@colour-base:         #E5E8E8; //EFEFEF;
+@colour-section-alt:  #FCFFFF;
+@colour-accent:       #3CAA9C;
+@colour-accent-light: #8EDAD0;
+@colour-font:         #777777;
+@colour-circle-btn:   #CCCCCC;
+@colour-circle-hover: rgba(255,255,255,.1);
+
+//borders
+@border-width: 2px;
+@border-accent: @border-width solid @colour-accent;
+@border-radius-circle: 50%;
+
+//fonts
+@font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-standard: "Lato", @font-family-base;
+@font-family-accent: @font-family-base;
+@font-family-fontAwesome: FontAwesome;
+
+@font-colour-standard: @colour-font;
+@font-colour-accent:   @colour-accent;
+
+@font-weight-light:     100; //this will need to have the retina effect applied i.e. only 100 on retina, else 300
+@font-weight-standard:  300;
+@font-weight-bold:      700;
+
+@font-spacing-standard: 0.0px;
+@font-spacing-thin:     0.5px;
+@font-spacing-thick:    1.0px;
+
+@font-size-button:      1.3em;
+@font-size-standard:    1.4em;
+@font-size-circlebtn-i: 1.5em;
+@font-size-subheading:  1.8em;
+@font-size-heading:     2.5em;
+@font-size-large:       3.6em;
+
+@font-size-circlebtn:   3.5em;
+
+@font-lineheight-circlebtn: 0.87;
+@font-lineheight-less:      1.1;
+@font-lineheight-btn:       1.3;
+@font-lineheight-standard:  1.4;
+
+@font-transform-none:       none;
+@font-transform-uppercase:  uppercase;
+
+//spacing
+@spacing-none:      00px;
+@spacing-xsmall:    05px;
+@spacing-small:     10px;
+@spacing-standard:  15px;
+@spacing-big:       20px;
+
+@spacing-header-above: 250px; //should be a %?
+
+//z-indexes
+@z-navbar:      1000;
+@z-floating-btn:   1050;
+
+//shadow
+@shadow-default: 1px 1px 6px #ddd;
