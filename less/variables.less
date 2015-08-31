@@ -1,6 +1,9 @@
-//sizing
+//device sizes
+@non-mobile: ~"min-width: 768px";
+
+//element sizing
 @size-full: 100%;
-@size-header-height: 545px; //should be a %?
+@size-header-height: 70%;
 @size-nav-height: 50px;
 @size-circle-btn: 70px;
 @size-circle-btn-i: 62px;
@@ -14,12 +17,13 @@
 @colour-accent:       #3CAA9C;
 @colour-accent-light: #8EDAD0;
 @colour-font:         #777777;
-@colour-circle-btn:   #CCCCCC;
+@colour-interactable: #CCCCCC;
 @colour-circle-hover: rgba(255,255,255,.1);
 
 //borders
 @border-width: 2px;
 @border-accent: @border-width solid @colour-accent;
+@border-radius-default: 3px;
 @border-radius-circle: 50%;
 
 //fonts
@@ -67,11 +71,21 @@
 @spacing-standard:  15px;
 @spacing-big:       20px;
 
-@spacing-header-above: 250px; //should be a %?
-
 //z-indexes
-@z-navbar:      1000;
-@z-floating-btn:   1050;
+@z-focus-underline: 100;
+@z-navbar:          1000;
+@z-floating-btn:    1050;
 
 //shadow
-@shadow-default: 1px 1px 6px #ddd;
+@shadow-default: ~"3px 3px 8px rgb(221, 221, 221)";
+@shadow-button: ~"0 3px 5px rgba(0,0,0,0.12), 0 3px 5px rgba(0,0,0,0.24)";
+
+//transition
+@transition-default: ~"all .5s ease";
+@transition-navbar: ~"background .5s ease-in-out, padding .5s ease-in-out";
+@transition-navbar-elements: ~"width .5s ease, background-color .5s ease";
+@transition-content-section: ~"opacity, 2s, ease";
+@transition-btn-circle: ~"background, .3s, ease-in-out";
+
+//page specifics
+@kcl-calc-degree-module-initialism-width: 65px;

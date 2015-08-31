@@ -1,20 +1,18 @@
-.rounded-corners(
-  @radius: 3px,
-) {
+.rounded-corners( @radius: @border-radius-default ) {
   -webkit-border-radius:  @radius;
   -moz-border-radius:     @radius;
   -ms-border-radius:      @radius;
   border-radius:          @radius;
 }
 
-.transition( @effect: all .5s ease) {
+.transition( @effect: @transition-default ) {
   -webkit-transition:   @effect;
   -moz-transition:      @effect;
   -ms-transition:       @effect;
   transition:           @effect;
 }
 
-.shadow(@effect: @shadow-default) {
+.shadow( @effect: @shadow-default ) {
   -moz-box-shadow:      @effect;
   -webkit-box-shadow:   @effect;
   box-shadow:           @effect;
