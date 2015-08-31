@@ -158,18 +158,19 @@ p {
 .container {
   width: 100%;
 }
-.intro-color-box {
-  background-color: #fcffff;
+/*.intro-color-box {
+  background-color: @colour-section-alt;
   position: absolute;
   top: 0;
-  width: 100%;
-  height: 545px;
-}
+  width: @size-full;
+  height: @size-header-height;
+}*/
 .intro {
   display: table;
   width: 100%;
   height: 545px;
   text-align: left;
+  background-color: #fcffff;
 }
 .intro .intro-body {
   margin-top: 250px;
@@ -184,6 +185,9 @@ p {
   display: none;
   text-align: left;
   padding-top: 50px;
+}
+.content-section.full-page {
+  height: calc( 100%  -  50px );
 }
 .content-panel {
   padding: 10px 20px 0px 20px;
@@ -386,7 +390,15 @@ p {
   color: #3caa9c;
 }
 #scroll-btn {
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  transition: none;
   z-index: 1050;
+}
+#scroll-btn.floating {
+  position: fixed;
+  top: 15px;
 }
 .input-group:focus {
   outline: 0;

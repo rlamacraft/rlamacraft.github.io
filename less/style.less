@@ -98,19 +98,20 @@ p {
   width: @size-full;
 }
 
-.intro-color-box {
+/*.intro-color-box {
   background-color: @colour-section-alt;
   position: absolute;
   top: 0;
   width: @size-full;
   height: @size-header-height;
-}
+}*/
 
 .intro {
   display: table;
   width: @size-full;
   height: @size-header-height;
   text-align: left;
+  background-color: @colour-section-alt;
 }
 
 .intro .intro-body {
@@ -124,6 +125,10 @@ p {
   display: none;
   text-align: left;
   padding-top: @size-content-top-space;
+}
+
+.content-section.full-page {
+  height: @size-content-min-height;
 }
 
 .content-panel {
@@ -313,7 +318,13 @@ p {
 }
 
 #scroll-btn {
+  .transition(none);
   z-index: @z-floating-btn;
+}
+
+#scroll-btn.floating {
+  position: fixed;
+  top: 15px;
 }
 
 //COMPONENTS - FORMS
