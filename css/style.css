@@ -158,22 +158,17 @@ p {
 .container {
   width: 100%;
 }
-/*.intro-color-box {
-  background-color: @colour-section-alt;
-  position: absolute;
-  top: 0;
-  width: @size-full;
-  height: @size-header-height;
-}*/
 .intro {
   display: table;
   width: 100%;
-  height: 545px;
+  height: 70%;
   text-align: left;
   background-color: #fcffff;
+  margin-top: 40px;
 }
 .intro .intro-body {
-  margin-top: 250px;
+  display: table-cell;
+  vertical-align: middle;
 }
 .content-section {
   -webkit-transition: opacity, 2s, ease;
@@ -395,10 +390,17 @@ p {
   -ms-transition: none;
   transition: none;
   z-index: 1050;
+  position: absolute;
+  top: -35px;
 }
 #scroll-btn.floating {
   position: fixed;
-  top: 15px;
+  top: 25px;
+}
+@media (min-width: 768px) {
+  #scroll-btn.floating {
+    top: 15px;
+  }
 }
 .input-group:focus {
   outline: 0;

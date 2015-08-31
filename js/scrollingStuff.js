@@ -20,8 +20,7 @@ $(window).scroll(function() {
         btn.addClass("fa-chevron-circle-down");
         pageScrollDown = true;
     }
-    console.log($(".navbar").offset().top + 50 > $(".intro").height());
-    if( $(".navbar").offset().top + 50 > $(".intro").height() ) {
+    if( $(".navbar").offset().top + 10 > $(".intro").height() ) {
       $('#scroll-btn').addClass('floating');
     } else {
       $('#scroll-btn').removeClass('floating');
