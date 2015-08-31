@@ -20,16 +20,10 @@ $(window).scroll(function() {
         btn.addClass("fa-chevron-circle-down");
         pageScrollDown = true;
     }
-    if( $(".navbar").offset().top + 50 > $(".intro-color-box").height() ) {
-      $(".page-scroll-btn").css({
-          "position": "fixed",
-          "top" : "15px",
-      });
+    if( $(".navbar").offset().top + 10 > $(".intro").height() ) {
+      $('#scroll-btn').addClass('floating');
     } else {
-      $(".page-scroll-btn").css({
-          "position": "absolute",
-          "top" : "260px",
-      });
+      $('#scroll-btn').removeClass('floating');
     }
 });
 
