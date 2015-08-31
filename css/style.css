@@ -190,7 +190,7 @@ p {
   height: calc( 100%  -  50px );
 }
 .content-panel {
-  padding: 10px 20px 0px 20px;
+  padding: 10px 20px;
 }
 .content-panel.white {
   background-color: #fcffff;
