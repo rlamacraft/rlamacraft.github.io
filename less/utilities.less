@@ -1,0 +1,83 @@
+/***
+** LESS Utility Functions
+***/
+
+.ignore-default-focus() {
+  outline: 0;
+}
+
+.space-top() {
+  .adding-margin;
+  margin-top: @spacing-standard;
+}
+
+.space-bottom() {
+  .adding-margin;
+  margin-bottom: @spacing-standard;
+}
+
+.space-vertical() {
+  .adding-margin;
+  margin: @spacing-standard 0;
+}
+
+/***
+** Spacing Utility Classes
+***/
+
+//any utility class adding margin should add this
+.adding-margin {
+  display: inline-block;
+}
+
+.space-top {
+  .adding-margin;
+  margin-top: @spacing-standard;
+}
+
+.space-bottom {
+  .adding-margin;
+  margin-bottom: @spacing-standard;
+}
+
+.space-vertical {
+  .adding-margin;
+  .space-top;
+  .space-bottom;
+}
+
+/***
+** Size Utilities
+***/
+
+.full-width {
+  width: @size-full;
+}
+
+/***
+** Font Stuff
+***/
+
+.ultra-big-text {
+  font-size: @font-size-xxlarge;
+}
+
+.big-text {
+  font-size: @font-size-xlarge;
+}
+
+/***
+** Icons, Symbols and Placeholders
+***/
+
+.text-divider:before {
+  content: "-";
+}
+
+/***
+** Other
+***/
+
+.shadow {
+  box-shadow: @shadow-default;
+}

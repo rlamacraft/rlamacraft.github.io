@@ -13,12 +13,11 @@
 
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,000' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
 
-  <body>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
       <!-- Navigation -->
       <nav class="navbar navbar-custom navbar-fixed-top transition" role="navigation">
           <div class="container">
@@ -57,25 +56,30 @@
 
       <!-- Intro Header -->
       <header class="intro">
-        <div class="intro-color-box">
           <div class="intro-body">
               <div class="container">
                   <div class="row">
                       <div class="col-md-8 col-md-offset-2">
-                          <h1 class="brand-heading">KCL Module Calculator</h1>
-                          <p class="intro-text home-intro-text">
+                          <h1>KCL Module Calculator</h1>
+                          <h4>
                             A simple grade calculator for King's College London's Computer Science (standard BSc) course.
                             This is in no way supported or endorsed by King's College London.
-                          </p>
-                          <a id="scroll-btn" href="#main" class="btn btn-circle page-scroll page-scroll-btn">
-                              <i class="fa fa-chevron-circle-down shadow"></i>
-                          </a>
+                          </h4>
                       </div>
                   </div>
               </div>
           </div>
-        </div>
       </header>
+
+      <div class="container">
+          <div class="row">
+              <div class="col-md-8 col-md-offset-2">
+                  <a id="scroll-btn" href="#main" class="btn btn-circle page-scroll page-scroll-btn">
+                      <i class="fa fa-chevron-circle-down"></i>
+                  </a>
+              </div>
+          </div>
+      </div>
 
       <!-- Year Selection Section -->
       <section id="main" class="content-section text-center">
@@ -84,7 +88,7 @@
         <div class="content-panel container">
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
-              <h1>What is your current year of the course?</h1>
+              <h2>What is your current year of the course?</h2>
               <div class="btn-group btn-group-lg space-top space-bottom full-width" role="group" aria-label="Year Selection">
                 <button type="button" class="btn btn-default yearSelect col-xs-4" data-year='1'>Year 1</button>
                 <button type="button" class="btn btn-default yearSelect col-xs-4" data-year='2'>Year 2</button>
@@ -98,61 +102,61 @@
         <div class="content-panel container transition yearBlock white" id="year1">
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
-            <h1>Enter your module marks for year one.</h1>
+            <h2>Enter your module marks for year one.</h2>
             <div class="row row-enable-spacing space-top space-bottom" role="group" aria-label="First year modules">
 
               <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
                 <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1">CS1</span>
+                  <span class="input-group-addon degree-module-initialism" id="basic-addon1">CS1</span>
                   <input type="text" class="form-control" placeholder="00" aria-describedby="Computer Systems 1 mark">
                 </div>
               </div>
 
               <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
                 <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1">DST</span>
+                  <span class="input-group-addon degree-module-initialism" id="basic-addon1">DST</span>
                   <input type="text" class="form-control" placeholder="00" aria-describedby="Data Structures mark">
                 </div>
               </div>
 
               <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
                 <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1">ELA</span>
+                  <span class="input-group-addon degree-module-initialism" id="basic-addon1">ELA</span>
                   <input type="text" class="form-control" placeholder="00" aria-describedby="Elementary Logic with Applications mark">
                 </div>
               </div>
 
               <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
                 <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1">FC1</span>
+                  <span class="input-group-addon degree-module-initialism" id="basic-addon1">FC1</span>
                   <input type="text" class="form-control" placeholder="00" aria-describedby="Foundations of Computing One mark">
                 </div>
               </div>
 
               <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
                 <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1">IAI</span>
+                  <span class="input-group-addon degree-module-initialism" id="basic-addon1">IAI</span>
                   <input type="text" class="form-control" placeholder="00" aria-describedby="Introduction to Artificial Intelligence mark">
                 </div>
               </div>
 
               <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
                 <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1">PEP</span>
+                  <span class="input-group-addon degree-module-initialism" id="basic-addon1">PEP</span>
                   <input type="text" class="form-control" placeholder="00" aria-describedby="Practical Experiences of Programming mark">
                 </div>
               </div>
 
               <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
                 <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1">PRA</span>
+                  <span class="input-group-addon degree-module-initialism" id="basic-addon1">PRA</span>
                   <input type="text" class="form-control" placeholder="00" aria-describedby="Programming Applications mark">
                 </div>
               </div>
 
               <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
                 <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1">PRP</span>
+                  <span class="input-group-addon degree-module-initialism" id="basic-addon1">PRP</span>
                   <input type="text" class="form-control" placeholder="00" aria-describedby="Programming Practice mark">
                 </div>
               </div>
@@ -166,54 +170,54 @@
       <div class="content-panel container transition yearBlock" id="year2">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-          <h1>Enter your module marks for year two.</h1>
+          <h2>Enter your module marks for year two.</h2>
           <div class="row row-enable-spacing space-top space-bottom" role="group" aria-label="Second year modules">
 
             <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
               <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">DB</span>
+                <span class="input-group-addon degree-module-initialism" id="basic-addon1">DB</span>
                 <input type="text" class="form-control" placeholder="00" aria-describedby="Database Systems mark">
               </div>
             </div>
 
             <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
               <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">CSL</span>
+                <span class="input-group-addon degree-module-initialism" id="basic-addon1">CSL</span>
                 <input type="text" class="form-control" placeholder="00" aria-describedby="Computer Science Logic mark">
               </div>
             </div>
 
             <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
               <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">FC2</span>
+                <span class="input-group-addon degree-module-initialism" id="basic-addon1">FC2</span>
                 <input type="text" class="form-control" placeholder="00" aria-describedby="Foundations of Computing 2 mark">
               </div>
             </div>
 
             <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
               <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">OSC</span>
+                <span class="input-group-addon degree-module-initialism" id="basic-addon1">OSC</span>
                 <input type="text" class="form-control" placeholder="00" aria-describedby="Operating Systems and Concurrency mark">
               </div>
             </div>
 
             <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
               <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">OSD</span>
+                <span class="input-group-addon degree-module-initialism" id="basic-addon1">OSD</span>
                 <input type="text" class="form-control" placeholder="00" aria-describedby="Object-Oriented Specification and Design mark">
               </div>
             </div>
 
             <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
               <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">PLD</span>
+                <span class="input-group-addon degree-module-initialism" id="basic-addon1">PLD</span>
                 <input type="text" class="form-control" placeholder="00" aria-describedby="Programming Language Design Paradigms mark">
               </div>
             </div>
 
             <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
               <div class="input-group">
-                <span class="input-group-addon" id="basic-addon1">SEG</span>
+                <span class="input-group-addon degree-module-initialism" id="basic-addon1">SEG</span>
                 <input type="text" class="form-control" placeholder="00" aria-describedby="Software Engineering Group Project mark">
               </div>
             </div>
@@ -227,54 +231,54 @@
     <div class="content-panel container transition yearBlock white" id="year3">
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
-        <h1>Enter your module marks for year three.</h1>
+        <h2>Enter your module marks for year three.</h2>
         <div class="row row-enable-spacing space-top space-bottom" role="group" aria-label="Third year modules">
 
           <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
             <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1">#1</span>
+              <span class="input-group-addon degree-module-initialism" id="basic-addon1">#1</span>
               <input type="text" class="form-control" placeholder="00" aria-describedby="Optional module 1 mark">
             </div>
           </div>
 
           <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
             <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1">#2</span>
+              <span class="input-group-addon degree-module-initialism" id="basic-addon1">#2</span>
               <input type="text" class="form-control" placeholder="00" aria-describedby="Optional module 2 mark">
             </div>
           </div>
 
           <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
             <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1">#3</span>
+              <span class="input-group-addon degree-module-initialism" id="basic-addon1">#3</span>
               <input type="text" class="form-control" placeholder="00" aria-describedby="Optional module 3 mark">
             </div>
           </div>
 
           <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
             <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1">#4</span>
+              <span class="input-group-addon degree-module-initialism" id="basic-addon1">#4</span>
               <input type="text" class="form-control" placeholder="00" aria-describedby="Optional module 4 mark">
             </div>
           </div>
 
           <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
             <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1">#5</span>
+              <span class="input-group-addon degree-module-initialism" id="basic-addon1">#5</span>
               <input type="text" class="form-control" placeholder="00" aria-describedby="Optional module 5 mark">
             </div>
           </div>
 
           <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
             <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1">#6</span>
+              <span class="input-group-addon degree-module-initialism" id="basic-addon1">#6</span>
               <input type="text" class="form-control" placeholder="00" aria-describedby="Optional module 6 mark">
             </div>
           </div>
 
           <div class="focus-underline col-sm-6 col-xs-12 space-top space-bottom">
             <div class="input-group">
-              <span class="input-group-addon" id="basic-addon1">PRJ</span>
+              <span class="input-group-addon degree-module-initialism" id="basic-addon1">PRJ</span>
               <input type="text" class="form-control" placeholder="00" aria-describedby="Computer Science Project mark">
             </div>
           </div>
@@ -286,15 +290,15 @@
 
   <!-- Output -->
   <div class="content-panel container change-background">
-    <div class="calculate space-top">
-      <div class='row'>
+    <div class="calculate">
+      <div class="row">
         <div class="col-md-8 col-md-offset-2">
-          <button type="button" class="btn btn-default full-width col-xs-4 space-top space-bottom" id="done">Done</button>
+          <button type="button" class="btn btn-default full-width col-xs-4 space-vertical" id="done">Done</button>
         </div>
       </div>
     </div>
 
-    <div class='output space-top'>
+    <div class="output">
       <div class="row">
         <div class="col-md-3 col-md-offset-2">
           <h1 id="avgOutput" class="ultra-big-text">81%</h1>

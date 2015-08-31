@@ -1,0 +1,91 @@
+//device sizes
+@non-mobile: ~"min-width: 768px";
+
+//element sizing
+@size-full: 100%;
+@size-header-height: 70%;
+@size-nav-height: 50px;
+@size-circle-btn: 70px;
+@size-circle-btn-i: 62px;
+@size-circle-btn-top: 260px;
+@size-content-min-height: ~"calc(" (@size-full) ~" - " (@size-nav-height) ~")";
+@size-content-top-space: (@size-circle-btn / 2) + @spacing-standard;
+
+//colours
+@colour-base:         #E5E8E8;
+@colour-section-alt:  #FCFFFF;
+@colour-accent:       #3CAA9C;
+@colour-accent-light: #8EDAD0;
+@colour-font:         #777777;
+@colour-interactable: #CCCCCC;
+@colour-circle-hover: rgba(255,255,255,.1);
+
+//borders
+@border-width: 2px;
+@border-accent: @border-width solid @colour-accent;
+@border-radius-default: 3px;
+@border-radius-circle: 50%;
+
+//fonts
+@font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-standard: "Lato", @font-family-base;
+@font-family-accent: @font-family-base;
+@font-family-fontAwesome: FontAwesome;
+
+@font-colour-standard: @colour-font;
+@font-colour-accent:   @colour-accent;
+
+@font-weight-light:     100;
+@font-weight-standard:  300;
+@font-weight-semibold:  400;
+@font-weight-bold:      700;
+
+@font-spacing-standard: 0.0px;
+@font-spacing-thin:     0.5px;
+@font-spacing-thick:    1.0px;
+
+@font-size-navbar-small:  01.0em;
+@font-size-interactable:  01.3em;
+@font-size-standard:      01.4em;
+@font-size-circlebtn-i:   01.5em;
+@font-size-navbar-large:  01.5em;
+@font-size-subheading:    01.8em;
+@font-size-heading:       02.5em;
+@font-size-circlebtn:     03.5em;
+@font-size-large:         03.6em;
+@font-size-xlarge:        05.0em;
+@font-size-xxlarge:       10.0em;
+
+@font-lineheight-circlebtn: 0.87;
+@font-lineheight-less:      1.1;
+@font-lineheight-btn:       1.3;
+@font-lineheight-standard:  1.4;
+
+@font-transform-none:       none;
+@font-transform-uppercase:  uppercase;
+
+//spacing
+@spacing-none:      00px;
+@spacing-xsmall:    05px;
+@spacing-small:     10px;
+@spacing-standard:  15px;
+@spacing-big:       20px;
+
+//z-indexes
+@z-focus-underline: 100;
+@z-navbar:          1000;
+@z-floating-btn:    1050;
+
+//shadow
+@shadow-default: ~"3px 3px 8px rgb(221, 221, 221)";
+@shadow-button: ~"0 3px 5px rgba(0,0,0,0.12), 0 3px 5px rgba(0,0,0,0.24)";
+
+//transition
+@transition-default: ~"all .5s ease";
+@transition-navbar: ~"background .5s ease-in-out, padding .5s ease-in-out";
+@transition-navbar-elements: ~"width .5s ease, background-color .5s ease";
+@transition-content-section: ~"opacity, 2s, ease";
+@transition-btn-circle: ~"background, .3s, ease-in-out";
+
+//page specifics
+@kcl-calc-degree-module-initialism-width: 65px;
