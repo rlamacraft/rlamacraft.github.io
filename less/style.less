@@ -100,7 +100,7 @@ p {
   width: @size-full;
   height: @size-header-height-large;
   min-height: @size-header-minheight-large;
-  text-align: left;
+  text-align: @font-align;
   background-color: @colour-section-alt;
   margin-top: 2 * @spacing-big;
 
@@ -124,7 +124,7 @@ p {
   opacity: 0;
   min-height: @size-content-min-height;
   display: none;
-  text-align: left;
+  text-align: @font-align;
   padding-top: @size-content-top-space;
 }
 
@@ -187,7 +187,7 @@ p {
 
 //disabled hamburger menu
 .navbar-nav {
-  float: left;
+  float: @font-align;
     margin: @spacing-xsmall @spacing-small @spacing-none @spacing-none;
 }
 
@@ -197,7 +197,7 @@ p {
 }
 
 .navbar-nav>li {
-  float: left;
+  float: @font-align;
 }
 
 .nav>li>a {
