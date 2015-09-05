@@ -257,7 +257,7 @@ p {
   background-color: #fcffff;
 }
 .navbar-nav {
-  float: center;
+  float: left;
   margin: 5px 10px 0px 0px;
 }
 .navbar-right {
@@ -265,7 +265,7 @@ p {
   margin-right: -15px;
 }
 .navbar-nav > li {
-  float: center;
+  float: left;
 }
 .nav > li > a {
   padding: 10px 20px;
