@@ -26,12 +26,13 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  .font(
-    @kerning:       @font-spacing-thick,
-    @size:          @font-size-heading,
-    @line-height:   @font-lineheight-less,
-  );
   margin: 0;
+
+  @media(@non-mobile) {
+    .heading-font(
+      @size: @font-size-heading,
+    );
+  };
 }
 
 h1>a, h2>a, h3>a, h4>a, h5>a, h6>a {
@@ -39,7 +40,7 @@ h1>a, h2>a, h3>a, h4>a, h5>a, h6>a {
 }
 
 h1 {
-  .font(
+  .heading-font(
       @size:        @font-size-large,
       @transform:   @font-transform-uppercase,
       @kerning:     @font-spacing-thick,
@@ -51,7 +52,7 @@ h1 {
          only screen and (-o-min-device-pixel-ratio: 2/1),
          only screen and (-webkit-min-device-pixel-ratio: 2),
          only screen and (min-device-pixel-ratio: 2) {
-           .font(
+           .heading-font(
                @weight:      @font-weight-light,
                @size:        @font-size-large,
                @transform:   @font-transform-uppercase,
@@ -62,23 +63,20 @@ h1 {
 }
 
 h2 {
-  .font(
+  .heading-font(
       @size:          @font-size-heading,
-      @line-height:   @font-lineheight-less,
   );
-  margin-bottom: @spacing-small;
 }
 
 h3 {
-  .font(
+  .heading-font(
       @size:          @font-size-heading,
-      @line-height:   @font-lineheight-less,
   );
   .space-top;
 }
 
 h4 {
-  .font(
+  .heading-font(
       @size:          @font-size-subheading,
   );
 }
@@ -100,10 +98,20 @@ p {
 .intro {
   display: table;
   width: @size-full;
-  height: @size-header-height;
+  height: @size-header-height-large;
+  min-height: @size-header-minheight-large;
   text-align: left;
   background-color: @colour-section-alt;
   margin-top: 2 * @spacing-big;
+
+  @media(@non-mobile) {
+    min-height: 0;
+    height: @size-header-height-standard;
+  }
+}
+
+.intro.intro-large {
+  height: @size-header-height-large;
 }
 
 .intro .intro-body {
@@ -125,11 +133,19 @@ p {
 }
 
 .content-panel {
-  padding: @spacing-small @spacing-big,
+  .transition(@transition-content-panel);
 }
 
 .content-panel.white {
   background-color: @colour-section-alt;
+}
+
+.content-panel-padding {
+  padding: @spacing-standard 0;
+}
+
+.content-section.always-show .content-panel {
+  opacity: 0;
 }
 
 // NAVBAR

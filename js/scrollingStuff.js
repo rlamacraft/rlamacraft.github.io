@@ -8,14 +8,14 @@ $(window).scroll(function() {
     if (isFloating) {
         navBar.addClass("top-nav-collapse");
         navBar.addClass("shadow");
-        $(".content-section").css("opacity", "1.0");
+        $(".content-section.toggle-hidden").css("opacity", "1.0");
         btn.removeClass("fa-chevron-circle-down");
         btn.addClass("fa-chevron-circle-up");
         pageScrollDown = false;
     } else {
         navBar.removeClass("top-nav-collapse");
         navBar.removeClass("shadow");
-        $(".content-section").css("opacity", "0.0");
+        $(".content-section.toggle-hidden").css("opacity", "0.0");
         btn.removeClass("fa-chevron-circle-up");
         btn.addClass("fa-chevron-circle-down");
         pageScrollDown = true;
@@ -63,7 +63,6 @@ $(document).ready( function() {
       $('#scroll-btn').removeClass('btn-highlight');
     });
 
-
     $('input.form-control').focus(function() {
       var parent = $($($(this).parent()[0]).parent()[0]);
       parent.addClass('focused');
@@ -72,5 +71,19 @@ $(document).ready( function() {
     $('input.form-control').focusout(function() {
       var parent = $($($(this).parent()[0]).parent()[0]);
       parent.removeClass('focused');
-    })
+    });
+
+    //small header pages have animated loading of content
+    $('.content-section.always-show').css('opacity', '1.0');
+    allPanels = $('.content-section.always-show .content-panel');
+
+    panelIndex = 0;
+    makePanelsVisible = window.setInterval(function() {
+      $(allPanels[panelIndex]).css('opacity', '1.0');
+      panelIndex++;
+      if(panelIndex === allPanels.length)
+        window.clearInterval(makePanelsVisible);
+    }, 750);
+
+
 });

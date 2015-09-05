@@ -35,3 +35,21 @@
   line-height: @line-height;
   text-transform: @transform;
 }
+
+.heading-font(
+  @family:      @font-family-standard,
+  @weight:      @font-weight-standard,
+  @colour:      @font-colour-standard,
+  @kerning:     @font-spacing-thick,
+  @size:        @font-size-standard,
+  @line-height: @font-lineheight-less,
+  @transform:   @font-transform-none,
+) {
+  font-family: @family;
+  font-weight: @weight;
+  color: @colour;
+  letter-spacing: @kerning;
+  font-size: @size;
+  line-height: @line-height;
+  text-transform: @transform;
+}
