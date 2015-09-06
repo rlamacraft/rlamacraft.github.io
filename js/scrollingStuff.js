@@ -85,5 +85,88 @@ $(document).ready( function() {
         window.clearInterval(makePanelsVisible);
     }, 750);
 
+    function openTag(tag) {
+      console.log("open");
+      $('.tag').removeClass('open'); //use closeTag() on all?
+
+      thisTag = $(tag);
+      thisTag.addClass('open');
+      thisTag.data("open", '1');
+    }
+
+    function closeTag(tag) {
+      thisTag = $(tag);
+      thisTag.removeClass('open');
+      thisTag.data("open", '0');
+    }
+
+    /*function tagAction(tag, source) {
+      setData = function(newAction) {
+        $(tag).data('action', newAction);
+      }
+
+      action = $(tag).data('action'); */
+      /*switch(action) {
+        case('open'): openTag(tag); setData('go'); break;
+        case('go'):   console.log("go"); break;
+      }*/
+      /*if(source === 'hover') {
+        openTag(this);
+      } else if(source === 'click') {
+        console.log("go");
+      }
+    }*/
+
+
+    /*$('.tag').hover(function() {
+      tagAction(this, 'hover');
+    }, function() {
+      closeTag(this);
+    } );
+
+    $('.tag').click(function() {
+      tagAction(this, 'click');
+    })*/
+
+    /*$('.tag.open').on("touchstart", function (e) {
+      console.log("touch tap");
+    });*/
+
+    $('.tag').data('open', '0');
+    function isOpen(tag) {
+      if($(tag).data('open') === '1')
+        return true;
+      return false;
+    }
+
+    /*$('.tag').on("mouseover", function() {
+      console.log("hover start");
+      openTag(this);
+    });
+
+    $('.tag').on("mouseleave", function() {
+      console.log("hover end");
+      closeTag(this);
+    });*/
+
+    $('.tag').hover(function() {
+      openTag(this);
+    }, function() {
+      closeTag(this);
+    });
+
+    $('.tag').on("touchstart", function (e) {
+      console.log("tap: " + isOpen(this));
+      if(isOpen(this))
+        alert("touch tap");
+    });
+
+    $('.tag').on("mousedown", function (e) {
+      console.log("mousedown: " + isOpen(this));
+      if(isOpen(this))
+        alert("mouse tap");
+    });
+
+
 
 });

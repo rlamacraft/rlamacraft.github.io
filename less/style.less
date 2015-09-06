@@ -3,6 +3,7 @@
 @import "variables.less";
 @import "functions.less";
 @import "utilities.less";
+@import "tags.less";
 
 /***
 ** Standard HTML tags
@@ -408,6 +409,11 @@ input.form-control:focus {
   .space-vertical;
 }
 
-.project-tags * {
-  display: inline;
+.project-title {
+  .space-right;
+}
+
+.project-tags {
+  display: inline-block;
+  vertical-align: super;
 }
