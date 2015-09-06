@@ -100,38 +100,6 @@ $(document).ready( function() {
       thisTag.data("open", '0');
     }
 
-    /*function tagAction(tag, source) {
-      setData = function(newAction) {
-        $(tag).data('action', newAction);
-      }
-
-      action = $(tag).data('action'); */
-      /*switch(action) {
-        case('open'): openTag(tag); setData('go'); break;
-        case('go'):   console.log("go"); break;
-      }*/
-      /*if(source === 'hover') {
-        openTag(this);
-      } else if(source === 'click') {
-        console.log("go");
-      }
-    }*/
-
-
-    /*$('.tag').hover(function() {
-      tagAction(this, 'hover');
-    }, function() {
-      closeTag(this);
-    } );
-
-    $('.tag').click(function() {
-      tagAction(this, 'click');
-    })*/
-
-    /*$('.tag.open').on("touchstart", function (e) {
-      console.log("touch tap");
-    });*/
-
     $('.tag').data('open', '0');
     function isOpen(tag) {
       if($(tag).data('open') === '1')
@@ -139,15 +107,9 @@ $(document).ready( function() {
       return false;
     }
 
-    /*$('.tag').on("mouseover", function() {
-      console.log("hover start");
-      openTag(this);
-    });
-
-    $('.tag').on("mouseleave", function() {
-      console.log("hover end");
-      closeTag(this);
-    });*/
+    tagClick = function(tag) {
+      window.location.href = tag.data('href');
+    }
 
     $('.tag').hover(function() {
       openTag(this);
@@ -155,18 +117,9 @@ $(document).ready( function() {
       closeTag(this);
     });
 
-    $('.tag').on("touchstart", function (e) {
-      console.log("tap: " + isOpen(this));
+    $('.tag').on("touchstart mousedown", function (e) {
       if(isOpen(this))
-        alert("touch tap");
+        tagClick(this);
     });
-
-    $('.tag').on("mousedown", function (e) {
-      console.log("mousedown: " + isOpen(this));
-      if(isOpen(this))
-        alert("mouse tap");
-    });
-
-
 
 });
