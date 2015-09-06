@@ -51,37 +51,9 @@
 .shadow {
   box-shadow: 3px 3px 8px rgb(221, 221, 221);
 }
-.tag {
-  background-color: #3caa9c;
-  border: none;
-  border-radius: 24px;
-  color: rgba(0, 0, 0, 0);
-  font-family: "Lato";
-  font-style: normal;
-  height: 24px;
-  line-height: 12px;
-  max-width: 24px;
-  min-width: 24px;
-  overflow: hidden;
-  padding: 0;
-  transition: all 0.5s cubic-bezier(0.39, 0.07, 0.13, 0.99);
-  vertical-align: middle;
-  display: inline-block;
-  position: relative;
-  font-size: 1.3em;
-  padding: 2px 5px;
-}
-.tag.open {
-  color: #f5f5f5;
-  max-width: 100%;
-  text-indent: 0;
-  padding: 5px 15px;
-}
-/***
-** The tags themselves
-***/
-.tag-javascript {
+.tag.tag-javascript {
   background-color: #65a4ed;
+  color: #65a4ed;
 }
 .tag-javascript:hover {
   background-color: #7cb1f0;
@@ -89,8 +61,9 @@
 .tag-javascript:after {
   content: "JavaScript";
 }
-.tag-css {
+.tag.tag-css {
   background-color: #edc365;
+  color: #edc365;
 }
 .tag-css:hover {
   background-color: #f0cc7c;
@@ -98,8 +71,9 @@
 .tag-css::after {
   content: "CSS";
 }
-.tag-jquery {
+.tag.tag-jquery {
   background-color: #a876ff;
+  color: #a876ff;
 }
 .tag-jquery:hover {
   background-color: #b890ff;
@@ -570,4 +544,35 @@ input.form-control:focus {
 .project-tags {
   display: inline-block;
   vertical-align: super;
+}
+.tag {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #777777;
+  letter-spacing: 0.1px;
+  font-size: 1.3em;
+  line-height: 12px;
+  text-transform: none;
+  border: none;
+  border-radius: 24px;
+  height: 24px;
+  max-width: 24px;
+  min-width: 24px;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.39, 0.07, 0.13, 0.99);
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  padding: 0 5px;
+}
+.tag.open {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #e5e8e8;
+  letter-spacing: 0.1px;
+  font-size: 1.3em;
+  line-height: 12px;
+  text-transform: none;
+  max-width: 100%;
+  padding: 5px 15px;
 }

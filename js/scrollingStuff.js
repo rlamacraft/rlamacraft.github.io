@@ -86,9 +86,7 @@ $(document).ready( function() {
     }, 750);
 
     function openTag(tag) {
-      console.log("open");
-      $('.tag').removeClass('open'); //use closeTag() on all?
-
+      $('.tag').removeClass('open');
       thisTag = $(tag);
       thisTag.addClass('open');
       thisTag.data("open", '1');

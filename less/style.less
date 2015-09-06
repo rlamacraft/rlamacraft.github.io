@@ -417,3 +417,32 @@ input.form-control:focus {
   display: inline-block;
   vertical-align: super;
 }
+
+.tag {
+  .font(
+      @size:          @font-size-interactable;
+      @line-height:   @size-tag-bubble-size / 2;
+  );
+  border: none;
+  border-radius: @size-tag-bubble-size;
+  display: inline-block;
+  height: @size-tag-bubble-size;
+  max-width: @size-tag-bubble-size;
+  min-width: @size-tag-bubble-size;
+  overflow: hidden;
+  transition: @transition-tag-bubble;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  padding: 0 @spacing-xsmall;
+}
+
+.tag.open {
+  .font(
+      @size:          @font-size-interactable;
+      @line-height:   @size-tag-bubble-size / 2;
+      @colour:        @colour-base;
+  );
+  max-width: 100%;
+  padding: @spacing-xsmall @spacing-standard;
+}
