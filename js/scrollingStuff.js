@@ -106,7 +106,8 @@ $(document).ready( function() {
     }
 
     tagClick = function(tag) {
-      window.location.href = $(tag).data('href');
+      //window.location.href = $(tag).data('href');
+      alert("this will go to the tag page");
     }
 
     $('.tag').hover(function() {
