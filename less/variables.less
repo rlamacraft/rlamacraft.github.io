@@ -13,7 +13,9 @@
 @size-circle-btn-top: 260px;
 @size-content-min-height: ~"calc(" (@size-full) ~" - " (@size-nav-height) ~")";
 @size-content-top-space: (@size-circle-btn / 2) + @spacing-standard;
-@size-tag-bubble-size: 24px;
+@size-tag-bubble-small: 18px;
+@size-tag-bubble-standard: 24px;
+@size-tag-bubble-large: 48px;
 
 //colours
 @colour-base:         #E5E8E8;
@@ -26,6 +28,7 @@
 
 //borders
 @border-width: 2px;
+@border-width-tag: 5px;
 @border-accent: @border-width solid @colour-accent;
 @border-radius-default: 3px;
 @border-radius-circle: 50%;
@@ -47,27 +50,33 @@
 @font-spacing-standard: 0.1px;
 @font-spacing-thick:    0.8px;
 
-@font-size-navbar-small:  01.0em;
-@font-size-interactable:  01.3em;
-@font-size-standard:      01.4em;
-@font-size-circlebtn-i:   01.5em;
-@font-size-navbar-large:  01.5em;
-@font-size-subheading:    01.8em;
-@font-size-heading:       02.5em;
-@font-size-circlebtn:     03.5em;
-@font-size-large:         03.6em;
-@font-size-xlarge:        05.0em;
-@font-size-xxlarge:       10.0em;
+@font-size-navbar-small:            01.0em;
+@font-size-interactable-small:      00.8em;
+@font-size-interactable-standard:   01.3em;
+@font-size-standard:                01.4em;
+@font-size-circlebtn-i:             01.5em;
+@font-size-navbar-large:            01.5em;
+@font-size-interactable-large:      02.5em;
+@font-size-subheading:              01.8em;
+@font-size-heading:                 02.5em;
+@font-size-circlebtn:               03.5em;
+@font-size-large:                   03.6em;
+@font-size-xlarge:                  05.0em;
+@font-size-xxlarge:                 10.0em;
 
+@font-lineheight-tag-small: 0.40;
+@font-lineheight-tag-standard: 0.70;
 @font-lineheight-circlebtn: 0.87;
-@font-lineheight-less:      1.1;
-@font-lineheight-btn:       1.3;
-@font-lineheight-standard:  1.4;
+@font-lineheight-tag-large: 1.00;
+@font-lineheight-less:      1.10;
+@font-lineheight-btn:       1.30;
+@font-lineheight-standard:  1.40;
 
 @font-transform-none:       none;
 @font-transform-uppercase:  uppercase;
 
-@font-align: center;
+@font-align: left;
+@font-align-header: center;
 
 //spacing
 @spacing-none:      00px;

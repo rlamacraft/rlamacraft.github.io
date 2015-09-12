@@ -90,14 +90,12 @@ $(document).ready( function() {
       thisTag = $(tag);
       thisTag.addClass('open');
       thisTag.data("open", '1');
-      console.log("data now says open");
     }
 
     function closeTag(tag) {
       thisTag = $(tag);
       thisTag.removeClass('open');
       thisTag.data("open", '0');
-      console.log("data now says closed");
     }
 
     $('.tag').data('open', '0');
@@ -108,29 +106,23 @@ $(document).ready( function() {
     }
 
     tagClick = function(tag) {
-      //window.location.href = $(tag).data('href');
-      alert("this will go to the tag page");
-      console.log(isOpen(tag));
+      window.location.href = "projectTags.html#" + $(tag).data('href');
     }
 
     $('.tag').on("mouseenter", function() {
-      console.log("mouse entered");
       openTag(this);
     });
 
     $('.tag').on("mouseleave", function() {
-      console.log("mouse left");
       closeTag(this);
     });
 
     $('.tag').on("touchstart", function (e) {
-      console.log("tap down");
       if(isOpen(this))
         tagClick(this);
     });
 
     $('.tag').on("mousedown", function (e) {
-      console.log("mouse down");
       if(isOpen(this))
         tagClick(this);
     });

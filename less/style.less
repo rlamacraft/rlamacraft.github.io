@@ -101,7 +101,7 @@ p {
   width: @size-full;
   height: @size-header-height-large;
   min-height: @size-header-minheight-large;
-  text-align: @font-align;
+  text-align: @font-align-header;
   background-color: @colour-section-alt;
   margin-top: 2 * @spacing-big;
 
@@ -138,6 +138,10 @@ p {
 }
 
 .content-panel.white {
+  background-color: @colour-section-alt;
+}
+
+.content-section .content-panel.white-alternate:nth-child(even) {
   background-color: @colour-section-alt;
 }
 
@@ -261,7 +265,7 @@ p {
     @family:       @font-family-standard,
     @colour:       @font-colour-accent,
     @kerning:      @font-spacing-standard,
-    @size:         @font-size-interactable,
+    @size:         @font-size-interactable-standard,
     @line-height:  @font-lineheight-btn,
   );
   border: @border-accent;
@@ -368,7 +372,7 @@ p {
 
 .input-group-addon {
   .font(
-      @size: @font-size-interactable,
+      @size: @font-size-interactable-standard,
       @line-height: @font-lineheight-less,
       @weight: @font-weight-semibold,
   );
@@ -384,7 +388,7 @@ p {
 
 input.form-control {
   .font(
-      @size: @font-size-interactable,
+      @size: @font-size-interactable-standard,
   );
   .shadow(none);
   .rounded-corners(0);
@@ -419,30 +423,52 @@ input.form-control:focus {
 }
 
 .tag {
-  .font(
-      @size:          @font-size-interactable;
-      @line-height:   @size-tag-bubble-size / 2;
-  );
+  .tag-size();
   border: none;
-  border-radius: @size-tag-bubble-size;
-  display: inline-block;
-  height: @size-tag-bubble-size;
-  max-width: @size-tag-bubble-size;
-  min-width: @size-tag-bubble-size;
+  border-radius:  @border-width-tag;
   overflow: hidden;
   transition: @transition-tag-bubble;
   vertical-align: middle;
   display: inline-block;
   position: relative;
-  padding: 0 @spacing-xsmall;
+  cursor: pointer;
 }
 
-.tag.open {
-  .font(
-      @size:          @font-size-interactable;
-      @line-height:   @size-tag-bubble-size / 2;
-      @colour:        @colour-base;
+.tag.open, .tag.locked {
+  .tag-expand();
+}
+
+.tag.small {
+  .tag-size(
+    @size: @size-tag-bubble-small,
+    @font-size: @font-size-interactable-small,
   );
-  max-width: 100%;
-  padding: @spacing-xsmall @spacing-standard;
+}
+
+.tag.small.open, .tag.small.locked {
+  .tag-expand(
+    @size: @size-tag-bubble-small,
+    @font-size: @font-size-interactable-small,
+    @line-height: @font-lineheight-tag-small,
+  );
+}
+
+.tag.large {
+  .tag-size(
+    @size: @size-tag-bubble-large,
+    @font-size: @font-size-interactable-large,
+  );
+}
+
+.tag.large.open, .tag.large.locked {
+  .tag-expand(
+    @size: @size-tag-bubble-large,
+    @font-size: @font-size-interactable-large,
+    @line-height: @font-lineheight-tag-large,
+  );
+}
+
+.anchor {
+  position: absolute;
+  margin-top: -150px;
 }

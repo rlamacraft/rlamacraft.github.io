@@ -12,11 +12,9 @@
   display: inline-block;
 }
 .space-top {
-  display: inline-block;
   margin-top: 15px;
 }
 .space-bottom {
-  display: inline-block;
   margin-bottom: 15px;
 }
 .space-vertical {
@@ -51,36 +49,101 @@
 .shadow {
   box-shadow: 3px 3px 8px rgb(221, 221, 221);
 }
+/***
+** Generators
+***/
 .tag.tag-javascript {
   background-color: #65a4ed;
   color: #65a4ed;
 }
-.tag-javascript:hover {
-  background-color: #7cb1f0;
+.tag.large.tag-javascript {
+  background-color: #65a4ed;
+  color: #65a4ed;
 }
-.tag-javascript:after {
+.tag.small.tag-javascript {
+  background-color: #65a4ed;
+  color: #65a4ed;
+}
+.tag.tag-javascript:hover {
+  background-color: #85b7f1;
+}
+.tag.large.tag-javascript:hover {
+  background-color: #85b7f1;
+}
+.tag.small.tag-javascript:hover {
+  background-color: #85b7f1;
+}
+.tag.tag-javascript:after {
   content: "JavaScript";
-}
-.tag.tag-css {
-  background-color: #edc365;
-  color: #edc365;
-}
-.tag-css:hover {
-  background-color: #f0cc7c;
-}
-.tag-css::after {
-  content: "CSS";
 }
 .tag.tag-jquery {
   background-color: #a876ff;
   color: #a876ff;
 }
-.tag-jquery:hover {
-  background-color: #b890ff;
+.tag.large.tag-jquery {
+  background-color: #a876ff;
+  color: #a876ff;
 }
-.tag-jquery::after {
+.tag.small.tag-jquery {
+  background-color: #a876ff;
+  color: #a876ff;
+}
+.tag.tag-jquery:hover {
+  background-color: #bf9aff;
+}
+.tag.large.tag-jquery:hover {
+  background-color: #bf9aff;
+}
+.tag.small.tag-jquery:hover {
+  background-color: #bf9aff;
+}
+.tag.tag-jquery:after {
   content: "jQuery";
 }
+.tag.tag-css {
+  background-color: #edc365;
+  color: #edc365;
+}
+.tag.large.tag-css {
+  background-color: #edc365;
+  color: #edc365;
+}
+.tag.small.tag-css {
+  background-color: #edc365;
+  color: #edc365;
+}
+.tag.tag-css:hover {
+  background-color: #f1cf85;
+}
+.tag.large.tag-css:hover {
+  background-color: #f1cf85;
+}
+.tag.small.tag-css:hover {
+  background-color: #f1cf85;
+}
+.tag.tag-css:after {
+  content: "CSS";
+}
+/***
+** Colour defintions
+***/
+/*.tag.tag-javascript { background-color: #65a4ed; color: #65a4ed; }
+  .tag-javascript:hover{ background-color: lighten(#65a4ed, 5%);}
+  .tag-javascript:after { content: "JavaScript"; }
+.tag.tag-javascript { background-color: #65a4ed; color: #65a4ed; }
+  .tag-javascript:hover{ background-color: lighten(#65a4ed, 5%);}
+  .tag-javascript:after { content: "JavaScript"; }
+.tag.tag-javascript { background-color: #65a4ed; color: #65a4ed; }
+  .tag-javascript:hover{ background-color: lighten(#65a4ed, 5%);}
+  .tag-javascript:after { content: "JavaScript"; }
+
+.tag.tag-css { background-color: #edc365; color: #edc365; }
+  .tag-css:hover{ background-color: lighten(#edc365, 5%);}
+  .tag-css::after { content: "CSS"; }
+
+.tag.tag-jquery { background-color: #a876ff; color: #a876ff; }
+  .tag-jquery:hover{ background-color: lighten(#a876ff, 5%);}
+  .tag-jquery::after { content: "jQuery"; }*/
 /***
 ** Standard HTML tags
 ***/
@@ -230,7 +293,7 @@ p {
   opacity: 0;
   min-height: calc( 100%  -  50px );
   display: none;
-  text-align: center;
+  text-align: left;
   padding-top: 50px;
 }
 .content-section.full-page {
@@ -243,6 +306,9 @@ p {
   transition: all 2s ease;
 }
 .content-panel.white {
+  background-color: #fcffff;
+}
+.content-section .content-panel.white-alternate:nth-child(even) {
   background-color: #fcffff;
 }
 .content-panel-padding {
@@ -550,29 +616,85 @@ input.form-control:focus {
   font-weight: 300;
   color: #777777;
   letter-spacing: 0.1px;
-  font-size: 1.3em;
-  line-height: 12px;
+  font-size: 24px;
+  line-height: 0;
   text-transform: none;
-  border: none;
-  border-radius: 24px;
   height: 24px;
   max-width: 24px;
   min-width: 24px;
+  padding: 5px 6px;
+  border: none;
+  border-radius: 5px;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(0.39, 0.07, 0.13, 0.99);
   vertical-align: middle;
   display: inline-block;
   position: relative;
-  padding: 0 5px;
+  cursor: pointer;
 }
-.tag.open {
+.tag.open,
+.tag.locked {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: #e5e8e8;
   letter-spacing: 0.1px;
   font-size: 1.3em;
-  line-height: 12px;
+  line-height: 0.7;
   text-transform: none;
   max-width: 100%;
-  padding: 5px 15px;
+  padding: 5px 12px;
+}
+.tag.small {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #777777;
+  letter-spacing: 0.1px;
+  font-size: 18px;
+  line-height: 0;
+  text-transform: none;
+  height: 18px;
+  max-width: 18px;
+  min-width: 18px;
+  padding: 5px 6px;
+}
+.tag.small.open,
+.tag.small.locked {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #e5e8e8;
+  letter-spacing: 0.1px;
+  font-size: 0.8em;
+  line-height: 0.4;
+  text-transform: none;
+  max-width: 100%;
+  padding: 5px 9px;
+}
+.tag.large {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #777777;
+  letter-spacing: 0.1px;
+  font-size: 48px;
+  line-height: 0;
+  text-transform: none;
+  height: 48px;
+  max-width: 48px;
+  min-width: 48px;
+  padding: 5px 6px;
+}
+.tag.large.open,
+.tag.large.locked {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #e5e8e8;
+  letter-spacing: 0.1px;
+  font-size: 2.5em;
+  line-height: 1;
+  text-transform: none;
+  max-width: 100%;
+  padding: 5px 24px;
+}
+.anchor {
+  position: absolute;
+  margin-top: -150px;
 }

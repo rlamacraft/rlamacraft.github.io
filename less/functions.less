@@ -45,11 +45,39 @@
   @line-height: @font-lineheight-less,
   @transform:   @font-transform-none,
 ) {
-  font-family: @family;
-  font-weight: @weight;
-  color: @colour;
-  letter-spacing: @kerning;
-  font-size: @size;
-  line-height: @line-height;
-  text-transform: @transform;
+  font-family:     @family;
+  font-weight:     @weight;
+  color:           @colour;
+  letter-spacing:  @kerning;
+  font-size:       @size;
+  line-height:     @line-height;
+  text-transform:  @transform;
+}
+
+.tag-size(
+  @size : @size-tag-bubble-standard,
+  @font-size: @font-size-interactable-standard,
+) {
+  .font(
+    @size: @size,
+    @line-height: 0,
+  );
+  height: @size;
+  max-width: @size;
+  min-width: @size;
+  padding: @spacing-xsmall (@size-tag-bubble-standard / 4);
+}
+
+.tag-expand(
+  @size: @size-tag-bubble-standard,
+  @font-size: @font-size-interactable-standard,
+  @line-height: @font-lineheight-tag-standard,
+) {
+  .font(
+    @size:          @font-size,
+    @line-height:   @line-height,
+    @colour:        @colour-base,
+  );
+  max-width: @size-full;
+  padding: @spacing-xsmall (@size / 2);
 }
