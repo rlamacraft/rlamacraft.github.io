@@ -2,47 +2,22 @@
 
 .create-tag(
   @colour,
+  @label,
 ) {
-  background-color: @colour;
-  color: @colour;
-}
-
-.create-tag-hover(
-  @colour,
-) {
-  background-color: lighten(@colour, @hover-lighten);
+  background-color: @colour !important;
+  color: @colour !important;
+  &:hover, &.locked {
+    background-color: lighten(@colour, @hover-lighten) !important;
+    color: @colour-base !important;
+  }
+  &:after {
+    content: @label;
+  }
 }
 
 /***
 ** Generators
 ***/
-.tag.tag-javascript { .create-tag( @colour-tag-javascript ) }
-.tag.large.tag-javascript { .create-tag( @colour-tag-javascript ) }
-.tag.small.tag-javascript { .create-tag( @colour-tag-javascript ) }
-.tag.tag-javascript:hover { .create-tag-hover(@colour-tag-javascript ) }
-.tag.large.tag-javascript:hover { .create-tag-hover(@colour-tag-javascript ) }
-.tag.small.tag-javascript:hover { .create-tag-hover(@colour-tag-javascript ) }
-.tag.tag-javascript:after { content: "JavaScript"; }
-
-.tag.tag-jquery { .create-tag( @colour-tag-jquery ) }
-.tag.large.tag-jquery { .create-tag( @colour-tag-jquery ) }
-.tag.small.tag-jquery { .create-tag( @colour-tag-jquery ) }
-.tag.tag-jquery:hover { .create-tag-hover(@colour-tag-jquery ) }
-.tag.large.tag-jquery:hover { .create-tag-hover(@colour-tag-jquery ) }
-.tag.small.tag-jquery:hover { .create-tag-hover(@colour-tag-jquery ) }
-.tag.tag-jquery:after { content: "jQuery"; }
-
-.tag.tag-css { .create-tag( @colour-tag-css ) }
-.tag.large.tag-css { .create-tag( @colour-tag-css ) }
-.tag.small.tag-css { .create-tag( @colour-tag-css ) }
-.tag.tag-css:hover { .create-tag-hover(@colour-tag-css ) }
-.tag.large.tag-css:hover { .create-tag-hover(@colour-tag-css ) }
-.tag.small.tag-css:hover { .create-tag-hover(@colour-tag-css ) }
-.tag.tag-css:after { content: "CSS"; }
-
-/***
-** Colour defintions
-***/
-@colour-tag-javascript :  #65a4ed; //blue
-@colour-tag-jquery:       #a876ff; //purple
-@colour-tag-css:          #edc365; //yellow
+.tag.tag-javascript { .create-tag( #65a4ed, "JavaScript"  ) } //blue
+.tag.tag-jquery     { .create-tag( #a876ff, "jQuery"      ) } //purple
+.tag.tag-css        { .create-tag( #edc365, "CSS"         ) } //yellow

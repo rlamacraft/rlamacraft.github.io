@@ -53,80 +53,41 @@
 ** Generators
 ***/
 .tag.tag-javascript {
-  background-color: #65a4ed;
-  color: #65a4ed;
+  background-color: #65a4ed !important;
+  color: #65a4ed !important;
 }
-.tag.large.tag-javascript {
-  background-color: #65a4ed;
-  color: #65a4ed;
-}
-.tag.small.tag-javascript {
-  background-color: #65a4ed;
-  color: #65a4ed;
-}
-.tag.tag-javascript:hover {
-  background-color: #85b7f1;
-}
-.tag.large.tag-javascript:hover {
-  background-color: #85b7f1;
-}
-.tag.small.tag-javascript:hover {
-  background-color: #85b7f1;
+.tag.tag-javascript:hover,
+.tag.tag-javascript.locked {
+  background-color: #85b7f1 !important;
+  color: #e5e8e8 !important;
 }
 .tag.tag-javascript:after {
   content: "JavaScript";
 }
 .tag.tag-jquery {
-  background-color: #a876ff;
-  color: #a876ff;
+  background-color: #a876ff !important;
+  color: #a876ff !important;
 }
-.tag.large.tag-jquery {
-  background-color: #a876ff;
-  color: #a876ff;
-}
-.tag.small.tag-jquery {
-  background-color: #a876ff;
-  color: #a876ff;
-}
-.tag.tag-jquery:hover {
-  background-color: #bf9aff;
-}
-.tag.large.tag-jquery:hover {
-  background-color: #bf9aff;
-}
-.tag.small.tag-jquery:hover {
-  background-color: #bf9aff;
+.tag.tag-jquery:hover,
+.tag.tag-jquery.locked {
+  background-color: #bf9aff !important;
+  color: #e5e8e8 !important;
 }
 .tag.tag-jquery:after {
   content: "jQuery";
 }
 .tag.tag-css {
-  background-color: #edc365;
-  color: #edc365;
+  background-color: #edc365 !important;
+  color: #edc365 !important;
 }
-.tag.large.tag-css {
-  background-color: #edc365;
-  color: #edc365;
-}
-.tag.small.tag-css {
-  background-color: #edc365;
-  color: #edc365;
-}
-.tag.tag-css:hover {
-  background-color: #f1cf85;
-}
-.tag.large.tag-css:hover {
-  background-color: #f1cf85;
-}
-.tag.small.tag-css:hover {
-  background-color: #f1cf85;
+.tag.tag-css:hover,
+.tag.tag-css.locked {
+  background-color: #f1cf85 !important;
+  color: #e5e8e8 !important;
 }
 .tag.tag-css:after {
   content: "CSS";
 }
-/***
-** Colour defintions
-***/
 /***
 ** Standard HTML tags
 ***/
