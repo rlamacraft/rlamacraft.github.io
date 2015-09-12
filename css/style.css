@@ -106,7 +106,7 @@ a {
   color: #3caa9c;
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #8edad0;
 }
 h1,
