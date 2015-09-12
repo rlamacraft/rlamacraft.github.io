@@ -333,7 +333,7 @@ p {
 
 #scroll-btn {
   .transition(none);
-  z-index: @z-floating-btn;
+  z-index: @z-floating-over-header;
   position: absolute;
   top: -1 * (@size-circle-btn / 2);
 }
@@ -471,4 +471,13 @@ input.form-control:focus {
 .anchor {
   position: absolute;
   margin-top: -150px;
+}
+
+.breadcrumb {
+  max-width: @size-half;
+  position: absolute;
+  top: @spacing-standard;
+  left: @spacing-standard;
+  z-index: @z-floating-over-header;
+  background-color: @colour-base;
 }
