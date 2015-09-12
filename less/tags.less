@@ -6,8 +6,11 @@
 ) {
   background-color: @colour !important;
   color: @colour !important;
-  &:hover, &.locked {
+  &:hover {
     background-color: lighten(@colour, @hover-lighten) !important;
+    color: @colour-base !important;
+  }
+  &.locked {
     color: @colour-base !important;
   }
   &:after {
