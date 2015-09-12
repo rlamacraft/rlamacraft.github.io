@@ -269,7 +269,7 @@ p {
   height: 50%;
   min-height: 320px;
   text-align: center;
-  background-color: #fcffff;
+  background-color: #f8fdfd;
   margin-top: 40px;
 }
 @media (min-width: 768px) {
@@ -306,10 +306,10 @@ p {
   transition: all 2s ease;
 }
 .content-panel.white {
-  background-color: #fcffff;
+  background-color: #f8fdfd;
 }
 .content-section .content-panel.white-alternate:nth-child(even) {
-  background-color: #fcffff;
+  background-color: #f8fdfd;
 }
 .content-panel-padding {
   padding: 15px 0;
@@ -323,7 +323,7 @@ p {
   -ms-transition: background .5s ease-in-out, padding .5s ease-in-out;
   transition: background .5s ease-in-out, padding .5s ease-in-out;
   padding: 10px 0px;
-  background-color: #fcffff;
+  background-color: #f8fdfd;
   z-index: 1000;
 }
 .navbar-custom li a:focus {
@@ -354,7 +354,7 @@ p {
 }
 .navbar-custom.top-nav-collapse {
   padding: 0;
-  background-color: #fcffff;
+  background-color: #f8fdfd;
 }
 .navbar-nav {
   float: left;
@@ -471,7 +471,7 @@ p {
 .btn-circle:hover,
 .btn-circle:focus {
   outline: 0;
-  color: #fcffff;
+  color: #f8fdfd;
   background-color: rgba(255, 255, 255, 0.1);
   border: none;
 }
@@ -502,7 +502,7 @@ p {
   width: 62px;
   height: 62px;
   text-align: center;
-  background-color: #fcffff;
+  background-color: #f8fdfd;
 }
 .btn-circle.btn-highlight i {
   -moz-box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 3px 5px rgba(0,0,0,0.24);
