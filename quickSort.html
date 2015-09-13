@@ -53,6 +53,11 @@
           <!-- /.container -->
       </nav>
 
+      <ol class="breadcrumb">
+        <li><a href="projects.html">Projects</a></li>
+        <li class="active">Quick Sort</li>
+      </ol>
+
       <!-- Intro Header -->
       <header class="intro">
           <div class="intro-body">
@@ -83,8 +88,8 @@
           <div class="row">
               <div class="col-md-8 col-md-offset-2">
                 <p>It feels like I have studied sorting algorithms half a dozen times: A Level Maths and Computing, some more times at uni. Quick sort has always been my favourite.</p>
-                <p>Just something about the simple way it can be recurisivly implemented with just one condition and the arbitary selection of the pivot. I just love it.</p>
-                <p>Quite a few times I've coded simple implementations of it, just to learn syntax or compare different languages. So without further ado here is extent of my nerdiness.</p>
+                <p>Just something about the simple way it can be recursively implemented with just one condition and the arbitary selection of the pivot. I just love it.</p>
+                <p>Quite a few times I've coded simple implementations of it, just to learn syntax or compare different languages. So without further ado here is the extent of my nerdiness.</p>
               </div>
             </div>
           </div>
@@ -96,7 +101,7 @@
 
                 <p>
                   I do love Python. Just the little things like being able to concat an array with the <code class="inline">[pivot]</code> (compare that to Java, below)!
-                  So lovely and tidy, for an imperative language anyway.
+                  So lovely and tidy, for an imperative/OOP language anyway.
                 </p>
 
                 <pre class="prettyprint linenums">def quickSort(list):
@@ -120,7 +125,7 @@
         sorted_S = quickSort(list_S)
         sorted_G = quickSort(list_G)
         result = sorted_S + [pivot] + sorted_G
-        return result</pre>
+        return result<a target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Python/dp_quickSort.py"><i class="fa fa-external-link pull-right"></i></a></pre>
               </div>
             </div>
         </div>
@@ -131,7 +136,9 @@
               <span class="tag tag-swift large locked space-bottom" data-action="open" data-href="Swift"></span>
 
               <p>
-                I first wrote the Swift version when it was a new language, when I was first giving it a play with. Not sure if this is even best practice anymore, just fixed the changes Apple have made so it shoudl still compile.
+                I first wrote the Swift version when it was a new language. Not sure if this is even best practice anymore; just fixed the changes Apple have made so it should still compile.
+              </p>
+              <p>
                 One thing I do really like about Swift is the pre and post-conditions (line 2), really plays well with with my black-box determinstic function code-style. Wish Python had that.
               </p>
 
@@ -161,7 +168,7 @@
       let result = sorted_S + [pivot] + sorted_G
       return result
   }
-}</pre>
+}<a target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Swift/dp_quickSort.playground/section-1.swift"><i class="fa fa-external-link pull-right"></i></a></pre>
             </div>
           </div>
         </div>
@@ -172,8 +179,8 @@
               <span class="tag tag-java large locked space-bottom" data-action="open" data-href="Java"></span>
 
               <p>
-                I strong dislike Java. This code is in no way elegant. Why are there no primitive dynamic arrays???
-                And please tell me there is a way to append two ArrayLists better than the mess on lines 22 through 28. I hate Java. I really do.
+                I strongly dislike Java. This code is in no way elegant. Why are there no primitive dynamic arrays???
+                And is there <i>really</i> no better way to append two ArrayLists than the mess on lines 30 through 36. I hate Java. I really do.
               </p>
 
               <pre class="prettyprint linenums">public static ArrayList<Float> quickSort(ArrayList<Float> list) {
@@ -182,15 +189,15 @@
     return list
   } else if (listLength == 2) {
     if (list.get(0) < list.get(1)) {
-		  return list;
-	  } else {
-		  ArrayList<Float> tmp = new ArrayList<Float>();
-		  tmp.add(list.get(1));
-		  tmp.add(list.get(0));
-		  return tmp;
+      return list;
+    } else {
+      ArrayList<Float> tmp = new ArrayList<Float>();
+      tmp.add(list.get(1));
+      tmp.add(list.get(0));
+      return tmp;
     }
   } else {
-	  float pivot = list.get(0);
+    float pivot = list.get(0);
     ArrayList<Float> list_S = new ArrayList<Float>();
     ArrayList<Float> list_G = new ArrayList<Float>();
     for( int i = 1; i < listLength; i++ ) {
@@ -215,7 +222,7 @@
 
     return result;
   }
-}</pre>
+}<a target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Java/dp_quickSort/src/main/Main.java"><i class="fa fa-external-link pull-right"></i></a></pre>
             </div>
           </div>
         </div>

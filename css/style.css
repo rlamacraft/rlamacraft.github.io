@@ -53,11 +53,11 @@
 ** Generators
 ***/
 .tag.tag-javascript {
-  background-color: #65a4ed !important;
-  color: #65a4ed !important;
+  background-color: #7e7e7e !important;
+  color: #7e7e7e !important;
 }
 .tag.tag-javascript:hover {
-  background-color: #85b7f1 !important;
+  background-color: #909090 !important;
   color: #e5e8e8 !important;
 }
 .tag.tag-javascript.locked {
@@ -67,11 +67,11 @@
   content: "JavaScript";
 }
 .tag.tag-jquery {
-  background-color: #a876ff !important;
-  color: #a876ff !important;
+  background-color: #b19cd6 !important;
+  color: #b19cd6 !important;
 }
 .tag.tag-jquery:hover {
-  background-color: #bf9aff !important;
+  background-color: #c5b5e0 !important;
   color: #e5e8e8 !important;
 }
 .tag.tag-jquery.locked {
@@ -95,11 +95,11 @@
   content: "CSS";
 }
 .tag.tag-python {
-  background-color: #0274cc !important;
-  color: #0274cc !important;
+  background-color: #50b942 !important;
+  color: #50b942 !important;
 }
 .tag.tag-python:hover {
-  background-color: #0288ef !important;
+  background-color: #67c45a !important;
   color: #e5e8e8 !important;
 }
 .tag.tag-python.locked {
@@ -109,11 +109,11 @@
   content: "Python";
 }
 .tag.tag-swift {
-  background-color: #f29a26 !important;
-  color: #f29a26 !important;
+  background-color: #fb6917 !important;
+  color: #fb6917 !important;
 }
 .tag.tag-swift:hover {
-  background-color: #f4aa48 !important;
+  background-color: #fc803a !important;
   color: #e5e8e8 !important;
 }
 .tag.tag-swift.locked {
@@ -123,11 +123,11 @@
   content: "Swift";
 }
 .tag.tag-java {
-  background-color: #c6a23a !important;
-  color: #c6a23a !important;
+  background-color: #c65c3a !important;
+  color: #c65c3a !important;
 }
 .tag.tag-java:hover {
-  background-color: #ceaf56 !important;
+  background-color: #ce7356 !important;
   color: #e5e8e8 !important;
 }
 .tag.tag-java.locked {
@@ -135,6 +135,34 @@
 }
 .tag.tag-java:after {
   content: "Java";
+}
+.tag.tag-haskell {
+  background-color: #265089 !important;
+  color: #265089 !important;
+}
+.tag.tag-haskell:hover {
+  background-color: #2e60a5 !important;
+  color: #e5e8e8 !important;
+}
+.tag.tag-haskell.locked {
+  color: #e5e8e8 !important;
+}
+.tag.tag-haskell:after {
+  content: "Haskell";
+}
+.tag.tag-html {
+  background-color: #45bfcb !important;
+  color: #45bfcb !important;
+}
+.tag.tag-html:hover {
+  background-color: #61c9d3 !important;
+  color: #e5e8e8 !important;
+}
+.tag.tag-html.locked {
+  color: #e5e8e8 !important;
+}
+.tag.tag-html:after {
+  content: "HTML";
 }
 code,
 pre {
@@ -638,6 +666,10 @@ input.form-control:focus {
 .project-tags {
   display: inline-block;
   vertical-align: super;
+}
+.full-project {
+  display: inline-block;
+  margin-top: 15px;
 }
 .tag {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;

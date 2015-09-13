@@ -83,7 +83,10 @@ $(document).ready( function() {
       panelIndex++;
       if(panelIndex === allPanels.length)
         window.clearInterval(makePanelsVisible);
-    }, 750);
+    }, 250);
+
+    if(window.location.hash !== "")
+      $(window.location.hash).parent().parent().parent().css('opacity', '1.0');
 
     function openTag(tag) {
       $('.tag').removeClass('open');
