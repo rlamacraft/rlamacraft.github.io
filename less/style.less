@@ -4,6 +4,7 @@
 @import "functions.less";
 @import "utilities.less";
 @import "tags.less";
+@import "code.less";
 
 /***
 ** Standard HTML tags
@@ -73,7 +74,6 @@ h3 {
   .heading-font(
       @size:          @font-size-heading,
   );
-  .space-top;
 }
 
 h4 {
@@ -84,7 +84,6 @@ h4 {
 
 p {
   .font;
-  .space-bottom;
 }
 
 /***
@@ -127,6 +126,9 @@ p {
   display: none;
   text-align: @font-align;
   padding-top: @size-content-top-space;
+  padding-left: @spacing-none;
+  padding-right: @spacing-none;
+  overflow: hidden;
 }
 
 .content-section.full-page {
@@ -410,7 +412,7 @@ input.form-control:focus {
 
 //HOME - PROJECTS
 .project {
-  .space-vertical;
+  .space-top;
 }
 
 .project-title {
