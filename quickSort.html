@@ -97,6 +97,27 @@
           <div class="content-panel content-panel-padding white-alternate">
             <div class="row">
               <div class="col-md-8 col-md-offset-2">
+                <span class="tag tag-haskell large locked space-bottom" data-action="open" data-href="Haskell"></span>
+
+                <p>
+                  First of all Haskell, can show how it is truly done. Nice and simple. Didn't even bother with the length-two-switch it's so simple and efficient. Though I'm sure some Haskell expert could make half-a-hundred improvements.
+                </p>
+
+                <pre class="prettyprint linenums">quickSort :: [Float] -> [Float]
+quickSort (n)
+  | length n < 2    = n
+  | otherwise       = quickSort (filterList n (&lt;pivot)) ++
+                      [ pivot ] ++
+                      quickSort (filterList n (&gt;pivot)) where
+      pivot = head n
+      filterList list condition = filter condition list<a target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Haskell/quickSort.hs"><i class="fa fa-external-link pull-right"></i></a></pre>
+              </div>
+            </div>
+        </div>
+
+          <div class="content-panel content-panel-padding white-alternate">
+            <div class="row">
+              <div class="col-md-8 col-md-offset-2">
                 <span class="tag tag-python large locked space-bottom" data-action="open" data-href="Python"></span>
 
                 <p>
