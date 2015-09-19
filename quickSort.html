@@ -106,11 +106,8 @@
                 <pre class="prettyprint linenums">quickSort :: [Float] -> [Float]
 quickSort (n)
   | length n < 2    = n
-  | otherwise       = quickSort (filterList n (&lt;pivot)) ++
-                      [ pivot ] ++
-                      quickSort (filterList n (&gt;pivot)) where
-      pivot = head n
-      filterList list condition = filter condition list<a target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Haskell/quickSort.hs"><i class="fa fa-external-link pull-right"></i></a></pre>
+  | otherwise       = quickSort (filter (<pivot) n ) ++ [ pivot ] ++ quickSort (filter (>pivot) n ) where
+      pivot = head n<a target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Haskell/quickSort.hs"><i class="fa fa-external-link pull-right"></i></a></pre>
               </div>
             </div>
         </div>
