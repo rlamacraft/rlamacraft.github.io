@@ -132,7 +132,7 @@ p {
 }
 
 .content-section.full-page {
-  height: @size-content-min-height;
+  min-height: @size-content-min-height;
 }
 
 .content-panel {
@@ -161,6 +161,10 @@ p {
   padding: @spacing-small @spacing-none;
   background-color: @colour-section-alt;
   z-index: @z-navbar;
+
+  &.border {
+    border-bottom: @border-width solid @colour-base;
+  }
 }
 
 .navbar-custom li a:focus {
@@ -173,7 +177,7 @@ p {
 }
 
 .navbar-custom li:after {
-  .transition(@transition-navbar-elements);
+  .transition(@transition-focus-underline);
   content: '';
   display: block;
   height: @border-width;
@@ -285,68 +289,56 @@ p {
   border: @border-width solid @colour-accent;
 }
 
-.btn-circle {
-  .rounded-corners(@border-radius-circle);
-  .transition(@transition-btn-circle);
-  .font(
-      @size: @font-size-circlebtn,
-  );
-  width: @size-circle-btn;
-  height: @size-circle-btn;
-  position: absolute;
-  padding: @spacing-xsmall;
-  top: @size-circle-btn-top;
-  border: none;
-}
-
-.btn-circle:hover,
-.btn-circle:focus {
-  .ignore-default-focus;
-  color: @colour-section-alt;
-  background-color: @colour-circle-hover;
-  border: none;
-}
-
-.btn-circle:active {
-  .shadow(none);
-}
-
-.btn-circle i {
-  .shadow( @shadow-default );
-  .transition(@transition-btn-circle);
-  .rounded-corners(@border-radius-circle);
-  .font(
-    @line-height:  @font-lineheight-circlebtn,
-    @family: @font-family-fontAwesome,
-    @colour: @colour-interactable,
-    @size: @font-size-circlebtn-i,
-  );
-  width: @size-circle-btn-i;
-  height: @size-circle-btn-i;
-  text-align: center;
-  background-color: @colour-section-alt;
-}
-
-.btn-circle.btn-highlight i {
-  .shadow( @shadow-button );
-  cursor: pointer;
-  color: @colour-accent;
-}
-
 #scroll-btn {
   .transition(none);
   z-index: @z-floating-over-header;
   position: absolute;
-  top: -1 * (@size-circle-btn / 2);
+  left: @size-half;
+  width: @size-scrollBtn-width;
+  height: @size-scrollBtn-height;
+  margin-left: ( @size-scrollBtn-width / 2 ) * -1;
 }
 
 #scroll-btn.floating {
   position: fixed;
-  top: @size-nav-height / 2;
+  top: @size-nav-height - @border-width;
+}
+
+.scrollBtn {
+  position: absolute;
+}
+
+.scrollBtn.background {
+  z-index: @z-floating-over-header;
+  display: none;
 
   @media(@non-mobile) {
-    top: @size-nav-height - (@size-circle-btn / 2);
+    display: block;
   }
+}
+
+.scrollBtn.icon {
+  position: fixed;
+  top: @spacing-small;
+  left: @spacing-standard;
+  color: @colour-accent;
+  font-size: @font-size-scrollbtn;
+
+  @media(@non-mobile) {
+    .transition;
+    margin-left: ( @size-scrollBtn-i-width / 2 ) * -1;
+    line-height: @font-lineheight-scrollBtn;
+    color: @colour-base;
+    z-index: @z-scrollBtn;
+    left: @size-half;
+    top: 0;
+    position: absolute;
+  }
+}
+
+.scrollBtn.icon:hover {
+  color: @colour-accent;
+  cursor: pointer;
 }
 
 //COMPONENTS - FORMS
@@ -361,14 +353,14 @@ p {
 	height: @border-width;
 	width: 0px;
 	background: transparent;
-	transition: width .5s ease, background-color .5s ease;
+	transition: @transition-focus-underline;
   position: relative;
   margin-top: -1px;
   z-index: @z-focus-underline;
 }
 
 .focus-underline.focused:after {
-  width: 100%;
+  width: @size-full;
   background: @colour-accent;
 }
 
@@ -476,7 +468,7 @@ input.form-control:focus {
 
 .anchor {
   position: absolute;
-  margin-top: -150px;
+  margin-top: @anchor-offset;
 }
 
 .breadcrumb {

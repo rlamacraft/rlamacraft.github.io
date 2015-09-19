@@ -4,7 +4,7 @@
 //element sizing
 @size-full: 100%;
 @size-half: 50%;
-@size-header-height-large: 50%;
+@size-header-height-large: 65%;
 @size-header-height-standard: 30%;
 @size-header-minheight-large: 320px;
 @size-header-minheight-standard: 220px;
@@ -12,11 +12,14 @@
 @size-circle-btn: 70px;
 @size-circle-btn-i: 62px;
 @size-circle-btn-top: 260px;
-@size-content-min-height: ~"calc(" (@size-full) ~" - " (@size-nav-height) ~")";
+@size-content-min-height: ~"calc(" (@size-full) ~" - " (@size-nav-height - @border-width) ~")";
 @size-content-top-space: (@size-circle-btn / 2) + @spacing-standard;
 @size-tag-bubble-small: 18px;
 @size-tag-bubble-standard: 24px;
 @size-tag-bubble-large: 48px;
+@size-scrollBtn-width: 250px;
+@size-scrollBtn-height: 55px;
+@size-scrollBtn-i-width: 28px;
 
 //colours
 @colour-base:         #E5E8E8;
@@ -59,23 +62,24 @@
 @font-size-code:                    01.1em;
 @font-size-interactable-standard:   01.3em;
 @font-size-standard:                01.4em;
-@font-size-circlebtn-i:             01.5em;
 @font-size-navbar-large:            01.5em;
-@font-size-interactable-large:      02.5em;
 @font-size-subheading:              01.8em;
+@font-size-scrollbtn:               02.0em;
 @font-size-heading:                 02.5em;
+@font-size-interactable-large:      02.5em;
 @font-size-circlebtn:               03.5em;
 @font-size-large:                   03.6em;
 @font-size-xlarge:                  05.0em;
 @font-size-xxlarge:                 10.0em;
 
-@font-lineheight-tag-small: 0.40;
-@font-lineheight-tag-standard: 0.70;
-@font-lineheight-circlebtn: 0.87;
-@font-lineheight-tag-large: 1.00;
-@font-lineheight-less:      1.10;
-@font-lineheight-btn:       1.30;
-@font-lineheight-standard:  1.40;
+@font-lineheight-tag-small:       0.40;
+@font-lineheight-tag-standard:    0.70;
+@font-lineheight-circlebtn:       0.87;
+@font-lineheight-tag-large:       1.00;
+@font-lineheight-scrollBtn:       1.00;
+@font-lineheight-less:            1.10;
+@font-lineheight-btn:             1.30;
+@font-lineheight-standard:        1.40;
 
 @font-transform-none:       none;
 @font-transform-uppercase:  uppercase;
@@ -94,19 +98,21 @@
 @z-focus-underline:         100;
 @z-navbar:                  1000;
 @z-floating-over-header:    1050;
+@z-scrollBtn:               1100;
 
 //shadow
 @shadow-default: ~"3px 3px 8px rgb(221, 221, 221)";
-@shadow-button: ~"0 3px 5px rgba(0,0,0,0.12), 0 3px 5px rgba(0,0,0,0.24)";
 
 //transition
 @transition-default: ~"all .5s ease";
 @transition-navbar: ~"background .5s ease-in-out, padding .5s ease-in-out";
-@transition-navbar-elements: ~"width .5s ease, background-color .5s ease";
+@transition-focus-underline: ~"width .5s ease, background-color .5s ease";
 @transition-content-section: ~"opacity, 2s, ease";
-@transition-btn-circle: ~"background, .3s, ease-in-out";
 @transition-content-panel: ~"all 2s ease";
 @transition-tag-bubble: ~"all 0.5s cubic-bezier(0.39, 0.07, 0.13, 0.99)";
+
+//misc
+@anchor-offset: -109px;
 
 //page specifics
 @kcl-calc-degree-module-initialism-width: 65px;

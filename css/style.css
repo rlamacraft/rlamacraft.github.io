@@ -44,12 +44,6 @@
   content: "-";
 }
 /***
-** Other
-***/
-.shadow {
-  box-shadow: 3px 3px 8px rgb(221, 221, 221);
-}
-/***
 ** Generators
 ***/
 .tag.tag-javascript {
@@ -321,7 +315,7 @@ p {
 .intro {
   display: table;
   width: 100%;
-  height: 50%;
+  height: 65%;
   min-height: 320px;
   text-align: center;
   background-color: #f8fcfc;
@@ -334,7 +328,7 @@ p {
   }
 }
 .intro.intro-large {
-  height: 50%;
+  height: 65%;
 }
 .intro .intro-body {
   display: table-cell;
@@ -346,7 +340,7 @@ p {
   -ms-transition: opacity, 2s, ease;
   transition: opacity, 2s, ease;
   opacity: 0;
-  min-height: calc( 100%  -  50px );
+  min-height: calc( 100%  -  48px );
   display: none;
   text-align: left;
   padding-top: 50px;
@@ -355,7 +349,7 @@ p {
   overflow: hidden;
 }
 .content-section.full-page {
-  height: calc( 100%  -  50px );
+  min-height: calc( 100%  -  48px );
 }
 .content-panel {
   -webkit-transition: all 2s ease;
@@ -383,6 +377,9 @@ p {
   padding: 10px 0px;
   background-color: #f8fcfc;
   z-index: 1000;
+}
+.navbar-custom.border {
+  border-bottom: 2px solid #e5e8e8;
 }
 .navbar-custom li a:focus {
   -webkit-border-radius: 3px;
@@ -503,72 +500,6 @@ p {
   text-decoration: none;
   border: 2px solid #3caa9c;
 }
-.btn-circle {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-  -webkit-transition: background, .3s, ease-in-out;
-  -moz-transition: background, .3s, ease-in-out;
-  -ms-transition: background, .3s, ease-in-out;
-  transition: background, .3s, ease-in-out;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  color: #777777;
-  letter-spacing: 0.1px;
-  font-size: 3.5em;
-  line-height: 1.4;
-  text-transform: none;
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  padding: 5px;
-  top: 260px;
-  border: none;
-}
-.btn-circle:hover,
-.btn-circle:focus {
-  outline: 0;
-  color: #f8fcfc;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: none;
-}
-.btn-circle:active {
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.btn-circle i {
-  -moz-box-shadow: 3px 3px 8px rgb(221, 221, 221);
-  -webkit-box-shadow: 3px 3px 8px rgb(221, 221, 221);
-  box-shadow: 3px 3px 8px rgb(221, 221, 221);
-  -webkit-transition: background, .3s, ease-in-out;
-  -moz-transition: background, .3s, ease-in-out;
-  -ms-transition: background, .3s, ease-in-out;
-  transition: background, .3s, ease-in-out;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-  font-family: FontAwesome;
-  font-weight: 300;
-  color: #cccccc;
-  letter-spacing: 0.1px;
-  font-size: 1.5em;
-  line-height: 0.87;
-  text-transform: none;
-  width: 62px;
-  height: 62px;
-  text-align: center;
-  background-color: #f8fcfc;
-}
-.btn-circle.btn-highlight i {
-  -moz-box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 3px 5px rgba(0,0,0,0.24);
-  -webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 3px 5px rgba(0,0,0,0.24);
-  box-shadow: 0 3px 5px rgba(0,0,0,0.12), 0 3px 5px rgba(0,0,0,0.24);
-  cursor: pointer;
-  color: #3caa9c;
-}
 #scroll-btn {
   -webkit-transition: none;
   -moz-transition: none;
@@ -576,16 +507,52 @@ p {
   transition: none;
   z-index: 1050;
   position: absolute;
-  top: -35px;
+  left: 50%;
+  width: 250px;
+  height: 55px;
+  margin-left: -125px;
 }
 #scroll-btn.floating {
   position: fixed;
-  top: 25px;
+  top: 48px;
+}
+.scrollBtn {
+  position: absolute;
+}
+.scrollBtn.background {
+  z-index: 1050;
+  display: none;
 }
 @media (min-width: 768px) {
-  #scroll-btn.floating {
-    top: 15px;
+  .scrollBtn.background {
+    display: block;
   }
+}
+.scrollBtn.icon {
+  position: fixed;
+  top: 10px;
+  left: 15px;
+  color: #3caa9c;
+  font-size: 2em;
+}
+@media (min-width: 768px) {
+  .scrollBtn.icon {
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    margin-left: -14px;
+    line-height: 1;
+    color: #e5e8e8;
+    z-index: 1100;
+    left: 50%;
+    top: 0;
+    position: absolute;
+  }
+}
+.scrollBtn.icon:hover {
+  color: #3caa9c;
+  cursor: pointer;
 }
 .input-group:focus {
   outline: 0;
@@ -597,7 +564,7 @@ p {
   height: 2px;
   width: 0px;
   background: transparent;
-  transition: width 0.5s ease, background-color 0.5s ease;
+  transition: width .5s ease, background-color .5s ease;
   position: relative;
   margin-top: -1px;
   z-index: 100;
@@ -756,7 +723,7 @@ input.form-control:focus {
 }
 .anchor {
   position: absolute;
-  margin-top: -150px;
+  margin-top: -109px;
 }
 .breadcrumb {
   max-width: 50%;

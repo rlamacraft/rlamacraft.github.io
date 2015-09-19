@@ -75,20 +75,20 @@
             </div>
       </header>
 
-      <div class="container">
-          <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-                  <a id="scroll-btn" href="#main" class="btn btn-circle page-scroll page-scroll-btn">
-                      <i class="fa fa-chevron-circle-down"></i>
-                  </a>
-              </div>
-          </div>
+      <div id="scroll-btn" href="#main">
+        <div class="scrollBtn background" id="scrollBtnBack">
+          <svg height="50" width="250">
+            <path d="M 0 0 Q 24 0 48 18 Q 72 36 96 36 L 144 36 Q 168 36 192 18 Q 216 0 240 0" stroke="#E5E8E8" stroke-width="2" fill="#f8fcfc" />          </svg>
+        </div>
+        <div class="scrollBtn icon">
+          <i class="fa fa-chevron-down"></i>
+        </div>
       </div>
 
       <!-- Recent Projects Section -->
       <section id="main" class="container content-section text-center full-page toggle-hidden">
           <div class="row">
-              <div class="col-md-8 col-md-offset-2">
+              <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                   <h2>Recent Projects</h2>
                   <p class="intro-text recent-subheading">Some of my recent projects.</p>
 

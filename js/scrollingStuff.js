@@ -3,24 +3,25 @@ pageScrollDown = true;
 
 $(window).scroll(function() {
     btn = $("#scroll-btn i");
+    btnBack = $('#scrollBtnBack svg path');
     navBar = $(".navbar");
     isFloating = navBar.offset().top > 50;
     if (isFloating) {
         navBar.addClass("top-nav-collapse");
-        navBar.addClass("shadow");
+        navBar.addClass("border");
         $(".content-section.toggle-hidden").css("opacity", "1.0");
-        btn.removeClass("fa-chevron-circle-down");
-        btn.addClass("fa-chevron-circle-up");
+        btn.removeClass("fa-chevron-down");
+        btn.addClass("fa-chevron-up");
         pageScrollDown = false;
     } else {
         navBar.removeClass("top-nav-collapse");
-        navBar.removeClass("shadow");
+        navBar.removeClass("border");
         $(".content-section.toggle-hidden").css("opacity", "0.0");
-        btn.removeClass("fa-chevron-circle-up");
-        btn.addClass("fa-chevron-circle-down");
+        btn.removeClass("fa-chevron-up");
+        btn.addClass("fa-chevron-down");
         pageScrollDown = true;
     }
-    if( $(".navbar").offset().top + 10 > $(".intro").height() ) {
+    if( $(".navbar").offset().top + 10 >= $(".intro").height() ) {
       $('#scroll-btn').addClass('floating');
     } else {
       $('#scroll-btn').removeClass('floating');
@@ -30,7 +31,7 @@ $(window).scroll(function() {
 //scroll button
 $(function() {
     $('#scroll-btn').bind('click', function(event) {
-      $('#scroll-btn').addClass('btn-highlight');
+      //$('#scroll-btn').addClass('btn-highlight');
       if(pageScrollDown) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -56,12 +57,6 @@ $('.navbar-collapse ul li a').click(function() {
 
 $(document).ready( function() {
     $(".content-section").css("display", "block");
-
-    $('#scroll-btn').hover(function() {
-      $('#scroll-btn').addClass('btn-highlight');
-    }, function() {
-      $('#scroll-btn').removeClass('btn-highlight');
-    });
 
     $('input.form-control').focus(function() {
       var parent = $($($(this).parent()[0]).parent()[0]);

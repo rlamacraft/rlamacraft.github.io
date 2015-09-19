@@ -64,7 +64,7 @@
           <div class="intro-body">
               <div class="container">
                   <div class="row">
-                      <div class="col-md-8 col-md-offset-2">
+                      <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                           <h1>KCL Module Calculator</h1>
                           <h4>
                             A simple grade calculator for King's College London's Computer Science (standard BSc) course.
@@ -76,14 +76,14 @@
           </div>
       </header>
 
-      <div class="container">
-          <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-                  <a id="scroll-btn" href="#main" class="btn btn-circle page-scroll page-scroll-btn">
-                      <i class="fa fa-chevron-circle-down"></i>
-                  </a>
-              </div>
-          </div>
+      <div id="scroll-btn" href="#main">
+        <div class="scrollBtn background" id="scrollBtnBack">
+          <svg height="50" width="250">
+            <path d="M 0 0 Q 24 0 48 18 Q 72 36 96 36 L 144 36 Q 168 36 192 18 Q 216 0 240 0" stroke="#E5E8E8" stroke-width="2" fill="#f8fcfc" />          </svg>
+        </div>
+        <div class="scrollBtn icon">
+          <i class="fa fa-chevron-down"></i>
+        </div>
       </div>
 
       <!-- Year Selection Section -->
@@ -92,7 +92,7 @@
         <!-- Year select -->
         <div class="content-panel content-panel-padding">
           <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
               <h2>What is your current year of the course?</h2>
               <div class="btn-group btn-group-lg space-top space-bottom full-width" role="group" aria-label="Year Selection">
                 <button type="button" class="btn btn-default yearSelect col-xs-4" data-year='1'>Year 1</button>
@@ -106,7 +106,7 @@
         <!-- First year modules -->
         <div class="content-panel content-panel-padding transition yearBlock white" id="year1">
           <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
             <h2>Enter your module marks for year one.</h2>
             <div class="row row-enable-spacing space-top space-bottom" role="group" aria-label="First year modules">
 
@@ -174,7 +174,7 @@
       <!-- Second year modules -->
       <div class="content-panel content-panel-padding transition yearBlock" id="year2">
         <div class="row">
-          <div class="col-md-8 col-md-offset-2">
+          <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
           <h2>Enter your module marks for year two.</h2>
           <div class="row row-enable-spacing space-top space-bottom" role="group" aria-label="Second year modules">
 
@@ -235,7 +235,7 @@
     <!-- Third year modules -->
     <div class="content-panel content-panel-padding transition yearBlock white" id="year3">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
         <h2>Enter your module marks for year three.</h2>
         <div class="row row-enable-spacing space-top space-bottom" role="group" aria-label="Third year modules">
 
@@ -297,7 +297,7 @@
   <div class="content-panel content-panel-padding change-background">
     <div class="calculate">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
           <button type="button" class="btn btn-default full-width col-xs-4 space-vertical" id="done">Done</button>
         </div>
       </div>
