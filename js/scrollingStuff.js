@@ -1,54 +1,39 @@
 // jQuery to collapse the navbar on scroll
-pageScrollDown = true;
 
 $(window).scroll(function() {
-    btn = $("#scroll-btn i");
-    btnBack = $('#scrollBtnBack svg path');
-    navBar = $(".navbar");
-    isFloating = navBar.offset().top > 50;
+    isFloating = document.body.scrollTop !== 0;
     if (isFloating) {
-        navBar.addClass("top-nav-collapse");
-        navBar.addClass("border");
         $(".content-section.toggle-hidden").css("opacity", "1.0");
-        btn.removeClass("fa-chevron-down");
-        btn.addClass("fa-chevron-up");
-        pageScrollDown = false;
     } else {
-        navBar.removeClass("top-nav-collapse");
-        navBar.removeClass("border");
         $(".content-section.toggle-hidden").css("opacity", "0.0");
-        btn.removeClass("fa-chevron-up");
-        btn.addClass("fa-chevron-down");
-        pageScrollDown = true;
     }
-    if( $(".navbar").offset().top + 10 >= $(".intro").height() ) {
-      $('#scroll-btn').addClass('floating');
+
+    belowHeader = document.body.scrollTop >= $('.intro').outerHeight();
+    if( belowHeader ) {
+      $('#scroll-up').css('opacity','1.0');
+      $('#scroll-up i').removeClass('fa-home').addClass('fa-chevron-up');
     } else {
-      $('#scroll-btn').removeClass('floating');
+      $('#scroll-up i').removeClass('fa-chevron-up').addClass('fa-home');
+      $('#scroll-up.homepage i').removeClass('fa-home').addClass('fa-refresh');
     }
 });
 
-//scroll button
-$(function() {
-    $('#scroll-btn').bind('click', function(event) {
-      //$('#scroll-btn').addClass('btn-highlight');
-      if(pageScrollDown) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 50// - 90
-        }, 1500);
-        event.preventDefault();
-      } else {
-        $('html, body').stop().animate({
-            scrollTop: 0
-        }, 1500);
-      }
-      window.setTimeout(function() {
-        $('#scroll-btn').removeClass('btn-highlight');
-      }, 1500);
-      pageScrollDown = !pageScrollDown;
-    });
-});
+$('#scroll-up').click(function() {
+  belowHeader = document.body.scrollTop >= $('.intro').outerHeight();
+  if( belowHeader ) {
+    $('html, body').stop().animate({
+        scrollTop: 0
+    }, 1500);
+  } else {
+      window.location.href = "index.html";
+  }
+})
+
+$('#scroll-down').click(function() {
+  $('html, body').stop().animate({
+    scrollTop: $('#main').offset().top
+  }, 1500);
+})
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {

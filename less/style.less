@@ -48,20 +48,6 @@ h1 {
       @kerning:     @font-spacing-thick,
       @line-height: @font-lineheight-less,
   );
-
-  //if retina (or equiv.), use ultra thin font
-  @media only screen and (-moz-min-device-pixel-ratio: 2),
-         only screen and (-o-min-device-pixel-ratio: 2/1),
-         only screen and (-webkit-min-device-pixel-ratio: 2),
-         only screen and (min-device-pixel-ratio: 2) {
-           .heading-font(
-               @weight:      @font-weight-light,
-               @size:        @font-size-large,
-               @transform:   @font-transform-uppercase,
-               @kerning:     @font-spacing-thick,
-               @line-height: @font-lineheight-less,
-           );
-  }
 }
 
 h2 {
@@ -79,7 +65,13 @@ h3 {
 h4 {
   .heading-font(
       @size:          @font-size-subheading,
+      @colour:        @font-colour-secondary,
   );
+}
+
+h4.subtitle {
+  padding-top: @spacing-small;
+  padding-bottom: @spacing-standard;
 }
 
 p {
@@ -102,7 +94,6 @@ p {
   min-height: @size-header-minheight-large;
   text-align: @font-align-header;
   background-color: @colour-section-alt;
-  margin-top: 2 * @spacing-big;
 
   @media(@non-mobile) {
     min-height: 0;
@@ -119,6 +110,21 @@ p {
   vertical-align: middle;
 }
 
+.homepage-title {
+  padding-top: @spacing-homepage;
+  padding-bottom: @spacing-homepage / 2;
+}
+
+.homepage-subtitle {
+  padding-top: @spacing-homepage / 2;
+  padding-bottom: @spacing-homepage / 2;
+}
+
+.scroll-buttons {
+  color: @font-colour-accent;
+  cursor: pointer;
+}
+
 .content-section {
   .transition(@transition-content-section);
   opacity: 0;
@@ -129,6 +135,10 @@ p {
   padding-left: @spacing-none;
   padding-right: @spacing-none;
   overflow: hidden;
+
+  &:nth-child(3) {
+    padding-top: 0;
+  }
 }
 
 .content-section.full-page {
@@ -137,6 +147,7 @@ p {
 
 .content-panel {
   .transition(@transition-content-panel);
+  border-top: @border-standard-thin;
 }
 
 .content-panel.white {
@@ -153,114 +164,6 @@ p {
 
 .content-section.always-show .content-panel {
   opacity: 0;
-}
-
-// NAVBAR
-.navbar-custom {
-  .transition(@transition-navbar);
-  padding: @spacing-small @spacing-none;
-  background-color: @colour-section-alt;
-  z-index: @z-navbar;
-
-  &.border {
-    border-bottom: @border-width solid @colour-base;
-  }
-}
-
-.navbar-custom li a:focus {
-  .rounded-corners;
-  .ignore-default-focus;
-}
-
-.navbar-custom li a:hover {
-  background-color: inherit;
-}
-
-.navbar-custom li:after {
-  .transition(@transition-focus-underline);
-  content: '';
-  display: block;
-  height: @border-width;
-  width: 0;
-  background: transparent;
-  margin: auto;
-}
-
-.navbar-custom li:hover:after {
-  width: @size-full;
-  background: @colour-accent;
-}
-
-.navbar-custom.top-nav-collapse {
-  padding: 0;
-  background-color: @colour-section-alt;
-}
-
-//disabled hamburger menu
-.navbar-nav {
-  float: left;
-    margin: @spacing-xsmall @spacing-small @spacing-none @spacing-none;
-}
-
-.navbar-right {
-  float: right;
-  margin-right: @spacing-standard * -1;
-}
-
-.navbar-nav>li {
-  float: left;
-}
-
-.nav>li>a {
-  padding: @spacing-small @spacing-big;
-}
-
-.nav a {
-  font-size: @font-size-standard;
-}
-
-.non-mobile {
-  display: none;
-}
-
-.mobile {
-  display: block;
-}
-
-@media(@non-mobile) {
-  .non-mobile {
-    display: block !important;
-  }
-
-  .mobile {
-    display: none !important;
-  }
-}
-
-.nav>li>a.page-scroll {
-  .font(
-      @transform: @font-transform-uppercase,
-      @size:      @font-size-navbar-large,
-  );
-
-  @media(@non-mobile) {
-    .font(
-      @transform: @font-transform-uppercase,
-      @size:      @font-size-navbar-small,
-    );
-  }
-}
-
-#current-location {
-  border-bottom: @border-width solid @colour-accent;
-}
-
-#current-location:after {
-  height: 0;
-}
-
-#current-location:hover a {
-  color: @colour-accent;
 }
 
 // COMPONENTS - BUTTONS
@@ -308,37 +211,14 @@ p {
   position: absolute;
 }
 
-.scrollBtn.background {
-  z-index: @z-floating-over-header;
-  display: none;
-
-  @media(@non-mobile) {
-    display: block;
-  }
-}
-
-.scrollBtn.icon {
+.scrollBtn {
   position: fixed;
   top: @spacing-small;
-  left: @spacing-standard;
+  right: @spacing-standard;
   color: @colour-accent;
   font-size: @font-size-scrollbtn;
-
-  @media(@non-mobile) {
-    .transition;
-    margin-left: ( @size-scrollBtn-i-width / 2 ) * -1;
-    line-height: @font-lineheight-scrollBtn;
-    color: @colour-base;
-    z-index: @z-scrollBtn;
-    left: @size-half;
-    top: 0;
-    position: absolute;
-  }
-}
-
-.scrollBtn.icon:hover {
-  color: @colour-accent;
-  cursor: pointer;
+  opacity: 0.0;
+  .transition();
 }
 
 //COMPONENTS - FORMS
@@ -371,6 +251,7 @@ p {
       @weight: @font-weight-semibold,
   );
   .rounded-corners(0);
+  border: @border-standard-thin;
   border-left: none;
   border-top: none;
   background-color: transparent;
@@ -387,6 +268,7 @@ input.form-control {
   .shadow(none);
   .rounded-corners(0);
   background-color: transparent;
+  border: @border-standard-thin;
   border-right: none;
   border-top: none;
 }
@@ -469,13 +351,4 @@ input.form-control:focus {
 .anchor {
   position: absolute;
   margin-top: @anchor-offset;
-}
-
-.breadcrumb {
-  max-width: @size-half;
-  position: absolute;
-  top: @spacing-standard;
-  left: @spacing-standard;
-  z-index: @z-floating-over-header;
-  background-color: @colour-base;
 }

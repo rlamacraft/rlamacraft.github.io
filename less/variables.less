@@ -12,7 +12,8 @@
 @size-circle-btn: 70px;
 @size-circle-btn-i: 62px;
 @size-circle-btn-top: 260px;
-@size-content-min-height: ~"calc(" (@size-full) ~" - " (@size-nav-height - @border-width) ~")";
+//@size-content-min-height: ~"calc(" (@size-full) ~" - " (@size-nav-height - @border-width) ~")";
+@size-content-min-height: 100%;
 @size-content-top-space: (@size-circle-btn / 2) + @spacing-standard;
 @size-tag-bubble-small: 18px;
 @size-tag-bubble-standard: 24px;
@@ -22,11 +23,13 @@
 @size-scrollBtn-i-width: 28px;
 
 //colours
-@colour-base:         #E5E8E8;
-@colour-section-alt:  #F8FCFC;
+@colour-base:         #F5F7F7; //#E5E8E8;
+@colour-section-alt:  #F5F7F7; //#F8FCFC;
+@colour-secondary:    #777777;
+@colour-thin-border:  #CCCCCC;
 @colour-accent:       #3CAA9C;
 @colour-accent-light: #8EDAD0;
-@colour-font:         #777777;
+@colour-font:         #555555;
 @colour-interactable: #CCCCCC;
 @colour-circle-hover: rgba(255,255,255,.1);
 @colour-code-background: #F3F5F4;
@@ -37,6 +40,7 @@
 @border-accent: @border-width solid @colour-accent;
 @border-radius-default: 3px;
 @border-radius-circle: 50%;
+@border-standard-thin: 1px solid @colour-thin-border;
 
 //fonts
 @font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -45,11 +49,12 @@
 @font-family-fontAwesome: FontAwesome;
 @font-family-code: "Source Code Pro", "Courier New", "Courier", mono-space;
 
-@font-colour-standard: @colour-font;
-@font-colour-accent:   @colour-accent;
+@font-colour-standard:    @colour-font;
+@font-colour-accent:      @colour-accent;
+@font-colour-secondary:   @colour-secondary;
 
-@font-weight-light:     100;
-@font-weight-standard:  300;
+@font-weight-light:     300; //100;
+@font-weight-standard:  300; //300;
 @font-weight-semibold:  400;
 @font-weight-bold:      700;
 
@@ -91,8 +96,9 @@
 @spacing-none:      00px;
 @spacing-xsmall:    05px;
 @spacing-small:     10px;
-@spacing-standard:  15px;
+@spacing-standard:  20px;
 @spacing-big:       20px;
+@spacing-homepage:  15%;
 
 //z-indexes
 @z-focus-underline:         100;
