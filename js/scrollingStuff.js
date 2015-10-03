@@ -1,7 +1,7 @@
 // jQuery to collapse the navbar on scroll
 
 $(window).scroll(function() {
-    isFloating = document.body.scrollTop !== 0;
+    isFloating = document.body.scrollTop > 0;
     if (isFloating) {
         $(".content-section.toggle-hidden").css("opacity", "1.0");
     } else {
