@@ -74,7 +74,7 @@ h4.subtitle {
   padding-bottom: @spacing-standard;
 }
 
-p {
+p, li {
   .font;
 }
 
@@ -348,7 +348,22 @@ input.form-control:focus {
   );
 }
 
+code .tag, pre .tag {
+  font-family: @font-family-code;
+  font-size: inherit;
+  padding: inherit;
+  vertical-align: inherit;
+  display: inherit;
+}
+
 .anchor {
   position: absolute;
   margin-top: @anchor-offset;
+}
+
+.code-link {
+  position: absolute;
+  right: 17px;
+  margin-top: -35px;
+  font-size: 2em;
 }

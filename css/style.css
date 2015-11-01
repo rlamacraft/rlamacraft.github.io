@@ -161,10 +161,18 @@
 code,
 pre {
   border: none !important;
-  background: #f3f5f4 !important;
+  background-color: #e8e9e8 !important;
+  font-family: "Roboto Mono", "Courier New", "Courier", mono-space !important;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  background: none;
 }
 pre.prettyprint {
-  font-family: "Source Code Pro", "Courier New", "Courier", mono-space;
+  font-family: "Roboto Mono", "Courier New", "Courier", mono-space;
   font-weight: 300;
   color: #555555;
   letter-spacing: 0.1px;
@@ -176,7 +184,7 @@ pre.prettyprint {
   overflow: hidden;
 }
 code.inline {
-  font-family: "Source Code Pro", "Courier New", "Courier", mono-space;
+  font-family: "Roboto Mono", "Courier New", "Courier", mono-space;
   font-weight: 300;
   color: #555555;
   letter-spacing: 0.1px;
@@ -185,17 +193,9 @@ code.inline {
   text-transform: none;
   display: inline-block;
 }
-li.L0,
-li.L1,
-li.L2,
-li.L3,
-li.L5,
-li.L6,
-li.L7,
-li.L8,
-li.L9 {
-  list-style-type: decimal !important;
-  background: #f3f5f4 !important;
+code.newline {
+  display: block;
+  margin-left: 50px;
 }
 /***
 ** Standard HTML tags
@@ -290,7 +290,8 @@ h4.subtitle {
   padding-top: 10px;
   padding-bottom: 20px;
 }
-p {
+p,
+li {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   color: #555555;
@@ -606,7 +607,21 @@ input.form-control:focus {
   max-width: 100%;
   padding: 5px 24px;
 }
+code .tag,
+pre .tag {
+  font-family: "Roboto Mono", "Courier New", "Courier", mono-space;
+  font-size: inherit;
+  padding: inherit;
+  vertical-align: inherit;
+  display: inherit;
+}
 .anchor {
   position: absolute;
   margin-top: -109px;
+}
+.code-link {
+  position: absolute;
+  right: 17px;
+  margin-top: -35px;
+  font-size: 2em;
 }

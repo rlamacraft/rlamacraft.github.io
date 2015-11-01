@@ -2,7 +2,12 @@
 
 code, pre {
   border: none !important;
-  background: @colour-code-background !important;
+  background-color: @colour-code-background !important;
+  font-family: @font-family-code !important;
+}
+
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+  background: none;
 }
 
 pre.prettyprint {
@@ -21,12 +26,9 @@ code.inline {
       @size:   @font-size-code-inline,
   );
   display: inline-block;
-
 }
 
-//adds line numbers on ever line, code block must include class linenums
-li.L0, li.L1, li.L2, li.L3,
-li.L5, li.L6, li.L7, li.L8, li.L9 {
-  list-style-type: decimal !important;
-  background: @colour-code-background !important;
+code.newline {
+  display: block;
+  margin-left: 50px;
 }

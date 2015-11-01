@@ -8,12 +8,13 @@
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:300' rel='stylesheet' type='text/css'>
 </head>
 
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -61,13 +62,14 @@
                   First of all Haskell, can show how it is truly done. Nice and simple. Didn't even bother with the length-two-switch it's so simple and efficient. Though I'm sure some Haskell expert could make half-a-hundred improvements.
                 </p>
 
-                <pre class="prettyprint linenums">quickSort :: [Float] -> [Float]
+                <pre><code class="language-haskell">quickSort :: [Float] -> [Float]
 quickSort (n)
   | length n < 2    = n
   | otherwise       = quickSort (filter (&lt;pivot) n ) ++
                       [ pivot ] ++
                       quickSort (filter (&gt;pivot) n ) where
-      pivot = head n<a target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Haskell/quickSort.hs"><i class="fa fa-external-link pull-right"></i></a></pre>
+      pivot = head n</code></pre>
+                <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Haskell/quickSort.hs"><i class="fa fa-external-link-square pull-right"></i></a>
               </div>
             </div>
           </div>
@@ -84,7 +86,7 @@ quickSort (n)
                   So lovely and tidy, for an imperative/OOP language anyway.
                 </p>
 
-                <pre class="prettyprint linenums">def quickSort(list):
+                <pre><code class="language-python">def quickSort(list):
     listLength = len(list)
     if listLength <= 1:
         return list
@@ -105,7 +107,8 @@ quickSort (n)
         sorted_S = quickSort(list_S)
         sorted_G = quickSort(list_G)
         result = sorted_S + [pivot] + sorted_G
-        return result<a target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Python/dp_quickSort.py"><i class="fa fa-external-link pull-right"></i></a></pre>
+        return result</code></pre>
+                <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Python/dp_quickSort.py"><i class="fa fa-external-link-square pull-right"></i></a>
               </div>
             </div>
           </div>
@@ -124,7 +127,7 @@ quickSort (n)
                   One thing I do really like about Swift is the pre and post-conditions (line 2), really plays well with with my black-box determinstic function code-style. Wish Python had that.
                 </p>
 
-                <pre class="prettyprint linenums">func quickSort(list: [Float]) -> [Float] {
+                <pre><code class="language-swift">func quickSort(list: [Float]) -> [Float] {
     let listLength = count(list)
     if listLength <= 1 {
         return list
@@ -150,7 +153,8 @@ quickSort (n)
         let result = sorted_S + [pivot] + sorted_G
         return result
     }
-  }<a target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Swift/dp_quickSort.playground/section-1.swift"><i class="fa fa-external-link pull-right"></i></a></pre>
+  }</code></pre>
+                <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Swift/dp_quickSort.playground/section-1.swift"><i class="fa fa-external-link-square pull-right"></i></a>
               </div>
             </div>
           </div>
@@ -168,7 +172,7 @@ quickSort (n)
                   Maybe Java 8 will make it okay. (Just got to drag myself to check it out.)
                 </p>
 
-                <pre class="prettyprint linenums">public static ArrayList<Float> quickSort(ArrayList<Float> list) {
+                <pre><code class="language-java">public static ArrayList<Float> quickSort(ArrayList<Float> list) {
     int listLength = list.size();
     if (listLength <= 1) {
       return list
@@ -207,7 +211,8 @@ quickSort (n)
 
       return result;
     }
-  }<a target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Java/dp_quickSort/src/main/Main.java"><i class="fa fa-external-link pull-right"></i></a></pre>
+  }</code></pre>
+                <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Java/dp_quickSort/src/main/quickSort.java"><i class="fa fa-external-link-square pull-right"></i></a>
               </div>
             </div>
           </div>
@@ -218,7 +223,7 @@ quickSort (n)
       <script type="text/javascript" src="js/jquery.min.js"></script>
       <script type="text/javascript" src="js/bootstrap.min.js"></script>
       <script type="text/javascript" src="js/scrollingStuff.js"></script>
-      <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+      <script type="text/javascript" src="js/prism.js"></script>
 
   </body>
 </html>
