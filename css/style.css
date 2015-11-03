@@ -163,6 +163,7 @@ pre {
   border: none !important;
   background-color: #e8e9e8 !important;
   font-family: "Roboto Mono", "Courier New", "Courier", mono-space !important;
+  border-radius: 7px;
 }
 .token.operator,
 .token.entity,
@@ -622,6 +623,6 @@ pre .tag {
 .code-link {
   position: absolute;
   right: 17px;
-  margin-top: -35px;
+  margin-top: -40px;
   font-size: 2em;
 }
