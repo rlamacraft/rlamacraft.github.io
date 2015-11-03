@@ -74,8 +74,8 @@ h4.subtitle {
   padding-bottom: @spacing-standard;
 }
 
-p, li {
-  .font;
+p {
+  margin-bottom: @spacing-xsmall;
 }
 
 /***
@@ -135,6 +135,7 @@ p, li {
   padding-left: @spacing-none;
   padding-right: @spacing-none;
   overflow: hidden;
+  .font;
 
   &:nth-child(3) {
     padding-top: 0;
@@ -246,7 +247,7 @@ p, li {
 
 .input-group-addon {
   .font(
-      @size: @font-size-interactable-standard,
+      @size: @font-size-no-effect,
       @line-height: @font-lineheight-less,
       @weight: @font-weight-semibold,
   );
@@ -263,7 +264,7 @@ p, li {
 
 input.form-control {
   .font(
-      @size: @font-size-interactable-standard,
+      @size: @font-size-no-effect,
   );
   .shadow(none);
   .rounded-corners(0);

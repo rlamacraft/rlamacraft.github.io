@@ -51,7 +51,7 @@
   color: #7e7e7e !important;
 }
 .tag.tag-javascript:hover {
-  background-color: #909090 !important;
+  background-color: #989898 !important;
   color: #f5f7f7 !important;
 }
 .tag.tag-javascript.locked {
@@ -65,7 +65,7 @@
   color: #b19cd6 !important;
 }
 .tag.tag-jquery:hover {
-  background-color: #c5b5e0 !important;
+  background-color: #cdc0e5 !important;
   color: #f5f7f7 !important;
 }
 .tag.tag-jquery.locked {
@@ -79,7 +79,7 @@
   color: #f45081 !important;
 }
 .tag.tag-css:hover {
-  background-color: #f67299 !important;
+  background-color: #f780a4 !important;
   color: #f5f7f7 !important;
 }
 .tag.tag-css.locked {
@@ -93,7 +93,7 @@
   color: #50b942 !important;
 }
 .tag.tag-python:hover {
-  background-color: #67c45a !important;
+  background-color: #71c866 !important;
   color: #f5f7f7 !important;
 }
 .tag.tag-python.locked {
@@ -107,7 +107,7 @@
   color: #fb6917 !important;
 }
 .tag.tag-swift:hover {
-  background-color: #fc803a !important;
+  background-color: #fc8949 !important;
   color: #f5f7f7 !important;
 }
 .tag.tag-swift.locked {
@@ -121,7 +121,7 @@
   color: #c65c3a !important;
 }
 .tag.tag-java:hover {
-  background-color: #ce7356 !important;
+  background-color: #d17d62 !important;
   color: #f5f7f7 !important;
 }
 .tag.tag-java.locked {
@@ -135,7 +135,7 @@
   color: #265089 !important;
 }
 .tag.tag-haskell:hover {
-  background-color: #2e60a5 !important;
+  background-color: #3167b1 !important;
   color: #f5f7f7 !important;
 }
 .tag.tag-haskell.locked {
@@ -149,7 +149,7 @@
   color: #45bfcb !important;
 }
 .tag.tag-html:hover {
-  background-color: #61c9d3 !important;
+  background-color: #6dcdd6 !important;
   color: #f5f7f7 !important;
 }
 .tag.tag-html.locked {
@@ -290,15 +290,8 @@ h4.subtitle {
   padding-top: 10px;
   padding-bottom: 20px;
 }
-p,
-li {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  color: #555555;
-  letter-spacing: 0.1px;
-  font-size: 1.4em;
-  line-height: 1.4;
-  text-transform: none;
+p {
+  margin-bottom: 5px;
 }
 /***
 **  Custom stuff
@@ -352,6 +345,13 @@ li {
   padding-left: 0px;
   padding-right: 0px;
   overflow: hidden;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #555555;
+  letter-spacing: 0.1px;
+  font-size: 1.25em;
+  line-height: 1.4;
+  text-transform: none;
 }
 .content-section:nth-child(3) {
   padding-top: 0;
@@ -391,7 +391,7 @@ li {
   font-weight: 300;
   color: #3caa9c;
   letter-spacing: 0.1px;
-  font-size: 1.3em;
+  font-size: 1.2em;
   line-height: 1.3;
   text-transform: none;
   border: 2px solid #3caa9c;
@@ -462,7 +462,7 @@ li {
   font-weight: 400;
   color: #555555;
   letter-spacing: 0.1px;
-  font-size: 1.3em;
+  font-size: 1em;
   line-height: 1.1;
   text-transform: none;
   -webkit-border-radius: 0;
@@ -482,7 +482,7 @@ input.form-control {
   font-weight: 300;
   color: #555555;
   letter-spacing: 0.1px;
-  font-size: 1.3em;
+  font-size: 1em;
   line-height: 1.4;
   text-transform: none;
   -moz-box-shadow: none;
@@ -551,7 +551,7 @@ input.form-control:focus {
   font-weight: 300;
   color: #f5f7f7;
   letter-spacing: 0.1px;
-  font-size: 1.3em;
+  font-size: 1.2em;
   line-height: 0.7;
   text-transform: none;
   max-width: 100%;
@@ -576,7 +576,7 @@ input.form-control:focus {
   font-weight: 300;
   color: #f5f7f7;
   letter-spacing: 0.1px;
-  font-size: 0.8em;
+  font-size: 0.7em;
   line-height: 0.4;
   text-transform: none;
   max-width: 100%;
@@ -601,7 +601,7 @@ input.form-control:focus {
   font-weight: 300;
   color: #f5f7f7;
   letter-spacing: 0.1px;
-  font-size: 2.5em;
+  font-size: 2em;
   line-height: 1;
   text-transform: none;
   max-width: 100%;
