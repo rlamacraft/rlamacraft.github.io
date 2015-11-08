@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
     <title> Robert Lamacraft </title>
 
     <!-- Favicon -->
@@ -13,14 +13,16 @@
 
     <!-- Stylesheets -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet">
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:300' rel='stylesheet' type='text/css'>
+
   </head>
 
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <body id="page-top" data-spy="scroll">
 
         <!-- Intro Header -->
         <header class="intro intro-large">
@@ -56,82 +58,56 @@
               </div>
         </header>
 
-        <!-- Back to top arrow -->
-        <h1 class="scrollBtn homepage" id="scroll-up">
-          <i class="scroll-buttons fa fa-chevron-up"></i>
-        </h1>
-
       <!-- Recent Projects Section -->
       <section id="main" class="container content-section full-page toggle-hidden">
 
         <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding white-alternate">
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                    <h2 class="space-bottom space-top">RECENT PROJECTS</h2>
+          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding">
+                  <h2 class="space-bottom space-top">RECENT PROJECTS</h2>
 
-                    <div id="recent-projects">
+                  <div id="recent-projects">
 
-                      <div class="project" id="project-2">
-                        <h3 class="project-title"> <a href="projectHugo-PartOne.html"> Project Hugo - Part 1 </a> </h3>
-                        <div class="project-tags">
-                          <span class="tag tag-python" data-action="open" data-href="Python"></span>
+                      <div class="project" id="project-2" data-src="projectHugo-PartOne.html">
+                        <h3 class="project-title"> Project Hugo - Part 1 </h3>
+                        <div class="center">
+                          <div class="project-tags">
+                            <span class="tag tag-python" data-action="open" data-href="Python"></span>
+                          </div>
                         </div>
-                        <div class="project-desc">
-                          <p>
-                            For a couple of months I've thought about getting a new alarm.
-                            A radio alarm clock and an iPad alarm and still I would fall back asleep some mornings.
-                            Natural light lamp seemed the way forward. Then I remembered Philip's Hue.
-                            Hence Hugo. Hue Go. Hugo. And then I bought Hue Iris. Because reasons.
-                            <a href="projectHugo-PartOne.html"> More.. </a>
-                          </p>
-                        </div>
+
                       </div>
 
-                        <div class="project" id="project-1">
-                          <h3 class="project-title"> <a href="quickSort.html"> Quick Sort </a> </h3>
-                          <div class="project-tags">
-                            <span class="tag tag-haskell" data-action="open" data-href="Haskell"></span>
-                            <span class="tag tag-python" data-action="open" data-href="Python"></span>
-                            <span class="tag tag-swift" data-action="open" data-href="Swift"></span>
-                            <span class="tag tag-java" data-action="open" data-href="Java"></span>
-                          </div>
-                          <div class="project-desc">
-                            <p>
-                              It feels like I have studied sorting algorithms half a dozen times: A Level Maths and Computing, some more times at uni. Quick sort has always been my favourite.
-                              Just something about the simple way it can be recursively implemented with just one condition and the arbitrary selection of the pivot. I just love it.
-                              Quite a few times I've coded simple implementations of it, just to learn syntax or compare different languages. So without further ado here is the extent of my nerdiness.
-                              <a href="quickSort.html"> More.. </a>
-                            </p>
+                        <div class="project" id="project-1" data-src="quickSort.html">
+                          <h3 class="project-title"> Quick Sort </h3>
+                          <div class="center">
+                            <div class="project-tags">
+                              <span class="tag tag-haskell"></span>
+                              <span class="tag tag-python"></span>
+                              <span class="tag tag-swift"></span>
+                              <span class="tag tag-java"></span>
+                            </div>
                           </div>
                         </div>
 
-                        <div class="project" id="project-0">
-                          <h3 class="project-title"> <a href="KCLModuleCalculator.html"> KCL Module Calculator </a> </h3>
+                        <div class="project" id="project-0" data-src="projects/KCLModuleCalculator.html">
+                          <h3 class="project-title"> KCL Module Calculator </h3>
+                          <div class="center">
                           <div class="project-tags">
-                            <span class="tag tag-javascript" data-action="open" data-href="JavaScript"></span>
-                            <span class="tag tag-css" data-action="open" data-href="CSS"></span>
-                            <span class="tag tag-jquery" data-action="open" data-href="jQuery"></span>
-                          </div>
-                          <div class="project-desc">
-                            <p>
-                                Bored at the weekend, had come to the realisation in the week that KCL's weightings for different modules
-                                and years is too complex and that this website really needed some content. So I made this. Just a simple calculator,
-                                that asks the user for their grades - depending on how many years they've so far completed - and finds the average,
-                                and their highest and lowest modules (helpful for selecting modules for final year).
-                                Hopefully its useful to someone.
-                                <a href="KCLModuleCalculator.html"> Link </a>
-                            </p>
+                              <span class="tag tag-javascript"></span>
+                              <span class="tag tag-css"></span>
+                              <span class="tag tag-jquery"></span>
+                            </div>
                           </div>
                         </div>
 
-
-
-                </div>
-
-            </div>
           </div>
         </div>
+        <div id="project-viewer-wrapper">
+          <div id="project-viewer" data-open="false"></div>
+        </div>
+        <h3 id="project-viewer-close">
+          <i class="fa fa-times"></i>
+        </h3>
       </div>
 
       </section>
@@ -139,6 +115,8 @@
       <script type="text/javascript" src="js/jquery.min.js"></script>
       <script type="text/javascript" src="js/bootstrap.min.js"></script>
       <script type="text/javascript" src="js/scrollingStuff.js"></script>
+      <script type="text/javascript" src="js/project-viewer.js"></script>
+      <script type="text/javascript" src="js/prism.js"></script>
 
     </body>
 </html>

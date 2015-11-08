@@ -12,19 +12,18 @@
 @size-circle-btn: 70px;
 @size-circle-btn-i: 62px;
 @size-circle-btn-top: 260px;
-//@size-content-min-height: ~"calc(" (@size-full) ~" - " (@size-nav-height - @border-width) ~")";
 @size-content-min-height: 100%;
 @size-content-top-space: (@size-circle-btn / 2) + @spacing-standard;
-@size-tag-bubble-small: 18px;
-@size-tag-bubble-standard: 24px;
-@size-tag-bubble-large: 48px;
+@size-tag-bubble-small: 0.5em;
+@size-tag-bubble-standard: 1.1em;
+@size-tag-bubble-large: 1.5em;
 @size-scrollBtn-width: 250px;
 @size-scrollBtn-height: 55px;
 @size-scrollBtn-i-width: 28px;
 
 //colours
 @colour-base:         #F5F7F7; //#E5E8E8;
-@colour-section-alt:  #F5F7F7; //#F8FCFC;
+@colour-section-alt:  #FFF; //#F8FCFC;
 @colour-secondary:    #777777;
 @colour-thin-border:  #CCCCCC;
 @colour-accent:       #3CAA9C;
@@ -35,17 +34,19 @@
 @colour-code-background: #E8E9E8;
 
 //borders
+@border-width-thin: 1px;
 @border-width: 2px;
 @border-width-tag: 5px;
 @border-accent: @border-width solid @colour-accent;
 @border-radius-default: 3px;
 @border-radius-code: 7px;
 @border-radius-circle: 50%;
-@border-standard-thin: 1px solid @colour-thin-border;
+@border-standard-thin: @border-width-thin solid @colour-thin-border;
 
 //fonts
 @font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-standard: "Lato", @font-family-base;
+@font-family-title: "Lato", @font-family-base;
 @font-family-accent: @font-family-base;
 @font-family-fontAwesome: FontAwesome;
 @font-family-code: "Roboto Mono", "Courier New", "Courier", mono-space;
@@ -59,17 +60,15 @@
 @font-weight-semibold:  400;
 @font-weight-bold:      700;
 
-@font-spacing-standard: 0.1px;
-@font-spacing-thick:    0.8px;
-
 @font-size-interactable-small:      00.7em;
 @font-size-code-inline:             00.9em;
 @font-size-no-effect:               01.0em;
 @font-size-navbar-small:            01.0em;
 @font-size-code:                    01.1em;
-@font-size-interactable-standard:   01.2em;
+@font-size-interactable-standard:   01.3em;
 @font-size-standard:                01.25em;
 @font-size-navbar-large:            01.5em;
+@font-size-code-link:               01.5em;
 @font-size-subheading:              01.8em;
 @font-size-scrollbtn:               02.0em;
 @font-size-heading:                 02.5em;
@@ -79,8 +78,12 @@
 @font-size-xlarge:                  05.0em;
 @font-size-xxlarge:                 10.0em;
 
+@font-size-tag-small:               00.8em;
+@font-size-tag-standard:            01.7em;
+@font-size-tag-large:               01.7em;
+
 @font-lineheight-tag-small:       0.40;
-@font-lineheight-tag-standard:    0.70;
+@font-lineheight-tag-standard:    0.60;
 @font-lineheight-circlebtn:       0.87;
 @font-lineheight-tag-large:       1.00;
 @font-lineheight-scrollBtn:       1.00;
@@ -95,12 +98,17 @@
 @font-align-header: center;
 
 //spacing
-@spacing-none:      00px;
-@spacing-xsmall:    05px;
-@spacing-small:     10px;
-@spacing-standard:  20px;
-@spacing-big:       20px;
-@spacing-homepage:  15%;
+@spacing-none:        00px;
+@spacing-none-em:     0.000em;
+@spacing-xsmall:      05px;
+@spacing-xsmall-em:   0.312em;
+@spacing-small:       10px;
+@spacing-small-em:    0.625em;
+@spacing-standard:    15px;
+@spacing-standard-em: 0.937em;
+@spacing-big:         20px;
+@spacing-big-em:      1.25em;
+@spacing-homepage:    15%;
 
 //z-indexes
 @z-focus-underline:         100;

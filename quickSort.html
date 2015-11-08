@@ -17,76 +17,65 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:300' rel='stylesheet' type='text/css'>
 </head>
 
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+  <body id="page-top" data-spy="scroll">
+
+    <div id="project-wrapper">
 
       <!-- Intro Header -->
       <header class="intro">
             <div class="intro-body">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-10 col-md-offset-1">
-                            <h1>Quick Sort</h1>
-                            <h4 class="subtitle">Yes, I'm sad enough to have a favourite sorting algorithm.</h4>
+                        <div class="col-md-10 col-md-offset-1 project-title">
+                            <h2>Quick Sort</h2>
+                            <h4 class="subtitle">I <span class="fa fa-heart"></span> QuickSort.</h4>
                         </div>
                     </div>
                 </div>
             </div>
       </header>
 
-      <!-- Back to top arrow -->
-      <h1 class="scrollBtn" id="scroll-up">
-        <i class="scroll-buttons fa fa-chevron-up"></i>
-      </h1>
-
       <section id="main" class="container content-section always-show">
 
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding white-alternate">
-            <div class="row">
-              <div class="col-sm-10 col-sm-offset-1">
-                <p>It feels like I have studied sorting algorithms half a dozen times: A Level Maths and Computing, some more times at uni. Quick sort has always been my favourite.</p>
-                <p>Just something about the simple way it can be recursively implemented with just one condition and the arbitrary selection of the pivot. I just love it.</p>
-                <p>Quite a few times I've coded simple implementations of it, just to learn syntax or compare different languages. So without further ado here is the extent of my nerdiness.</p>
-              </div>
-            </div>
+              <p>
+                It feels like I have studied sorting algorithms half a dozen times: A Level Maths and Computing, some more times at uni. Quick sort has always been my favourite.
+                Just something about the simple way it can be recursively implemented with just one condition and the arbitrary selection of the pivot. I just love it.
+                Quite a few times I've coded simple implementations of it, just to learn syntax or compare different languages. So without further ado here is the extent of my nerdiness.
+              </p>
           </div>
         </div>
 
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding white-alternate">
-            <div class="row">
-              <div class="col-sm-10 col-sm-offset-1">
-                <span class="tag tag-haskell large locked space-bottom" data-action="open" data-href="Haskell"></span>
+            <span class="tag tag-haskell large locked space-bottom"></span>
 
-                <p>
-                  First of all Haskell, can show how it is truly done. Nice and simple. Didn't even bother with the length-two-switch it's so simple and efficient. Though I'm sure some Haskell expert could make half-a-hundred improvements.
-                </p>
+            <p>
+              First of all Haskell, can show how it is truly done. Nice and simple. Didn't even bother with the length-two-switch it's so simple and efficient. Though I'm sure some Haskell expert could make half-a-hundred improvements.
+            </p>
 
-                <pre><code class="language-haskell">quickSort :: [Float] -> [Float]
+            <pre><code class="language-haskell">quickSort :: [Float] -> [Float]
 quickSort (n)
   | length n < 2    = n
   | otherwise       = quickSort (filter (&lt;pivot) n ) ++
                       [ pivot ] ++
                       quickSort (filter (&gt;pivot) n ) where
       pivot = head n</code></pre>
-                <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Haskell/quickSort.hs"><i class="fa fa-external-link-square pull-right"></i></a>
-              </div>
-            </div>
+            <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Haskell/quickSort.hs"><i class="fa fa-external-link-square pull-right"></i></a>
           </div>
         </div>
 
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding white-alternate">
-            <div class="row">
-              <div class="col-sm-10 col-sm-offset-1">
-                <span class="tag tag-python large locked space-bottom" data-action="open" data-href="Python"></span>
+            <span class="tag tag-python large locked space-bottom"></span>
 
-                <p>
-                  I do love Python. Just the little things like being able to concat an array with the <code class="inline">[pivot]</code> (compare that to Java, below)!
-                  So lovely and tidy, for an imperative/OOP language anyway.
-                </p>
+            <p>
+              I do love Python. Just the little things like being able to concat an array with the <code class="inline">[pivot]</code> (compare that to Java, below)!
+              So lovely and tidy, for an imperative/OOP language anyway.
+            </p>
 
-                <pre><code class="language-python">def quickSort(list):
+            <pre><code class="language-python">def quickSort(list):
     listLength = len(list)
     if listLength <= 1:
         return list
@@ -108,26 +97,22 @@ quickSort (n)
         sorted_G = quickSort(list_G)
         result = sorted_S + [pivot] + sorted_G
         return result</code></pre>
-                <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Python/dp_quickSort.py"><i class="fa fa-external-link-square pull-right"></i></a>
-              </div>
-            </div>
+              <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Python/dp_quickSort.py"><i class="fa fa-external-link-square pull-right"></i></a>
           </div>
         </div>
 
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding white-alternate">
-            <div class="row">
-              <div class="col-sm-10 col-sm-offset-1">
-                <span class="tag tag-swift large locked space-bottom" data-action="open" data-href="Swift"></span>
+            <span class="tag tag-swift large locked space-bottom"></span>
 
-                <p>
-                  I first wrote the Swift version when it was a new language. Not sure if this is even best practice anymore; just fixed the changes Apple have made so it should still compile.
-                </p>
-                <p>
-                  One thing I do really like about Swift is the pre and post-conditions (line 2), really plays well with with my black-box determinstic function code-style. Wish Python had that.
-                </p>
+            <p>
+              I first wrote the Swift version when it was a new language. Not sure if this is even best practice anymore; just fixed the changes Apple have made so it should still compile.
+            </p>
+            <p>
+              One thing I do really like about Swift is the pre and post-conditions (line 2), really plays well with with my black-box determinstic function code-style. Wish Python had that.
+            </p>
 
-                <pre><code class="language-swift">func quickSort(list: [Float]) -> [Float] {
+            <pre><code class="language-swift">func quickSort(list: [Float]) -> [Float] {
     let listLength = count(list)
     if listLength <= 1 {
         return list
@@ -154,25 +139,21 @@ quickSort (n)
         return result
     }
   }</code></pre>
-                <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Swift/dp_quickSort.playground/section-1.swift"><i class="fa fa-external-link-square pull-right"></i></a>
-              </div>
-            </div>
+            <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Swift/dp_quickSort.playground/section-1.swift"><i class="fa fa-external-link-square pull-right"></i></a>
           </div>
         </div>
 
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding white-alternate">
-            <div class="row">
-              <div class="col-sm-10 col-sm-offset-1">
-                <span class="tag tag-java large locked space-bottom" data-action="open" data-href="Java"></span>
+            <span class="tag tag-java large locked space-bottom"></span>
 
-                <p>
-                  I strongly dislike Java. This code is in no way elegant. Why are there no primitive dynamic arrays???
-                  And is there <i>really</i> no better way to append two ArrayLists than the mess on lines 30 through 36. I hate Java. I really do.
-                  Maybe Java 8 will make it okay. (Just got to drag myself to check it out.)
-                </p>
+            <p>
+              I strongly dislike Java. This code is in no way elegant. Why are there no primitive dynamic arrays???
+              And is there <i>really</i> no better way to append two ArrayLists than the mess on lines 30 through 36. I hate Java. I really do.
+              Maybe Java 8 will make it okay. (Just got to drag myself to check it out.)
+            </p>
 
-                <pre><code class="language-java">public static ArrayList<Float> quickSort(ArrayList<Float> list) {
+            <pre><code class="language-java">public static ArrayList<Float> quickSort(ArrayList<Float> list) {
     int listLength = list.size();
     if (listLength <= 1) {
       return list
@@ -212,13 +193,13 @@ quickSort (n)
       return result;
     }
   }</code></pre>
-                <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Java/dp_quickSort/src/main/quickSort.java"><i class="fa fa-external-link-square pull-right"></i></a>
-              </div>
-            </div>
+            <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/DailyProgrammer/blob/master/Java/dp_quickSort/src/main/quickSort.java"><i class="fa fa-external-link-square pull-right"></i></a>
           </div>
         </div>
 
       </section>
+
+    </div> <!-- project wrapper -->
 
       <script type="text/javascript" src="js/jquery.min.js"></script>
       <script type="text/javascript" src="js/bootstrap.min.js"></script>

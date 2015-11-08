@@ -22,7 +22,6 @@
   @family:      @font-family-standard,
   @weight:      @font-weight-standard,
   @colour:      @font-colour-standard,
-  @kerning:     @font-spacing-standard,
   @size:        @font-size-standard,
   @line-height: @font-lineheight-standard,
   @transform:   @font-transform-none,
@@ -30,17 +29,15 @@
   font-family: @family;
   font-weight: @weight;
   color: @colour;
-  letter-spacing: @kerning;
   font-size: @size;
   line-height: @line-height;
   text-transform: @transform;
 }
 
 .heading-font(
-  @family:      @font-family-standard,
+  @family:      @font-family-title,
   @weight:      @font-weight-standard,
   @colour:      @font-colour-standard,
-  @kerning:     @font-spacing-thick,
   @size:        @font-size-standard,
   @line-height: @font-lineheight-less,
   @transform:   @font-transform-none,
@@ -48,7 +45,6 @@
   font-family:     @family;
   font-weight:     @weight;
   color:           @colour;
-  letter-spacing:  @kerning;
   font-size:       @size;
   line-height:     @line-height;
   text-transform:  @transform;
@@ -56,10 +52,10 @@
 
 .tag-size(
   @size : @size-tag-bubble-standard,
-  @font-size: @font-size-interactable-standard,
+  @font-size: @font-size-tag-standard,
 ) {
   .font(
-    @size: @size,
+    @size: @font-size,
     @line-height: 0,
   );
   height: @size;
@@ -70,7 +66,7 @@
 
 .tag-expand(
   @size: @size-tag-bubble-standard,
-  @font-size: @font-size-interactable-standard,
+  @font-size: @font-size-tag-standard,
   @line-height: @font-lineheight-tag-standard,
 ) {
   .font(

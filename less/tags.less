@@ -1,20 +1,17 @@
-@hover-lighten: 10%;
-
 .create-tag(
   @colour,
   @label,
 ) {
   background-color: @colour !important;
   color: @colour !important;
-  &:hover {
-    background-color: lighten(@colour, @hover-lighten) !important;
-    color: @colour-base !important;
-  }
   &.locked {
     color: @colour-base !important;
   }
   &:after {
     content: @label;
+  }
+  &:hover {
+    color: @colour-base !important;
   }
 }
 
