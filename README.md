@@ -1,2 +1,2 @@
 # rlamacraft.github.io
-Playing around with GitHub Pages
+My personal website, [rlamacraft.co.uk](http://rlamacraft.co.uk)
