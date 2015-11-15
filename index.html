@@ -62,60 +62,77 @@
       <section id="main" class="container content-section full-page toggle-hidden">
 
         <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding">
-                  <h2 class="space-bottom space-top">RECENT PROJECTS</h2>
+          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding project-blur">
+            <h2 class="space-bottom space-top">RECENT PROJECTS</h2>
 
-                  <div id="recent-projects">
+            <div id="recent-projects">
 
-                      <div class="project" id="project-2" data-src="projectHugo-PartOne.html">
-                        <h3 class="project-title"> Project Hugo - Part 1 </h3>
-                        <div class="center">
-                          <div class="project-tags">
-                            <span class="tag tag-python" data-action="open" data-href="Python"></span>
-                          </div>
-                        </div>
+              <div class="project" id="project-2" data-src="projects/projectHugo-PartTwo.html">
+                <h3 class="project-title"> Project Hugo - Part 2 </h3>
+                <div class="center">
+                  <div class="project-tags">
+                    <span class="tag tag-html"></span>
+                    <span class="tag tag-less"></span>
+                    <span class="tag tag-javascript"></span>
+                  </div>
+                </div>
+              </div>
 
-                      </div>
+              <div class="project" id="project-2" data-src="projects/projectHugo-PartOne.html">
+                <h3 class="project-title"> Project Hugo - Part 1 </h3>
+                <div class="center">
+                  <div class="project-tags">
+                    <span class="tag tag-python"></span>
+                  </div>
+                </div>
+              </div>
 
-                        <div class="project" id="project-1" data-src="quickSort.html">
-                          <h3 class="project-title"> Quick Sort </h3>
-                          <div class="center">
-                            <div class="project-tags">
-                              <span class="tag tag-haskell"></span>
-                              <span class="tag tag-python"></span>
-                              <span class="tag tag-swift"></span>
-                              <span class="tag tag-java"></span>
-                            </div>
-                          </div>
-                        </div>
+              <div class="project" id="project-1" data-src="projects/quickSort.html">
+                <h3 class="project-title"> Quick Sort </h3>
+                <div class="center">
+                  <div class="project-tags">
+                    <span class="tag tag-haskell"></span>
+                    <span class="tag tag-python"></span>
+                    <span class="tag tag-swift"></span>
+                    <span class="tag tag-java"></span>
+                  </div>
+                </div>
+              </div>
 
-                        <div class="project" id="project-0" data-src="projects/KCLModuleCalculator.html">
-                          <h3 class="project-title"> KCL Module Calculator </h3>
-                          <div class="center">
-                          <div class="project-tags">
-                              <span class="tag tag-javascript"></span>
-                              <span class="tag tag-css"></span>
-                              <span class="tag tag-jquery"></span>
-                            </div>
-                          </div>
-                        </div>
+              <div class="project" id="project-0" data-src="projects/KCLModuleCalculator.html">
+                <h3 class="project-title"> KCL Module Calculator </h3>
+                <div class="center">
+                <div class="project-tags">
+                    <span class="tag tag-javascript"></span>
+                    <span class="tag tag-css"></span>
+                  </div>
+                </div>
+              </div>
 
           </div>
         </div>
+
         <div id="project-viewer-wrapper">
           <div id="project-viewer" data-open="false"></div>
         </div>
-        <h3 id="project-viewer-close">
+        <h4 id="project-viewer-close">
           <i class="fa fa-times"></i>
-        </h3>
-      </div>
+        </h4>
 
+      </div>
       </section>
+
+      <div id="image-fullscreen">
+        <img id="image-fullscreen-image">
+        <h4 id="image-fullscreen-close">
+          <i class="fa fa-times"></i>
+        </h4>
+      </div>
 
       <script type="text/javascript" src="js/jquery.min.js"></script>
       <script type="text/javascript" src="js/bootstrap.min.js"></script>
       <script type="text/javascript" src="js/scrollingStuff.js"></script>
-      <script type="text/javascript" src="js/project-viewer.js"></script>
+      <script type="text/javascript" src="js/animations.js"></script>
       <script type="text/javascript" src="js/prism.js"></script>
 
     </body>

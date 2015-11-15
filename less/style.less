@@ -31,7 +31,7 @@ a:hover {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
 
-  @media(@non-mobile) {
+  @media(@non-xs) {
     .heading-font(
       @size: @font-size-heading,
     );
@@ -72,8 +72,9 @@ h4 {
   padding-bottom: @spacing-small-em;
 }
 
-p {
+p, li {
   margin-bottom: @spacing-standard-em;
+  .font();
 }
 
 /***
@@ -93,7 +94,7 @@ p {
   text-align: @font-align-header;
   background-color: @colour-section-alt;
 
-  @media(@non-mobile) {
+  @media(@non-xs) {
     min-height: 0;
     height: @size-header-height-standard;
   }
@@ -136,7 +137,7 @@ p {
   padding-left: @spacing-none;
   padding-right: @spacing-none;
   overflow: hidden;
-  .font;
+  // .font;
 
   &:nth-child(3) {
     padding-top: 0;
@@ -296,12 +297,10 @@ input.form-control:focus {
 
 .project {
   .space-top;
-  margin: @spacing-big-em 0;
-  padding: @spacing-big-em 0;
   border: @border-standard-thin;
   border-radius: @border-radius-default;
   background-color: @colour-section-alt;
-  padding: 20px;
+  padding: 20px 30px;
   margin: 20px;
   cursor: pointer;
   flex-grow: 1;
@@ -347,6 +346,7 @@ input.form-control:focus {
 
 .tag.open, .tag.locked {
   .tag-expand();
+  border-radius: @border-radius-default;
 }
 
 .tag.small {
@@ -395,15 +395,15 @@ code .tag, pre .tag {
 .code-link {
   position: absolute;
   right: 2px;
-  margin-top: -40px;
+  margin-top: -30px;
   font-size: @font-size-code-link;
 }
 
 #project-viewer-wrapper {
   position: absolute;
   right: 0;
-  height: 100%;
-  width: 100%;
+  height: @size-full;
+  width: @size-full;
   overflow-x: hidden;
   z-index: 0;
 }
@@ -412,17 +412,17 @@ code .tag, pre .tag {
   position: relative;
   border: none;
   opacity: 0.0;
-  transition: all .5s ease;
+  transition: @transition-default; //all .5s ease;
   background-color: @colour-section-alt;
   overflow: auto;
   border: @border-standard-thin;
   display: none;
-  width: 100%;
-  height: 100%;
-  right: -100%;
+  width: 95%;
+  height: @size-full;
+  right: @size-full * -1;
 
-  @media(min-width: 768px) {
-    width: 75%;
+  @media(@non-sm) {
+    width: @size-projectviewer-desktop;
   }
 }
 
@@ -445,12 +445,159 @@ code .tag, pre .tag {
   margin-bottom: 0;
 }
 
-#project-wrapper p {
+figure.image-wrapper {
+  border-radius: @border-radius-lots;
+  border: @border-standard-thin;
+  overflow: hidden;
+  position: relative;
+  background-color: @colour-section-alt;
+  min-width: 220px;
+  max-width: 310px;
+  max-height: 220px;
+  text-align: center;
+}
+
+figure.image-wrapper.right {
+  float: right;
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+figure.image-wrapper.left {
+  float: left;
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+figure.image-wrapper.fixedwidth {
+  width: 200px;
+}
+
+figure.image-wrapper.fixedheight {
+  height: 200px;
+}
+
+figure.image-wrapper * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  .transition()
+}
+
+figure.image-wrapper img {
+  opacity: 1.0;
+  width: 100%;
+  .transition();
+}
+
+figure.image-wrapper figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: @size-full;
+  height: @size-full;
   .font(
-    @size: 0.85em,
+      @size: 1em
   );
 }
 
-#project-wrapper .btn {
-    font-size: 0.9em,
+figure.image-wrapper p {
+  margin: 0;
+  position: absolute;
+  width: @size-full;
+  left: 0;
+  opacity: 0;
+}
+
+figure.image-wrapper p {
+  padding: 10px 30px;
+  font-size: 1.2em;
+  font-weight: @font-weight-bold;
+}
+
+figure.image-wrapper p.top {
+  bottom: @size-half;
+  .transform(~"translate3d(0%, 100%, 0)")
+}
+
+figure.image-wrapper p.bottom {
+  top: @size-half;
+  .transform(~"translate3d(0%, -100%, 0)")
+}
+
+figure.image-wrapper:hover img,
+figure.image-wrapper.hover img {
+  opacity: 0.3;
+  .filter(~"grayscale(100%)");
+  .transform(~"scale(1.1)");
+}
+
+figure.image-wrapper:hover figcaption p,
+figure.image-wrapper.hover figcaption p {
+  .transform(~"translate3d(0%, 0%, 0)")
+}
+
+figure.image-wrapper:hover figcaption p,
+figure.image-wrapper.hover figcaption p {
+  opacity: 0.8;
+}
+
+figure.image-wrapper:hover figcaption span.fa,
+figure.image-wrapper.hover figcaption span.fa {
+  opacity: 1.0;
+  cursor: pointer;
+}
+
+figure.image-wrapper figcaption span.fa {
+  position: absolute;
+  top: @spacing-xsmall;
+  right: @spacing-xsmall;
+  opacity: 0.0;
+  color: @colour-accent;
+}
+
+#image-fullscreen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: @colour-base; //#23353e;
+  opacity: 0;
+  z-index: 0;
+  .transition();
+  overflow: auto;
+  display: none;
+}
+
+#image-fullscreen.show {
+  opacity: 1;
+  z-index: 1000;
+}
+
+#image-fullscreen-image {
+  width: calc( @size-full ~"-" (@spacing-big * 2) );
+  margin: auto;
+  display: block;
+  margin: @spacing-big;
+  margin-top: 2 * @spacing-big;
+  border: @border-standard-thin;
+  border-radius: @border-radius-lots;
+}
+
+#image-fullscreen-close {
+  right: 10px;
+  top: 0;
+  position: fixed;
+  color: @colour-accent;
+  cursor: pointer;
+  display: none;
+}
+
+#image-fullscreen-close.show{
+  display: block;
+  opacity: 1.0;
+}
+
+#main {
+  padding: 0;
 }
