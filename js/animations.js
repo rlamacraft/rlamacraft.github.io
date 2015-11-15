@@ -1,3 +1,5 @@
+var currentProjectUrl = undefined;
+
 $(document).ready( function() {
 
   //project is opened
@@ -5,15 +7,19 @@ $(document).ready( function() {
     var url = $(this).data("src");
     var projectViewer = $('#project-viewer');
 
-    console.log(url);
-
-    projectViewer.load(url + " #project-wrapper", function() {
-      //Once new content has loaded
-      Prism.highlightAll(); //re-render code blocks
-      $('.image-fullscreen-open').click(function() { openImageFullscreen(this) });
-    });
-
-    openDrawer($('#project-viewer-wrapper'), projectViewer, $('#project-viewer-close'), 1000, 100, "-100%");
+    console.log(currentProjectUrl + "==" + url);
+    if(url !== currentProjectUrl) {
+      projectViewer.load(url + " #project-wrapper", function() {
+        //Once new content has loaded
+        Prism.highlightAll(); //re-render code blocks
+        $('.image-fullscreen-open').click(function() { openImageFullscreen(this) });
+      });
+      currentProjectUrl = url;
+      openDrawer($('#project-viewer-wrapper'), projectViewer, $('#project-viewer-close'), 1000, 100, "-100%");
+      projectViewer.scrollTop(0);
+    } else {
+      openDrawer($('#project-viewer-wrapper'), projectViewer, $('#project-viewer-close'), 1000, 100, "-100%");
+    }
   });
 
   //project is closed
