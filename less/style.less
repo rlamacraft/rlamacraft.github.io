@@ -184,6 +184,10 @@ p, li {
   border: @border-accent;
   padding: @spacing-small-em @spacing-standard-em;
   background-color: transparent;
+
+  polyline {
+    .transition();
+  }
 }
 
 .btn:hover,
@@ -194,6 +198,14 @@ p, li {
   color: @colour-base;
   text-decoration: none;
   border: @border-width solid @colour-accent;
+
+  polyline.stroke {
+    stroke: @colour-base !important;
+  }
+
+  polyline.fill {
+    fill: @colour-base !important;
+  }
 }
 
 #scroll-btn {
@@ -312,10 +324,15 @@ input.form-control:focus {
 }
 
 .project-title {
-  .space-right;
+  .space-right();
+  .transition();
   display: block;
   text-align: center;
   color: @colour-accent;
+}
+
+.project:hover .project-title {
+  color: @colour-accent-light;
 }
 
 .project-tags {
@@ -541,15 +558,15 @@ figure.image-wrapper.hover figcaption p {
   opacity: 0.8;
 }
 
-figure.image-wrapper:hover figcaption span.fa,
-figure.image-wrapper.hover figcaption span.fa {
+figure.image-wrapper:hover figcaption svg,
+figure.image-wrapper.hover figcaption svg {
   opacity: 1.0;
   cursor: pointer;
 }
 
-figure.image-wrapper figcaption span.fa {
+figure.image-wrapper figcaption svg {
   position: absolute;
-  top: @spacing-xsmall;
+  bottom: @spacing-xsmall;
   right: @spacing-xsmall;
   opacity: 0.0;
   color: @colour-accent;
