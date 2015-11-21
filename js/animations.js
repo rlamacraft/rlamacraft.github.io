@@ -48,6 +48,10 @@ function openDrawer(absParent, relContainer, faClose, iconDelay, zIndex, transla
   setTimeout(function() {
       faClose.css("display", "block").css("opacity", "1.0");
   }, iconDelay);
+
+  $('html, body').stop().animate({
+    scrollTop: relContainer.offset().top
+  }, 1500);
 }
 
 function openImageFullscreen(openButton) {
