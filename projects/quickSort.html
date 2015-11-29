@@ -101,6 +101,23 @@ quickSort (n)
 
         <div class="row">
           <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding white-alternate">
+            <span class="tag tag-lua large locked space-bottom"></span>
+
+            <p>
+              Lua is a bit funky. The only form of arrays are associative arrays that map numeric indexes to values.
+              To provide a sorted output a standard function, <code>table.sort()</code>, is provided that is an interface to the standard C math library.
+                After a quick bit of research, it seems that the sort algorithm must by definition have a O(n log n) sort time which happens to equal that of QuickSort. Nice.
+            </p>
+
+            <pre><code class="language-lua">function listSort(list)
+  table.sort(list)
+  return(list)
+end</code></pre>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding white-alternate">
             <span class="tag tag-swift large locked space-bottom"></span>
 
             <p>

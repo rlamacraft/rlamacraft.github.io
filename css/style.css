@@ -73,8 +73,8 @@
   color: #f5f7f7 !important;
 }
 .tag.tag-python {
-  background-color: #50b942 !important;
-  color: #50b942 !important;
+  background-color: #2a69c5 !important;
+  color: #2a69c5 !important;
 }
 .tag.tag-python.locked {
   color: #f5f7f7 !important;
@@ -112,8 +112,8 @@
   color: #f5f7f7 !important;
 }
 .tag.tag-haskell {
-  background-color: #265089 !important;
-  color: #265089 !important;
+  background-color: #945992 !important;
+  color: #945992 !important;
 }
 .tag.tag-haskell.locked {
   color: #f5f7f7 !important;
@@ -125,8 +125,8 @@
   color: #f5f7f7 !important;
 }
 .tag.tag-html {
-  background-color: #45bfcb !important;
-  color: #45bfcb !important;
+  background-color: #50b942 !important;
+  color: #50b942 !important;
 }
 .tag.tag-html.locked {
   color: #f5f7f7 !important;
@@ -148,6 +148,19 @@
   content: "LESS";
 }
 .tag.tag-less:hover {
+  color: #f5f7f7 !important;
+}
+.tag.tag-lua {
+  background-color: #000080 !important;
+  color: #000080 !important;
+}
+.tag.tag-lua.locked {
+  color: #f5f7f7 !important;
+}
+.tag.tag-lua:after {
+  content: "Lua";
+}
+.tag.tag-lua:hover {
   color: #f5f7f7 !important;
 }
 code,
