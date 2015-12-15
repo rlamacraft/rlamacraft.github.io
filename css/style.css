@@ -334,13 +334,8 @@ li {
   display: table-cell;
   vertical-align: middle;
 }
-.homepage-title {
-  padding-top: 15%;
-  padding-bottom: 7.5%;
-}
 .homepage-subtitle {
-  padding-top: 7.5%;
-  padding-bottom: 7.5%;
+  padding-top: 10%;
 }
 .scroll-buttons {
   color: #3caa9c;
