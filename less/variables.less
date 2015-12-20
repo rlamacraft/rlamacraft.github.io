@@ -7,7 +7,7 @@
 @size-full: 100%;
 @size-half: 50%;
 @size-header-height-large: 100%;
-@size-header-height-standard: 30%;
+@size-header-height-standard: 50%;
 @size-header-minheight-large: 320px;
 @size-header-minheight-standard: 220px;
 @size-nav-height: 50px;
@@ -15,7 +15,6 @@
 @size-circle-btn-i: 62px;
 @size-circle-btn-top: 260px;
 @size-content-min-height: 100%;
-@size-content-top-space: (@size-circle-btn / 2) + @spacing-standard;
 @size-tag-bubble-small: 0.5em;
 @size-tag-bubble-standard: 1.5em;
 @size-tag-bubble-standard-width: 2em;
@@ -24,6 +23,7 @@
 @size-scrollBtn-height: 55px;
 @size-scrollBtn-i-width: 28px;
 @size-projectviewer-desktop: 75%;
+@size-contentsection-width: 80%;
 
 //colours
 @colour-base:         #F5F7F7; //#E5E8E8;
@@ -38,17 +38,15 @@
 @colour-code-background: #E8E9E8;
 
 //borders
+@border-standard: @border-width solid @colour-thin-border;
 @border-standard-thin: @border-width-thin solid @colour-thin-border;
 @border-accent: @border-width solid @colour-accent;
+@border-image: @border-width solid @colour-thin-border;
 
 @border-width-thin: 1px;
 @border-width: 2px;
-@border-width-tag: 5px;
 
-@border-radius-default: 3px;
-@border-radius-lots: 5px;
-@border-radius-code: 7px;
-@border-radius-circle: 50%;
+@border-radius: 4px;
 
 //fonts
 @font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -62,8 +60,7 @@
 @font-colour-accent:      @colour-accent;
 @font-colour-secondary:   @colour-secondary;
 
-@font-weight-light:     300; //100;
-@font-weight-standard:  300; //300;
+@font-weight-standard:  300;
 @font-weight-semibold:  400;
 @font-weight-bold:      700;
 
@@ -107,15 +104,16 @@
 //spacing
 @spacing-none:        00px;
 @spacing-none-em:     0.000em;
-@spacing-xsmall:      05px;
+@spacing-xsmall:      10px;
 @spacing-xsmall-em:   0.312em;
-@spacing-small:       10px;
+@spacing-small:       20px;
 @spacing-small-em:    0.625em;
-@spacing-standard:    15px;
+@spacing-standard:    25px;
 @spacing-standard-em: 0.937em;
-@spacing-big:         20px;
+@spacing-big:         40px;
 @spacing-big-em:      1.25em;
 @spacing-homepage:    10%;
+@spacing-content-section: 10%;
 
 //z-indexes
 @z-focus-underline:         100;
@@ -131,7 +129,6 @@
 @transition-navbar: ~"background .5s ease-in-out, padding .5s ease-in-out";
 @transition-focus-underline: ~"width .5s ease, background-color .5s ease";
 @transition-content-section: ~"opacity, 2s, ease";
-@transition-content-panel: ~"all 2s ease";
 @transition-tag-bubble: ~"all 0.75s cubic-bezier(0.39, 0.07, 0.13, 0.99)";
 
 //misc

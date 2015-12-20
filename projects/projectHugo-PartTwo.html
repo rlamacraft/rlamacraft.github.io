@@ -1,143 +1,117 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Project Hugo - Episode II | Robert Lamacraft </title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Project Hugo - Episode II | Robert Lamacraft </title>
 
-    <!-- Stylesheets -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/prism.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/prism.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:300' rel='stylesheet' type='text/css'>
 </head>
 
-  <body id="page-top" data-spy="scroll">
+  <body>
 
-    <div id="project-wrapper">
+      <section class="content-section always-show">
 
-      <!-- Intro Header -->
-      <header class="intro">
-            <div class="intro-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1 project-title">
-                            <h2>Project Hugo </h2>
-                            <h4 class="subtitle">Episode Two - The Pi Strikes Back</h4>
-                            <a target="_blank" href="https://github.com/rlamacraft/ProjectHugo/tree/master/HugoHub" class="btn btn-default">View Source</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-      </header>
-
-      <section class="container content-section always-show">
-
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding">
-            <h2>Idea</h2>
-            <p>
-              Only being able to control my lamp from my iPad is rather inconvienent.
-              A single UI for controlling the lamp fom my laptop, tablet and phone would sure be nice.
-              So, the idea is to run a local website that would control the lamp, running on my Raspberry Pi.
-              I wont lie, the original idea was to control the lamp with gestures via my Leap Motion.
-              But, it turns out, the Pi is not only incapable or processing the sheer amount of data but it doesn't even output enough power to turn the device on...
-              So, plan B: <b>Hugo Hub</b>
-            </p>
-          </div>
+        <div class="content-panel padding intro">
+          <h2>Project Hugo </h2>
+          <h4 class="subtitle">Episode Two - The Pi Strikes Back</h4>
+          <a target="_blank" href="https://github.com/rlamacraft/ProjectHugo/tree/master/HugoHub" class="btn btn-default">View Source</a>
         </div>
 
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding">
-            <h2>Setup</h2>
-            <p>
-              Both the Hue Bridge and the Raspberry Pi require a wired network connection.
-              In order for this system to be setup locally to the lamp, everything had to be wireless.
-              Step in, my existing WiFi Range Extender, that just so happens to have a single ethernet port.
-              But I need two ports: so to Amazon for a Ethernet-splitter-thing.
-              Wiring it all up it looks like this, tucked away inside my desk.
-            </p>
-            <figure class="image-wrapper right fixedheight">
-                <img src="images/HugoHub/Setup_Small.jpg">
+        <div class="content-panel padding">
+          <h2>Idea</h2>
+          <p>
+            Only being able to control my lamp from my iPad is rather inconvienent.
+            A single UI for controlling the lamp fom my laptop, tablet and phone would sure be nice.
+            So, the idea is to run a local website that would control the lamp, running on my Raspberry Pi.
+            I wont lie, the original idea was to control the lamp with gestures via my Leap Motion.
+            But, it turns out, the Pi is not only incapable or processing the sheer amount of data but it doesn't even output enough power to turn the device on...
+            So, plan B: <b>Hugo Hub</b>
+          </p>
+        </div>
+
+        <div class="content-panel padding">
+          <h2>Setup</h2>
+          <p>
+            Both the Hue Bridge and the Raspberry Pi require a wired network connection.
+            In order for this system to be setup locally to the lamp, everything had to be wireless.
+            Step in, my existing WiFi Range Extender, that just so happens to have a single ethernet port.
+            But I need two ports: so to Amazon for a Ethernet-splitter-thing.
+            Wiring it all up it looks like this, tucked away inside my desk.
+          </p>
+          <a href="../images/HugoHub/Setup.jpg" target="_blank">
+            <figure class="image-wrapper right fixedheight withcaption">
+                <img src="../images/HugoHub/Setup_Small.jpg">
                 <figcaption>
                   <p class="top">The Pi is just peeking in from the top right.</p>
                   <p class="bottom">Hue Bridge is down at the bottom center.</p>
-                  <h4>
-                    <svg height="25" width="25" class="image-fullscreen-open" data-imagesrc="images/HugoHub/Setup.jpg">
-                      <polyline points="8,1 20,1 20,13"
-                                style="fill:none;stroke:#3caa9c;stroke-width:3"
-                      />
-                      <polyline points="1,8 1,20 13,20"
-                                style="fill:none;stroke:#3caa9c;stroke-width:3"
-                      />
-                    </svg>
-                  </h4>
               </figcaption>
             </figure>
-            <p>
-              So yes, my lamp is connected to the network via wifi (lamp to bridge), ethernet (bridge to wifi range extender) and then wifi (wifi range extender to router).
-              And the lag isn't as much of an issue as you would think...
-            </p>
-          </div>
+          </a>
+          <p>
+            So yes, my lamp is connected to the network via wifi (lamp to bridge), ethernet (bridge to wifi range extender) and then wifi (wifi range extender to router).
+            And the lag isn't as much of an issue as you would think...
+          </p>
         </div>
 
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding">
-            <h2>Pi Setup</h2>
-            <p>
-              This should have been easy bit. It wasn't. Not having a screen to plug into the Pi didn't help.
-            </p>
-            <ol>
-              <li>Get GitHub repo, where website code will be stored.</li>
-              <li>Run a simple HTTP server using Python: <code class="language-bash newline">python -m SimpleHTTPServer 8080</code></li>
-              <li>Add server command to execute on boot by adding the following to the crontab file.
-                <code class="language-bash newline">@reboot cd /home/pi/ProjectHugo/HugoHub ; python -m SimpleHTTPServer 8080 &amp;</code>
-              </li>
-            </ol>
-          </div>
+        <div class="content-panel padding">
+          <h2>Pi Setup</h2>
+          <p>
+            This should have been easy bit. It wasn't. Not having a screen to plug into the Pi didn't help.
+          </p>
+          <ol>
+            <li>Get GitHub repo, where website code will be stored.</li>
+            <li>Run a simple HTTP server using Python: <code class="language-bash newline">python -m SimpleHTTPServer 8080</code></li>
+            <li>Add server command to execute on boot by adding the following to the crontab file.
+            <code class="language-bash newline">@reboot cd /home/pi/ProjectHugo/HugoHub ; python -m SimpleHTTPServer 8080 &amp;</code>
+            </li>
+          </ol>
         </div>
 
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding">
-            <h2>FAB</h2>
-            <p>
-              As a lover of <a target="_blank" href="https://design.google.com">Google's Material Design</a>, having a simple FAB that that turned the lamp on/off seemed like the obvious thing to do.
-              There's probably a more official way to do it, but this is already a hack. So here's the LESS code for that.
-            </p>
-            <pre><code class="language-less">#FAB {
-    position: fixed;
-    bottom: @fab-small-pos;
-    right: @fab-small-pos;
-    width: @fab-small-size;
-    height: @fab-small-size;
-    border-radius: 50%;
-    box-shadow: 2px 2px 5px #ccc;
-    background-color: @colour-accent;
-    color: @colour-base;
-    cursor: pointer;
+        <div class="content-panel padding">
+          <h2>FAB</h2>
+          <p>
+            As a lover of <a target="_blank" href="https://design.google.com">Google's Material Design</a>, having a simple FAB that that turned the lamp on/off seemed like the obvious thing to do.
+            There's probably a more official way to do it, but this is already a hack. So here's the LESS code for that.
+          </p>
+          <pre><code class="language-less">#FAB {
+  position: fixed;
+  bottom: @fab-small-pos;
+  right: @fab-small-pos;
+  width: @fab-small-size;
+  height: @fab-small-size;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px #ccc;
+  background-color: @colour-accent;
+  color: @colour-base;
+  cursor: pointer;
 
-    @media(min-width:768px) {
-        bottom: @fab-large-pos;
-        right: @fab-large-pos;
-        width: @fab-large-size;
-        height: @fab-large-size;
-    }
+  @media(min-width:768px) {
+      bottom: @fab-large-pos;
+      right: @fab-large-pos;
+      width: @fab-large-size;
+      height: @fab-large-size;
+  }
 
-    span {
-        font-size: 2.7em;
-        text-align: center;
-        width: 100%;
-        display: block;
+  span {
+      font-size: 2.7em;
+      text-align: center;
+      width: 100%;
+      display: block;
         color: inherit;
-        padding-top: 12px;
-    }
+      padding-top: 12px;
+  }
 }</code></pre>
-            <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/ProjectHugo/blob/master/HugoHub/less/style.less"><i class="fa fa-external-link-square pull-right"></i></a>
-            <figure class="image-wrapper left fixedwidth fixedheight">
-                <img src="images/HugoHub/FAB_Small.png">
+            <a href="../images/HugoHub/FAB.jpg" target="_blank">
+                <figure class="image-wrapper left fixedwidth fixedheight withcaption">
+                <img src="../images/HugoHub/FAB_Small.png">
                 <figcaption>
                   <p class="top">
                     Yes, I know the icon isn't center.
@@ -146,122 +120,91 @@
                     But screw it.
                     It's not important.
                   </p>
-                  <h4>
-                    <svg height="25" width="25" class="image-fullscreen-open" data-imagesrc="images/HugoHub/FAB.png">
-                      <polyline points="8,1 20,1 20,13"
-                                style="fill:none;stroke:#3caa9c;stroke-width:3"
-                      />
-                      <polyline points="1,8 1,20 13,20"
-                                style="fill:none;stroke:#3caa9c;stroke-width:3"
-                      />
-                    </svg>
-                </h4>
                 </figcaption>
             </figure>
-            <p>
-              As with LESS best practices, any recycled values are stored in variables.less file. I guess, the box-shadow and span values probably should too but they're only used here.
-              Essentially, white text on a circular div coloured with my accent green colour. The media tag just sets a larger size on desktop.
-              The white text is then a <a target="_blank" href="http://fortawesome.github.io/Font-Awesome/icon/lightbulb-o/">lightbulb font awesome icon.</a>
-            </p>
+          </a>
+          <p>
+            As with LESS best practices, any recycled values are stored in variables.less file. I guess, the box-shadow and span values probably should too but they're only used here.
+            Essentially, white text on a circular div coloured with my accent green colour. The media tag just sets a larger size on desktop.
+            The white text is then a <a target="_blank" href="http://fortawesome.github.io/Font-Awesome/icon/lightbulb-o/">lightbulb font awesome icon.</a>
+          </p>
             <p>Then it was just case of wiring together a simple REST PUT request, essentially the same code as in Part One but in JavaScript. <a target="_blank" href="https://github.com/rlamacraft/ProjectHugo/blob/master/HugoHub/js/hue-utils.js">Simple stuff.</a></p>
-          </div>
         </div>
 
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding">
-            <h2>Scenes</h2>
-            <p>
-              I then went on to split the bulk of the page into two tabs; the first for showing some defined 'scenes'.
-              I tried to use the built-in Hue scenes but the API isn't as open in that regard.
-              Wrote some HTML and CSS to create a kind of 'scene' component to display a colour splot and title.
-              Then just added a few of these to the HTML file. Then a simple JavaScript function to take the hue, sat and bri data attributes and put together a Hue request for that too.
-              Oh, and then set the background of the splot to the defined colours.
-              Having played with <a target="_blank" href="https://www.polymer-project.org/1.0/">Google's Polymer</a> recently, I can't help but keep seeing it's potential with things like this.
-            </p>
-            <pre class="language-html"><code class="language-html">&lt;li class="scene" data-hue="38234" data-bri="180" data-sat="180"&gt;
-  &lt;button>
-    &lt;div class="splot">&lt;/div>
-    &lt;div class="labels">&lt;h3>Morning Blue&lt;/h3>&lt;/div>
-  &lt;/button>
+        <div class="content-panel padding">
+          <h2>Scenes</h2>
+          <p>
+            I then went on to split the bulk of the page into two tabs; the first for showing some defined 'scenes'.
+            I tried to use the built-in Hue scenes but the API isn't as open in that regard.
+            Wrote some HTML and CSS to create a kind of 'scene' component to display a colour splot and title.
+            Then just added a few of these to the HTML file. Then a simple JavaScript function to take the hue, sat and bri data attributes and put together a Hue request for that too.
+            Oh, and then set the background of the splot to the defined colours.
+            Having played with <a target="_blank" href="https://www.polymer-project.org/1.0/">Google's Polymer</a> recently, I can't help but keep seeing it's potential with things like this.
+          </p>
+          <pre><code class="language-html">&lt;li class="scene" data-hue="38234" data-bri="180" data-sat="180"&gt;
+&lt;button>
+  &lt;div class="splot">&lt;/div>
+  &lt;div class="labels">&lt;h3>Morning Blue&lt;/h3>&lt;/div>
+&lt;/button>
 &lt;/li></code></pre>
-          </div>
         </div>
 
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding">
-            <h2>Alarms</h2>
+        <div class="content-panel padding">
+          <h2>Alarms</h2>
+          <a href="../images/HugoHub/Alarm.png" target="_blank">
             <figure class="image-wrapper right">
-                <img src="images/HugoHub/Alarm_Small.png">
-                <figcaption>
-                  <p>
-                    The basic information describing an alarm.
-                  </p>
-                  <h4>
-                    <svg height="25" width="25" class="image-fullscreen-open" data-imagesrc="images/HugoHub/Alarm.png">
-                      <polyline points="8,1 20,1 20,13"
-                                style="fill:none;stroke:#3caa9c;stroke-width:3"
-                      />
-                      <polyline points="1,8 1,20 13,20"
-                                style="fill:none;stroke:#3caa9c;stroke-width:3"
-                      />
-                    </svg>
-              </h4>
-                </figcaption>
+                <img src="../images/HugoHub/Alarm_Small.png">
             </figure>
-            <p>
-              Lastly, in another tab, I wanted a list of all of the set alarms. Eventually, I may make this editable (likewise I may make it possible to create scenes), but for now just a list will do.
-              I reused the HTML scene 'component' but added a subtitle for showing the time. Then wrote another simple bit of JavaScript to list all of the alarms.
-            </p>
-            <pre class="language-javascript"><code class="language-javascript">function renderAllAlarms(data) {
-  for (var key in data) {
-    if (data.hasOwnProperty(key)) {
-      colours = data[key].command.body;
-      if(colours.on === false) {
-        hue = "0";
-        sat = "100";
-        bri = "0";
-      } else {
-        hue = Math.round(HueToHSL(colours.hue, 'hue'));
-        sat = Math.round(HueToHSL(colours.sat, 'sat'));
-        bri = Math.round(HueToHSL(colours.bri, 'bri'));
-      }
-      splotColour = 'hsl(' + hue + ',' + sat + '%,' + bri + '%)';
-      splot = '<div class="splot" style="background-color:' + splotColour + '"></div>';
-      nameLabel = '<h3>' + data[key].name + '</h3>';
-      timeLabel = '<h5>' + data[key].time + '</h5>';
-      labels = '<div class="labels">' + nameLabel + timeLabel + '</div>';
-
-      $('#alarms-list').append('<li class="alarm" title="' + data[key].description + '">' + splot + labels + '</li>');
-      console.log(data[key]);
+          </a>
+          <p>
+            Lastly, in another tab, I wanted a list of all of the set alarms. Eventually, I may make this editable (likewise I may make it possible to create scenes), but for now just a list will do.
+            I reused the HTML scene 'component' but added a subtitle for showing the time. Then wrote another simple bit of JavaScript to list all of the alarms.
+          </p>
+          <pre class="language-javascript"><code class="language-javascript">function renderAllAlarms(data) {
+for (var key in data) {
+  if (data.hasOwnProperty(key)) {
+    colours = data[key].command.body;
+    if(colours.on === false) {
+      hue = "0";
+      sat = "100";
+      bri = "0";
+    } else {
+      hue = Math.round(HueToHSL(colours.hue, 'hue'));
+      sat = Math.round(HueToHSL(colours.sat, 'sat'));
+      bri = Math.round(HueToHSL(colours.bri, 'bri'));
     }
+    splotColour = 'hsl(' + hue + ',' + sat + '%,' + bri + '%)';
+    splot = '<div class="splot" style="background-color:' + splotColour + '"></div>';
+    nameLabel = '<h3>' + data[key].name + '</h3>';
+    timeLabel = '<h5>' + data[key].time + '</h5>';
+    labels = '<div class="labels">' + nameLabel + timeLabel + '</div>';
+
+    $('#alarms-list').append('<li class="alarm" title="' + data[key].description + '">' + splot + labels + '</li>');
+    console.log(data[key]);
   }
+}
 }</code></pre>
-          </div>
         </div>
 
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding">
-            <img src="images/HugoHub/Device_Small.png" class="pull-right" height="500">
-            <h2>Nativise</h2>
-            <p>Then just to make the website act like a native app, by:</p>
-            <ol>
-              <li>Add as homescreen icon on iOS.</li>
-              <li>Add as homescreen icon on Android.</li>
-              <li>Create a <a target="_blank" href="http://fluidapp.com/">Fluid app</a> on Mac.</li>
-            </ol>
-            <p>
-              And that is a nice simple project, completed.
-            </p>
+        <div class="content-panel padding">
+          <img src="../images/HugoHub/Device_Small.png" class="pull-right" height="500">
+          <h2>Nativise</h2>
+          <p>Then just to make the website act like a native app, by:</p>
+          <ol>
+            <li>Add as homescreen icon on iOS.</li>
+            <li>Add as homescreen icon on Android.</li>
+            <li>Create a <a target="_blank" href="http://fluidapp.com/">Fluid app</a> on Mac.</li>
+          </ol>
+          <p>
+            And that is a nice simple project, completed.
+          </p>
 
-          </div>
         </div>
 
       </section>
-    </div> <!-- project wrapper -->
 
     <script type="text/javascript" src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../js/scrollingStuff.js"></script>
     <script type="text/javascript" src="../js/prism.js"></script>
 
   </body>

@@ -16,12 +16,12 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/prism.css" rel="stylesheet">
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:300' rel='stylesheet' type='text/css'>
 
   </head>
 
-  <body id="page-top" data-spy="scroll">
+  <body>
 
         <!-- Intro Header -->
         <header class="intro intro-large">
@@ -48,7 +48,7 @@
                                                   class="stroke"
                                         />
                                       </svg>
-                                       <span class="network-name">GitHub</span>
+                                       GitHub
                                      </a>
                                   </li>
                                   <li>
@@ -59,7 +59,7 @@
                                                     class="fill"
                                           />
                                         </svg>
-                                        <span class="network-name">Email</span>
+                                        Email
                                       </a>
                                   </li>
                               </ul>
@@ -69,9 +69,9 @@
                         <div class="col-xs-10 col-xs-offset-1 text-center homepage-subtitle">
                           <div class="row">
                             <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                              <h4 class="space-top space-bottom"> Student at King's College London. </h4>
-                              <h4 class="space-bottom"> Intern at Goldman Sachs. </h4>
-                              <h4 class="space-bottom"> Developer. </h4>
+                              <h4> Student at King's College London. </h4>
+                              <h4> Intern at Goldman Sachs. </h4>
+                              <h4> Developer. </h4>
                           <svg height="40" width="40" id="scroll-down">
                                 <polyline points="6,8 20,24 34,8"
                                           style="fill:none;stroke:#3caa9c;stroke-width:8"
@@ -87,53 +87,86 @@
         </header>
 
       <!-- Recent Projects Section -->
-      <section id="main" class="container content-section full-page toggle-hidden">
+      <section id="main" class="content-section full-page toggle-hidden">
 
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding project-blur">
-            <h2 class="space-bottom space-top">RECENT PROJECTS</h2>
+          <div class="content-panel content-panel-padding project-blur">
+            <h3 class="space-bottom space-top">RECENT PROJECTS</h3>
 
             <div id="recent-projects">
 
-              <div class="project" id="project-2" data-src="projects/projectHugo-PartTwo.html">
-                <h3 class="project-title"> Project Hugo - Part 2 </h3>
+              <div class="project" id="project-2">
                 <div class="center">
+                  <h3 class="project-title"> Project Hugo - Part 2 </h3>
+                  <hr>
+                  <span class="subtitle">completed (mostly)</span>
+                </div>
+                <div class="overlay">
                   <div class="project-tags">
-                    <span class="tag tag-html"></span>
-                    <span class="tag tag-less"></span>
-                    <span class="tag tag-javascript"></span>
+                    <span class="project-tag project-tag-html"></span>
+                    <span class="project-tag project-tag-less"></span>
+                    <span class="project-tag project-tag-javascript"></span>
+                  </div>
+                  <div class="overlay-buttons">
+                    <a class="btn" href="projects/projectHugo-PartTwo.html">Read</a>
+                    <a class="btn" href="https://github.com/rlamacraft/ProjectHugo" target="_blank">Source</a>
                   </div>
                 </div>
               </div>
 
-              <div class="project" id="project-2" data-src="projects/projectHugo-PartOne.html">
-                <h3 class="project-title"> Project Hugo - Part 1 </h3>
+              <div class="project" id="project-2">
+
                 <div class="center">
+                  <h3 class="project-title"> Project Hugo - Part 1 </h3>
+                  <hr>
+                  <span class="subtitle">completed</span>
+                </div>
+                <div class="overlay">
                   <div class="project-tags">
-                    <span class="tag tag-python"></span>
+                    <span class="project-tag project-tag-python"></span>
+                  </div>
+                  <div class="overlay-buttons">
+                    <a class="btn" href="projects/projectHugo-PartOne.html">Read</a>
+                    <a class="btn" href="https://github.com/rlamacraft/ProjectHugo" target="_blank">Source</a>
                   </div>
                 </div>
               </div>
 
-              <div class="project" id="project-1" data-src="projects/quickSort.html">
-                <h3 class="project-title"> Quick Sort </h3>
+              <div class="project" id="project-1">
                 <div class="center">
+                  <h3 class="project-title"> Quick Sort </h3>
+                  <hr>
+                <span class="subtitle">always in progress</span>
+                </div>
+                <div class="overlay">
                   <div class="project-tags">
-                    <span class="tag tag-haskell"></span>
-                    <span class="tag tag-python"></span>
-                    <span class="tag tag-lua"></span>
-                    <span class="tag tag-swift"></span>
-                    <span class="tag tag-java"></span>
+                    <span class="project-tag project-tag-haskell"></span>
+                    <span class="project-tag project-tag-python"></span>
+                    <span class="project-tag project-tag-lua"></span>
+                    <span class="project-tag project-tag-swift"></span>
+                    <span class="project-tag project-tag-java"></span>
+                  </div>
+                  <div class="overlay-buttons">
+                  <a class="btn" href="projects/quickSort.html">Read</a>
                   </div>
                 </div>
               </div>
 
-              <div class="project" id="project-0" data-src="projects/KCLModuleCalculator.html">
-                <h3 class="project-title"> KCL Module Calculator </h3>
+              <div class="project" id="project-0">
+
                 <div class="center">
-                <div class="project-tags">
-                    <span class="tag tag-javascript"></span>
-                    <span class="tag tag-css"></span>
+                  <h3 class="project-title"> KCL Module Calculator </h3>
+
+                  <hr>
+                  <span class="subtitle">completed</span>
+                </div>
+                <div class="overlay">
+                  <div class="project-tags">
+                    <span class="project-tag project-tag-javascript" data-height="50%"></span>
+                    <span class="project-tag project-tag-css" data-height="25%"></span>
+                  </div>
+                  <div class="overlay-buttons">
+                    <a class="btn" href="projects/KCLModuleCalculator.html">Read</a>
+                    <a class="btn" href="demos/KCLModuleCalculator.html" target="_blank">View</a>
                   </div>
                 </div>
               </div>
@@ -141,43 +174,11 @@
           </div>
         </div>
 
-        <div id="project-viewer-wrapper">
-          <div id="project-viewer" data-open="false"></div>
-        </div>
-        <h4 id="project-viewer-close">
-          <svg height="25" width="25">
-            <polyline points="4,4 20,20"
-                      style="fill:none;stroke:#3caa9c;stroke-width:8"
-            />
-            <polyline points="4,20 20,4"
-                      style="fill:none;stroke:#3caa9c;stroke-width:8"
-            />
-            X <!-- X is displayed for browsers that don't support SVG -->
-          </svg>
-        </h4>
-
-      </div>
       </section>
-
-      <div id="image-fullscreen">
-        <img id="image-fullscreen-image">
-        <h4 id="image-fullscreen-close">
-          <svg height="25" width="25">
-            <polyline points="4,4 20,20"
-                      style="fill:none;stroke:#3caa9c;stroke-width:8"
-            />
-            <polyline points="4,20 20,4"
-                      style="fill:none;stroke:#3caa9c;stroke-width:8"
-            />
-            X <!-- X is displayed for browsers that don't support SVG -->
-          </svg>
-        </h4>
-      </div>
 
       <script type="text/javascript" src="js/jquery.min.js"></script>
       <script type="text/javascript" src="js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="js/scrollingStuff.js"></script>
-      <script type="text/javascript" src="js/animations.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
       <script type="text/javascript" src="js/prism.js"></script>
 
     </body>

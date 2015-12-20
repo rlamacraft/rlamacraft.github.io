@@ -1,0 +1,32 @@
+  .create-tag(
+  @colour,
+  @label,
+) {
+  background-color: @colour !important;
+  color: @colour !important;
+  &.locked {
+    color: @colour-base !important;
+  }
+  &:after {
+    content: @label;
+  }
+  &:hover {
+    color: @colour-base !important;
+  }
+}
+
+/***
+** Generators
+***/
+  .project-tag.project-tag-idea       { .create-tag( @colour-accent, "Idea" ) } //For project ideas
+.project-tag.project-tag-javascript { .create-tag( #7e7e7e, "JavaScript"  ) } //Steel Grey
+.project-tag.project-tag-css        { .create-tag( #f45081, "CSS"         ) } //Pink
+.project-tag.project-tag-python     { .create-tag( #2A69C5, "Python"      ) } //Blue
+.project-tag.project-tag-swift      { .create-tag( #fb6917, "Swift"       ) } //Orange
+.project-tag.project-tag-java       { .create-tag( #c65c3a, "Java"        ) } //Brown
+.project-tag.project-tag-haskell    { .create-tag( #945992, "Haskell"     ) } //Purple
+.project-tag.project-tag-html       { .create-tag( #50b942, "HTML"        ) } //Green
+.project-tag.project-tag-less       { .create-tag( #FFC107, "LESS"        ) } //Yellowey-orange
+.project-tag.project-tag-lua        { .create-tag( #000080, "Lua"         ) } //Deep Blue
+
+//

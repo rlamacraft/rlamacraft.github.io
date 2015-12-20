@@ -1,166 +1,144 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Project Hugo - Episode I | Robert Lamacraft </title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Project Hugo - Episode I | Robert Lamacraft </title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico">
-    <meta name="theme-color" content="#f5f7f7">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#3CAA9C">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+  <meta name="theme-color" content="#f5f7f7">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#3CAA9C">
 
-    <!-- Stylesheets -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/prism.css" rel="stylesheet">
+  <!-- Stylesheets -->
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/prism.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
 
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:300' rel='stylesheet' type='text/css'>
 </head>
 
-  <body id="page-top" data-spy="scroll">
+  <body>
+    <section class="content-section always-show">
 
-    <div id="project-wrapper">
+      <div class="content-panel padding intro">
+        <h2>Project Hugo </h2>
+        <h4 class="subtitle">Episode One - A New Lamp</h4>
+        <a target="_blank" href="https://github.com/rlamacraft/ProjectHugo" class="btn btn-default">View Source</a>
+      </div>
 
-      <!-- Intro Header -->
-      <header class="intro">
-            <div class="intro-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-1 project-title">
-                            <h2>Project Hugo </h2>
-                            <h4 class="subtitle">Episode One - A New Lamp</h4>
-                            <a target="_blank" href="https://github.com/rlamacraft/ProjectHugo" class="btn btn-default">View Source</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-      </header>
+      <div class="content-panel padding">
+        <h4>Backstory</h4>
+        <p>
+          For a couple of months I've thought about getting a new alarm. A radio alarm clock and an iPad alarm and still I would fall back asleep some mornings.
+          Natural light lamp seemed the way forward. Then I remembered Philip's Hue. Hence Hugo. Hue Go. Hugo. And then I bought Hue Iris. Because reasons.
+        </p>
+        <p>
+          So Hue works with countless apps and IFTTT. But, more importantly, it also can be programmed via a simple REST API. Here's some of my inital experimentation.
+        </p>
+      </div>
 
-      <section class="container content-section always-show">
+      <div class="content-panel padding">
+        <h4>The REST API</h4>
+        <p>Quick bit of research discovered that Python SDKs existed, but screw that. So I wrote a python script for sending REST API calls.</p>
 
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding">
-              <h4>Backstory</h4>
-              <p>
-                For a couple of months I've thought about getting a new alarm. A radio alarm clock and an iPad alarm and still I would fall back asleep some mornings.
-                Natural light lamp seemed the way forward. Then I remembered Philip's Hue. Hence Hugo. Hue Go. Hugo. And then I bought Hue Iris. Because reasons.
-              </p>
-              <p>
-                So Hue works with countless apps and IFTTT. But, more importantly, it also can be programmed via a simple REST API. Here's some of my inital experimentation.
-              </p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding">
-            <h4>The REST API</h4>
-            <p>Quick bit of research discovered that Python SDKs existed, but screw that. So I wrote a python script for sending REST API calls.</p>
-
-            <pre><code class="language-python">def get_request(domain, username, url):
-    url = domain + '/' + username + '/' + url
-    req = urllib.request.Request(url)
-    response = urllib.request.urlopen(req)
-    return response.read().decode('ascii')
+        <pre><code class="language-python">def get_request(domain, username, url):
+  url = domain + '/' + username + '/' + url
+  req = urllib.request.Request(url)
+  response = urllib.request.urlopen(req)
+  return response.read().decode('ascii')
 
 def put_request(domain, username, url, data):
-    url = domain + '/' + username + '/' + url
-    json_data = json.dumps(data)
-    binary_data = json_data.encode('ascii')
-    req = urllib.request.Request(url, binary_data)
-    req.get_method = lambda: 'PUT'
-    response = urllib.request.urlopen(req)
-    return response.read()
+  url = domain + '/' + username + '/' + url
+  json_data = json.dumps(data)
+  binary_data = json_data.encode('ascii')
+  req = urllib.request.Request(url, binary_data)
+  req.get_method = lambda: 'PUT'
+  response = urllib.request.urlopen(req)
+  return response.read()
 
 def post_request(domain, username, url, data):
-    url = domain + '/' + username + '/' + url
-    json_data = json.dumps(data)
-    binary_data = json_data.encode('ascii')
-    req = urllib.request.Request(url, binary_data)
-    # including binary data, defaults from GET to POST
-    response = urllib.request.urlopen(req)
-    return response.read()
+  url = domain + '/' + username + '/' + url
+  json_data = json.dumps(data)
+  binary_data = json_data.encode('ascii')
+  req = urllib.request.Request(url, binary_data)
+  # including binary data, defaults from GET to POST
+  response = urllib.request.urlopen(req)
+  return response.read()
 
 def delete_request(domain, username, url):
-    url = domain + '/' + username + '/' + url
-    req = urllib.request.Request(url)
-    req.get_method = lambda: 'DELETE'
-    response = urllib.request.urlopen(req)
-    return response.read()
+  url = domain + '/' + username + '/' + url
+  req = urllib.request.Request(url)
+  req.get_method = lambda: 'DELETE'
+  response = urllib.request.urlopen(req)
+  return response.read()
 </code></pre>
-            <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/ProjectHugo/blob/master/hue_requests.py"><i class="fa fa-external-link-square pull-right"></i></a>
+        <p>When it comes to DRY, it's the thought that counts, right?</p>
+      </div>
 
-            <p>When it comes to DRY, it's the thought that counts, right?</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding">
-            <h4>Schedules</h4>
-            <p>
-              The HUE system works pretty well with alarms, or schedules as they call them. Schedules are stored on the Hue Bridge, the inter-lamp communication component.
-              Just send a POST request to &lt;local IP of bridge&gt;/api/&lt;username&gt;/schedules with a JSON object in the format below.
-            </p>
-            <pre><code class="language-javascript">{
-    "name": "Example Schedule",
-    "description": "This is an example schedule",
-    "command": {
-        "address": "/api/&lt;username&gt;/groups/1/action",
-        "method": "PUT",
-        "body": {
-          "on": true
-        }
-    },
-    "localtime": "W127/T12:00:00"
+      <div class="content-panel padding">
+        <h4>Schedules</h4>
+          <p>
+            The HUE system works pretty well with alarms, or schedules as they call them. Schedules are stored on the Hue Bridge, the inter-lamp communication component.
+            Just send a POST request to &lt;local IP of bridge&gt;/api/&lt;username&gt;/schedules with a JSON object in the format below.
+          </p>
+          <pre><code class="language-javascript">{
+  "name": "Example Schedule",
+  "description": "This is an example schedule",
+  "command": {
+      "address": "/api/&lt;username&gt;/groups/1/action",
+      "method": "PUT",
+      "body": {
+        "on": true
+      }
+  },
+  "localtime": "W127/T12:00:00"
 }
 </code></pre>
-            <p>
-              At the time specified in the local time param, the command will be executed.
-              The command is a standard form for executing a command on the lamps, just specify a target (group 1, above) and an effect;
-              the above code turns the lamp on but hue, satursation and brightness can also be set.
-            </p>
-            <p>
-              There are a few ways to specify the time, but this is the one I find most useful.
-              First is a number that corresponds a set of 7 boolean flags representing the 7 days of the week.
-              MTWTFSS, so 00000011 (3) would be the weekened, 01111100 (124) would be weekdays and 127 is everyday.
-              Then the rest of the time is obvious: HH:MM:SS, so this alarm will execute everyday at noon.</p>
-            <p>
-              I then wrote a couple of wrapper functions.
-            </p>
-            <pre><code class="language-python">def get_all_schedules(domain, username):
-    url = "schedules"
-    return get_request(domain, username, url)
+          <p>
+            At the time specified in the local time param, the command will be executed.
+            The command is a standard form for executing a command on the lamps, just specify a target (group 1, above) and an effect;
+            the above code turns the lamp on but hue, satursation and brightness can also be set.
+          </p>
+          <p>
+            There are a few ways to specify the time, but this is the one I find most useful.
+            First is a number that corresponds a set of 7 boolean flags representing the 7 days of the week.
+            MTWTFSS, so 00000011 (3) would be the weekened, 01111100 (124) would be weekdays and 127 is everyday.
+            Then the rest of the time is obvious: HH:MM:SS, so this alarm will execute everyday at noon.</p>
+          <p>
+            I then wrote a couple of wrapper functions.
+          </p>
+          <pre><code class="language-python">def get_all_schedules(domain, username):
+  url = "schedules"
+  return get_request(domain, username, url)
 
 def create_schedule(domain, username, name, desc, group, action, when):
-    url = "schedules"
-    address = "/api/" + username + "/groups/" + group + "/action"
-    params = {
-        "name": name,
-        "description": desc,
-        "command": {
-            "address": address,
-            "method": "PUT",
-            "body": action
-        },
-        "localtime": when
-    }
-    post_request(domain, username, url, params)
+  url = "schedules"
+  address = "/api/" + username + "/groups/" + group + "/action"
+  params = {
+      "name": name,
+      "description": desc,
+      "command": {
+          "address": address,
+          "method": "PUT",
+          "body": action
+      },
+      "localtime": when
+  }
+  post_request(domain, username, url, params)
 
 def delete_schedule(domain, username, schedule_id):
-    delete_request(domain, username, "schedules/" + schedule_id)</code></pre>
-            <a class="code-link" target="_blank" title="View source" href="https://github.com/rlamacraft/ProjectHugo/blob/master/utils.py"><i class="fa fa-external-link-square pull-right"></i></a>
-          </div>
-        </div>
+  delete_request(domain, username, "schedules/" + schedule_id)</code></pre>
+      </div>
 
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding">
-            <h4>From JSON</h4>
-            <p>
-              To separate the code from the defintions of all of my alarms, I then planned out a JSON defintion.
-              An array of alarms that could be loaded from a JSON file and converted to Hue schedules.</p>
-            <pre><code class="language-javascript">{
+      <div class="content-panel padding">
+        <h4>From JSON</h4>
+        <p>
+          To separate the code from the defintions of all of my alarms, I then planned out a JSON defintion.
+          An array of alarms that could be loaded from a JSON file and converted to Hue schedules.</p>
+        <pre><code class="language-javascript">{
   "name": "wake up",
   "desc": "weekday wakeup",
   "group": "1",
@@ -174,44 +152,36 @@ def delete_schedule(domain, username, schedule_id):
   "when": "W124/T07:00:00"
 },
 </code></pre>
-            <p>
-              Note; transition time is defined in 100s of milliseconds with the default 4. This will take 12 seconds to turn on.
-              Hue, saturation and birghtness define a warm orange.
-            </p>
-            <p>
-              So, I then wrote a JSON file that defined all of the regular alarms, like getting out of bed, with some interesting colours.
-              Then all if took was a <a target="_blank" href="https://github.com/rlamacraft/ProjectHugo/blob/master/alarms.py">simple script</a> to read in the JSON objects and for each one call <code>create_schedule</code>, as defined above.
-            </p>
-            <p>
-              Oh, and a script was needed to clean out all of the old ones, otherwise duplicates would keep piling up everytime I re-ran the script.
-              To solve this, I just appened 'Hugo:' to the front of the description and deleted all schedules with description starting with 'Hugo:' before creating the new ones.
-              Bit of a hack, but it works.
-            </p>
-          </div>
-        </div>
+        <p>
+          Note; transition time is defined in 100s of milliseconds with the default 4. This will take 12 seconds to turn on.
+          Hue, saturation and birghtness define a warm orange.
+        </p>
+        <p>
+          So, I then wrote a JSON file that defined all of the regular alarms, like getting out of bed, with some interesting colours.
+          Then all if took was a <a target="_blank" href="https://github.com/rlamacraft/ProjectHugo/blob/master/alarms.py">simple script</a> to read in the JSON objects and for each one call <code>create_schedule</code>, as defined above.
+        </p>
+        <p>
+          Oh, and a script was needed to clean out all of the old ones, otherwise duplicates would keep piling up everytime I re-ran the script.
+          To solve this, I just appened 'Hugo:' to the front of the description and deleted all schedules with description starting with 'Hugo:' before creating the new ones.
+          Bit of a hack, but it works.
+        </p>
+      </div>
 
-        <div class="row">
-          <div class="col-xs-10 col-xs-offset-1 content-panel content-panel-padding">
-            <h4>Conclusion</h4>
-            <p>
-              It still needs some tweaking and testing.
-              I'm not waking up from the light alone, still being driven made by Apple's buzzing noises.
-              But waking up with a dim light makes getting up so much easier.
-              And this is so much cooler.
-              More cool ideas to come.
-            </p>
-          </div>
-        </div>
+      <div class="content-panel padding">
+        <h4>Conclusion</h4>
+        <p>
+          It still needs some tweaking and testing.
+          I'm not waking up from the light alone, still being driven made by Apple's buzzing noises.
+          But waking up with a dim light makes getting up so much easier.
+          And this is so much cooler.
+          More cool ideas to come.
+        </p>
+      </div>
 
-      </section>
+    </section>
 
-    </div> <!-- project wrapper -->
-
-      <script type="text/javascript" src="js/jquery.min.js"></script>
-      <script type="text/javascript" src="js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="js/scrollingStuff.js"></script>
-      <script type="text/javascript" src="js/project-viewer.js"></script>
-      <script type="text/javascript" src="js/prism.js"></script>
-
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/prism.js"></script>
   </body>
 </html>

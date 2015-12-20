@@ -1,4 +1,4 @@
-.rounded-corners( @radius: @border-radius-default ) {
+.rounded-corners( @radius: @border-radius ) {
   -webkit-border-radius:  @radius;
   -moz-border-radius:     @radius;
   -ms-border-radius:      @radius;
@@ -35,6 +35,7 @@
   @size:        @font-size-standard,
   @line-height: @font-lineheight-standard,
   @transform:   @font-transform-none,
+  @letter-spacing: 0em,
 ) {
   font-family: @family;
   font-weight: @weight;
@@ -42,6 +43,7 @@
   font-size: @size;
   line-height: @line-height;
   text-transform: @transform;
+  letter-spacing: @letter-spacing;
 }
 
 .heading-font(
@@ -61,7 +63,7 @@
 }
 
 .tag-size(
-  @size : @size-tag-bubble-standard,
+  @size : @size-half,
   @font-size: @font-size-tag-standard,
 ) {
   .font(
