@@ -14,7 +14,6 @@ html, body {
   width: @size-full;
   height: @size-full;
   background-color: @colour-base;
-  // overflow-x: hidden;
 }
 
 a {
@@ -23,9 +22,10 @@ a {
   color: @font-colour-accent;
 }
 
-a:hover {
+a:hover, a:focus {
   text-decoration: none;
   color: @colour-accent-light;
+  outline: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
