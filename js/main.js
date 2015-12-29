@@ -15,9 +15,6 @@ $(document).ready( function() {
       parent.removeClass('focused');
     });
 
-    if(window.location.hash !== "")
-      $(window.location.hash).parent().parent().parent().css('opacity', '1.0');
-
     $('.project').on('click mouseover', function() {
       $('.project').removeClass('hover');
       $(this).addClass('hover');
