@@ -395,6 +395,7 @@ li {
   border-top: 2px solid #cccccc;
   border-color: #555555;
   padding-top: 25px;
+  margin-top: 40px;
 }
 .content-section#main .content-panel > h3 {
   position: absolute;
@@ -402,7 +403,7 @@ li {
   left: 50%;
   background-color: #f5f7f7;
   padding: 20px;
-  margin: 20px 0 0 -154px;
+  margin: 60px 0 0 -154px;
 }
 .content-section.full-page {
   min-height: 100%;
