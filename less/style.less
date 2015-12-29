@@ -150,6 +150,7 @@ p, li {
   &#main {
     background-color: @colour-base;
     border: none;
+    margin-bottom: @spacing-standard;
 
     .content-panel {
       border: none;
@@ -157,14 +158,14 @@ p, li {
       border-color: @colour-font;
       padding-top: @spacing-standard;
       margin-top: @spacing-big;
+      position: relative;
 
       > h3 {
           position: absolute;
-          top: ~"calc(100% - 20px)";
-          left: @size-half;
+          top: (@spacing-standard + @spacing-big) * -1;
+          left: @spacing-small;
           background-color: @colour-base;
           padding: @spacing-small;
-          margin: @spacing-small + @spacing-big 0 0 -154px;
       }
     }
   }
