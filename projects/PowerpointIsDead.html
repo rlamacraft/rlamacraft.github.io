@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> PowerPoint Is Dead | Robert Lamacraft </title>
+
+    <!-- Stylesheets -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <section class="content-section always-show">
+
+    <div class="content-panel padding intro">
+      <h2> PowerPoint Is Dead. </h2>
+      <h4 class="subtitle">Idea = Prezi + LESS</h4>
+    </div>
+
+    <div class="content-panel padding">
+      <p>
+        PowerPoint is dead. It's cold, corporate and looks ancient.
+        Recently, new tools have risen in popularity to challenge the status quo held by PowerPoint, Apple's Keynote and Google's Slides.
+        The most popular of which, has to be <a href="https://prezi.com/" target="_blank">Prezi</a>.
+      </p>
+      <p>
+        However, what's frustrating for a web developer, using a web based presentation tool, is knowing the capabilities of the platform and not being able to use them.
+        It should be easy to embed content, link to external pages, import custom fonts, even apply custom event handling on certain keypresses using JavaScript.
+      </p>
+      <p>
+        There exist some JavaScript plugins for doing similar things. Such as <a href="https://github.com/impress/impress.js" target="_blank">impress.js</a> and <a href="https://github.com/hakimel/reveal.js/" target="_blank">reveal.js</a>, however, I'm yet to find one that allows the user to code their styles
+        in a variable based system like LESS or SASS then compiles into CSS as part of a visual editor (because coding everything can be tedious).
+      </p>
+      <p>
+        So there's a project idea, should I ever find the time. A visual presentation tool that facilitates styling, through LESS or SASS, and custom JavaScript.
+        Probably as a browser extension on <a href="http://electron.atom.io/" target="_blank">Electron</a> app to allow for offline use. Really want to build something using Electron at some point.
+      </p>
+    </div>
+
+    <div class="content-panel padding">
+      <div class="half-column">
+        <h4>impress.js</h4>
+        <iframe src="http://impress.github.io/impress.js/#/" width="100%" height="300px"></iframe>
+      </div>
+      <div class="half-column">
+        <h4>reveal.js</h4>
+        <iframe src="http://lab.hakim.se/reveal-js/#/" width="100%" height="300px"></iframe>
+      </div>
+    </div>
+
+  </section>
+
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -201,6 +201,11 @@ p, li {
   > h3 {
     margin-left: @spacing-xsmall;
   }
+
+  > div.half-column {
+    display: inline-block;
+    width: calc(50% - 2px);
+  }
 }
 
 .btn {
@@ -566,4 +571,9 @@ hr {
   margin-top: @spacing-big;
   margin-bottom: @spacing-big;
   border-top: @border-standard-thin;
+}
+
+iframe {
+  border-radius: @border-radius;
+  border: @border-image;
 }
