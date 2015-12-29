@@ -171,7 +171,7 @@ p, li {
 }
 
 .content-section.full-page {
-  min-height: @size-content-min-height;
+  min-height: calc( @size-content-min-height ~" - " @spacing-big );
   overflow-x: hidden;
 }
 
@@ -560,7 +560,6 @@ figure.image-wrapper {
 }
 
 span.subtitle {
-  // text-transform: uppercase;
   .font(
     @transform: uppercase;
     @letter-spacing: 0.03em;
