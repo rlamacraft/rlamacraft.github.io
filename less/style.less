@@ -223,26 +223,30 @@ p, li {
   padding: @spacing-small-em @spacing-standard-em;
   background-color: transparent;
 
+  &.header {
+    font-size: 1.2em;
+    width: 8em;
+    max-width: 50%;
+  }
+
   polyline {
     .transition();
   }
-}
 
-.btn:hover,
-.btn:focus,
-.btn.selected {
-  .ignore-default-focus;
-  background-color: @colour-accent;
-  color: @colour-base;
-  text-decoration: none;
-  border: @border-width solid @colour-accent;
+  &:hover, &:focus, &.selected {
+    .ignore-default-focus;
+    background-color: @colour-accent;
+    color: @colour-base;
+    text-decoration: none;
+    border: @border-width solid @colour-accent;
 
-  polyline.stroke {
-    stroke: @colour-base !important;
-  }
+    polyline.stroke {
+      stroke: @colour-base !important;
+    }
 
-  polyline.fill {
-    fill: @colour-base !important;
+    polyline.fill {
+      fill: @colour-base !important;
+    }
   }
 }
 

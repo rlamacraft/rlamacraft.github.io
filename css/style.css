@@ -461,6 +461,11 @@ li {
   padding: 0.625em 0.937em;
   background-color: transparent;
 }
+.btn.header {
+  font-size: 1.2em;
+  width: 8em;
+  max-width: 50%;
+}
 .btn polyline {
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
