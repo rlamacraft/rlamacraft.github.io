@@ -177,7 +177,7 @@ p, li {
 
   &.intro {
     border-bottom: @border-standard-thin;
-    padding-bottom: @spacing-big;
+    padding-bottom: @spacing-xsmall;
     min-height: 0;
   }
 
@@ -213,6 +213,16 @@ p, li {
     font-size: 1.2em;
     width: 8em;
     max-width: 50%;
+
+    &.link {
+      border: @border-btn-link;
+      .space-top();
+
+      &:hover, &:focus, &:active {
+        background: transparent;
+        color: @colour-accent-light;
+      }
+    }
   }
 
   polyline {
@@ -225,6 +235,8 @@ p, li {
     color: @colour-base;
     text-decoration: none;
     border: @border-width solid @colour-accent;
+    outline: none;
+    box-shadow: none;
 
     polyline.stroke {
       stroke: @colour-base !important;
