@@ -572,6 +572,7 @@ input.form-control:focus {
   display: block;
   text-align: center;
   color: #3caa9c;
+  font-size: 2em;
 }
 .project .subtitle {
   display: block;
