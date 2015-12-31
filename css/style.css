@@ -221,9 +221,6 @@ code.inline {
 code.newline {
   display: block;
 }
-/***
-** Standard HTML tags
-***/
 html,
 body {
   width: 100%;
@@ -251,21 +248,12 @@ h4,
 h5,
 h6 {
   margin: 0;
-}
-@media (min-width: 768px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    color: #555555;
-    font-size: 2.5em;
-    line-height: 1.1;
-    text-transform: none;
-  }
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: #555555;
+  font-size: 2.5em;
+  line-height: 1.1;
+  text-transform: none;
 }
 h1 > a,
 h2 > a,
@@ -292,14 +280,7 @@ h2 {
   text-transform: none;
   margin-bottom: 0.312em;
 }
-h3 {
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  color: #555555;
-  font-size: 2.5em;
-  line-height: 1.1;
-  text-transform: none;
-}
+h3,
 h4 {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -321,9 +302,6 @@ li {
   text-transform: none;
   letter-spacing: 0em;
 }
-/***
-**  Custom stuff
-***/
 .container {
   width: 100%;
 }
@@ -355,7 +333,7 @@ li {
 .homepage-subtitle {
   padding-top: 10%;
 }
-.homepage-subtitle h4 {
+.homepage-subtitle h3 {
   margin-bottom: 10px;
 }
 .scroll-buttons {
@@ -392,6 +370,7 @@ li {
   background-color: #f5f7f7;
   border: none;
   margin-bottom: 25px;
+  margin-top: 0px;
 }
 .content-section#main .content-panel {
   border: none;
@@ -407,6 +386,8 @@ li {
   left: 20px;
   background-color: #f5f7f7;
   padding: 20px;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 .content-section.full-page {
   min-height: calc(100%  -  40px);
