@@ -11,15 +11,17 @@
 @size-header-minheight-standard: 220px;
 @size-content-min-height: 100%;
 @size-contentsection-width: 80%;
+@size-intro-button-width: 8em;
 
 //colours
 @colour-base:         #F5F7F7;
-@colour-section-alt:  #FCFCFC;
-@colour-secondary:    #777777;
+@colour-section-alt:  #F9FBFB;
+@colour-secondary:    #607070;
+@colour-subheading:   #556969;
 @colour-thin-border:  #CCCCCC;
 @colour-accent:       #3CAA9C;
 @colour-accent-light: #8EDAD0;
-@colour-font:         #555555;
+@colour-font:         #405050;
 @colour-circle-hover: rgba(255,255,255,.1);
 @colour-code-background: #E8E9E8;
 
@@ -36,9 +38,10 @@
 @border-radius: 4px;
 
 //fonts
-@font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-standard: "Lato", @font-family-base;
+@font-family-base: sans-serif;
+@font-family-standard: @font-family-base;
 @font-family-title: "Lato", @font-family-base;
+@font-family-subheading: "Product Sans", @font-family-title;
 @font-family-accent: @font-family-base;
 @font-family-code: "Roboto Mono", "Courier New", "Courier", mono-space;
 
@@ -52,13 +55,15 @@
 
 @font-size-interactable-small:      00.7em;
 @font-size-code-inline:             00.9em;
+@font-size-projecttag:              00.95em;
 @font-size-no-effect:               01.0em;
 @font-size-code:                    01.0em;
 @font-size-interactable-standard:   01.3em;
-@font-size-standard:                01.25em;
+@font-size-standard:                01.1em;
 @font-size-code-link:               01.5em;
+@font-size-project:                 01.7em;
 @font-size-subheading:              01.8em;
-@font-size-project:                 02.0em;
+@font-size-subheading-big:          02.0em;
 @font-size-heading:                 02.5em;
 @font-size-large:                   03.6em;
 @font-size-xlarge:                  05.0em;
@@ -71,7 +76,7 @@
 @font-lineheight-less:                      1.10;
 @font-lineheight-btn:                       1.30;
 @font-lineheight-standard:                  1.40;
-@font-lineheight-homepage_section-heading:  1.50;
+@font-lineheight-homepage_section-heading:  1.30;
 
 @font-transform-none:       none;
 @font-transform-uppercase:  uppercase;

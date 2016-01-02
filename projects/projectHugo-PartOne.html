@@ -12,11 +12,11 @@
   <link rel="mask-icon" href="safari-pinned-tab.svg" color="#3CAA9C">
 
   <!-- Stylesheets -->
-  <link href="../css/bootstrap.min.css" rel="stylesheet">
   <link href="../css/prism.css" rel="stylesheet">
   <link href="../css/style.css" rel="stylesheet">
 
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:300' rel='stylesheet' type='text/css'>
 </head>
 
@@ -31,7 +31,7 @@
       </div>
 
       <div class="content-panel padding">
-        <h4>Backstory</h4>
+        <h3>Backstory</h3>
         <p>
           For a couple of months I've thought about getting a new alarm. A radio alarm clock and an iPad alarm and still I would fall back asleep some mornings.
           Natural light lamp seemed the way forward. Then I remembered Philip's Hue. Hence Hugo. Hue Go. Hugo. And then I bought Hue Iris. Because reasons.
@@ -42,7 +42,7 @@
       </div>
 
       <div class="content-panel padding">
-        <h4>The REST API</h4>
+        <h3>The REST API</h3>
         <p>Quick bit of research discovered that Python SDKs existed, but screw that. So I wrote a python script for sending REST API calls.</p>
 
         <pre><code class="language-python">def get_request(domain, username, url):
@@ -80,7 +80,7 @@ def delete_request(domain, username, url):
       </div>
 
       <div class="content-panel padding">
-        <h4>Schedules</h4>
+        <h3>Schedules</h3>
           <p>
             The HUE system works pretty well with alarms, or schedules as they call them. Schedules are stored on the Hue Bridge, the inter-lamp communication component.
             Just send a POST request to &lt;local IP of bridge&gt;/api/&lt;username&gt;/schedules with a JSON object in the format below.
@@ -135,7 +135,7 @@ def delete_schedule(domain, username, schedule_id):
       </div>
 
       <div class="content-panel padding">
-        <h4>From JSON</h4>
+        <h3>From JSON</h3>
         <p>
           To separate the code from the defintions of all of my alarms, I then planned out a JSON defintion.
           An array of alarms that could be loaded from a JSON file and converted to Hue schedules.</p>
@@ -169,7 +169,7 @@ def delete_schedule(domain, username, schedule_id):
       </div>
 
       <div class="content-panel padding">
-        <h4>Conclusion</h4>
+        <h3>Conclusion</h3>
         <p>
           It still needs some tweaking and testing.
           I'm not waking up from the light alone, still being driven made by Apple's buzzing noises.
@@ -182,7 +182,7 @@ def delete_schedule(domain, username, schedule_id):
     </section>
 
     <script type="text/javascript" src="../js/jquery.min.js"></script>
-    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="../js/bootstrap.min.js"></script> -->
     <script type="text/javascript" src="../js/prism.js"></script>
   </body>
 </html>
