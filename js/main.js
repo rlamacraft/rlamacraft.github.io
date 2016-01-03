@@ -1,6 +1,6 @@
 $('#scroll-down').click(function() {
   $('html, body').stop().animate({
-    scrollTop: $('#main').offset().top
+    scrollTop: $('#homepage-content-section').offset().top
   }, 1500);
 })
 

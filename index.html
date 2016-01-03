@@ -22,51 +22,37 @@
   </head>
 
   <body>
+    <header id="homepage-intro">
+      <div>
+        <div class="homepage-title">
+          <h1>Robert Lamacraft</h1>
+          <h4 class="subtitle">Programmer, Nerd and Functional Minimalist.</h3>
+          <a href="https://github.com/rlamacraft" target="_blank" class="btn header">
+            GitHub
+          </a>
+          <a href="mailto:rlamacraft@gmail.com" class="btn header">
+            Email
+          </a>
+        </div>
+        <div class="homepage-subtitle">
+          <h4> Student at King's College London. </h3>
+          <h4> Intern at Goldman Sachs. </h3>
+          <h4> Developer. </h3>
+          <svg height="40" width="40" id="scroll-down">
+            <polyline points="6,8 20,24 34,8"
+                      style="fill:none;stroke:#3caa9c;stroke-width:8"
+                      class="scroll-buttons" />
+            Scroll. Go on.
+          </svg>
+        </div>
+      </div>
+    </header>
 
-        <!-- Intro Header -->
-        <header class="intro intro-large">
-              <div class="intro-body">
-                  <div class="container">
-                      <div class="row">
-                          <div class="col-md-10 col-md-offset-1 homepage-title">
-                              <h1>Robert Lamacraft</h1>
-                              <h4 class="subtitle">Programmer, Nerd and Functional Minimalist.</h3>
-                              <a href="https://github.com/rlamacraft" target="_blank" class="btn header">
-                                GitHub
-                              </a>
-                              <a href="mailto:rlamacraft@gmail.com" class="btn header">
-                                Email
-                              </a>
-                          </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-xs-10 col-xs-offset-1 text-center homepage-subtitle">
-                          <div class="row">
-                            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-                              <h4> Student at King's College London. </h3>
-                              <h4> Intern at Goldman Sachs. </h3>
-                              <h4> Developer. </h3>
-                              <svg height="40" width="40" id="scroll-down">
-                                <polyline points="6,8 20,24 34,8"
-                                          style="fill:none;stroke:#3caa9c;stroke-width:8"
-                                          class="scroll-buttons" />
-                                Scroll. Go on.
-                              </svg>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-        </header>
+    <section id="homepage-content-section" class="content-section">
 
-      <!-- Recent Projects Section -->
-      <section id="main" class="content-section full-page toggle-hidden">
-
-          <div class="content-panel content-panel-padding project-blur">
+          <div id="recent-projects" class="content-panel content-panel-padding">
             <h3 class="space-bottom space-top">Recent Projects</h3>
-
-            <div id="recent-projects">
+            <div id="projects-container">
 
               <div class="project">
                 <div class="center">
@@ -167,7 +153,6 @@
       </section>
 
       <script type="text/javascript" src="js/jquery.min.js"></script>
-      <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
       <script type="text/javascript" src="js/main.js"></script>
       <script type="text/javascript" src="js/prism.js"></script>
 
