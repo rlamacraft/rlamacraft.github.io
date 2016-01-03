@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Quick Sort | Robert Lamacraft </title>
 
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+    <meta name="theme-color" content="#f5f7f7">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#3CAA9C">
+
     <!-- Stylesheets -->
     <link href="../css/prism.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
@@ -18,27 +23,27 @@
 <body>
   <section class="content-section always-show">
 
-  <div class="content-panel intro">
-    <h2>Quick Sort</h2>
-    <h4 class="subtitle">I ♥︎ QuickSort.</h4>
-    <a href="/#main" class="btn header link">More Projects</a>
-  </div>
+    <div class="content-panel intro">
+      <h2>Quick Sort</h2>
+      <h4 class="subtitle">I ♥︎ QuickSort.</h4>
+      <a href="/#main" class="btn header link">More Projects</a>
+    </div>
 
-  <div class="content-panel">
-    <p>
-      It feels like I have studied sorting algorithms half a dozen times: A Level Maths and Computing, some more times at uni. Quick sort has always been my favourite.
-      Just something about the simple way it can be recursively implemented with just one condition and the arbitrary selection of the pivot. I just love it.
-      Quite a few times I've coded simple implementations of it, just to learn syntax or compare different languages. So without further ado here is the extent of my nerdiness.
-    </p>
-  </div>
+    <div class="content-panel">
+      <p>
+        It feels like I have studied sorting algorithms half a dozen times: A Level Maths and Computing, some more times at uni. Quick sort has always been my favourite.
+        Just something about the simple way it can be recursively implemented with just one condition and the arbitrary selection of the pivot. I just love it.
+        Quite a few times I've coded simple implementations of it, just to learn syntax or compare different languages. So without further ado here is the extent of my nerdiness.
+      </p>
+    </div>
 
-  <div class="content-panel">
-    <h3>Haskell</h3>
-    <p>
-      First of all Haskell, can show how it is truly done. Nice and simple. Didn't even bother with the length-two-switch it's so simple and efficient. Though I'm sure some Haskell expert could make half-a-hundred improvements.
-    </p>
+    <div class="content-panel">
+      <h3>Haskell</h3>
+      <p>
+        First of all Haskell, can show how it is truly done. Nice and simple. Didn't even bother with the length-two-switch it's so simple and efficient. Though I'm sure some Haskell expert could make half-a-hundred improvements.
+      </p>
 
-    <pre><code class="language-haskell">quickSort :: [Float] -> [Float]
+      <pre><code class="language-haskell">quickSort :: [Float] -> [Float]
 quickSort (n)
   | length n < 2    = n
   | otherwise       = quickSort (filter (&lt;pivot) n ) ++
