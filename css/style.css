@@ -269,7 +269,8 @@ h5 > a,
 h6 > a {
   text-decoration: none !important;
 }
-h1 {
+h1,
+html #homepage-intro h1 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   color: #607070;
@@ -315,25 +316,6 @@ li {
   line-height: 1.4;
   text-transform: none;
   letter-spacing: 0em;
-}
-#homepage-intro {
-  display: table;
-  height: 100%;
-  text-align: center;
-  width: 100%;
-}
-#homepage-intro > div {
-  display: table-cell;
-  vertical-align: middle;
-}
-#homepage-intro .homepage-subtitle {
-  padding-top: 10%;
-}
-#homepage-intro .homepage-subtitle h4 {
-  margin-bottom: 10px;
-}
-#homepage-intro .homepage-subtitle svg {
-  margin-top: 10px;
 }
 .content-section {
   -webkit-transition: all .5s ease;

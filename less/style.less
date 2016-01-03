@@ -41,7 +41,7 @@ h1>a, h2>a, h3>a, h4>a, h5>a, h6>a {
   text-decoration: none !important;
 }
 
-h1 {
+h1, html #homepage-intro h1 {
   .heading-font(
       @size:        @font-size-large,
       @transform:   @font-transform-uppercase,
@@ -80,30 +80,6 @@ h4 {
 p, li {
   margin: 0 0 @spacing-standard-em;
   .font();
-}
-
-#homepage-intro {
-  display: table;
-  height: 100%;
-  text-align: center;
-  width: 100%;
-
-  > div {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-  .homepage-subtitle {
-    padding-top: @spacing-homepage;
-
-    h4 {
-      margin-bottom: @spacing-xsmall;
-    }
-
-    svg {
-      margin-top: @spacing-xsmall;
-    }
-  }
 }
 
 .content-section {
