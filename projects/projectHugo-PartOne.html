@@ -23,14 +23,14 @@
   <body>
     <section class="content-section always-show">
 
-      <div class="content-panel padding intro">
+      <div class="content-panel intro">
         <h2>Project Hugo </h2>
         <h4 class="subtitle">Episode One - A New Lamp</h4>
         <a target="_blank" href="https://github.com/rlamacraft/ProjectHugo" class="btn header link">View Source</a>
         <a href="/#main" class="btn header link">More Projects</a>
       </div>
 
-      <div class="content-panel padding">
+      <div class="content-panel">
         <h3>Backstory</h3>
         <p>
           For a couple of months I've thought about getting a new alarm. A radio alarm clock and an iPad alarm and still I would fall back asleep some mornings.
@@ -41,7 +41,7 @@
         </p>
       </div>
 
-      <div class="content-panel padding">
+      <div class="content-panel">
         <h3>The REST API</h3>
         <p>Quick bit of research discovered that Python SDKs existed, but screw that. So I wrote a python script for sending REST API calls.</p>
 
@@ -79,7 +79,7 @@ def delete_request(domain, username, url):
         <p>When it comes to DRY, it's the thought that counts, right?</p>
       </div>
 
-      <div class="content-panel padding">
+      <div class="content-panel">
         <h3>Schedules</h3>
           <p>
             The HUE system works pretty well with alarms, or schedules as they call them. Schedules are stored on the Hue Bridge, the inter-lamp communication component.
@@ -134,7 +134,7 @@ def delete_schedule(domain, username, schedule_id):
   delete_request(domain, username, "schedules/" + schedule_id)</code></pre>
       </div>
 
-      <div class="content-panel padding">
+      <div class="content-panel">
         <h3>From JSON</h3>
         <p>
           To separate the code from the defintions of all of my alarms, I then planned out a JSON defintion.
@@ -168,7 +168,7 @@ def delete_schedule(domain, username, schedule_id):
         </p>
       </div>
 
-      <div class="content-panel padding">
+      <div class="content-panel">
         <h3>Conclusion</h3>
         <p>
           It still needs some tweaking and testing.
