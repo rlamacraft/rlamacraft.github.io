@@ -142,7 +142,7 @@ p, li {
   border-bottom: @border-standard-thin;
   padding: @spacing-standard @spacing-big;
 
-  &.intro {
+  &.intro, &.outro {
     border-bottom: @border-standard-thin;
     padding-bottom: @spacing-xsmall;
     min-height: 0;
@@ -157,15 +157,11 @@ p, li {
     &.demo {
       background-color: @colour-base;
     }
+  }
 
-    &.intro-large {
-      height: @size-header-height-large;
-      background-color: @colour-base;
-    }
-
-    .intro-body {
-      display: table-cell;
-      vertical-align: middle;
+  &.outro {
+    .btn.header.link {
+      margin-top: 0;
     }
   }
 
@@ -587,4 +583,8 @@ iframe {
 
 .pull-right {
   float: right;
+}
+
+.pull-left {
+  float: left;
 }

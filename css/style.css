@@ -382,7 +382,8 @@ li {
   border-bottom: 1px solid #cccccc;
   padding: 25px 40px;
 }
-.content-panel.intro {
+.content-panel.intro,
+.content-panel.outro {
   border-bottom: 1px solid #cccccc;
   padding-bottom: 10px;
   min-height: 0;
@@ -390,21 +391,18 @@ li {
   text-align: center;
 }
 @media (min-width: 768px) {
-  .content-panel.intro {
+  .content-panel.intro,
+  .content-panel.outro {
     min-height: 0;
     height: 50%;
   }
 }
-.content-panel.intro.demo {
+.content-panel.intro.demo,
+.content-panel.outro.demo {
   background-color: #f5f7f7;
 }
-.content-panel.intro.intro-large {
-  height: 100%;
-  background-color: #f5f7f7;
-}
-.content-panel.intro .intro-body {
-  display: table-cell;
-  vertical-align: middle;
+.content-panel.outro .btn.header.link {
+  margin-top: 0;
 }
 .content-panel:last-child {
   border: none;
@@ -828,4 +826,7 @@ iframe {
 }
 .pull-right {
   float: right;
+}
+.pull-left {
+  float: left;
 }
