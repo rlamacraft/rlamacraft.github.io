@@ -317,6 +317,9 @@ li {
   text-transform: none;
   letter-spacing: 0em;
 }
+svg#scroll-down:hover {
+  cursor: pointer;
+}
 .content-section {
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
