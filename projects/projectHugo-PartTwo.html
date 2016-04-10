@@ -87,7 +87,7 @@
             As a lover of <a target="_blank" href="https://design.google.com">Google's Material Design</a>, having a simple FAB that that turned the lamp on/off seemed like the obvious thing to do.
             There's probably a more official way to do it, but this is already a hack. So here's the LESS code for that.
           </p>
-          <pre><code class="language-less">#FAB {
+          <pre class="line-numbers"><code class="language-less">#FAB {
   position: fixed;
   bottom: @fab-small-pos;
   right: @fab-small-pos;
@@ -147,7 +147,7 @@
             Oh, and then set the background of the splot to the defined colours.
             Having played with <a target="_blank" href="https://www.polymer-project.org/1.0/">Google's Polymer</a> recently, I can't help but keep seeing it's potential with things like this.
           </p>
-          <pre><code class="language-html">&lt;li class="scene" data-hue="38234" data-bri="180" data-sat="180"&gt;
+          <pre class="line-numbers"><code class="language-html">&lt;li class="scene" data-hue="38234" data-bri="180" data-sat="180"&gt;
 &lt;button>
   &lt;div class="splot">&lt;/div>
   &lt;div class="labels">&lt;h3>Morning Blue&lt;/h3>&lt;/div>
@@ -166,7 +166,7 @@
             Lastly, in another tab, I wanted a list of all of the set alarms. Eventually, I may make this editable (likewise I may make it possible to create scenes), but for now just a list will do.
             I reused the HTML scene 'component' but added a subtitle for showing the time. Then wrote another simple bit of JavaScript to list all of the alarms.
           </p>
-          <pre class="language-javascript"><code class="language-javascript">function renderAllAlarms(data) {
+          <pre class="language-javascript line-numbers"><code class="language-javascript">function renderAllAlarms(data) {
   for (var key in data) {
     if (data.hasOwnProperty(key)) {
       colours = data[key].command.body;
@@ -180,10 +180,10 @@
         bri = Math.round(HueToHSL(colours.bri, 'bri'));
       }
       splotColour = 'hsl(' + hue + ',' + sat + '%,' + bri + '%)';
-      splot = '<div class="splot" style="background-color:' + splotColour + '"></div>';
-      nameLabel = '<h3>' + data[key].name + '</h3>';
-      timeLabel = '<h5>' + data[key].time + '</h5>';
-      labels = '<div class="labels">' + nameLabel + timeLabel + '</div>';
+      splot = '&lt;div class="splot" style="background-color:' + splotColour + '">&lt;/div>';
+      nameLabel = '&lt;h3>' + data[key].name + '&lt;/h3>';
+      timeLabel = '&lt;h5>' + data[key].time + '&lt;/h5>';
+      labels = '&lt;div class="labels">' + nameLabel + timeLabel + '&lt;/div>';
 
       $('#alarms-list').append('<li class="alarm" title="' + data[key].description + '">' + splot + labels + '</li>');
       console.log(data[key]);

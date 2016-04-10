@@ -43,7 +43,7 @@
         First of all Haskell, can show how it is truly done. Nice and simple. Didn't even bother with the length-two-switch it's so simple and efficient. Though I'm sure some Haskell expert could make half-a-hundred improvements.
       </p>
 
-      <pre><code class="language-haskell">quickSort :: [Float] -> [Float]
+      <pre class="line-numbers"><code class="language-haskell">quickSort :: [Float] -> [Float]
 quickSort (n)
   | length n < 2    = n
   | otherwise       = quickSort (filter (&lt;pivot) n ) ++
@@ -60,7 +60,7 @@ quickSort (n)
       So lovely and tidy, for an imperative/OOP language anyway.
     </p>
 
-    <pre><code class="language-python">def quickSort(list):
+    <pre class="line-numbers"><code class="language-python">def quickSort(list):
   listLength = len(list)
   if listLength <= 1:
   return list
@@ -93,7 +93,7 @@ quickSort (n)
           After a quick bit of research, it seems that the sort algorithm must by definition have a O(n log n) sort time which happens to equal that of QuickSort. Nice.
       </p>
 
-      <pre><code class="language-lua">function listSort(list)
+      <pre class="line-numbers"><code class="language-lua">function listSort(list)
   table.sort(list)
   return(list)
 end</code></pre>
@@ -109,7 +109,7 @@ end</code></pre>
         One thing I do really like about Swift is the pre and post-conditions (line 2), really plays well with with my black-box determinstic function code-style. Wish Python had that.
       </p>
 
-      <pre><code class="language-swift">func quickSort(list: [Float]) -> [Float] {
+      <pre class="line-numbers"><code class="language-swift">func quickSort(list: [Float]) -> [Float] {
   let listLength = count(list)
   if listLength <= 1 {
     return list
@@ -147,7 +147,7 @@ end</code></pre>
         Maybe Java 8 will make it okay. (Just got to drag myself to check it out.)
       </p>
 
-      <pre><code class="language-java">public static ArrayList<Float> quickSort(ArrayList<Float> list) {
+      <pre class="line-numbers"><code class="language-java">public static ArrayList<Float> quickSort(ArrayList<Float> list) {
   int listLength = list.size();
   if (listLength <= 1) {
     return list
