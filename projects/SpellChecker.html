@@ -32,12 +32,12 @@
 
     <div class="content-panel">
       <p>
-        Inspired by <a href="https://www.reddit.com/r/dailyprogrammer/comments/3n55f3/20150930_challenge_234_intermediate_red_squiggles/" target="_blank">this post</a> on <a href="https://www.reddit.com/r/dailyprogrammer" target="_blank">/r/dailyProgrammer</a>, I decided to build a simply spell checker that would take text as a user entered it against a dictionary of words to highlight when a given word was no longer a known word.
+        Inspired by <a href="https://www.reddit.com/r/dailyprogrammer/comments/3n55f3/20150930_challenge_234_intermediate_red_squiggles/" target="_blank">this post</a> on <a href="https://www.reddit.com/r/dailyprogrammer" target="_blank">/r/dailyProgrammer</a>, I decided to build a simple spell checker that would take text as a user entered and compare it against a dictionary of words to highlight when a given word was no longer a known word.
         Simply because, for me, hacking together webpages is something I do everyday I stuck to JavaScript (also meant that I could host the result <a href="../demos/SpellChecker/index.html" target="_blank">here</a>).
         After loading the dictionary using a simple jQuery ajax call I took to evaluating an efficient way to search the list of words.
       </p>
       <p>
-        The dictionary of words provided by the reddit post is return separated so <code>dictionary.split("\n")</code> was a simple solution to having an array of all of the words that was conviently sorted alphabetically.
+        The dictionary of words provided by the reddit post is return-separated so <code>dictionary.split("\n")</code> was a simple solution to having an array of all of the words that was conviently sorted alphabetically.
         <i>Binary searching</i> seemed like the obvious way to go from there.
       </p>
       <pre class="language-javascript line-numbers"><code class="language-javascript">var SUCCESS = -2;
