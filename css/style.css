@@ -833,3 +833,7 @@ iframe {
 .pull-left {
   float: left;
 }
+.prism-show-language-label {
+  font-family: "Open Sans", "Lato", sans-serif;
+  padding: 0.312em 0.625em !important;
+}
