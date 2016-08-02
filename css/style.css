@@ -43,9 +43,6 @@
 .text-divider:before {
   content: "-";
 }
-/***
-** Generators
-***/
 .project-tag.project-tag-idea {
   background-color: #3caa9c !important;
   color: #3caa9c !important;
@@ -175,6 +172,36 @@
 }
 .project-tag.project-tag-lua:hover {
   color: #f5f7f7 !important;
+}
+.project.project__primary-tag-idea {
+  border: 2px solid #3caa9c;
+}
+.project.project__primary-tag-javascript {
+  border: 2px solid #7e7e7e;
+}
+.project.project__primary-tag-css {
+  border: 2px solid #f45081;
+}
+.project.project__primary-tag-python {
+  border: 2px solid #2a69c5;
+}
+.project.project__primary-tag-swift {
+  border: 2px solid #fb6917;
+}
+.project.project__primary-tag-java {
+  border: 2px solid #c65c3a;
+}
+.project.project__primary-tag-haskell {
+  border: 2px solid #945992;
+}
+.project.project__primary-tag-html {
+  border: 2px solid #50b942;
+}
+.project.project__primary-tag-less {
+  border: 2px solid #ffc107;
+}
+.project.project__primary-tag-lua {
+  border: 2px solid #000080;
 }
 code,
 pre {
@@ -325,10 +352,10 @@ svg#scroll-down:hover {
   -moz-transition: all .5s ease;
   -ms-transition: all .5s ease;
   transition: all .5s ease;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
   text-align: left;
   padding-left: 0px;
   padding-right: 0px;
@@ -418,10 +445,10 @@ svg#scroll-down:hover {
   width: calc(48%);
 }
 .btn {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -ms-transition: all .5s ease;
@@ -437,6 +464,7 @@ svg#scroll-down:hover {
   padding: 0.625em 0.937em;
   background-color: transparent;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .btn.header {
   font-size: 1.2em;
@@ -563,25 +591,22 @@ input.form-control:focus {
 .project {
   display: inline-block;
   margin-top: 25px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-  -moz-box-shadow: 3px 3px 5px rgba(75, 100, 100, 0.2);
-  -webkit-box-shadow: 3px 3px 5px rgba(75, 100, 100, 0.2);
-  box-shadow: 3px 3px 5px rgba(75, 100, 100, 0.2);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 1px 1px 3px rgba(85, 100, 100, 0.3);
+  -webkit-box-shadow: 1px 1px 3px rgba(85, 100, 100, 0.3);
+  box-shadow: 1px 1px 3px rgba(85, 100, 100, 0.3);
   border: 1px solid rgba(150, 150, 150, 0.2);
   background-color: #f9fbfb;
   padding: 40px;
   padding-top: 50px;
-  margin: 20px;
+  margin: 10px;
   flex-grow: 1;
   flex-basis: auto;
   position: relative;
   overflow: hidden;
-}
-.project.center {
-  text-align: center;
 }
 .project .project-title {
   -webkit-transition: all .5s ease;
@@ -606,6 +631,12 @@ input.form-control:focus {
 }
 .project .subtitle:after {
   content: " -";
+}
+.project .center {
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
 }
 .project .overlay .overlay-buttons {
   position: absolute;
@@ -704,6 +735,9 @@ input.form-control:focus {
 .project.hover .project-title {
   color: #8edad0;
 }
+.project.hover .center {
+  -webkit-filter: blur(3px);
+}
 .project.hover .overlay .overlay-buttons .btn {
   transform: translateY(0%) !important;
   opacity: 1;
@@ -730,10 +764,10 @@ pre .tag {
   margin-top: -109px;
 }
 figure.image-wrapper {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
   border: 2px solid rgba(150, 150, 150, 0.2);
   overflow: hidden;
   position: relative;
@@ -836,7 +870,7 @@ hr {
   border: 1px solid rgba(150, 150, 150, 0.2);
 }
 iframe {
-  border-radius: 4px;
+  border-radius: 3px;
   border: 2px solid rgba(150, 150, 150, 0.2);
 }
 .pull-right {

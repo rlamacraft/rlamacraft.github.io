@@ -1,4 +1,15 @@
-  .create-tag(
+@Idea       : @colour-accent; //For project ideas
+@JavaScript : #7e7e7e; //Steel Grey
+@CSS        : #f45081; //Pink
+@Python     : #2A69C5; //Blue
+@Swift      : #fb6917; //Orange
+@Java       : #c65c3a; //Brown
+@Haskell    : #945992; //Purple
+@HTML       : #50b942; //Green
+@LESS       : #FFC107; //Yellowey-orange
+@Lua        : #000080; //Deep Blue
+
+.create-tag(
   @colour,
   @label,
 ) {
@@ -15,18 +26,30 @@
   }
 }
 
-/***
-** Generators
-***/
-  .project-tag.project-tag-idea       { .create-tag( @colour-accent, "Idea" ) } //For project ideas
-.project-tag.project-tag-javascript { .create-tag( #7e7e7e, "JavaScript"  ) } //Steel Grey
-.project-tag.project-tag-css        { .create-tag( #f45081, "CSS"         ) } //Pink
-.project-tag.project-tag-python     { .create-tag( #2A69C5, "Python"      ) } //Blue
-.project-tag.project-tag-swift      { .create-tag( #fb6917, "Swift"       ) } //Orange
-.project-tag.project-tag-java       { .create-tag( #c65c3a, "Java"        ) } //Brown
-.project-tag.project-tag-haskell    { .create-tag( #945992, "Haskell"     ) } //Purple
-.project-tag.project-tag-html       { .create-tag( #50b942, "HTML"        ) } //Green
-.project-tag.project-tag-less       { .create-tag( #FFC107, "LESS"        ) } //Yellowey-orange
-.project-tag.project-tag-lua        { .create-tag( #000080, "Lua"         ) } //Deep Blue
+.project-tag.project-tag-idea       { .create-tag( @Idea, "Idea"              ) }
+.project-tag.project-tag-javascript { .create-tag( @JavaScript, "JavaScript"  ) }
+.project-tag.project-tag-css        { .create-tag( @CSS, "CSS"                ) }
+.project-tag.project-tag-python     { .create-tag( @Python, "Python"          ) }
+.project-tag.project-tag-swift      { .create-tag( @Swift, "Swift"            ) }
+.project-tag.project-tag-java       { .create-tag( @Java, "Java"              ) }
+.project-tag.project-tag-haskell    { .create-tag( @Haskell, "Haskell"        ) }
+.project-tag.project-tag-html       { .create-tag( @HTML, "HTML"              ) }
+.project-tag.project-tag-less       { .create-tag( @LESS, "LESS"              ) }
+.project-tag.project-tag-lua        { .create-tag( @Lua, "Lua"                ) }
 
-//
+.project-primary-tag-border(
+  @colour,
+) {
+  border: @border-width solid @colour;
+}
+
+.project.project__primary-tag-idea       { .project-primary-tag-border( @Idea        ) }
+.project.project__primary-tag-javascript { .project-primary-tag-border( @JavaScript  ) }
+.project.project__primary-tag-css        { .project-primary-tag-border( @CSS         ) }
+.project.project__primary-tag-python     { .project-primary-tag-border( @Python      ) }
+.project.project__primary-tag-swift      { .project-primary-tag-border( @Swift       ) }
+.project.project__primary-tag-java       { .project-primary-tag-border( @Java        ) }
+.project.project__primary-tag-haskell    { .project-primary-tag-border( @Haskell     ) }
+.project.project__primary-tag-html       { .project-primary-tag-border( @HTML        ) }
+.project.project__primary-tag-less       { .project-primary-tag-border( @LESS        ) }
+.project.project__primary-tag-lua        { .project-primary-tag-border( @Lua         ) }

@@ -199,6 +199,7 @@ svg#scroll-down{
   padding: @spacing-small-em @spacing-standard-em;
   background-color: transparent;
   text-transform: uppercase;
+  cursor: pointer;
 
   &.header {
     font-size: 1.2em;
@@ -312,21 +313,17 @@ input.form-control {
 
 .project {
   .space-top;
-  .rounded-corners;
+  .rounded-corners(@border-radius-project);
   .shadow;
   border: @border-standard-thin;
   background-color: @colour-section-alt;
   padding: @spacing-big;
   padding-top: @spacing-big + @spacing-xsmall;
-  margin: @spacing-small;
+  margin: @spacing-xsmall;
   flex-grow: 1;
   flex-basis: auto;
   position: relative;
   overflow: hidden;
-
-  &.center {
-    text-align: center;
-  }
 
   .project-title {
     .transition();
@@ -351,6 +348,10 @@ input.form-control {
     &:after {
       content: " -"
     }
+  }
+
+  .center {
+    .transition;
   }
 
   .overlay {
@@ -454,6 +455,10 @@ input.form-control {
   &.hover {
     .project-title {
       color: @colour-accent-light;
+    }
+
+    .center {
+      -webkit-filter: blur(3px);
     }
 
     .overlay {
