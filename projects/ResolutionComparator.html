@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Resolution Comparator | Robert Lamacraft </title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+    <meta name="theme-color" content="#f5f7f7">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#3CAA9C">
+
+    <!-- Stylesheets -->
+    <link href="../css/prism.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <section class="content-section always-show">
+
+    <div class="content-panel intro">
+      <h2> Resolution Comparator </h2>
+      <h4 class="subtitle">My new year's resolution? 4K.</h4>
+      <a target="_blank" href="../demos/ResolutionComparator/index.html" class="btn header link">View Demo</a>
+      <a href="/#homepage-content-section" class="btn header link">More Projects</a>
+    </div>
+
+    <div class="content-panel">
+      <p>
+        I'm thinking of getting a new monitor, and I'm considering splashing the cash on a 4K monitor.
+        As someone who has a retina-display mac, the biggest problem I have with using other monitors simulataneously is the difference in pixel density.
+        So, as a simple way to calculate and compare the pixel densite of different monitors, I built this simple widget over a weekend.
+      </p>
+      <p>
+        I know, I'm sad. Deal with it.
+      </p>
+      <p>
+        There's nothing particularily funky going on.
+        Just a function that calculates the pixel density (that could honestly do with some tests if I could be bothered):
+      </p>
+      <pre class="language-javascript line-numbers"><code class="language-javascript">function calculate_ppi() {
+  var horizontal = $(".calculation_input_horizontal").val();
+  var vertical = $(".calculation_input_vertical").val();
+  var diagonal = $(".calculation_input_diagonal").val();
+
+  var aspect_ratio = horizontal / vertical;
+  var angle = Math.atan(vertical/horizontal);
+
+  var height = Math.sin(angle) * diagonal;
+  var width = Math.cos(angle) * diagonal;
+  var area = height * width;
+
+  var num_of_pixels = horizontal * vertical;
+  var pixels_per_square_inch = Math.sqrt(num_of_pixels / area );
+  return( Math.round( pixels_per_square_inch * 100 ) / 100 );
+}
+</code></pre>
+      <p>
+        We then just store that in the browser's local storage when the user hits save. Then display a <a target="_blank" href="https://www.datatables.net/">DataTable</a> from the stored data.
+      </p>
+      <p>
+        Oh, and then just to add a bit of responsiveness, the columns of the table vanish when the screen size is too small.
+        Not the best for functionality but a simple hack to ensure it doesn't look like crap.
+      </p>
+      <pre class="line-numbers"><code class="language-less">@media(max-width: 900px) {
+    table.dataTable thead tr th:nth-child(6), table.dataTable thead tr th:nth-child(7),
+  table.dataTable tbody tr td:nth-child(6), table.dataTable tbody tr td:nth-child(7) {
+    display: none;
+  }
+}
+
+@media(max-width: 600px) {
+  table.dataTable thead tr th:nth-child(2), table.dataTable thead tr th:nth-child(3), table.dataTable thead tr th:nth-child(4),
+  table.dataTable tbody tr td:nth-child(2), table.dataTable tbody tr td:nth-child(3), table.dataTable tbody tr td:nth-child(4) {
+    display: none;
+  }
+}</code></pre>
+      <p>
+        The source code is available within the GitHub repository for this website, see <a target="_blank" href="#TODO">here</a>.
+      </p>
+    </div>
+
+    <div class="content-panel outro">
+      <a target="_blank" href="../demos/ResolutionComparator/index.html" class="btn header link">View Demo</a>
+      <a href="/#homepage-content-section" class="btn header link">More Projects</a>
+    </div>
+
+  </section>
+
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/prism.js"></script>
+
+</body>
+</html>
