@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Resolution Comparator</title>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" charset="utf-8">
+  <link rel="stylesheet" href="/css/style.css" charset="utf-8">
+  <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+  <link href='//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="section section_header">
+    <h1><span class="material-icons">aspect_ratio</span></h1>
+  </div>
+
+  <div class="section section_calculation section__card">
+    <div class="section_calculation_default visible">
+      <div class="section_calculation_input">
+        <input placeholder="horizontal pixel count" type="number" min="0" class="calculation_input_horizontal"/>
+        <input placeholder="vertical pixel count" type="number" min="0" class="calculation_input_vertical"/>
+        <input placeholder="diagonal length (inches)" type="number" min="0" class="calculation_input_diagonal"/>
+      </div>
+      <div class="section_calculation_output">
+        <h1><span class="calculation_output_value">0</span></h1>
+      </div>
+      <div class="section_calculation_actions">
+        <a href="#" class="link-btn calculation_clear_button">CLEAR</a>
+        <a href="#" class="link-btn calculation_save_button">SAVE</a>
+      </div>
+    </div>
+    <div class="section_calculation_save">
+      <div class="section_calculation_input_details">
+        <input placeholder="name" type="text" class="calculation_input_name"/>
+        <input placeholder="price" type="text" class="calculation_input_price"/>
+        <input placeholder="note" type="text" class="calculation_input_note"/>
+      </div>
+      <div class="section_calculation_actions_details">
+        <a href="#" class="link-btn calculation_cancel_button">CANCEL</a>
+        <a href="#" class="link-btn calculation_done_button">DONE</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section section_table section__card">
+
+
+    <div class="section_table_output">
+      <table class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>horizontal</th>
+                <th>vertical</th>
+                <th>diagonal</th>
+                <th>ppi</th>
+                <th>price</th>
+                <th>note</th>
+            </tr>
+        </thead>
+      </table>
+    </div>
+
+    <div class="section_table_actions">
+      <a href="#" class="link-btn table_clear_button">CLEAR</a>
+    </div>
+  </div>
+
+  <script src="/js/jquery.js"></script>
+  <script src="js/calculation.js"></script>
+  <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+</body>
+
+</html>

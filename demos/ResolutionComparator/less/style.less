@@ -1,0 +1,112 @@
+// out: ../css/style.css
+@import "../../../less/variables.less";
+@import "../../../less/functions.less";
+
+.section_header {
+  padding-top: 3em;
+
+  h1 {
+    text-align: center;
+
+    .material-icons {
+      font-size: 3em;
+      color: @colour-accent;
+    }
+  }
+}
+
+.section__card {
+  margin: 25px 50px;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(100,100,100,0.3);
+  background-color: #fafafa;
+}
+
+.section_calculation {
+  input {
+    width: ~"calc(32% - 20px)";
+    margin: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: @border-standard;
+    .font(
+      @weight: @font-weight-standard,
+      @size: @font-size-interactable-standard
+    );
+
+    &:focus {
+      border-bottom-color: @colour-accent;
+      outline-width: 0;
+    }
+  }
+
+  label {
+    font-family: "Lato";
+    margin-top: -20px;
+    position: absolute;
+    background-color: grey;
+  }
+}
+
+.section_calculation_output {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.section_calculation_save, .section_calculation_default {
+  display: none;
+
+  &.visible {
+    display: inline;
+  }
+}
+
+.section_calculation_actions, .section_table_actions, .section_calculation_actions_details {
+  margin-top: 25px;
+  text-align: right;
+
+  a.link-btn {
+    .font(
+      @colour: @colour-accent;
+    );
+    padding: 5px 10px;
+
+    &:hover {
+      color: @colour-accent-light;
+    }
+  }
+}
+
+.section_table_output {
+  .font();
+
+  td {
+    border: none !important;
+  }
+
+  table.dataTable.no-footer {
+    border-bottom-color: @colour-thin-border;
+  }
+
+  table.dataTable thead th, table.dataTable thead td {
+    .font(
+      @weight: @font-weight-standard
+    );
+    border-bottom-color: @colour-thin-border;
+  }
+
+  @media(max-width: 900px) {
+    table.dataTable thead tr th:nth-child(6), table.dataTable thead tr th:nth-child(7),
+    table.dataTable tbody tr td:nth-child(6), table.dataTable tbody tr td:nth-child(7) {
+      display: none;
+    }
+  }
+
+  @media(max-width: 600px) {
+    table.dataTable thead tr th:nth-child(2), table.dataTable thead tr th:nth-child(3), table.dataTable thead tr th:nth-child(4),
+    table.dataTable tbody tr td:nth-child(2), table.dataTable tbody tr td:nth-child(3), table.dataTable tbody tr td:nth-child(4) {
+      display: none;
+    }
+  }
+}
