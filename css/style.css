@@ -377,7 +377,7 @@ svg#scroll-down:hover {
 .content-section#homepage-content-section {
   background-color: #f5f7f7;
   border: none;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
   margin-top: 0px;
 }
 .content-section#homepage-content-section .content-panel {
