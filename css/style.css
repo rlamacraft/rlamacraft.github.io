@@ -43,6 +43,7 @@
 .text-divider:before {
   content: "-";
 }
+/*@C              : #c13030; //Brown-ish red -- not yet used*/
 /*@Assembly       : #37474F; //Dark-blueish grey -- not yet used*/
 .project-tag.project-tag-idea {
   background-color: #3caa9c !important;
@@ -467,6 +468,18 @@ svg#scroll-down:hover {
   text-transform: uppercase;
   cursor: pointer;
 }
+.btn.link:after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: #8edad0;
+  display: block;
+  margin: 0 auto;
+  transition: all .5s ease;
+}
+.btn.link:hover:after {
+  width: 100%;
+}
 .btn.header {
   font-size: 1.2em;
   display: inline-block;
@@ -656,17 +669,22 @@ input.form-control:focus {
   margin: 12px;
   background-color: transparent;
   display: inline-block;
-  border: 2px solid rgba(150, 150, 150, 0.2);
-  border-width: 1px;
-  border-color: #f5f7f7;
-  color: #f5f7f7;
+  border: none;
+  color: #eeeeee;
   text-transform: uppercase;
   font-size: 1.1em;
   padding: 0.5em 0.937em;
 }
 .project .overlay .overlay-buttons .btn:hover {
-  color: #3caa9c;
+  color: #f5f7f7;
+}
+.project .overlay .overlay-buttons .btn:after {
+  position: absolute;
+  margin: 0;
   background-color: #f5f7f7;
+}
+.project .overlay .overlay-buttons .btn:hover:after {
+  width: 85%;
 }
 .project .overlay .overlay-buttons .btn + .btn {
   margin-left: 0;

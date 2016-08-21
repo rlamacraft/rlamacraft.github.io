@@ -201,6 +201,22 @@ svg#scroll-down{
   text-transform: uppercase;
   cursor: pointer;
 
+  &.link {
+    &:after {
+      content: '';
+      width: 0%;
+      height: @border-width;
+      background-color: @colour-accent-light;
+      display: block;
+      margin: 0 auto;
+      transition: @transition-default;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+
   &.header {
     font-size: 1.2em;
     display: inline-block;
@@ -369,17 +385,24 @@ input.form-control {
         margin: @spacing-project-btn-margin;
         background-color: transparent;
         display: inline-block;
-        border: @border-standard;
-        border-width: @border-width-thin;
-        border-color: @colour-base;
-        color: @colour-base;
+        border: none;
+        color: @colour-base-subdued;
         text-transform: uppercase;
         font-size: @font-size-standard;
         padding: @spacing-project-btn-padding @spacing-standard-em;
 
         &:hover {
-          color: @colour-accent;
+          color: @colour-base;
+        }
+
+        &:after {
+          position: absolute;
+          margin: 0;
           background-color: @colour-base;
+        }
+
+        &:hover:after {
+          width: 85%;
         }
       }
 
