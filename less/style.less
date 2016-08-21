@@ -618,3 +618,48 @@ iframe {
     font-family: @font-family-subheading;
     padding: @spacing-xsmall-em @spacing-small-em !important;
 }
+
+html.dark-theme {
+  background-color: @colour-dark-theme;
+
+  body {
+    background-color: @colour-dark-theme;
+  }
+
+  a.btn.header:hover {
+    color: @colour-dark-theme;
+
+    &.link {
+      color: @colour-accent-light;
+    }
+  }
+
+  .content-section {
+    background-color: @colour-dark-theme;
+  }
+
+  .content-section#homepage-content-section {
+    background-color: @colour-dark-theme;
+  }
+
+  .content-section#homepage-content-section .content-panel > h3 {
+    background-color: @colour-dark-theme;
+  }
+
+  .project {
+    background-color: @colour-dark-theme;
+  }
+
+  p, li {
+    color: @colour-dark-theme-font;
+  }
+
+  pre, code {
+    background-color: @colour-dark-theme-alt !important;
+  }
+
+  code[class*="language-"], pre[class*="language-"] {
+    color: @colour-dark-theme-font;
+    text-shadow: 0 1px black;
+  }
+}

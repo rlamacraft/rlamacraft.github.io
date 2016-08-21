@@ -40,13 +40,6 @@
       outline-width: 0;
     }
   }
-
-  label {
-    font-family: "Lato";
-    margin-top: -20px;
-    position: absolute;
-    background-color: grey;
-  }
 }
 
 .section_calculation_output {
@@ -110,3 +103,34 @@
     }
   }
 }
+ html.dark-theme {
+   .section__card {
+     background-color: @colour-dark-theme-alt;
+   }
+
+   .section_calculation input {
+     color: @colour-dark-theme-font;
+   }
+
+   table.dataTable thead th, table.dataTable thead td {
+     color: @colour-dark-theme-font;
+   }
+
+   table.dataTable.stripe tbody tr.odd, table.dataTable.display tbody tr.odd {
+     background-color: lighten(@colour-dark-theme-alt, 10%);
+     color: @colour-dark-theme-font;
+   }
+
+   table.dataTable.stripe tbody tr.even, table.dataTable.display tbody tr.even {
+     background-color: lighten(@colour-dark-theme-alt, 15%);
+     color: @colour-dark-theme-font;
+   }
+
+   table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+     background-color: lighten(@colour-dark-theme-alt, 12%);
+   }
+
+   table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+     background-color: lighten(@colour-dark-theme-alt, 17%);
+   }
+ }

@@ -33,12 +33,6 @@
   border-bottom-color: #3caa9c;
   outline-width: 0;
 }
-.section_calculation label {
-  font-family: "Lato";
-  margin-top: -20px;
-  position: absolute;
-  background-color: grey;
-}
 .section_calculation_output {
   text-align: center;
   margin-top: 15px;
@@ -117,4 +111,32 @@
   .section_table_output table.dataTable tbody tr td:nth-child(4) {
     display: none;
   }
+}
+html.dark-theme .section__card {
+  background-color: #2a2e2a;
+}
+html.dark-theme .section_calculation input {
+  color: #959695;
+}
+html.dark-theme table.dataTable thead th,
+html.dark-theme table.dataTable thead td {
+  color: #959695;
+}
+html.dark-theme table.dataTable.stripe tbody tr.odd,
+html.dark-theme table.dataTable.display tbody tr.odd {
+  background-color: #424942;
+  color: #959695;
+}
+html.dark-theme table.dataTable.stripe tbody tr.even,
+html.dark-theme table.dataTable.display tbody tr.even {
+  background-color: #4f564f;
+  color: #959695;
+}
+html.dark-theme table.dataTable.display tbody tr.odd > .sorting_1,
+html.dark-theme table.dataTable.order-column.stripe tbody tr.odd > .sorting_1 {
+  background-color: #474e47;
+}
+html.dark-theme table.dataTable.display tbody tr.even > .sorting_1,
+html.dark-theme table.dataTable.order-column.stripe tbody tr.even > .sorting_1 {
+  background-color: #535b53;
 }

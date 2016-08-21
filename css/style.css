@@ -43,6 +43,7 @@
 .text-divider:before {
   content: "-";
 }
+/*@Assembly       : #37474F; //Dark-blueish grey -- not yet used*/
 .project-tag.project-tag-idea {
   background-color: #3caa9c !important;
   color: #3caa9c !important;
@@ -148,8 +149,8 @@
   color: #f5f7f7 !important;
 }
 .project-tag.project-tag-less {
-  background-color: #37474f !important;
-  color: #37474f !important;
+  background-color: #c143d5 !important;
+  color: #c143d5 !important;
 }
 .project-tag.project-tag-less.locked {
   color: #f5f7f7 !important;
@@ -161,8 +162,8 @@
   color: #f5f7f7 !important;
 }
 .project-tag.project-tag-lua {
-  background-color: #000080 !important;
-  color: #000080 !important;
+  background-color: #039be5 !important;
+  color: #039be5 !important;
 }
 .project-tag.project-tag-lua.locked {
   color: #f5f7f7 !important;
@@ -198,10 +199,10 @@
   border: 2px solid #9ccc65;
 }
 .project.project__primary-tag-less {
-  border: 2px solid #37474f;
+  border: 2px solid #c143d5;
 }
 .project.project__primary-tag-lua {
-  border: 2px solid #000080;
+  border: 2px solid #039be5;
 }
 code,
 pre {
@@ -882,4 +883,41 @@ iframe {
 .prism-show-language-label {
   font-family: "Open Sans", "Lato", sans-serif;
   padding: 0.312em 0.625em !important;
+}
+html.dark-theme {
+  background-color: #1a1a1a;
+}
+html.dark-theme body {
+  background-color: #1a1a1a;
+}
+html.dark-theme a.btn.header:hover {
+  color: #1a1a1a;
+}
+html.dark-theme a.btn.header:hover.link {
+  color: #8edad0;
+}
+html.dark-theme .content-section {
+  background-color: #1a1a1a;
+}
+html.dark-theme .content-section#homepage-content-section {
+  background-color: #1a1a1a;
+}
+html.dark-theme .content-section#homepage-content-section .content-panel > h3 {
+  background-color: #1a1a1a;
+}
+html.dark-theme .project {
+  background-color: #1a1a1a;
+}
+html.dark-theme p,
+html.dark-theme li {
+  color: #959695;
+}
+html.dark-theme pre,
+html.dark-theme code {
+  background-color: #2a2e2a !important;
+}
+html.dark-theme code[class*="language-"],
+html.dark-theme pre[class*="language-"] {
+  color: #959695;
+  text-shadow: 0 1px black;
 }

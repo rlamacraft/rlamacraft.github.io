@@ -22,6 +22,5 @@ $(document).ready( function() {
 
     $('.project').on('mouseleave', function() {
       $('.project').removeClass('hover');
-    })
-
+    });
 });
