@@ -723,7 +723,7 @@ input.form-control:focus {
 }
 .project .overlay .project-tags .project-tag:nth-child(1) {
   transform: translateY(-25%);
-  top: -60%;
+  top: calc(-60% + 1px);
   transition-delay: .1s;
   z-index: 120;
 }
