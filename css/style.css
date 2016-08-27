@@ -43,7 +43,6 @@
 .text-divider:before {
   content: "-";
 }
-/*@C              : #c13030; //Brown-ish red -- not yet used*/
 /*@Assembly       : #37474F; //Dark-blueish grey -- not yet used*/
 .project-tag.project-tag-idea {
   background-color: #3caa9c !important;
@@ -175,6 +174,19 @@
 .project-tag.project-tag-lua:hover {
   color: #f5f7f7 !important;
 }
+.project-tag.project-tag-c {
+  background-color: #c13030 !important;
+  color: #c13030 !important;
+}
+.project-tag.project-tag-c.locked {
+  color: #f5f7f7 !important;
+}
+.project-tag.project-tag-c:after {
+  content: "C";
+}
+.project-tag.project-tag-c:hover {
+  color: #f5f7f7 !important;
+}
 .project.project__primary-tag-idea {
   border: 2px solid #3caa9c;
 }
@@ -204,6 +216,9 @@
 }
 .project.project__primary-tag-lua {
   border: 2px solid #039be5;
+}
+.project.project__primary-tag-c {
+  border: 2px solid #c13030;
 }
 code,
 pre {

@@ -8,7 +8,7 @@
 @HTML       : #60d14d; //Green
 @Lua        : #039BE5; //Deep Blue
 @LESS       : #c143d5; //magenta
-/*@C              : #c13030; //Brown-ish red -- not yet used*/
+@C          : #ef5350; //Brown-ish red
 /*@Assembly       : #37474F; //Dark-blueish grey -- not yet used*/
 
 
@@ -39,6 +39,7 @@
 .project-tag.project-tag-html       { .create-tag( @HTML, "HTML"              ) }
 .project-tag.project-tag-less       { .create-tag( @LESS, "LESS"              ) }
 .project-tag.project-tag-lua        { .create-tag( @Lua, "Lua"                ) }
+.project-tag.project-tag-c          { .create-tag( @C, "C"                    ) }
 
 .project-primary-tag-border(
   @colour,
@@ -56,3 +57,4 @@
 .project.project__primary-tag-html       { .project-primary-tag-border( @HTML        ) }
 .project.project__primary-tag-less       { .project-primary-tag-border( @LESS        ) }
 .project.project__primary-tag-lua        { .project-primary-tag-border( @Lua         ) }
+.project.project__primary-tag-c          { .project-primary-tag-border( @C           ) }
