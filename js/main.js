@@ -15,12 +15,8 @@ $(document).ready( function() {
       parent.removeClass('focused');
     });
 
-    $('.project').on('click mouseover', function() {
+    $('.project').on('click', function() {
       $('.project').removeClass('hover');
       $(this).addClass('hover');
-    });
-
-    $('.project').on('mouseleave', function() {
-      $('.project').removeClass('hover');
     });
 });

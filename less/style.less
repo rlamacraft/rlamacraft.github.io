@@ -428,6 +428,7 @@ input.form-control {
         right: 0;
         position: absolute;
         transition: all .5s cubic-bezier(0.18, 0.89, 0.29, 1.21);
+        will-change: transform;
 
         &:after {
           position: absolute;
@@ -475,11 +476,7 @@ input.form-control {
     }
   }
 
-  &.hover {
-    .project-title {
-      color: @colour-accent-light;
-    }
-
+  &.hover, &:hover {
     .center {
       -webkit-filter: blur(3px);
     }
