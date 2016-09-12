@@ -391,7 +391,7 @@ input.form-control {
         font-size: @font-size-standard;
         padding: @spacing-project-btn-padding @spacing-standard-em;
 
-        &:hover {
+        &:hover, &:focus {
           color: @colour-base;
         }
 
@@ -401,7 +401,7 @@ input.form-control {
           background-color: @colour-base;
         }
 
-        &:hover:after {
+        &:hover:after, &:focus:after {
           width: 85%;
         }
       }

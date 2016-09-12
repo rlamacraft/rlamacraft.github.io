@@ -19,4 +19,9 @@ $(document).ready( function() {
       $('.project').removeClass('hover');
       $(this).addClass('hover');
     });
+
+    $('.overlay-buttons a').on('focus', function() {
+      $('.project').removeClass('hover');
+      $(this).parents('.project').addClass('hover');
+    });
 });

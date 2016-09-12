@@ -690,7 +690,8 @@ input.form-control:focus {
   font-size: 1.1em;
   padding: 0.5em 0.937em;
 }
-.project .overlay .overlay-buttons .btn:hover {
+.project .overlay .overlay-buttons .btn:hover,
+.project .overlay .overlay-buttons .btn:focus {
   color: #f5f7f7;
 }
 .project .overlay .overlay-buttons .btn:after {
@@ -698,7 +699,8 @@ input.form-control:focus {
   margin: 0;
   background-color: #f5f7f7;
 }
-.project .overlay .overlay-buttons .btn:hover:after {
+.project .overlay .overlay-buttons .btn:hover:after,
+.project .overlay .overlay-buttons .btn:focus:after {
   width: 85%;
 }
 .project .overlay .overlay-buttons .btn + .btn {
