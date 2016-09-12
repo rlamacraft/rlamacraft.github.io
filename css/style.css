@@ -492,7 +492,8 @@ svg#scroll-down:hover {
   margin: 0 auto;
   transition: all .5s ease;
 }
-.btn.link:hover:after {
+.btn.link:hover:after,
+.btn.link:focus:after {
   width: 100%;
 }
 .btn.header {
