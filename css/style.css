@@ -317,7 +317,7 @@ h1,
 html #homepage-intro h1 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  color: #607070;
+  color: #5a5a5a;
   font-size: 3.6em;
   line-height: 1.1;
   text-transform: uppercase;
@@ -466,10 +466,10 @@ svg#scroll-down:hover {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   border-radius: 3px;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -ms-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all .5s ease-out;
+  -moz-transition: all .5s ease-out;
+  -ms-transition: all .5s ease-out;
+  transition: all .5s ease-out;
   font-family: "Open Sans", "Lato", sans-serif;
   font-weight: 400;
   color: #3caa9c;

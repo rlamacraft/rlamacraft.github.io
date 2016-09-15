@@ -46,7 +46,7 @@ h1, html #homepage-intro h1 {
       @size:        @font-size-large,
       @transform:   @font-transform-uppercase,
       @line-height: @font-lineheight-less,
-      @colour:      @colour-secondary,
+      @colour:      @font-colour-title,
   );
 }
 
@@ -187,7 +187,7 @@ svg#scroll-down{
 
 .btn {
   .rounded-corners;
-  .transition;
+  .transition(@transition-btn);
   .font(
     @family:       @font-family-subheading,
     @colour:       @font-colour-accent,
