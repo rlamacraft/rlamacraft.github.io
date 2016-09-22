@@ -15,6 +15,7 @@ html, body {
   height: @size-full;
   background-color: @colour-base;
   margin: 0;
+  overflow: initial !important; // allows scrolling once linked styles have loaded
 }
 
 a {
@@ -83,8 +84,22 @@ p, li {
 }
 
 svg#scroll-down{
+  opacity: 1 !important;
+  .transition;
+
   &:hover {
     cursor: pointer;
+
+    polyline {
+      stroke: #8EDAD0;
+    }
+  }
+
+  polyline {
+    .transition;
+    fill:none;
+    stroke:#3caa9c;
+    stroke-width:3
   }
 }
 
@@ -228,10 +243,10 @@ svg#scroll-down{
       border: @border-btn-link;
       width: 100%;
 
-      @media(@non-xs) {
-        width: auto;
-        margin: @spacing-standard @spacing-xsmall @spacing-xsmall @spacing-xsmall;
-      }
+
+      width: auto;
+      margin: @spacing-standard @spacing-xsmall @spacing-xsmall @spacing-xsmall;
+
 
       &:hover, &:focus, &:active {
         background: transparent;

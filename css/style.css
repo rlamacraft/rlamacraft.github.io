@@ -276,6 +276,7 @@ body {
   height: 100%;
   background-color: #f5f7f7;
   margin: 0;
+  overflow: initial !important;
 }
 a {
   -webkit-transition: all .5s ease;
@@ -318,7 +319,7 @@ html #homepage-intro h1 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   color: #5a5a5a;
-  font-size: 3.6em;
+  font-size: 2.3em;
   line-height: 1.1;
   text-transform: uppercase;
 }
@@ -361,8 +362,27 @@ li {
   text-transform: none;
   letter-spacing: 0em;
 }
+svg#scroll-down {
+  opacity: 1 !important;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+}
 svg#scroll-down:hover {
   cursor: pointer;
+}
+svg#scroll-down:hover polyline {
+  stroke: #8EDAD0;
+}
+svg#scroll-down polyline {
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  fill: none;
+  stroke: #3caa9c;
+  stroke-width: 3;
 }
 .content-section {
   -webkit-transition: all .5s ease;
@@ -506,12 +526,8 @@ svg#scroll-down:hover {
 .btn.header.link {
   border: 2px solid transparent;
   width: 100%;
-}
-@media (min-width: 768px) {
-  .btn.header.link {
-    width: auto;
-    margin: 25px 10px 10px 10px;
-  }
+  width: auto;
+  margin: 25px 10px 10px 10px;
 }
 .btn.header.link:hover,
 .btn.header.link:focus,
