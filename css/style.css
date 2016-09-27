@@ -486,10 +486,10 @@ svg#scroll-down polyline {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   border-radius: 3px;
-  -webkit-transition: all .5s ease-out;
-  -moz-transition: all .5s ease-out;
-  -ms-transition: all .5s ease-out;
-  transition: all .5s ease-out;
+  -webkit-transition: all .3s cubic-bezier(.82,0,.12,1);
+  -moz-transition: all .3s cubic-bezier(.82,0,.12,1);
+  -ms-transition: all .3s cubic-bezier(.82,0,.12,1);
+  transition: all .3s cubic-bezier(.82,0,.12,1);
   font-family: "Open Sans", "Lato", sans-serif;
   font-weight: 400;
   color: #3caa9c;
