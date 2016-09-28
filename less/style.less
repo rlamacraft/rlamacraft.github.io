@@ -11,11 +11,16 @@
 }
 
 html, body {
-  width: @size-full;
-  height: @size-full;
-  background-color: @colour-base;
-  margin: 0;
   overflow: initial !important; // allows scrolling once linked styles have loaded
+}
+
+body {
+  margin: @spacing-xsmall;
+  background-color: #F7F7F7;
+
+  @media(@non-sm) {
+    margin: @spacing-small @spacing-body-side-padding;
+  }
 }
 
 a {
@@ -47,7 +52,6 @@ h1, html #homepage-intro h1 {
       @size:        @font-size-large,
       @transform:   @font-transform-uppercase,
       @line-height: @font-lineheight-less,
-      @colour:      @font-colour-title,
   );
 }
 
@@ -56,15 +60,12 @@ h2 {
       @size:          @font-size-heading,
   );
   margin-bottom: @spacing-xsmall-em;
-  color: @font-colour-secondary;
   text-transform: uppercase;
 }
 
 h3, h4 {
   .heading-font(
-      @size:          @font-size-subheading,
-      @colour:        @colour-subheading,
-      @family:        @font-family-subheading,
+      @size:          @font-size-subheading
   );
   padding-top: @spacing-xsmall-em;
   padding-bottom: @spacing-small-em;
@@ -100,60 +101,6 @@ svg#scroll-down{
     fill:none;
     stroke:#3caa9c;
     stroke-width:3
-  }
-}
-
-.content-section {
-  .transition();
-  .rounded-corners;
-  text-align: @font-align;
-  padding-left: @spacing-none;
-  padding-right: @spacing-none;
-  overflow: hidden;
-  border: @border-standard-thin;
-  background-color: @colour-section-alt;
-  min-height: @size-full;
-
-  @media(@non-xs) {
-    width: @size-contentsection-width;
-    margin: @spacing-big @spacing-none @spacing-big @spacing-content-section;
-    min-height: 0;
-  }
-
-  &:nth-child(3) {
-    padding-top: 0;
-  }
-
-  &#homepage-content-section {
-    background-color: @colour-base;
-    border: none;
-    margin-bottom: @spacing-none;
-    margin-top: @spacing-none;
-
-    .content-panel {
-      border: none;
-      border-top: @border-standard;
-      border-color: @colour-secondary;
-      padding-top: @spacing-standard;
-      margin-top: @spacing-big;
-      position: relative;
-
-      > h3 {
-          position: absolute;
-          top: (@spacing-standard + @spacing-big) * -1;
-          background-color: @colour-base;
-          padding: @spacing-small;
-
-          @media(@non-xs) {
-            left: @spacing-small;
-          }
-      }
-    }
-  }
-
-  &.full-page {
-    min-height: calc( @size-full ~" - " @spacing-big );
-    overflow-x: hidden;
   }
 }
 
@@ -243,10 +190,9 @@ svg#scroll-down{
       border: @border-btn-link;
       width: 100%;
 
-
       width: auto;
-      margin: @spacing-standard @spacing-xsmall @spacing-xsmall @spacing-xsmall;
-
+      padding: 0;
+      margin: @spacing-standard;
 
       &:hover, &:focus, &:active {
         background: transparent;
