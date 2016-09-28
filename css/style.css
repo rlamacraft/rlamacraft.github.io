@@ -510,7 +510,7 @@ svg#scroll-down polyline {
   background-color: #8edad0;
   display: block;
   margin: 0 auto;
-  transition: all .5s ease;
+  transition: all .3s cubic-bezier(.82,0,.12,1);
 }
 .btn.link:hover:after,
 .btn.link:focus:after {
