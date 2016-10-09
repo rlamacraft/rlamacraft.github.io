@@ -232,6 +232,8 @@ pre {
   text-transform: none;
   letter-spacing: 0em;
   font-family: "Roboto Mono", "Courier New", "Courier", mono-space !important;
+  padding: 1px 2px;
+  border-radius: 3px;
 }
 .token.operator,
 .token.entity,
@@ -264,6 +266,25 @@ code.inline {
 }
 code.newline {
   display: block;
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #D81B60;
+}
+html.dark-theme pre,
+html.dark-theme code {
+  background-color: #2a2e2a !important;
+  color: #959695;
+}
+html.dark-theme code[class*="language-"],
+html.dark-theme pre[class*="language-"] {
+  color: #959695;
+  text-shadow: 0 1px black;
 }
 *,
 *:before,
@@ -594,7 +615,6 @@ input.form-control:focus {
   -webkit-box-shadow: 1px 1px 3px rgba(85, 100, 100, 0.3);
   box-shadow: 1px 1px 3px rgba(85, 100, 100, 0.3);
   border: 1px solid rgba(150, 150, 150, 0.2);
-  background-color: #f9fbfb;
   padding: 40px;
   padding-top: 50px;
   margin: 10px;
@@ -889,39 +909,39 @@ iframe {
   padding: 0.312em 0.625em !important;
 }
 html.dark-theme {
-  background-color: #1a1a1a;
+  background-color: #363c42;
 }
 html.dark-theme body {
-  background-color: #1a1a1a;
+  background-color: #363c42;
+}
+html.dark-theme h1,
+html.dark-theme h2,
+html.dark-theme h3,
+html.dark-theme h4,
+html.dark-theme h5,
+html.dark-theme h6,
+html.dark-theme #homepage-intro h1 {
+  color: #cccccc;
 }
 html.dark-theme a.btn.header:hover {
-  color: #1a1a1a;
+  color: #363c42;
 }
 html.dark-theme a.btn.header:hover.link {
   color: #8edad0;
 }
 html.dark-theme .content-section {
-  background-color: #1a1a1a;
+  background-color: #363c42;
 }
 html.dark-theme .content-section#homepage-content-section {
-  background-color: #1a1a1a;
+  background-color: #363c42;
 }
 html.dark-theme .content-section#homepage-content-section .content-panel > h3 {
-  background-color: #1a1a1a;
+  background-color: #363c42;
 }
-html.dark-theme .project {
-  background-color: #1a1a1a;
+html.dark-theme .project .subtitle {
+  color: #cccccc;
 }
 html.dark-theme p,
 html.dark-theme li {
   color: #959695;
-}
-html.dark-theme pre,
-html.dark-theme code {
-  background-color: #2a2e2a !important;
-}
-html.dark-theme code[class*="language-"],
-html.dark-theme pre[class*="language-"] {
-  color: #959695;
-  text-shadow: 0 1px black;
 }

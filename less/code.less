@@ -7,6 +7,8 @@ code, pre {
     @size: @font-size-code,
   );
   font-family: @font-family-code !important;
+  padding: 1px 2px;
+  border-radius: 3px;
 }
 
 .token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
@@ -33,4 +35,21 @@ code.inline {
 
 code.newline {
   display: block;
+}
+
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted {
+  color: #D81B60;
+}
+
+
+html.dark-theme {
+  pre, code {
+    background-color: @colour-dark-theme-alt !important;
+    color: @colour-dark-theme-font;
+  }
+
+  code[class*="language-"], pre[class*="language-"] {
+    color: @colour-dark-theme-font;
+    text-shadow: 0 1px black;
+  }
 }

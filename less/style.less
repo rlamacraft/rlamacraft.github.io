@@ -293,7 +293,6 @@ input.form-control {
   .rounded-corners(@border-radius-project);
   .shadow;
   border: @border-standard-thin;
-  background-color: @colour-section-alt;
   padding: @spacing-big;
   padding-top: @spacing-big + @spacing-xsmall;
   margin: @spacing-xsmall;
@@ -607,6 +606,10 @@ html.dark-theme {
     background-color: @colour-dark-theme;
   }
 
+  h1, h2, h3, h4, h5, h6, #homepage-intro h1 {
+    color: @font-colour-heading-dark;
+  }
+
   a.btn.header:hover {
     color: @colour-dark-theme;
 
@@ -628,19 +631,12 @@ html.dark-theme {
   }
 
   .project {
-    background-color: @colour-dark-theme;
+    .subtitle {
+      color: @font-colour-heading-dark;
+    }
   }
 
   p, li {
     color: @colour-dark-theme-font;
-  }
-
-  pre, code {
-    background-color: @colour-dark-theme-alt !important;
-  }
-
-  code[class*="language-"], pre[class*="language-"] {
-    color: @colour-dark-theme-font;
-    text-shadow: 0 1px black;
   }
 }
