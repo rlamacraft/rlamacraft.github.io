@@ -290,10 +290,8 @@ input.form-control {
 
 .project {
   .space-top;
-  .rounded-corners(@border-radius-project);
-  .shadow;
   border: @border-standard-thin;
-  padding: @spacing-big;
+  padding: @spacing-big @spacing-standard;
   padding-top: @spacing-big + @spacing-xsmall;
   margin: @spacing-xsmall;
   flex-grow: 1;
@@ -304,26 +302,17 @@ input.form-control {
   .project-title {
     .transition();
     display: block;
-    text-align: center;
     color: @colour-accent;
     font-size: @font-size-project;
     font-family: @font-family-title;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    letter-spacing: 0.025em;
   }
 
   .subtitle {
     display: block;
-    text-align: center;
-    color: @colour-subheading;
+    color: @font-color-subheading;
     font-family: @font-family-subheading;
-
-    &:before {
-      content: "- "
-    }
-
-    &:after {
-      content: " -"
-    }
   }
 
   .center {
@@ -570,8 +559,10 @@ figure.image-wrapper {
 
 span.subtitle {
   .font(
-    @transform: uppercase;
+    @transform: capitalize;
     @letter-spacing: 0.03em;
+    @line-height: @font-lineheight-less;
+    @size: @font-size-project / 2;
   );
 }
 
@@ -628,12 +619,6 @@ html.dark-theme {
 
   .content-section#homepage-content-section .content-panel > h3 {
     background-color: @colour-dark-theme;
-  }
-
-  .project {
-    .subtitle {
-      color: @font-colour-heading-dark;
-    }
   }
 
   p, li {
