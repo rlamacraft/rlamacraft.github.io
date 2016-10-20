@@ -10,7 +10,7 @@
 @LESS       : #c143d5; //magenta
 @C          : #ef5350; //Brown-ish red
 /*@Assembly       : #37474F; //Dark-blueish grey -- not yet used*/
-
+@AppleScript: #ababab; //Apple's pale grey
 
 .create-tag(
   @colour,
@@ -40,6 +40,7 @@
 .project-tag.project-tag-less       { .create-tag( @LESS, "LESS"              ) }
 .project-tag.project-tag-lua        { .create-tag( @Lua, "Lua"                ) }
 .project-tag.project-tag-c          { .create-tag( @C, "C"                    ) }
+.project-tag.project-tag-applescript{ .create-tag(@AppleScript, "AppleScript" ) }
 
 .project-primary-tag-border(
   @colour,
@@ -58,3 +59,4 @@
 .project.project__primary-tag-less       { .project-primary-tag-border( @LESS        ) }
 .project.project__primary-tag-lua        { .project-primary-tag-border( @Lua         ) }
 .project.project__primary-tag-c          { .project-primary-tag-border( @C           ) }
+.project.project__primary-tag-AppleScript{ .project-primary-tag-border( @AppleScript ) }

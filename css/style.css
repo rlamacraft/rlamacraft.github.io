@@ -187,6 +187,19 @@
 .project-tag.project-tag-c:hover {
   color: #f5f7f7 !important;
 }
+.project-tag.project-tag-applescript {
+  background-color: #ababab !important;
+  color: #ababab !important;
+}
+.project-tag.project-tag-applescript.locked {
+  color: #f5f7f7 !important;
+}
+.project-tag.project-tag-applescript:after {
+  content: "AppleScript";
+}
+.project-tag.project-tag-applescript:hover {
+  color: #f5f7f7 !important;
+}
 .project.project__primary-tag-idea {
   border: 2px solid #3caa9c;
 }
@@ -219,6 +232,9 @@
 }
 .project.project__primary-tag-c {
   border: 2px solid #ef5350;
+}
+.project.project__primary-tag-AppleScript {
+  border: 2px solid #ababab;
 }
 code,
 pre {
