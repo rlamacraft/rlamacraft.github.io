@@ -710,6 +710,8 @@ input.form-control:focus {
   bottom: 2px;
   text-transform: uppercase;
   color: #f5f7f7;
+  font-size: 0.8em;
+  line-height: 1.6;
 }
 .project .overlay .project-tags .project-tag:nth-child(1) {
   transform: translateY(-25%);
