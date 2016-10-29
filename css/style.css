@@ -249,7 +249,17 @@ pre {
   letter-spacing: 0em;
   font-family: "Roboto Mono", "Courier New", "Courier", mono-space !important;
   padding: 1px 2px;
-  border-radius: 3px;
+}
+pre {
+  left: -20px;
+  width: calc(100% + 40px);
+}
+@media (min-width: 992px) {
+  pre {
+    left: -110px;
+    width: calc(100% + 220px);
+    padding-left: 110px !important;
+  }
 }
 .token.operator,
 .token.entity,
