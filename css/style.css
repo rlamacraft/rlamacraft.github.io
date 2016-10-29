@@ -304,7 +304,7 @@ code.newline {
 }
 html.dark-theme pre,
 html.dark-theme code {
-  background-color: #2a2e2a !important;
+  background-color: #2e3338 !important;
   color: #959695;
 }
 html.dark-theme code[class*="language-"],
