@@ -24,4 +24,24 @@ $(document).ready( function() {
       $('.project').removeClass('hover');
       $(this).parents('.project').addClass('hover');
     });
+
+    $('#layout-switch input[type="radio"]').on('click change', function(evt) {
+      if(evt.target.value === "list") {
+        $("#projects-container").css("animation-name", "gridlist");
+        setTimeout(function() {
+          $("#projects-container").addClass("list")
+        }, 500);
+        setTimeout(function() {
+          $("#projects-container").css("animation-name", "");
+        }, 1001);
+      } else {
+        $("#projects-container").css("animation-name", "gridlist");
+        setTimeout(function() {
+          $("#projects-container").removeClass("list")
+        }, 500);
+        setTimeout(function() {
+          $("#projects-container").css("animation-name", "");
+        }, 1001);
+      }
+    });
 });

@@ -157,8 +157,15 @@
     <section id="homepage-content-section" class="content-section">
 
           <div id="recent-projects" class="content-panel">
+            <div class="switch" id="layout-switch">
+              <input type="radio" class="switch-input" name="view" value="grid" id="grid" checked>
+              <label for="grid" class="switch-label switch-label-off">Grid</label>
+              <input type="radio" class="switch-input" name="view" value="list" id="list">
+              <label for="list" class="switch-label switch-label-on">List</label>
+              <span class="switch-selection"></span>
+            </div>
             <h3>Recent Projects</h3>
-            <div id="projects-container">
+            <div id="projects-container" class="">
 
               <div class="project project__primary-tag-javascript">
                 <div class="center">

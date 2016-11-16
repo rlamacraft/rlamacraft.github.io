@@ -44,196 +44,196 @@
   content: "-";
 }
 /*@Assembly       : #37474F; //Dark-blueish grey -- not yet used*/
-.project-tag.project-tag-idea {
+#projects-container .project-tag.project-tag-idea {
   background-color: #3caa9c !important;
   color: #3caa9c !important;
 }
-.project-tag.project-tag-idea.locked {
+#projects-container .project-tag.project-tag-idea.locked {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-idea:after {
+#projects-container .project-tag.project-tag-idea:after {
   content: "Idea";
 }
-.project-tag.project-tag-idea:hover {
+#projects-container .project-tag.project-tag-idea:hover {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-javascript {
+#projects-container .project-tag.project-tag-javascript {
   background-color: #859683 !important;
   color: #859683 !important;
 }
-.project-tag.project-tag-javascript.locked {
+#projects-container .project-tag.project-tag-javascript.locked {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-javascript:after {
+#projects-container .project-tag.project-tag-javascript:after {
   content: "JavaScript";
 }
-.project-tag.project-tag-javascript:hover {
+#projects-container .project-tag.project-tag-javascript:hover {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-css {
+#projects-container .project-tag.project-tag-css {
   background-color: #d66be8 !important;
   color: #d66be8 !important;
 }
-.project-tag.project-tag-css.locked {
+#projects-container .project-tag.project-tag-css.locked {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-css:after {
+#projects-container .project-tag.project-tag-css:after {
   content: "CSS";
 }
-.project-tag.project-tag-css:hover {
+#projects-container .project-tag.project-tag-css:hover {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-python {
+#projects-container .project-tag.project-tag-python {
   background-color: #2a69c5 !important;
   color: #2a69c5 !important;
 }
-.project-tag.project-tag-python.locked {
+#projects-container .project-tag.project-tag-python.locked {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-python:after {
+#projects-container .project-tag.project-tag-python:after {
   content: "Python";
 }
-.project-tag.project-tag-python:hover {
+#projects-container .project-tag.project-tag-python:hover {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-swift {
+#projects-container .project-tag.project-tag-swift {
   background-color: #fb6917 !important;
   color: #fb6917 !important;
 }
-.project-tag.project-tag-swift.locked {
+#projects-container .project-tag.project-tag-swift.locked {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-swift:after {
+#projects-container .project-tag.project-tag-swift:after {
   content: "Swift";
 }
-.project-tag.project-tag-swift:hover {
+#projects-container .project-tag.project-tag-swift:hover {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-java {
+#projects-container .project-tag.project-tag-java {
   background-color: #c65c3a !important;
   color: #c65c3a !important;
 }
-.project-tag.project-tag-java.locked {
+#projects-container .project-tag.project-tag-java.locked {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-java:after {
+#projects-container .project-tag.project-tag-java:after {
   content: "Java";
 }
-.project-tag.project-tag-java:hover {
+#projects-container .project-tag.project-tag-java:hover {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-haskell {
+#projects-container .project-tag.project-tag-haskell {
   background-color: #945992 !important;
   color: #945992 !important;
 }
-.project-tag.project-tag-haskell.locked {
+#projects-container .project-tag.project-tag-haskell.locked {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-haskell:after {
+#projects-container .project-tag.project-tag-haskell:after {
   content: "Haskell";
 }
-.project-tag.project-tag-haskell:hover {
+#projects-container .project-tag.project-tag-haskell:hover {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-html {
+#projects-container .project-tag.project-tag-html {
   background-color: #60d14d !important;
   color: #60d14d !important;
 }
-.project-tag.project-tag-html.locked {
+#projects-container .project-tag.project-tag-html.locked {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-html:after {
+#projects-container .project-tag.project-tag-html:after {
   content: "HTML";
 }
-.project-tag.project-tag-html:hover {
+#projects-container .project-tag.project-tag-html:hover {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-less {
+#projects-container .project-tag.project-tag-less {
   background-color: #c143d5 !important;
   color: #c143d5 !important;
 }
-.project-tag.project-tag-less.locked {
+#projects-container .project-tag.project-tag-less.locked {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-less:after {
+#projects-container .project-tag.project-tag-less:after {
   content: "LESS";
 }
-.project-tag.project-tag-less:hover {
+#projects-container .project-tag.project-tag-less:hover {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-lua {
+#projects-container .project-tag.project-tag-lua {
   background-color: #039be5 !important;
   color: #039be5 !important;
 }
-.project-tag.project-tag-lua.locked {
+#projects-container .project-tag.project-tag-lua.locked {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-lua:after {
+#projects-container .project-tag.project-tag-lua:after {
   content: "Lua";
 }
-.project-tag.project-tag-lua:hover {
+#projects-container .project-tag.project-tag-lua:hover {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-c {
+#projects-container .project-tag.project-tag-c {
   background-color: #ef5350 !important;
   color: #ef5350 !important;
 }
-.project-tag.project-tag-c.locked {
+#projects-container .project-tag.project-tag-c.locked {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-c:after {
+#projects-container .project-tag.project-tag-c:after {
   content: "C";
 }
-.project-tag.project-tag-c:hover {
+#projects-container .project-tag.project-tag-c:hover {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-applescript {
+#projects-container .project-tag.project-tag-applescript {
   background-color: #ababab !important;
   color: #ababab !important;
 }
-.project-tag.project-tag-applescript.locked {
+#projects-container .project-tag.project-tag-applescript.locked {
   color: #f5f7f7 !important;
 }
-.project-tag.project-tag-applescript:after {
+#projects-container .project-tag.project-tag-applescript:after {
   content: "AppleScript";
 }
-.project-tag.project-tag-applescript:hover {
+#projects-container .project-tag.project-tag-applescript:hover {
   color: #f5f7f7 !important;
 }
-.project.project__primary-tag-idea {
+#projects-container .project.project__primary-tag-idea {
   border: 2px solid #3caa9c;
 }
-.project.project__primary-tag-javascript {
+#projects-container .project.project__primary-tag-javascript {
   border: 2px solid #859683;
 }
-.project.project__primary-tag-css {
+#projects-container .project.project__primary-tag-css {
   border: 2px solid #d66be8;
 }
-.project.project__primary-tag-python {
+#projects-container .project.project__primary-tag-python {
   border: 2px solid #2a69c5;
 }
-.project.project__primary-tag-swift {
+#projects-container .project.project__primary-tag-swift {
   border: 2px solid #fb6917;
 }
-.project.project__primary-tag-java {
+#projects-container .project.project__primary-tag-java {
   border: 2px solid #c65c3a;
 }
-.project.project__primary-tag-haskell {
+#projects-container .project.project__primary-tag-haskell {
   border: 2px solid #945992;
 }
-.project.project__primary-tag-html {
+#projects-container .project.project__primary-tag-html {
   border: 2px solid #60d14d;
 }
-.project.project__primary-tag-less {
+#projects-container .project.project__primary-tag-less {
   border: 2px solid #c143d5;
 }
-.project.project__primary-tag-lua {
+#projects-container .project.project__primary-tag-lua {
   border: 2px solid #039be5;
 }
-.project.project__primary-tag-c {
+#projects-container .project.project__primary-tag-c {
   border: 2px solid #ef5350;
 }
-.project.project__primary-tag-AppleScript {
+#projects-container .project.project__primary-tag-AppleScript {
   border: 2px solid #ababab;
 }
 code,
@@ -311,6 +311,22 @@ html.dark-theme code[class*="language-"],
 html.dark-theme pre[class*="language-"] {
   color: #959695;
   text-shadow: 0 1px black;
+}
+@keyframes gridlist {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 *,
 *:before,
@@ -625,12 +641,78 @@ input.form-control:focus {
   border-left: 2px solid #3caa9c;
   border-bottom-color: rgba(150, 150, 150, 0.2);
 }
+.switch {
+  position: relative;
+  height: 3em;
+  width: calc(9em + 2px);
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+  font-family: sans-serif;
+  font-weight: 300;
+  color: #405050;
+  font-size: 1.1em;
+  line-height: 1.4;
+  text-transform: none;
+  letter-spacing: 0em;
+}
+.switch-label {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: calc(4.5em + 1px);
+  line-height: 3;
+  font-size: 1em;
+  color: #9e9c9b;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+.switch-input {
+  display: none;
+}
+.switch-input:checked + .switch-label {
+  color: #f5f7f7;
+  -webkit-transition: 0.15s ease-out;
+  -moz-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  cursor: default;
+}
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+  /* Note: left: 50% doesn't transition in WebKit */
+  left: 4.5em;
+}
+/* the green bubble */
+.switch-selection {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  left: 2px;
+  width: 4.5em;
+  height: 2.7em;
+  background: #3caa9c;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  -o-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+}
 #projects-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  animation-duration: 1s;
+  animation-timing-function: linear;
 }
-.project {
+#projects-container .project {
   display: inline-block;
   margin-top: 25px;
   border: 1px solid rgba(150, 150, 150, 0.2);
@@ -641,8 +723,10 @@ input.form-control:focus {
   flex-basis: auto;
   position: relative;
   overflow: hidden;
+  animation-duration: 1s;
+  animation-timing-function: linear;
 }
-.project .project-title {
+#projects-container .project .project-title {
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -ms-transition: all .5s ease;
@@ -654,25 +738,25 @@ input.form-control:focus {
   text-transform: capitalize;
   letter-spacing: 0.025em;
 }
-.project .subtitle {
+#projects-container .project .subtitle {
   display: block;
   color: #9e9c9b;
   font-family: "Open Sans", "Lato", sans-serif;
 }
-.project .center {
+#projects-container .project .center {
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -ms-transition: all .5s ease;
   transition: all .5s ease;
 }
-.project .overlay .overlay-buttons {
+#projects-container .project .overlay .overlay-buttons {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 250;
 }
-.project .overlay .overlay-buttons .btn {
+#projects-container .project .overlay .overlay-buttons .btn {
   transform: translateY(-100%);
   opacity: 0;
   -webkit-transition: all .5s ease;
@@ -688,30 +772,30 @@ input.form-control:focus {
   font-size: 1.1em;
   padding: 0.5em 0.937em;
 }
-.project .overlay .overlay-buttons .btn:hover,
-.project .overlay .overlay-buttons .btn:focus {
+#projects-container .project .overlay .overlay-buttons .btn:hover,
+#projects-container .project .overlay .overlay-buttons .btn:focus {
   color: #f5f7f7;
 }
-.project .overlay .overlay-buttons .btn:after {
+#projects-container .project .overlay .overlay-buttons .btn:after {
   position: absolute;
   margin: 0;
   background-color: #f5f7f7;
 }
-.project .overlay .overlay-buttons .btn:hover:after,
-.project .overlay .overlay-buttons .btn:focus:after {
+#projects-container .project .overlay .overlay-buttons .btn:hover:after,
+#projects-container .project .overlay .overlay-buttons .btn:focus:after {
   width: 85%;
 }
-.project .overlay .overlay-buttons .btn + .btn {
+#projects-container .project .overlay .overlay-buttons .btn + .btn {
   margin-left: 0;
 }
-.project .overlay .project-tags {
+#projects-container .project .overlay .project-tags {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
 }
-.project .overlay .project-tags .project-tag {
+#projects-container .project .overlay .project-tags .project-tag {
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -ms-transition: all .5s ease;
@@ -730,7 +814,7 @@ input.form-control:focus {
   transition: all 0.5s cubic-bezier(0.18, 0.89, 0.29, 1.21);
   will-change: transform;
 }
-.project .overlay .project-tags .project-tag:after {
+#projects-container .project .overlay .project-tags .project-tag:after {
   position: absolute;
   right: 10px;
   bottom: 2px;
@@ -739,56 +823,64 @@ input.form-control:focus {
   font-size: 0.8em;
   line-height: 1.6;
 }
-.project .overlay .project-tags .project-tag:nth-child(1) {
+#projects-container .project .overlay .project-tags .project-tag:nth-child(1) {
   transform: translateY(-25%);
   top: calc(-60% + 1px);
   transition-delay: .1s;
   z-index: 120;
 }
-.project .overlay .project-tags .project-tag:nth-child(2) {
+#projects-container .project .overlay .project-tags .project-tag:nth-child(2) {
   transform: translateY(-40%);
   top: -45%;
   transition-delay: .2s;
   z-index: 115;
 }
-.project .overlay .project-tags .project-tag:nth-child(3) {
+#projects-container .project .overlay .project-tags .project-tag:nth-child(3) {
   transform: translateY(-55%);
   top: -30%;
   transition-delay: .3s;
   z-index: 110;
 }
-.project .overlay .project-tags .project-tag:nth-child(4) {
+#projects-container .project .overlay .project-tags .project-tag:nth-child(4) {
   transform: translateY(-70%);
   top: -15%;
   transition-delay: .4s;
   z-index: 105;
 }
-.project .overlay .project-tags .project-tag:nth-child(5) {
+#projects-container .project .overlay .project-tags .project-tag:nth-child(5) {
   transform: translateY(-85%);
   top: 0%;
   transition-delay: .5s;
   z-index: 100;
 }
-.project.hover .center,
-.project:hover .center {
+#projects-container .project.hover .center,
+#projects-container .project:hover .center {
   -webkit-filter: blur(3px);
 }
-.project.hover .overlay .overlay-buttons .btn,
-.project:hover .overlay .overlay-buttons .btn {
+#projects-container .project.hover .overlay .overlay-buttons .btn,
+#projects-container .project:hover .overlay .overlay-buttons .btn {
   transform: translateY(0%) !important;
   opacity: 1;
 }
-.project.hover .overlay .overlay-buttons .btn:nth-child(1),
-.project:hover .overlay .overlay-buttons .btn:nth-child(1) {
+#projects-container .project.hover .overlay .overlay-buttons .btn:nth-child(1),
+#projects-container .project:hover .overlay .overlay-buttons .btn:nth-child(1) {
   transition-delay: 0.1s;
 }
-.project.hover .overlay .overlay-buttons .btn:nth-child(2),
-.project:hover .overlay .overlay-buttons .btn:nth-child(2) {
+#projects-container .project.hover .overlay .overlay-buttons .btn:nth-child(2),
+#projects-container .project:hover .overlay .overlay-buttons .btn:nth-child(2) {
   transition-delay: 0.15s;
 }
-.project.hover .overlay .project-tag,
-.project:hover .overlay .project-tag {
+#projects-container .project.hover .overlay .project-tag,
+#projects-container .project:hover .overlay .project-tag {
   transform: translateY(0%) !important;
+}
+#projects-container.list {
+  padding-top: 2em;
+}
+#projects-container.list .project {
+  flex-basis: 50%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 code .tag,
 pre .tag {
