@@ -77,12 +77,13 @@ h2 {
       @size:          @font-size-heading,
   );
   margin-bottom: @spacing-xsmall-em;
-  text-transform: uppercase;
+  text-transform: capitalize;;
 }
 
 h3, h4 {
   .heading-font(
-      @size:          @font-size-subheading
+      @size:          @font-size-subheading,
+      @colour:        @font-color-subheading
   );
   padding-top: @spacing-xsmall-em;
   padding-bottom: @spacing-small-em;
@@ -92,7 +93,8 @@ h4 {
   font-weight: 400;
 
   &.subtitle {
-    font-size: 1.6em;
+    font-size: 1.2em;
+    color: @font-color-subheading;
   }
 }
 
@@ -132,7 +134,6 @@ svg#scroll-down{
     padding-bottom: @spacing-xsmall;
     min-height: 0;
     width: @size-full;
-    text-align: center;
 
     @media(@non-xs) {
       min-height: 0;
@@ -206,6 +207,7 @@ svg#scroll-down{
     &.link {
       border: @border-btn-link;
       width: 100%;
+      float: right;
 
       width: auto;
       padding: 0;
@@ -694,7 +696,7 @@ html.dark-theme {
     background-color: @colour-dark-theme;
   }
 
-  h1, h2, h3, h4, h5, h6, #homepage-intro h1 {
+  h1, h2, h3, #homepage-intro h1 {
     color: @font-colour-heading-dark;
   }
 

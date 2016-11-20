@@ -399,13 +399,13 @@ h2 {
   line-height: 1.1;
   text-transform: none;
   margin-bottom: 0.312em;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 h3,
 h4 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  color: #5a5a5a;
+  color: #9e9c9b;
   font-size: 1.8em;
   line-height: 1.1;
   text-transform: none;
@@ -416,7 +416,8 @@ h4 {
   font-weight: 400;
 }
 h4.subtitle {
-  font-size: 1.6em;
+  font-size: 1.2em;
+  color: #9e9c9b;
 }
 p,
 li {
@@ -466,7 +467,6 @@ svg#scroll-down polyline {
   padding-bottom: 10px;
   min-height: 0;
   width: 100%;
-  text-align: center;
 }
 @media (min-width: 768px) {
   .content-panel.intro,
@@ -537,6 +537,7 @@ svg#scroll-down polyline {
 .btn.header.link {
   border: 2px solid transparent;
   width: 100%;
+  float: right;
   width: auto;
   padding: 0;
   margin: 25px;
@@ -1056,9 +1057,6 @@ html.dark-theme body {
 html.dark-theme h1,
 html.dark-theme h2,
 html.dark-theme h3,
-html.dark-theme h4,
-html.dark-theme h5,
-html.dark-theme h6,
 html.dark-theme #homepage-intro h1 {
   color: #cccccc;
 }
