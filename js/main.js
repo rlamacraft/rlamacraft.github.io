@@ -15,14 +15,14 @@ $(document).ready( function() {
       parent.removeClass('focused');
     });
 
-    $('.project').on('click', function() {
-      $('.project').removeClass('hover');
+    $('article').on('click', function() {
+      $('article').removeClass('hover');
       $(this).addClass('hover');
     });
 
     $('.overlay-buttons a').on('focus', function() {
-      $('.project').removeClass('hover');
-      $(this).parents('.project').addClass('hover');
+      $('article').removeClass('hover');
+      $(this).parents('article').addClass('hover');
     });
 
     $('#layout-switch input[type="radio"]').on('click change', function(evt) {

@@ -363,14 +363,14 @@ input.form-control {
   transition: left 0.15s ease-out;
 }
 
-#projects-container {
+#projects-container, #posts-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   animation-duration: 1s;
   animation-timing-function: linear;
 
-  .project {
+  article {
     .space-top;
     border: @border-standard-thin;
     padding: @spacing-big @spacing-standard;
@@ -383,7 +383,7 @@ input.form-control {
     animation-duration: 1s;
     animation-timing-function: linear;
 
-    .project-title {
+    .title {
       .transition();
       display: block;
       color: @colour-accent;
@@ -399,7 +399,7 @@ input.form-control {
       font-family: @font-family-subheading;
     }
 
-    .center {
+    .background {
       .transition;
     }
 
@@ -512,7 +512,7 @@ input.form-control {
     }
 
     &.hover, &:hover {
-      .center {
+      .background {
         -webkit-filter: blur(3px);
       }
 
@@ -542,7 +542,7 @@ input.form-control {
   &.list {
     padding-top: 2em;
 
-    .project {
+    article {
       flex-basis: 50%;
       margin-left: 10%;
       margin-right: 10%;
