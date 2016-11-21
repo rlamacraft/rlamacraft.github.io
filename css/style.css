@@ -906,6 +906,18 @@ input.form-control:focus {
 #posts-container article:hover .overlay .project-tag {
   transform: translateY(0%) !important;
 }
+#projects-container article.post a.btn.link,
+#posts-container article.post a.btn.link {
+  color: #3caa9c;
+}
+#projects-container article.post a.btn.link:hover,
+#posts-container article.post a.btn.link:hover {
+  color: #8edad0;
+}
+#projects-container article.post a.btn.link:after,
+#posts-container article.post a.btn.link:after {
+  background-color: #8edad0;
+}
 #projects-container.list,
 #posts-container.list {
   padding-top: 2em;

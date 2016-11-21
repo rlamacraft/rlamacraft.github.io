@@ -83,7 +83,7 @@ h2 {
 h3, h4 {
   .heading-font(
       @size:          @font-size-subheading,
-      @colour:        @font-color-subheading
+      @colour:        @font-colour-subheading
   );
   padding-top: @spacing-xsmall-em;
   padding-bottom: @spacing-small-em;
@@ -94,7 +94,7 @@ h4 {
 
   &.subtitle {
     font-size: 1.2em;
-    color: @font-color-subheading;
+    color: @font-colour-subheading;
   }
 }
 
@@ -322,7 +322,7 @@ input.form-control {
   width: ~"calc(4.5em + 1px)";
   line-height: 3;
   font-size: 1em;
-  color: @font-color-subheading;
+  color: @font-colour-subheading;
   text-align: center;
   cursor: pointer;
   letter-spacing: 0.05em;
@@ -397,7 +397,7 @@ input.form-control {
 
     .subtitle {
       display: block;
-      color: @font-color-subheading;
+      color: @font-colour-subheading;
       font-family: @font-family-subheading;
     }
 
@@ -536,6 +536,20 @@ input.form-control {
 
         .project-tag {
           transform: translateY(0%) !important;
+        }
+      }
+    }
+
+    &.post {
+      a.btn.link {
+        color: @font-colour-accent;
+
+        &:hover {
+          color: @colour-accent-light;
+        }
+
+        &:after {
+          background-color: @colour-accent-light;
         }
       }
     }
