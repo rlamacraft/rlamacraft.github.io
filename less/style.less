@@ -23,6 +23,25 @@
   }
 }
 
+@keyframes bounce {
+    0%, 5%, 12.5%, 20%, 25%, 30%, 37.5%, 45%, 50%, 55%, 62.5%, 70%, 75%, 80%, 87.5%, 95%, 100% {
+        -webkit-transform: translateY(0) rotate(-0deg);
+                transform: translateY(0) rotate(-0deg);
+    }
+    10%, 60%, 85% {
+        -webkit-transform: translateY(-10px) rotate(-0deg);
+                transform: translateY(-10px) rotate(-0deg);
+    }
+    15%, 40%, 65%, 90% {
+        -webkit-transform: translateY(-5px) rotate(-0deg);
+                transform: translateY(-5px) rotate(-0deg);
+    }
+    35% {
+        -webkit-transform: translateY(-10px) rotateY(-90deg);
+                transform: translateY(-10px) rotateY(-90deg);
+    }
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -106,6 +125,8 @@ p, li {
 svg#scroll-down{
   opacity: 1 !important;
   .transition;
+  animation: bounce 10s infinite;
+  margin-top: 12em;
 
   &:hover {
     cursor: pointer;
