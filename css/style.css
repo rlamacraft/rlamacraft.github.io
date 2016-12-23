@@ -253,6 +253,7 @@ pre {
 pre {
   left: -20px;
   width: calc(100% + 40px);
+  position: relative;
 }
 @media (min-width: 992px) {
   pre {
