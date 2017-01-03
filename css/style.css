@@ -393,6 +393,7 @@ a {
   transition: all .5s ease;
   text-decoration: none;
   color: #3caa9c;
+  font-weight: 500;
 }
 a:hover,
 a:focus {
