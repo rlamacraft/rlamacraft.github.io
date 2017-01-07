@@ -9,7 +9,7 @@
 @Lua        : #039BE5; //Deep Blue
 @LESS       : #c143d5; //magenta
 @C          : #ef5350; //Brown-ish red
-/*@Assembly       : #37474F; //Dark-blueish grey -- not yet used*/
+@Assembly   : #556c77; //Dark-blueish grey
 @AppleScript: #ababab; //Apple's pale grey
 
 .create-tag(
@@ -41,6 +41,7 @@
 #projects-container .project-tag.project-tag-lua        { .create-tag( @Lua, "Lua"                ) }
 #projects-container .project-tag.project-tag-c          { .create-tag( @C, "C"                    ) }
 #projects-container .project-tag.project-tag-applescript{ .create-tag(@AppleScript, "AppleScript" ) }
+#projects-container .project-tag.project-tag-assembly   { .create-tag(@Assembly, "Assembly"       ) }
 
 .project-primary-tag-border(
   @colour,
@@ -59,4 +60,5 @@
 #projects-container .project.project__primary-tag-less       { .project-primary-tag-border( @LESS        ) }
 #projects-container .project.project__primary-tag-lua        { .project-primary-tag-border( @Lua         ) }
 #projects-container .project.project__primary-tag-c          { .project-primary-tag-border( @C           ) }
-#projects-container .project.project__primary-tag-AppleScript{ .project-primary-tag-border( @AppleScript ) }
+#projects-container .project.project__primary-tag-applescript{ .project-primary-tag-border( @AppleScript ) }
+#projects-container .project.project__primary-tag-assembly   { .project-primary-tag-border( @Assembly    ) }

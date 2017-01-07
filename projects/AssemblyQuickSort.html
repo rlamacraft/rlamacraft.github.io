@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> QuickSort in Assembly | Robert Lamacraft </title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+    <meta name="theme-color" content="#f5f7f7">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#3CAA9C">
+
+    <!-- Stylesheets -->
+    <link href="../css/prism.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:300' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="../js/dark-theme.js"></script>
+</head>
+
+<body>
+  <section class="content-section">
+
+    <div class="content-panel intro">
+      <a target="_blank" href="https://github.com/rlamacraft/Assembly/tree/master/quickSort" class="btn header link">View Source</a>
+      <a href="/#homepage-content-section" class="btn header link">More Projects</a>
+      <h2> QuickSort in Assembly </h2>
+      <h4 class="subtitle">Because why not.</h4>
+    </div>
+
+    <div class="content-panel">
+      <p>
+        To continue with my long-standing project to implement Quick Sort algorithm I decided to take on Assembly.
+        Except that this one was quite a challenge and ended up taking many, many hours spread over a good few months.
+        But it's finished now, 200 lines of x86-based Assembly code, and quite honestly I really feel quite confident in working with Assembly code and have a greater understanding of how C code maps to low-level instructions.
+        So, let me explain, just how my C implementation of QuickSort maps to my Assembly implementation.
+      </p>
+    </div>
+
+    <div class="content-panel">
+      <h3>The C code.</h3>
+      <p>
+        Now, first you must be familiar with the in-place C implementation of Quick Sort. I added it to <a href="quickSort">this post</a> when I first included it but here it is, for reference, with a few slight modifications so it more closely follows the Assembly code to be discussed.
+      </p>
+      <pre class="line-numbers"><code class="language-c">void swap(int* a, int* b) {
+  int tmp = *a;
+  *a = *b;
+  *b = tmp;
+}
+
+void quickSort(int* list, int size) {
+  if(size == 2) {
+    if(list[1] &lt; list[0]) {
+      swap(&amp;list[0], &amp;list[1]);
+    }
+  } else if(size &gt; 2) {
+    int pivot = list[0];
+    int left = 0;
+    int right = size - 1;
+    while(left &lt;= right) {
+      while(list[left] &lt; pivot) {
+        ++left;
+      }
+      while(list[right] &gt; pivot) {
+        --right;
+      }
+      if(left &lt;= right) {
+        swap(&amp;list[left], &amp;list[right]);
+        ++left;
+        --right;
+      }
+    }
+    quickSort(list, right + 1);
+    quickSort(&amp;list[left], size - left);
+  }
+}</code></pre>
+      <p>
+        So what we have is a recursive algorithm that takes a pointer to the list (stored in the heap) and the number of elements that are to be sorted; in the initial call this will be a pointer to the beginning of the list and the total number of elements in the list. This is important as the in place algorithm will change the index at which the function is called at and the number of elements that are in scope for sorting in that round of the algorithm.
+      </p>
+      <p>
+        It is worth first noting how we do different operations depending upon the number of elements currently being sorted as this translated directly to the assembly code. If two elements are being considered then we simply check and possibly swap the numbers. If there are more elements then we do some swapping and then call the algorithm recursively, otherwise we do nothing.
+      </p>
+      <p>
+        Finally, before getting to the assembly code, it is worth noting how the inplace sorting is performed before we call the function recursively. We start with a left pointer that points to the first element in the list being considered, and a right pointer pointing to the last element. These pointers then move towards each other, stopping when they find an element more than or less than the pivot, respectively. These values are then swapped. This process is repeated until all of the values less than the pivot sit on its left and the values more than the pivot sit on its right. We then call the algorithm recursively for the list of elements on the left of the pivot and those on the right of the pivot. The left and right pointers are used in providing pointers for the recursive calls as well as calculating the number of elements in each sub-list.
+      </p>
+    </div>
+
+    <div class="content-panel">
+      <h3>Now, to the Assembly.</h3>
+      <p>
+        Firstly, as the GitHub repo says, I make no guarantees that this is well written code. I have probably broken all of the standard conventions on how to write easy to read and maintainable low-level code; this is purely for educational purposes.
+      </p>
+
+      <h4>Main Function</h4>
+      <p>
+        So the main function does a few things.
+        First it calls a function that prints the contents of the array.
+        Then it calls the sort function on the entire list (the global variables are declared in the data section).
+        The print function is then recalled to display the differences.
+        Finally, the function calls the system call to exit normally.
+      </p>
+      <pre class="line-numbers" data-start="200"><code class="language-nasm">main:
+  call printArray
+
+  movzx rax, BYTE[size]
+  push rax
+  push array
+  call sort
+  pop rax
+  pop rax
+
+  call printArray
+
+  mov rax, 60		; exit syscall (x86_64)
+  mov rdi, 0		; status = 0 (exit normally)
+  syscall</code></pre>
+
+      <h4>The Sort Function</h4>
+      <p>
+        The sort function is where the main meat of the program happens.
+        First the size is checked, as the C code does, and does one of three things.
+        If the list has two elements, then it jumps to the "lengthTwo" line, else if there are more than two element it jumps to "lengthN", otherwise the function simply returns.
+      </p>
+      <pre class="line-numbers" data-start="70"><code class="language-nasm">; [rbp + 24] = the length
+; [rbp + 16] = the array
+sort:
+  push rbp
+  mov rbp, rsp
+
+  ; check length of array
+  cmp [rbp+24], DWORD(0x2)
+  jz lengthTwo  ; if length == 2
+  jg lengthN    ; if length > 2
+  jmp done_sort ; else</code></pre>
+
+      <h4>Two elements</h4>
+      <p>
+        If there are only two elements in the list then we simply check what order they're in and swap if needed.
+        The idea of doing this is to essentially save memory as choosing a pivot and calling the function recurisvely is for more expensive than doing a simple check.
+      </p>
+      <pre class="line-numbers" data-start="82"><code class="language-nasm">lengthTwo:
+  mov rax, [rbp+16]
+  movzx rbx, BYTE[rax] ; get first value
+
+  add rax, 1
+  movzx rax, BYTE[rax] ; get second value
+
+  cmp rax, rbx
+  jg done_sort
+
+  mov rax, [rbp+16]
+  push rax
+  add rax, 1
+  push rax
+  call swap
+  pop rax
+  pop rax
+
+  jmp done_sort</code></pre>
+      <p>
+        Essentially, what we do is get both numbers which isn't too difficult as <code>rbp + 16</code> is already pointing to the first. We extract that byte, add one to get the next value and then get that byte too.
+        We then use <code>cmp</code> to compare the values and if the first value is greater than the second then we jumpt to the loop's end (the same place we just jumped to if the list had fewer than 2 elements).
+        Otherwise, we push both pointers and call swap.
+      </p>
+
+      <h4>Swapping two elements</h4>
+      <p>
+        Like in the C code above, we have a separate swap function as it is called in a couple of places and allows us to have a simple way to swap the value stored in two memory locations, with the function taking two pointers as arguments.
+      </p>
+      <pre class="line-numbers" data-start="53"><code class="language-nasm">; swaps the values stored at two memory locations
+; [rbp + 16] = pointer a
+; [rbp + 24] = pointer b
+swap:
+  push rbp
+  mov rbp, rsp
+
+  mov rax, [rbp + 16]
+  mov rbx, [rbp + 24]
+  movzx rcx, BYTE[rax] ; the value pointer a points to
+  movzx rdx, BYTE[rbx] ; the value pointer b points to
+  mov BYTE[rax], dl
+  mov BYTE[rbx], cl
+
+  pop rbp
+  ret</code></pre>
+
+      <h4>More than two elements</h4>
+      <p>
+
+      </p>
+
+      <p>
+        If we are looking at a list with more than two items then things get a little more complex. Let me walk you through what's happening.
+      </p>
+      <p>
+        We start off by allocating three variables: the pivot, a left pointer, and a right pointer.
+      </p>
+      <pre class="line-numbers" data-start="102"><code class="language-nasm">lengthN:
+  sub rsp, 24
+
+  ; pivot = the first value in the array
+  mov rax, [rbp + 16]
+  movzx rax, BYTE[rax]
+  mov [rbp - 8], rax
+
+  ; left = 0
+  mov [rbp - 16], DWORD(0x0)
+  mov rax, [rbp - 16]
+
+  ; right = length - 1
+  mov rax, [rbp + 24]
+  sub rax, 1
+  mov [rbp - 24], rax</code></pre>
+      <p>
+        We then enter a loop, <code>loop_lengthN</code>, the condition for which we will come to later.
+      </p>
+      <p>
+        Within this loop, we enter another loop. This loop moves the left pointer until we find a value in the array greater, or equal to, the pivot.
+        Obviously, the first time we enter this loop it will run once and exit on line 127 as the pivot is the first value in the array, which the left pointer is already pointing to.
+        However, when the aforementioned parent loop is called subsequently the value of the left pointer will actually get incremented.
+      </p>
+      <pre class="line-numbers" data-start="121"><code class="language-nasm">loop_leftLoop:
+  mov rax, [rbp + 16]
+  add rax, [rbp - 16]
+  movzx rax, BYTE[rax]
+  mov rbx, [rbp - 8]
+  cmp rax, rbx
+  jge loop_rightLoop
+
+  mov rax, [rbp - 16]
+  add rax, 1
+  mov [rbp - 16], rax
+  jmp loop_leftLoop</code></pre>
+      <p>
+        We then have a similar loop for the right pointer, but this decrements until it finds a value less than, or equal to, the pivot.
+      </p>
+      <pre class="line-numbers" data-start="134"><code class="language-nasm">loop_rightLoop:
+  mov rax, [rbp + 16]
+  add rax, [rbp - 24]
+  movzx rax, BYTE[rax]
+  mov rbx, [rbp - 8]
+  cmp rax, rbx
+  jle loop_swapIfNeeded
+
+  mov rax, [rbp - 24]
+  sub rax, 1
+  mov [rbp - 24], rax
+  jmp loop_rightLoop</code></pre>
+      <p>
+        Ok, so now we have the left pointing to a value &gt;= than the pivot and the right pointing to a value &lt;= than the pivot, or worst case have them both pointing at the pivot itself.
+        So we check and swap, incrementing the left and decrementing the right in the process.
+      </p>
+      <pre class="line-numbers" data-start="147"><code class="language-nasm">loop_swapIfNeeded:
+  mov rax, [rbp - 16] ; left
+  mov rbx, [rbp - 24] ; right
+  cmp rax, rbx
+  jg loop_endCondition
+  mov rcx, [rbp + 16]
+  add rax, rcx
+  add rbx, rcx
+  push rax
+  push rbx
+  call swap
+  pop rax
+  pop rax
+  ; increment left and decrement right
+  mov rax, [rbp - 16]
+  add rax, 1
+  mov [rbp - 16], rax
+  mov rax, [rbp - 24]
+  sub rax, 1
+  mov [rbp - 24], rax</code></pre>
+      <p>
+        Now we need to keep doing this process of moving the left right, the right left, and swapping until we have all of the values less than the pivot left of the pivot and all of the values more than the pivot right of the pivot.
+        Or in other words, the value of the left pointer is more than the right pointer. And that is our condition on the <code>loop_lengthN</code> loop.
+      </p>
+      <pre class="line-numbers" data-start="168"><code class="language-nasm">loop_endCondition:
+  mov rax, [rbp - 16] ; left
+  mov rbx, [rbp - 24] ; right
+  cmp rax, rbx
+  jle loop_lengthN</code></pre>
+      <p>
+        Ok, now for the final part. The recursive calls, without which we don't really have a sorting algorithm.
+        For this bit, looking at the C code really helps, so here's a reminder.
+      </p>
+      <pre class="line-numbers" data-start="29"><code class="language-c">quickSort(list, right + 1);
+quickSort(&amp;list[left], size - left);</code></pre>
+      <p>
+        Note: the parameters in the assembly code are pushed following the C code but from right to left.
+      </p>
+      <pre class="line-numbers" data-start="173"><code class="language-nasm"> ; first recursive call
+ mov rax, [rbp - 24]
+ add rax, 1
+ push rax
+ mov rax, [rbp + 16]
+ push rax
+ call sort
+ pop rax
+ pop rax
+ ; second recursive call
+ mov rax, [rbp + 24]
+ sub rax, [rbp - 16]
+ push rax
+ mov rax, [rbp + 16]
+ add rax, [rbp - 16]
+ push rax
+ call sort
+ pop rax
+ pop rax</code></pre>
+     <p>
+        Lines 174 and 175 calculate <code>right + 1</code>. Then, <code>rbp + 16</code> (line 177) is the memory location of the list pointer that this instance of the call was given, and so that's passed on.
+        Lines 183 and 184 calculate the number of elements to the right of the pivot and lines 186 and 187 calculate a pointer to the element pointed to by the left pointer, i.e. <code>&amp;list[left]</code>.
+     </p>
+     <p>
+       Then all that's left to do is to tidy up. All of the functions return and the array, in the heap, is left sorted ascending. 200 lines of code and a few months later.
+     </p>
+    </div>
+
+    <div class="content-panel outro">
+      <a target="_blank" href="https://github.com/rlamacraft/Assembly/tree/master/quickSort" class="btn header link">View Source</a>
+      <a href="/#homepage-content-section" class="btn header link">More Projects</a>
+    </div>
+
+  </section>
+
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../js/prism.js"></script>
+
+</body>
+</html>
