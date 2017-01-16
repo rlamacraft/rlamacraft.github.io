@@ -786,6 +786,7 @@ input.form-control:focus {
   overflow: hidden;
   animation-duration: 1s;
   animation-timing-function: linear;
+  border-radius: 3px;
 }
 #projects-container article .title,
 #posts-container article .title {
@@ -885,7 +886,7 @@ input.form-control:focus {
   left: 0;
   right: 0;
   position: absolute;
-  transition: all 0.5s cubic-bezier(0.18, 0.89, 0.29, 1.21);
+  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.29, 1.21);
   will-change: transform;
 }
 #projects-container article .overlay .project-tags .project-tag:after,
