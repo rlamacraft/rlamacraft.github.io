@@ -259,15 +259,15 @@ pre {
   font-weight: 300;
   color: #405050;
   font-size: 1em;
-  line-height: 1.4;
+  line-height: 1.7;
   text-transform: none;
   letter-spacing: 0em;
   font-family: "Roboto Mono", "Courier New", "Courier", mono-space !important;
   padding: 1px 2px;
 }
 pre {
-  left: -20px;
-  width: calc(100% + 40px);
+  left: -50px;
+  width: calc(100% + 100px);
   position: relative;
 }
 @media (min-width: 992px) {
@@ -289,7 +289,7 @@ pre.prettyprint {
   font-weight: 300;
   color: #405050;
   font-size: 1em;
-  line-height: 1.4;
+  line-height: 1.7;
   text-transform: none;
   letter-spacing: 0em;
   display: block;
@@ -301,7 +301,7 @@ code.inline {
   font-weight: 300;
   color: #405050;
   font-size: 0.9em;
-  line-height: 1.4;
+  line-height: 1.7;
   text-transform: none;
   letter-spacing: 0em;
   display: inline-block;
@@ -393,7 +393,7 @@ body {
   overflow: initial !important;
 }
 body {
-  margin: 10px;
+  margin: 10px 40px;
   background-color: #F7F7F7;
 }
 @media (min-width: 992px) {
@@ -481,8 +481,8 @@ li {
   font-family: sans-serif;
   font-weight: 300;
   color: #405050;
-  font-size: 1.1em;
-  line-height: 1.4;
+  font-size: 1.2em;
+  line-height: 1.7;
   text-transform: none;
   letter-spacing: 0em;
 }
@@ -677,7 +677,7 @@ input.form-control {
   font-weight: 300;
   color: #405050;
   font-size: 1em;
-  line-height: 1.4;
+  line-height: 1.7;
   text-transform: none;
   letter-spacing: 0em;
   -moz-box-shadow: none;
@@ -714,8 +714,8 @@ input.form-control:focus {
   font-family: sans-serif;
   font-weight: 300;
   color: #405050;
-  font-size: 1.1em;
-  line-height: 1.4;
+  font-size: 1.2em;
+  line-height: 1.7;
   text-transform: none;
   letter-spacing: 0em;
 }
@@ -836,7 +836,7 @@ input.form-control:focus {
   border: none;
   color: #eeeeee;
   text-transform: uppercase;
-  font-size: 1.1em;
+  font-size: 1.2em;
   padding: 0.5em 0.937em;
 }
 #projects-container article .overlay .overlay-buttons .btn:hover,
@@ -879,7 +879,7 @@ input.form-control:focus {
   font-weight: 300;
   color: #405050;
   font-size: 0.95em;
-  line-height: 1.4;
+  line-height: 1.7;
   text-transform: none;
   letter-spacing: 0em;
   height: 100%;
@@ -1087,7 +1087,7 @@ figure.image-wrapper figcaption {
   font-weight: 300;
   color: #405050;
   font-size: 1em;
-  line-height: 1.4;
+  line-height: 1.7;
   text-transform: none;
   letter-spacing: 0em;
 }

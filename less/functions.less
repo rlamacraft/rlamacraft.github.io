@@ -61,31 +61,3 @@
   line-height:     @line-height;
   text-transform:  @transform;
 }
-
-.tag-size(
-  @size : @size-half,
-  @font-size: @font-size-tag-standard,
-) {
-  .font(
-    @size: @font-size,
-    @line-height: 0,
-  );
-  height: @size;
-  max-width: @size-tag-bubble-standard-width;
-  min-width: @size-tag-bubble-standard-width;
-  padding: @spacing-xsmall (@size-tag-bubble-standard / 4);
-}
-
-.tag-expand(
-  @size: @size-tag-bubble-standard,
-  @font-size: @font-size-tag-large,
-  @line-height: @font-lineheight-tag-standard,
-) {
-  .font(
-    @size:          @font-size,
-    @line-height:   @line-height,
-    @colour:        @colour-base,
-  );
-  max-width: @size-full;
-  padding: @spacing-xsmall (@size / 2);
-}
