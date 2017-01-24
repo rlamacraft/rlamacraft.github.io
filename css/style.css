@@ -1003,15 +1003,17 @@ input.form-control:focus {
   position: absolute;
   margin: 0;
 }
-#projects-container.list,
-#posts-container.list {
-  padding-top: 2em;
-}
-#projects-container.list article,
-#posts-container.list article {
-  flex-basis: 50%;
-  margin-left: 10%;
-  margin-right: 10%;
+@media (min-width: 992px) {
+  #projects-container.list,
+  #posts-container.list {
+    padding-top: 2em;
+  }
+  #projects-container.list article,
+  #posts-container.list article {
+    flex-basis: 50%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 code .tag,
 pre .tag {

@@ -603,13 +603,15 @@ input.form-control {
     }
   }
 
-  &.list {
-    padding-top: 2em;
+  @media(@non-sm) {
+    &.list {
+      padding-top: 2em;
 
-    article {
-      flex-basis: 50%;
-      margin-left: 10%;
-      margin-right: 10%;
+      article {
+        flex-basis: 50%;
+        margin-left: 10%;
+        margin-right: 10%;
+      }
     }
   }
 }
