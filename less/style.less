@@ -396,9 +396,7 @@ input.form-control {
 
   article {
     .space-top;
-    border: @border-standard-thin;
-    padding: @spacing-big @spacing-standard;
-    padding-top: @spacing-big + @spacing-xsmall;
+    padding: @spacing-big;
     margin: @spacing-xsmall;
     flex-grow: 1;
     flex-basis: auto;
@@ -407,11 +405,21 @@ input.form-control {
     animation-duration: 1s;
     animation-timing-function: linear;
     border-radius: 3px;
+    box-shadow: @shadow-card;
+    background-color: @colour-section-alt;
+
+    &.project {
+      padding-top: 55px;
+    }
+
+    &.post {
+      padding: @spacing-small @spacing-big;
+    }
 
     .title {
       .transition();
       display: block;
-      color: @colour-accent;
+      color: @font-colour-heading;
       font-size: @font-size-project;
       font-family: @font-family-title;
       text-transform: capitalize;
@@ -536,44 +544,61 @@ input.form-control {
       }
     }
 
-    &.hover, &:hover {
-      .background {
-        -webkit-filter: blur(3px);
-      }
-
-      .overlay {
-        .overlay-buttons {
-          .btn {
-            transform: translateY(0%) !important;
-            opacity: 1;
-
-            &:nth-child(1) {
-              transition-delay: 0.1s;
-            }
-
-            &:nth-child(2) {
-              transition-delay: 0.15s;
-            }
-          }
+    &.project {
+      &.hover, &:hover {
+        .background {
+          -webkit-filter: blur(3px);
         }
 
-        .project-tag {
-          transform: translateY(0%) !important;
+        .overlay {
+          .overlay-buttons {
+            .btn {
+              transform: translateY(0%) !important;
+              opacity: 1;
+
+              &:nth-child(1) {
+                transition-delay: 0.1s;
+              }
+
+              &:nth-child(2) {
+                transition-delay: 0.15s;
+              }
+            }
+          }
+
+          .project-tag {
+            transform: translateY(0%) !important;
+          }
         }
       }
     }
+  }
 
-    &.post {
-      a.btn.link {
-        color: @font-colour-accent;
+  .buttons {
+    padding-top: @spacing-small;
 
-        &:hover {
-          color: @colour-accent-light;
-        }
+    a.btn.link {
+      color: @font-colour-accent;
+      background-color: transparent;
+      display: inline-block;
+      border: none;
+      text-transform: uppercase;
+      font-size: @font-size-standard;
+      padding-left: 0;
+      padding-right: @spacing-big-em;
+      transform: translateY(0%) !important; /* don't ask */
+
+      &:hover {
+        color: @colour-accent-light;
 
         &:after {
-          background-color: @colour-accent-light;
+          width: 85%;
         }
+      }
+
+      &:after {
+        position: absolute;
+        margin: 0;
       }
     }
   }
@@ -759,5 +784,13 @@ html.dark-theme {
 
   p, li {
     color: @colour-dark-theme-font;
+  }
+
+  #projects-container article.project, #posts-container article.post {
+    background-color: @colour-dark-theme-alt;
+
+    .title {
+      color: @font-colour-heading-dark
+    }
   }
 }

@@ -776,9 +776,7 @@ input.form-control:focus {
 #posts-container article {
   display: inline-block;
   margin-top: 25px;
-  border: 1px solid rgba(150, 150, 150, 0.2);
-  padding: 40px 25px;
-  padding-top: 50px;
+  padding: 40px;
   margin: 10px;
   flex-grow: 1;
   flex-basis: auto;
@@ -787,6 +785,16 @@ input.form-control:focus {
   animation-duration: 1s;
   animation-timing-function: linear;
   border-radius: 3px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background-color: #f9fbfb;
+}
+#projects-container article.project,
+#posts-container article.project {
+  padding-top: 55px;
+}
+#projects-container article.post,
+#posts-container article.post {
+  padding: 20px 40px;
 }
 #projects-container article .title,
 #posts-container article .title {
@@ -795,7 +803,7 @@ input.form-control:focus {
   -ms-transition: all .5s ease;
   transition: all .5s ease;
   display: block;
-  color: #3caa9c;
+  color: #5a5a5a;
   font-size: 1.7em;
   font-family: "Lato", sans-serif;
   text-transform: capitalize;
@@ -830,7 +838,7 @@ input.form-control:focus {
   -moz-transition: all .5s ease;
   -ms-transition: all .5s ease;
   transition: all .5s ease;
-  margin: 12px;
+  margin: 8px;
   background-color: transparent;
   display: inline-block;
   border: none;
@@ -934,48 +942,66 @@ input.form-control:focus {
   transition-delay: .5s;
   z-index: 100;
 }
-#projects-container article.hover .background,
-#posts-container article.hover .background,
-#projects-container article:hover .background,
-#posts-container article:hover .background {
+#projects-container article.project.hover .background,
+#posts-container article.project.hover .background,
+#projects-container article.project:hover .background,
+#posts-container article.project:hover .background {
   -webkit-filter: blur(3px);
 }
-#projects-container article.hover .overlay .overlay-buttons .btn,
-#posts-container article.hover .overlay .overlay-buttons .btn,
-#projects-container article:hover .overlay .overlay-buttons .btn,
-#posts-container article:hover .overlay .overlay-buttons .btn {
+#projects-container article.project.hover .overlay .overlay-buttons .btn,
+#posts-container article.project.hover .overlay .overlay-buttons .btn,
+#projects-container article.project:hover .overlay .overlay-buttons .btn,
+#posts-container article.project:hover .overlay .overlay-buttons .btn {
   transform: translateY(0%) !important;
   opacity: 1;
 }
-#projects-container article.hover .overlay .overlay-buttons .btn:nth-child(1),
-#posts-container article.hover .overlay .overlay-buttons .btn:nth-child(1),
-#projects-container article:hover .overlay .overlay-buttons .btn:nth-child(1),
-#posts-container article:hover .overlay .overlay-buttons .btn:nth-child(1) {
+#projects-container article.project.hover .overlay .overlay-buttons .btn:nth-child(1),
+#posts-container article.project.hover .overlay .overlay-buttons .btn:nth-child(1),
+#projects-container article.project:hover .overlay .overlay-buttons .btn:nth-child(1),
+#posts-container article.project:hover .overlay .overlay-buttons .btn:nth-child(1) {
   transition-delay: 0.1s;
 }
-#projects-container article.hover .overlay .overlay-buttons .btn:nth-child(2),
-#posts-container article.hover .overlay .overlay-buttons .btn:nth-child(2),
-#projects-container article:hover .overlay .overlay-buttons .btn:nth-child(2),
-#posts-container article:hover .overlay .overlay-buttons .btn:nth-child(2) {
+#projects-container article.project.hover .overlay .overlay-buttons .btn:nth-child(2),
+#posts-container article.project.hover .overlay .overlay-buttons .btn:nth-child(2),
+#projects-container article.project:hover .overlay .overlay-buttons .btn:nth-child(2),
+#posts-container article.project:hover .overlay .overlay-buttons .btn:nth-child(2) {
   transition-delay: 0.15s;
 }
-#projects-container article.hover .overlay .project-tag,
-#posts-container article.hover .overlay .project-tag,
-#projects-container article:hover .overlay .project-tag,
-#posts-container article:hover .overlay .project-tag {
+#projects-container article.project.hover .overlay .project-tag,
+#posts-container article.project.hover .overlay .project-tag,
+#projects-container article.project:hover .overlay .project-tag,
+#posts-container article.project:hover .overlay .project-tag {
   transform: translateY(0%) !important;
 }
-#projects-container article.post a.btn.link,
-#posts-container article.post a.btn.link {
-  color: #3caa9c;
+#projects-container .buttons,
+#posts-container .buttons {
+  padding-top: 20px;
 }
-#projects-container article.post a.btn.link:hover,
-#posts-container article.post a.btn.link:hover {
+#projects-container .buttons a.btn.link,
+#posts-container .buttons a.btn.link {
+  color: #3caa9c;
+  background-color: transparent;
+  display: inline-block;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  padding-left: 0;
+  padding-right: 1.25em;
+  transform: translateY(0%) !important;
+  /* don't ask */
+}
+#projects-container .buttons a.btn.link:hover,
+#posts-container .buttons a.btn.link:hover {
   color: #8edad0;
 }
-#projects-container article.post a.btn.link:after,
-#posts-container article.post a.btn.link:after {
-  background-color: #8edad0;
+#projects-container .buttons a.btn.link:hover:after,
+#posts-container .buttons a.btn.link:hover:after {
+  width: 85%;
+}
+#projects-container .buttons a.btn.link:after,
+#posts-container .buttons a.btn.link:after {
+  position: absolute;
+  margin: 0;
 }
 #projects-container.list,
 #posts-container.list {
@@ -1149,4 +1175,12 @@ html.dark-theme .content-section#homepage-content-section .content-panel > h3 {
 html.dark-theme p,
 html.dark-theme li {
   color: #959695;
+}
+html.dark-theme #projects-container article.project,
+html.dark-theme #posts-container article.post {
+  background-color: #2e3338;
+}
+html.dark-theme #projects-container article.project .title,
+html.dark-theme #posts-container article.post .title {
+  color: #cccccc;
 }
