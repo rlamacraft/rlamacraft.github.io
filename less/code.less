@@ -20,6 +20,12 @@ pre {
     width: ~"calc(100% + 220px)";
     padding-left: 110px !important;
   }
+
+  @media(@lg) {
+    padding-left: 90px !important;
+    border-radius: @border-radius;
+    box-shadow: @shadow-card;
+  }
 }
 
 .token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
