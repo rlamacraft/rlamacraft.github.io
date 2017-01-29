@@ -1038,7 +1038,6 @@ input.form-control:focus {
   #projects-container.list,
   #posts-container.list {
     padding-top: 2em;
-    width: 1000px;
     margin: auto;
   }
   #projects-container.list article,
