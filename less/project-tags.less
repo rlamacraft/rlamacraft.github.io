@@ -1,16 +1,18 @@
 @Idea       : @colour-accent; //For project ideas
-@JavaScript : #859683; //Steel Grey
+@JavaScript : #cc7400; //Orange
 @CSS        : #d66be8; //Pink
 @Python     : #2A69C5; //Blue
 @Swift      : #fb6917; //Orange
 @Java       : #c65c3a; //Brown
 @Haskell    : #945992; //Purple
-@HTML       : #60d14d; //Green
+@HTML       : #4CAF50; //Green
 @Lua        : #039BE5; //Deep Blue
 @LESS       : #c143d5; //magenta
 @C          : #ef5350; //Brown-ish red
 @Assembly   : #556c77; //Dark-blueish grey
-@AppleScript: #ababab; //Apple's pale grey
+@AppleScript: #85868a; //Apple's pale grey
+
+@border-darken-factor: 10%;
 
 .create-tag(
   @colour,
@@ -49,16 +51,16 @@
   border: @border-width solid @colour
 }
 
-#projects-container .project.project__primary-tag-idea       { .project-primary-tag-border( @Idea        ) }
-#projects-container .project.project__primary-tag-javascript { .project-primary-tag-border( @JavaScript  ) }
-#projects-container .project.project__primary-tag-css        { .project-primary-tag-border( @CSS         ) }
-#projects-container .project.project__primary-tag-python     { .project-primary-tag-border( @Python      ) }
-#projects-container .project.project__primary-tag-swift      { .project-primary-tag-border( @Swift       ) }
-#projects-container .project.project__primary-tag-java       { .project-primary-tag-border( @Java        ) }
-#projects-container .project.project__primary-tag-haskell    { .project-primary-tag-border( @Haskell     ) }
-#projects-container .project.project__primary-tag-html       { .project-primary-tag-border( @HTML        ) }
-#projects-container .project.project__primary-tag-less       { .project-primary-tag-border( @LESS        ) }
-#projects-container .project.project__primary-tag-lua        { .project-primary-tag-border( @Lua         ) }
-#projects-container .project.project__primary-tag-c          { .project-primary-tag-border( @C           ) }
-#projects-container .project.project__primary-tag-applescript{ .project-primary-tag-border( @AppleScript ) }
-#projects-container .project.project__primary-tag-assembly   { .project-primary-tag-border( @Assembly    ) }
+#projects-container .project.project__primary-tag-idea       { .project-primary-tag-border( darken(@Idea        , @border-darken-factor) ) }
+#projects-container .project.project__primary-tag-javascript { .project-primary-tag-border( darken(@JavaScript  , @border-darken-factor) ) }
+#projects-container .project.project__primary-tag-css        { .project-primary-tag-border( darken(@CSS         , @border-darken-factor) ) }
+#projects-container .project.project__primary-tag-python     { .project-primary-tag-border( darken(@Python      , @border-darken-factor) ) }
+#projects-container .project.project__primary-tag-swift      { .project-primary-tag-border( darken(@Swift       , @border-darken-factor) ) }
+#projects-container .project.project__primary-tag-java       { .project-primary-tag-border( darken(@Java        , @border-darken-factor) ) }
+#projects-container .project.project__primary-tag-haskell    { .project-primary-tag-border( darken(@Haskell     , @border-darken-factor) ) }
+#projects-container .project.project__primary-tag-html       { .project-primary-tag-border( darken(@HTML        , @border-darken-factor) ) }
+#projects-container .project.project__primary-tag-less       { .project-primary-tag-border( darken(@LESS        , @border-darken-factor) ) }
+#projects-container .project.project__primary-tag-lua        { .project-primary-tag-border( darken(@Lua         , @border-darken-factor) ) }
+#projects-container .project.project__primary-tag-c          { .project-primary-tag-border( darken(@C           , @border-darken-factor) ) }
+#projects-container .project.project__primary-tag-applescript{ .project-primary-tag-border( darken(@AppleScript , @border-darken-factor) ) }
+#projects-container .project.project__primary-tag-assembly   { .project-primary-tag-border( darken(@Assembly    , @border-darken-factor) ) }

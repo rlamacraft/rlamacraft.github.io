@@ -57,8 +57,8 @@
   color: #f5f7f7 !important;
 }
 #projects-container .project-tag.project-tag-javascript {
-  background-color: #859683 !important;
-  color: #859683 !important;
+  background-color: #cc7400 !important;
+  color: #cc7400 !important;
 }
 #projects-container .project-tag.project-tag-javascript.locked {
   color: #f5f7f7 !important;
@@ -135,8 +135,8 @@
   color: #f5f7f7 !important;
 }
 #projects-container .project-tag.project-tag-html {
-  background-color: #60d14d !important;
-  color: #60d14d !important;
+  background-color: #4caf50 !important;
+  color: #4caf50 !important;
 }
 #projects-container .project-tag.project-tag-html.locked {
   color: #f5f7f7 !important;
@@ -187,8 +187,8 @@
   color: #f5f7f7 !important;
 }
 #projects-container .project-tag.project-tag-applescript {
-  background-color: #ababab !important;
-  color: #ababab !important;
+  background-color: #85868a !important;
+  color: #85868a !important;
 }
 #projects-container .project-tag.project-tag-applescript.locked {
   color: #f5f7f7 !important;
@@ -213,43 +213,43 @@
   color: #f5f7f7 !important;
 }
 #projects-container .project.project__primary-tag-idea {
-  border: 2px solid #3caa9c;
+  border: 2px solid #2f8479;
 }
 #projects-container .project.project__primary-tag-javascript {
-  border: 2px solid #859683;
+  border: 2px solid #995700;
 }
 #projects-container .project.project__primary-tag-css {
-  border: 2px solid #d66be8;
+  border: 2px solid #ca3fe1;
 }
 #projects-container .project.project__primary-tag-python {
-  border: 2px solid #2a69c5;
+  border: 2px solid #21539b;
 }
 #projects-container .project.project__primary-tag-swift {
-  border: 2px solid #fb6917;
+  border: 2px solid #db5104;
 }
 #projects-container .project.project__primary-tag-java {
-  border: 2px solid #c65c3a;
+  border: 2px solid #9f492e;
 }
 #projects-container .project.project__primary-tag-haskell {
-  border: 2px solid #945992;
+  border: 2px solid #744673;
 }
 #projects-container .project.project__primary-tag-html {
-  border: 2px solid #60d14d;
+  border: 2px solid #3d8b40;
 }
 #projects-container .project.project__primary-tag-less {
-  border: 2px solid #c143d5;
+  border: 2px solid #a72abb;
 }
 #projects-container .project.project__primary-tag-lua {
-  border: 2px solid #039be5;
+  border: 2px solid #0279b3;
 }
 #projects-container .project.project__primary-tag-c {
-  border: 2px solid #ef5350;
+  border: 2px solid #eb2521;
 }
 #projects-container .project.project__primary-tag-applescript {
-  border: 2px solid #ababab;
+  border: 2px solid #6c6d70;
 }
 #projects-container .project.project__primary-tag-assembly {
-  border: 2px solid #556c77;
+  border: 2px solid #405159;
 }
 code,
 pre {
@@ -821,7 +821,7 @@ input.form-control:focus {
 }
 #projects-container article.project,
 #posts-container article.project {
-  padding-top: 55px;
+  padding-top: 50px;
 }
 #projects-container article.post,
 #posts-container article.post {
@@ -933,9 +933,8 @@ input.form-control:focus {
   position: absolute;
   right: 10px;
   bottom: 2px;
-  text-transform: uppercase;
   color: #f5f7f7;
-  font-size: 0.8em;
+  font-size: 1em;
   line-height: 1.6;
 }
 #projects-container article .overlay .project-tags .project-tag:nth-child(1),
