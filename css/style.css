@@ -837,7 +837,7 @@ input.form-control:focus {
 }
 #projects-container article.project,
 #posts-container article.project {
-  padding-top: 50px;
+  padding-top: 40px;
 }
 #projects-container article.post,
 #posts-container article.post {
