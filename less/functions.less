@@ -44,11 +44,12 @@
   line-height: @line-height;
   text-transform: @transform;
   letter-spacing: @letter-spacing;
+  -webkit-font-smoothing: antialiased;
 }
 
 .heading-font(
   @family:      @font-family-title,
-  @weight:      @font-weight-standard,
+  @weight:      @font-weight-heading,
   @colour:      @font-colour-heading,
   @size:        @font-size-standard,
   @line-height: @font-lineheight-less,
@@ -60,4 +61,5 @@
   font-size:       @size;
   line-height:     @line-height;
   text-transform:  @transform;
+  -webkit-font-smoothing: antialiased;
 }

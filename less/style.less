@@ -102,8 +102,7 @@ h2 {
 
 h3, h4 {
   .heading-font(
-      @size:          @font-size-subheading,
-      @colour:        @font-colour-subheading
+      @size:          @font-size-subheading
   );
   padding-top: @spacing-xsmall-em;
   padding-bottom: @spacing-small-em;
@@ -113,13 +112,10 @@ h3, h4 {
   }
 }
 
-h4 {
-  font-weight: 400;
-
-  &.subtitle {
-    font-size: 1.2em;
-    color: @font-colour-subheading;
-  }
+h4.subtitle {
+  font-size: 1.2em;
+  color: @font-colour-subheading;
+  font-family: @font-family-standard;
 }
 
 p, li {
@@ -202,10 +198,6 @@ svg#scroll-down{
       border: none;
     }
 
-    > h3 {
-      margin-left: @spacing-xsmall;
-    }
-
     > div.half-column {
       display: inline-block;
       width: calc(50% - 2px);
@@ -217,11 +209,11 @@ svg#scroll-down{
   .rounded-corners;
   .transition(@transition-btn);
   .font(
-    @family:       @font-family-subheading,
+    @family:       @font-family-base,
     @colour:       @font-colour-accent,
     @size:         @font-size-interactable-standard,
     @line-height:  @font-lineheight-btn,
-    @weight:       @font-weight-semibold,
+    @weight:       @font-weight-bold,
   );
   border: @border-accent;
   padding: @spacing-small-em @spacing-standard-em;
@@ -233,7 +225,7 @@ svg#scroll-down{
     &:after {
       content: '';
       width: 0%;
-      height: @border-width;
+      height: 1px;
       background-color: @colour-accent-light;
       display: block;
       margin: 0 auto;
@@ -246,11 +238,11 @@ svg#scroll-down{
   }
 
   &.header {
-    font-size: 1.2em;
+    font-size: @font-size-standard;
     display: inline-block;
     width: @size-intro-button-width;
     max-width: @size-half;
-    font-family: @font-family-subheading;
+    font-family: @font-family-base;
 
     &.link {
       border: @border-btn-link;
@@ -317,7 +309,7 @@ svg#scroll-down{
   .font(
       @size: @font-size-no-effect,
       @line-height: @font-lineheight-less,
-      @weight: @font-weight-semibold,
+      @weight: @font-weight-bold,
   );
   .rounded-corners(0);
   border: @border-standard-thin;
@@ -374,6 +366,7 @@ input.form-control {
   text-align: center;
   cursor: pointer;
   letter-spacing: 0.05em;
+  font-family: @font-family-base;
 }
 
 .switch-input {
@@ -524,8 +517,8 @@ input.form-control {
 
           &:after {
             position: absolute;
-            right: 10px;
-            bottom: 2px;
+            right: 6px;
+            bottom: 0px;
             color: @colour-base;
             font-size: @font-size-tag;
             line-height: @font-lineheight-tag;
@@ -628,14 +621,12 @@ input.form-control {
     }
   }
 
-  @media(@non-sm) {
-    &.list {
-      padding-top: 2em;
-      margin: auto;
+  &.list {
+    padding-top: 2em;
+    margin: auto;
 
-      article {
-        flex-basis: 50%;
-      }
+    article {
+      flex-basis: 50%;
     }
   }
 }
@@ -784,7 +775,7 @@ html.dark-theme {
     background-color: @colour-dark-theme;
   }
 
-  h1, h2, h3, #homepage-intro h1 {
+  h1, h2, h3, h4, #homepage-intro h1 {
     color: @font-colour-heading-dark;
   }
 
@@ -797,7 +788,9 @@ html.dark-theme {
   }
 
   .content-section {
-    background-color: @colour-dark-theme-alt;
+    @media(@lg) {
+      background-color: @colour-dark-theme-alt;
+    }
   }
 
   .content-section#homepage-content-section {

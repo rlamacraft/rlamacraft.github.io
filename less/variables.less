@@ -43,10 +43,10 @@
 @border-radius-project: 2px;
 
 //fonts
-@font-family-base: sans-serif;
-@font-family-standard: @font-family-base;
-@font-family-title: "Lato", @font-family-base;
-@font-family-subheading: "Open Sans", @font-family-title;
+@font-family-base: "Lato", sans-serif;
+@font-family-standard: "Roboto Slab", @font-family-base;
+@font-family-title: @font-family-base;
+@font-family-subheading: "Roboto Slab", @font-family-title;
 @font-family-accent: @font-family-base;
 @font-family-code: "Roboto Mono", "Courier New", "Courier", mono-space;
 
@@ -55,10 +55,10 @@
 @font-colour-secondary:    @colour-secondary;
 @font-colour-heading:      #5a5a5a;
 @font-colour-heading-dark: #ccc;
-@font-colour-subheading:    #9e9c9b;
+@font-colour-subheading:   #9e9c9b;
 
-@font-weight-standard:  300;
-@font-weight-semibold:  400;
+@font-weight-heading:   300;
+@font-weight-standard:  400;
 @font-weight-bold:      700;
 
 @font-size-code-inline:             00.9em;
@@ -66,8 +66,8 @@
 @font-size-tag:                     01.0em;
 @font-size-no-effect:               01.0em;
 @font-size-code:                    01.0em;
+@font-size-standard:                01.0em;
 @font-size-interactable-standard:   01.3em;
-@font-size-standard:                01.2em;
 @font-size-code-link:               01.5em;
 @font-size-project:                 01.7em;
 @font-size-subheading:              01.8em;
@@ -114,7 +114,7 @@
 @transition-navbar: ~"background .5s ease-in-out, padding .5s ease-in-out";
 @transition-focus-underline: ~"width .5s ease, background-color .5s ease";
 @transition-content-section: ~"opacity, 2s, ease";
-@transition-btn: ~"all .3s cubic-bezier(0.47, 0.05, 0.23, 1.16);";
+@transition-btn: ~"all .3s cubic-bezier(0.47, 0.05, 0.23, 1.16)";
 
 //misc
 @anchor-offset: -109px;
