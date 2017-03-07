@@ -213,8 +213,8 @@
   color: #f5f7f7 !important;
 }
 #projects-container .project-tag.project-tag-elm {
-  background-color: #60b5cc !important;
-  color: #60b5cc !important;
+  background-color: #4f95a9 !important;
+  color: #4f95a9 !important;
 }
 #projects-container .project-tag.project-tag-elm.locked {
   color: #f5f7f7 !important;
@@ -265,7 +265,7 @@
   border: 2px solid #405159;
 }
 #projects-container .project.project__primary-tag-elm {
-  border: 2px solid #3ca1bd;
+  border: 2px solid #3f7686;
 }
 code,
 pre {
@@ -534,7 +534,7 @@ svg#scroll-down:hover {
   cursor: pointer;
 }
 svg#scroll-down:hover polyline {
-  stroke: #8EDAD0;
+  stroke: #8edad0;
 }
 svg#scroll-down polyline {
   -webkit-transition: all .5s ease;
@@ -845,7 +845,9 @@ input.form-control:focus {
 }
 #projects-container article.project,
 #posts-container article.project {
-  padding-top: 40px;
+  height: 66px;
+  text-align: center;
+  padding: 0;
 }
 #projects-container article.post,
 #posts-container article.post {
@@ -863,6 +865,7 @@ input.form-control:focus {
   font-family: "Lato", sans-serif;
   text-transform: capitalize;
   letter-spacing: 0.025em;
+  padding-top: 0.625em;
 }
 #projects-container article .subtitle,
 #posts-container article .subtitle {
@@ -876,6 +879,7 @@ input.form-control:focus {
   -moz-transition: all .5s ease;
   -ms-transition: all .5s ease;
   transition: all .5s ease;
+  padding: 0 30px;
 }
 #projects-container article .overlay .overlay-buttons,
 #posts-container article .overlay .overlay-buttons {
@@ -884,6 +888,7 @@ input.form-control:focus {
   left: 0;
   right: 0;
   z-index: 250;
+  text-align: left;
 }
 #projects-container article .overlay .overlay-buttons .btn,
 #posts-container article .overlay .overlay-buttons .btn {
@@ -893,14 +898,12 @@ input.form-control:focus {
   -moz-transition: all .5s ease;
   -ms-transition: all .5s ease;
   transition: all .5s ease;
-  margin: 8px;
   background-color: transparent;
   display: inline-block;
   border: none;
   color: #eeeeee;
   text-transform: uppercase;
   font-size: 1em;
-  padding: 0.5em 0.937em;
 }
 #projects-container article .overlay .overlay-buttons .btn:hover,
 #posts-container article .overlay .overlay-buttons .btn:hover,
@@ -926,11 +929,12 @@ input.form-control:focus {
 }
 #projects-container article .overlay .project-tags,
 #posts-container article .overlay .project-tags {
-  position: absolute;
-  top: 0;
+  margin-top: -65px;
   bottom: 0;
   left: 0;
   right: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 #projects-container article .overlay .project-tags .project-tag,
 #posts-container article .overlay .project-tags .project-tag {
@@ -947,15 +951,15 @@ input.form-control:focus {
   letter-spacing: 0em;
   -webkit-font-smoothing: antialiased;
   height: 100%;
-  left: 0;
-  right: 0;
-  position: absolute;
   transition: all 0.3s cubic-bezier(0.18, 0.89, 0.29, 1.21);
   will-change: transform;
+  transform: translateY(0%);
+  text-align: right;
+  padding: 0 10px;
+  padding-top: 40px;
 }
 #projects-container article .overlay .project-tags .project-tag:after,
 #posts-container article .overlay .project-tags .project-tag:after {
-  position: absolute;
   right: 6px;
   bottom: 0px;
   color: #f5f7f7;
@@ -964,37 +968,30 @@ input.form-control:focus {
 }
 #projects-container article .overlay .project-tags .project-tag:nth-child(1),
 #posts-container article .overlay .project-tags .project-tag:nth-child(1) {
-  transform: translateY(-25%);
-  top: calc(-60% + 1px);
   transition-delay: .1s;
   z-index: 120;
+  flex-grow: 1;
+  min-width: 225px;
+  /* to give enough space for 2 links */
 }
 #projects-container article .overlay .project-tags .project-tag:nth-child(2),
 #posts-container article .overlay .project-tags .project-tag:nth-child(2) {
-  transform: translateY(-40%);
-  top: -45%;
-  transition-delay: .2s;
+  transition-delay: .15s;
   z-index: 115;
 }
 #projects-container article .overlay .project-tags .project-tag:nth-child(3),
 #posts-container article .overlay .project-tags .project-tag:nth-child(3) {
-  transform: translateY(-55%);
-  top: -30%;
-  transition-delay: .3s;
+  transition-delay: .2s;
   z-index: 110;
 }
 #projects-container article .overlay .project-tags .project-tag:nth-child(4),
 #posts-container article .overlay .project-tags .project-tag:nth-child(4) {
-  transform: translateY(-70%);
-  top: -15%;
-  transition-delay: .4s;
+  transition-delay: .25s;
   z-index: 105;
 }
 #projects-container article .overlay .project-tags .project-tag:nth-child(5),
 #posts-container article .overlay .project-tags .project-tag:nth-child(5) {
-  transform: translateY(-85%);
-  top: 0%;
-  transition-delay: .5s;
+  transition-delay: .3s;
   z-index: 100;
 }
 #projects-container article.project.hover .background,
@@ -1026,7 +1023,7 @@ input.form-control:focus {
 #posts-container article.project.hover .overlay .project-tag,
 #projects-container article.project:hover .overlay .project-tag,
 #posts-container article.project:hover .overlay .project-tag {
-  transform: translateY(0%) !important;
+  transform: translateY(44px) !important;
 }
 #projects-container .buttons,
 #posts-container .buttons {
