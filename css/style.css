@@ -600,7 +600,8 @@ svg#scroll-down polyline {
   display: inline-block;
   width: calc(48%);
 }
-.btn {
+.btn,
+button {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -611,77 +612,119 @@ svg#scroll-down polyline {
   transition: all .3s cubic-bezier(0.47, 0.05, 0.23, 1.16);
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  color: #3caa9c;
-  font-size: 1.3em;
+  color: #f5f7f7;
+  font-size: 1em;
   line-height: 1.3;
   text-transform: none;
   letter-spacing: 0em;
   -webkit-font-smoothing: antialiased;
-  border: 2px solid #3caa9c;
   padding: 0.625em 0.937em;
-  background-color: transparent;
-  text-transform: uppercase;
+  background-color: #3caa9c;
   cursor: pointer;
+  border: none;
+  margin-right: 1em;
 }
-.btn.link:after {
+.btn.link,
+button.link {
+  color: #3caa9c;
+  background-color: transparent;
+  display: inline-block;
+  border: none;
+  text-transform: uppercase;
+  padding-left: 0;
+  padding-right: 1em;
+  transform: translateY(0%) !important;
+  /* don't ask */
+}
+.btn.link:after,
+button.link:after {
   content: '';
   width: 0%;
   height: 1px;
   background-color: #8edad0;
   display: block;
-  margin: 0 auto;
+  position: absolute;
+  margin: 0;
   transition: all .3s cubic-bezier(0.47, 0.05, 0.23, 1.16);
 }
+.btn.link.right,
+button.link.right {
+  padding-left: 1em;
+  padding-right: 0;
+}
+.btn.link.right:after,
+button.link.right:after {
+  right: 0;
+}
+.btn.link:hover,
+button.link:hover {
+  color: #8edad0;
+  background-color: transparent;
+}
 .btn.link:hover:after,
-.btn.link:focus:after {
+button.link:hover:after,
+.btn.link:focus:after,
+button.link:focus:after {
   width: 100%;
 }
-.btn.header {
+.btn.header,
+button.header {
   font-size: 1em;
   display: inline-block;
   width: 8em;
   max-width: 50%;
   font-family: "Lato", sans-serif;
 }
-.btn.header.link {
+.btn.header.link,
+button.header.link {
   border: 2px solid transparent;
   width: 100%;
   float: right;
   width: auto;
-  padding: 0;
-  margin: 25px;
+  margin: 10px;
 }
 .btn.header.link:hover,
+button.header.link:hover,
 .btn.header.link:focus,
-.btn.header.link:active {
+button.header.link:focus,
+.btn.header.link:active,
+button.header.link:active {
   background: transparent;
   color: #8edad0;
 }
-.btn polyline {
+.btn polyline,
+button polyline {
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -ms-transition: all .5s ease;
   transition: all .5s ease;
 }
 .btn:hover,
+button:hover,
 .btn:focus,
-.btn.selected {
+button:focus,
+.btn.selected,
+button.selected {
   outline: 0;
-  background-color: #3caa9c;
-  color: #f5f7f7;
+  background-color: #8edad0;
   text-decoration: none;
-  border: 2px solid #3caa9c;
   outline: none;
-  box-shadow: none;
+  color: #f5f7f7;
 }
 .btn:hover polyline.stroke,
+button:hover polyline.stroke,
 .btn:focus polyline.stroke,
-.btn.selected polyline.stroke {
+button:focus polyline.stroke,
+.btn.selected polyline.stroke,
+button.selected polyline.stroke {
   stroke: #f5f7f7 !important;
 }
 .btn:hover polyline.fill,
+button:hover polyline.fill,
 .btn:focus polyline.fill,
-.btn.selected polyline.fill {
+button:focus polyline.fill,
+.btn.selected polyline.fill,
+button.selected polyline.fill {
   fill: #f5f7f7 !important;
 }
 .input-group:focus {
@@ -889,6 +932,7 @@ input.form-control:focus {
   right: 0;
   z-index: 250;
   text-align: left;
+  padding: 0 1em;
 }
 #projects-container article .overlay .overlay-buttons .btn,
 #posts-container article .overlay .overlay-buttons .btn {
@@ -916,12 +960,6 @@ input.form-control:focus {
   position: absolute;
   margin: 0;
   background-color: #f5f7f7;
-}
-#projects-container article .overlay .overlay-buttons .btn:hover:after,
-#posts-container article .overlay .overlay-buttons .btn:hover:after,
-#projects-container article .overlay .overlay-buttons .btn:focus:after,
-#posts-container article .overlay .overlay-buttons .btn:focus:after {
-  width: 85%;
 }
 #projects-container article .overlay .overlay-buttons .btn + .btn,
 #posts-container article .overlay .overlay-buttons .btn + .btn {
@@ -1028,32 +1066,6 @@ input.form-control:focus {
 #projects-container .buttons,
 #posts-container .buttons {
   padding-top: 20px;
-}
-#projects-container .buttons a.btn.link,
-#posts-container .buttons a.btn.link {
-  color: #3caa9c;
-  background-color: transparent;
-  display: inline-block;
-  border: none;
-  text-transform: uppercase;
-  font-size: 1em;
-  padding-left: 0;
-  padding-right: 1.25em;
-  transform: translateY(0%) !important;
-  /* don't ask */
-}
-#projects-container .buttons a.btn.link:hover,
-#posts-container .buttons a.btn.link:hover {
-  color: #8edad0;
-}
-#projects-container .buttons a.btn.link:hover:after,
-#posts-container .buttons a.btn.link:hover:after {
-  width: 85%;
-}
-#projects-container .buttons a.btn.link:after,
-#posts-container .buttons a.btn.link:after {
-  position: absolute;
-  margin: 0;
 }
 #projects-container.list,
 #posts-container.list {
