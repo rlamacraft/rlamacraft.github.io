@@ -369,10 +369,14 @@ input.form-control {
   border-radius: 2px;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
-  display: inline-block;
+  display: none;
   float: right;
   margin-right: 10px;
   .font();
+
+  @media(@non-xxs) {
+    display: inline-block;
+  }
 }
 
 .switch-label {
@@ -448,7 +452,7 @@ input.form-control {
     background-color: @colour-section-alt;
 
     &.project {
-      height: 66px;
+      min-height: 66px;
       text-align: center;
       padding: 0;
     }
@@ -613,8 +617,15 @@ input.form-control {
     padding-top: @spacing-small;
   }
 
+  @media(@xxs) {
+    margin: auto;
+
+    article {
+      flex-basis: 50%;
+    }
+  }
+
   &.list {
-    padding-top: 2em;
     margin: auto;
 
     article {

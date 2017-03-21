@@ -804,7 +804,7 @@ input.form-control:focus {
   border-radius: 2px;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
-  display: inline-block;
+  display: none;
   float: right;
   margin-right: 10px;
   font-family: "Roboto Slab", "Lato", sans-serif;
@@ -815,6 +815,11 @@ input.form-control:focus {
   text-transform: none;
   letter-spacing: 0em;
   -webkit-font-smoothing: antialiased;
+}
+@media (min-width: 550px) {
+  .switch {
+    display: inline-block;
+  }
 }
 .switch-label {
   position: relative;
@@ -888,7 +893,7 @@ input.form-control:focus {
 }
 #projects-container article.project,
 #posts-container article.project {
-  height: 66px;
+  min-height: 66px;
   text-align: center;
   padding: 0;
 }
@@ -1067,9 +1072,18 @@ input.form-control:focus {
 #posts-container .buttons {
   padding-top: 20px;
 }
+@media (max-width: 550px) {
+  #projects-container,
+  #posts-container {
+    margin: auto;
+  }
+  #projects-container article,
+  #posts-container article {
+    flex-basis: 50%;
+  }
+}
 #projects-container.list,
 #posts-container.list {
-  padding-top: 2em;
   margin: auto;
 }
 #projects-container.list article,
