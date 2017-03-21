@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> WikiMind | Robert Lamacraft </title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+    <meta name="theme-color" content="#f5f7f7">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#3CAA9C">
+
+    <!-- Stylesheets -->
+    <link href="../css/prism.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:300' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="../js/dark-theme.js"></script>
+</head>
+
+<body>
+  <section class="content-section">
+
+    <div class="content-panel intro">
+      <a href="/#homepage-content-section" class="btn header link right">More Projects</a>
+      <h2> WikiMind </h2>
+      <h4 class="subtitle">Can an algorithm learn a strategy that, in a reasonable amount of time, can find a chain of links between two random Wikipedia articles?</h4>
+    </div>
+
+    <div class="content-panel" id="ThePremise">
+      <h3>The Premise</h3>
+      <p>
+        One of the best things about the Web is its self-referential meta-ness. Nowhere is that manifested better than in the glorious - and just ridiculous - games that use some of the Web’s most popular sources of information. These games include <a href="http://damn.dog/" target="_blank">damn.dog</a> (uses <a href="http://www.wikihow.com/Main-Page" target="_blank">WikiHow</a>) and <a href="https://www.geoguessr.com/" target="_blank">Geoguesser</a> (uses <a href="https://maps.google.com/" target="_blank">Google Maps</a>), but none is as brilliant and as simple as the Wikipedia game.
+      </p>
+      <div class="togglable-paragraphs">
+        <p>
+          As anyone who has found themselves down a Wikipedia-Rabbit-Hole at 2AM can attest, Wikipedia is a labyrinth of endless articles that link to more articles in all directions.
+          Rather than getting lost in interesting things about European Royalty or Apollo Spacecraft, the Wikipedia game is predicated on navigating through the swamp from one random article to another - using as few links as possible - From <a href="https://en.wikipedia.org/wiki/Binary_number" target="_blank">Binary Numbers</a> to <a href="https://en.wikipedia.org/wiki/Bacon" target="_blank">Bacon</a>, that kind of thing (Binary number → Thai numerals → Thai language → Thailand → Fish sauce → Pork → Bacon).
+        </p>
+        <p>
+          This is real test of a general awareness of a broad array of topics; after all you might get from an article about a specific WW2 battle to a particular quantum particle.
+          For humans, this plays heavily on their knowledge of the content at hand; typically of history and geography.
+          However, the question is, could a computer - without such a knowledge base - be able to compete simply by being able to identify what links on a page are good to follow? Is that, on its own, a viable strategy to this game?
+        </p>
+        <p>
+          Anyone who tries navigating between articles, will quickly realise that a quick route is to follow links to broader topics: apple → vegetable, football → sport, that kind of thing.
+          It is also clear that the links tend to be near the top of the page, occur frequently, perhaps in the sidebar.
+        </p>
+        <p>
+          So, could a computer algorithm rank all of the links on a page by how useful they are in reaching broader topics, follow that link and repeat the process - all faster than it takes a human to decide how two topics might be related?
+        </p>
+      </div>
+      <button class="togglable-paragraph-btn">Expand</button>
+      <a class="btn link" href="https://github.com/rlamacraft/WikiMind/commit/9fb4b496cc19665aefcf32017704c6716b4b3890" target="_blank">CODE</a>
+    </div>
+
+    <div class="content-panel outro">
+      <a href="/#homepage-content-section" class="btn header link right">More Projects</a>
+    </div>
+
+  </section>
+
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="../js/prism.js"></script>
+  <script>
+    $(".togglable-paragraphs").slideUp(0);
+    if(window.location.hash !== "") {
+      $(window.location.hash).children(".togglable-paragraphs").slideDown().toggleClass('open');
+      $(window.location.hash).children(".togglable-paragraph-btn").text("Collapse");
+    }
+    $(".togglable-paragraph-btn").click(function(evt) {
+      var button = $(evt.target);
+      var paragraph = $(button.prev()[0]);
+      if((paragraph).hasClass("open")) {
+        paragraph.slideUp();
+        button.text("Expand");
+      } else {
+        paragraph.slideDown();
+        button.text("Collapse");
+      }
+      paragraph.toggleClass("open");
+    });
+  </script>
+
+</body>
+</html>
