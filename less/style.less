@@ -251,11 +251,11 @@ svg#scroll-down{
       }
     }
 
-    &:hover {
+    &:hover, &:focus, &.selected {
       color: @colour-accent-light;
       background-color: transparent;
     }
-    &:hover:after, &:focus:after {
+    &:hover:after, &:focus:after, &.selected:after {
       width: 100%;
     }
   }

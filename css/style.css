@@ -657,14 +657,20 @@ button.link.right:after {
   right: 0;
 }
 .btn.link:hover,
-button.link:hover {
+button.link:hover,
+.btn.link:focus,
+button.link:focus,
+.btn.link.selected,
+button.link.selected {
   color: #8edad0;
   background-color: transparent;
 }
 .btn.link:hover:after,
 button.link:hover:after,
 .btn.link:focus:after,
-button.link:focus:after {
+button.link:focus:after,
+.btn.link.selected:after,
+button.link.selected:after {
   width: 100%;
 }
 .btn.header,
