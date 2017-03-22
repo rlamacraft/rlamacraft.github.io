@@ -58,6 +58,32 @@
       <a class="btn link" href="https://github.com/rlamacraft/WikiMind/commit/9fb4b496cc19665aefcf32017704c6716b4b3890" target="_blank">CODE</a>
     </div>
 
+    <div class="content-panel" id="RandomBlindSearch">
+      <h3>Random Blind Search</h3>
+      <p>
+        The simplest way for a computer to play the Wikipedia game would be just a brute-force approach.
+        If we think of Wikipedia as a directional graph, articles as nodes, links as edges, then we can traverse the graph with a simple searching algorithm.
+        To test just how infeasible this approach is, I developed a randomised algorithm that maintained an open list of all links seen on all pages so far, iteratively picking a random link from that list, fetching its page, and adding all of the links on that page to the open list.
+        But this quickly became unmanageable.
+      </p>
+      <div class="togglable-paragraphs">
+        <p>
+          And that’s the problem.
+          Most Wikipedia articles have a branching factor in the 10s or even 100s.
+          Running for just a few minutes, and the open list grows to tens or even hundreds of thousands of links, most of which are complete useless.
+          And neither breadth-first nor depth-first search would fare any better in trying to find a path from two purely random articles.
+          We need some heuristics!
+        </p>
+        <p>
+          So the question that is raised, is how do we improve this algorithm so that it can at least find <b>a</b> path between two articles.
+          As soon as we find a single path we can run the algorithm on many, many pairs of random articles, iteratively improving the algorithm but first we need something that can find an initial path.
+          What heuristics might be able to make the searching actual achievable?
+        </p>
+      </div>
+      <button class="togglable-paragraph-btn">Expand</button>
+      <a class="btn link" href="https://github.com/rlamacraft/WikiMind/commit/26ddc828d92d938d5df2e24295eccc2c9b6fe8cc" target="_blank">CODE</a>
+    </div>
+
     <div class="content-panel outro">
       <a href="/#homepage-content-section" class="btn header link right">More Projects</a>
     </div>
