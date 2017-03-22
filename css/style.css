@@ -633,6 +633,8 @@ button.link {
   text-transform: uppercase;
   padding-left: 0;
   padding-right: 1em;
+  transform: translateY(0%);
+  /* don't ask */
 }
 .btn.link:after,
 button.link:after {
@@ -931,7 +933,6 @@ input.form-control:focus {
   -moz-transition: all .5s ease;
   -ms-transition: all .5s ease;
   transition: all .5s ease;
-  padding: 0 30px;
 }
 #projects-container article .overlay .overlay-buttons,
 #posts-container article .overlay .overlay-buttons {
