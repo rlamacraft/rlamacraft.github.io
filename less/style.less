@@ -229,7 +229,6 @@ svg#scroll-down{
     text-transform: uppercase;
     padding-left: 0;
     padding-right: @spacing-link-underline-overhang;
-    transform: translateY(0%) !important; /* don't ask */
 
     &:after {
       content: '';
@@ -424,10 +423,7 @@ input.form-control {
   border-radius: 2px;
   -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
-  -webkit-transition: left 0.15s ease-out;
-  -moz-transition: left 0.15s ease-out;
-  -o-transition: left 0.15s ease-out;
-  transition: left 0.15s ease-out;
+  .transition(~"left 0.15s ease-out");
 }
 
 #projects-container, #posts-container {
@@ -494,9 +490,9 @@ input.form-control {
         padding: 0 @font-size-interactable-standard;
 
         .btn {
-          transform: translateY(-100%);
+          transform: translateY(-50%) scale(1.1);
           opacity: 0;
-          .transition;
+          .transition(@transition-project);
           background-color: transparent;
           display: inline-block;
           border: none;
@@ -531,12 +527,11 @@ input.form-control {
         justify-content: flex-end;
 
         .project-tag {
-          .transition();
+          .transition(@transition-project);
           .font(
             @size: @font-size-projecttag,
           );
           height: 100%;
-          transition: all .3s cubic-bezier(0.18, 0.89, 0.29, 1.21);
           will-change: transform;
 
           transform: translateY(0%);
@@ -592,7 +587,7 @@ input.form-control {
         .overlay {
           .overlay-buttons {
             .btn {
-              transform: translateY(0%) !important;
+              transform: translateY(0%) scale(1) !important;
               opacity: 1;
 
               &:nth-child(1) {
