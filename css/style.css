@@ -347,11 +347,11 @@ code.newline {
 html.dark-theme pre,
 html.dark-theme code {
   background-color: #2e3338 !important;
-  color: #959695;
+  color: #bbbbbb;
 }
 html.dark-theme code[class*="language-"],
 html.dark-theme pre[class*="language-"] {
-  color: #959695;
+  color: #bbbbbb;
   text-shadow: 0 1px black;
 }
 @keyframes gridlist {
@@ -1260,7 +1260,7 @@ html.dark-theme .content-section#homepage-content-section .content-panel > h3 {
 }
 html.dark-theme p,
 html.dark-theme li {
-  color: #959695;
+  color: #bbbbbb;
 }
 html.dark-theme #projects-container article.project,
 html.dark-theme #posts-container article.post {
