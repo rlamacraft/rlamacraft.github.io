@@ -427,6 +427,11 @@ body {
     margin: 50px 100px;
   }
 }
+@media (min-width: 768px) {
+  body {
+    margin: 10px;
+  }
+}
 a {
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
