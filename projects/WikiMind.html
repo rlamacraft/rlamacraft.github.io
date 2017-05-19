@@ -115,6 +115,51 @@
       <a class="btn link" href="https://github.com/rlamacraft/WikiMind/commit/8923e113105829b0d65088b3963b3c28c9f69280" target="_blank">CODE</a>
     </div>
 
+    <div class="content-panel" id="SearchingForAnInitialDataSet">
+      <h3>Searching for an Initial Data Set</h3>
+      <p>
+        As random searching proved, before we can just have a go at a search between two random articles we need some intelligent algorithm for reducing the number of pages we have to search.
+        We can use a machine learning classifier to do this, to rank links into a number of different buckets based on their perceived usefulness in finding a chain.
+        However, in order to train a classifier we need an initial data set. It doesn't have to be perfect (we can improve it iteratively over time) but we need something to start with.
+      </p>
+      <div class="togglable-paragraphs">
+        <p>
+          We can do this by simplifying the problem.
+          Instead of searching for a chain between two random articles, we can search from a random article - let's call it article A(0) - to another article that is derived from article A(0).
+          Let's call the derived article A(N) where N is the number of link we follow. So, to generate A(2) we start at a random article A(0), follow a link to a page A(1), then follow a link in A(1) to get to an article A(2).
+          These links can be selected initially at random but then increasingly using the classifier as it learns.
+          We can also increment N as the classifier becomes more capable, and by starting at a small value of N (say, less than 3) we can find chains using nothing but random searching to bootstrap the whole process.
+        </p>
+        <p>
+          So, how does it work?
+          The main script, first_searcher.py, runs a loop that creates a search, running for some number of iterations (a few dozen times gets a good sample of data).
+          The search function generates a random article, A(0), using Wikipedia's API, and then finds a goal, A(N), derived from A(0), the classifier, and some random factor.
+          The searcher then initialises an open list (a list of links to articles that have been discovered but not yet visited) with A(0), and continues to loop until either the open list is empty or a chain from A(0) to A(N) has been found.
+          In batches of up to 10, links are pulled from the open list, fetched, analysed for links to the A(N) article, and all of their links are added to the open list - using the classifier to calculate their scores in the process.
+          The open list is maintained as a heap to give easy access to the links with the best scores, but the batches are also populated with a small number of random links from the open list to ensure the algorithm is continually trying new approaches and will eventually learn from those approaches that work.
+        </p>
+        <p>
+          Then, once we have a chain between A(0) and A(N), we add all of the links in the chain to the results data structure with their scores, as well as a selection of the links that the algorithm fetched but failed to be useful (recorded with a score of 10, greater than any successful score, to penalise those data points).
+          The proportion of these useless requests that are recorded is determined by the function: <code>round( log( len( useless_requests ), 10) ** 4)</code>.
+          This means that the number of recorded useless requests is proportional to the number of useless requests made, but doesn't grow quite as quickly.
+          This is important as without any checks the searching algorithm makes A LOT of requests.
+          Currently, a cap of 50,000 links on the open list causes the algorithm to just give up but this isn't ideal: firstly because 50,000 is very arbitrary, it is impossible to tell if the next link would have been the one to complete the chain, and the fixed limit does not increase as N (the depth of the constructed chain) grows.
+        </p>
+        <p>
+          That's all well and good, but does it work? Kind of.
+          For values of N less than about 8, the algorithm finds chains most of the time - often much shorter chains than the initial chain - but has to give up a good portion of the time.
+          For values greater than 8, the initial chain too often either gets stuck in a loop - visiting the same page twice in the initial chain, and so in effect producing a chain of size 3 or 4 - or falling down a 'well' that is impossible to find.
+          These 'well's are links that point to a very different part of Wikipedia (the article on <a href="https://en.wikipedia.org/wiki/International_Standard_Book_Number" target="_blank" aria-label="Wikipedia: ISBN">ISBNs</a> is a frequent example of a well as it occurs in the references of lots of pages) and so any subsequent links are very difficult to find.
+          And this highlights the biggest flaw with this system - it relies heavily on a highly connected graph of linked articles and although it discovers broader topics it struggles to find the correct topic to link wider articles together.
+          What is needed is a two-sided approach so that rather than searching for a needle in a haystack, we're searching for intersection of two haystacks, but first more data is needed.
+          The two currently recorded features, the frequency that the text of a link occurs on a page and the percentage of the length through the HTML that the link first appears, are useful but lacking.
+          The data is murky and fails to identify obvious connections. Additional, richer, features of links will help identify these deficiencies and improve the classifier before we let it loose on the real problem.
+        </p>
+      </div>
+      <button class="togglable-paragraph-btn">Expand</button>
+      <a class="btn link" href="https://github.com/rlamacraft/WikiMind/commit/042f8172233530b598e011fa18a3773e4d9fe0bc" target="_blank">CODE</a>
+    </div>
+
     <div class="content-panel outro">
       <a href="/#homepage-content-section" class="btn header link right">More Projects</a>
     </div>
