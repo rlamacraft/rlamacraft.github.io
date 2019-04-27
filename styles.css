@@ -27,7 +27,7 @@ p {
 .box {
   background: var(--WHITE);
   border-radius: 5px;
-  margin-top: 5vh;
+  margin: 5vh 0;
   max-width: 75%;
   padding: 3vh 3vw;
 }
