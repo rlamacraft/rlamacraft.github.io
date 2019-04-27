@@ -1,91 +1,55 @@
-html, body {
-  margin: 0;
-  min-height: 100%;
-  display: block;
+html {
+  --WHITE: #fafafa;
+  --LIGHT-GREY: #f2f2f2;
+  --DARK-GREY: #3b525d;
 }
 
 body {
-  background: #3d6f88; /* Old Browsers */
-  /* background: -webkit-linear-gradient(bottom left,#2b3e50,#338592); /*Safari 5.1-6*/ */
-  background: -webkit-linear-gradient(316deg,#3d6f88,#1b3e44); /*Safari 5.1-6*/
-  background: -o-linear-gradient(316deg,#3d6f88,#438792); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(316deg,#3d6f88,#438792); /*Fx 3.6-15*/
-  background: linear-gradient(136deg,#3d6f88,#1b3e44); /*Standard*/
-
-  font-family: 'roboto slab', sans-serif;
-  color: #dde;
-  line-height: 1.5;
-  font-size: 1.05em;
-  letter-spacing: 0.01em;
-}
-
-header {
-  margin-bottom: 2vh;
-  padding: 2vh;
-}
-
-h1 {
+  background: var(--LIGHT-GREY);
+  color: var(--DARK-GREY);
+  font-family: Helvetica, Arial, sans-serif;
   margin: 0;
-  font-weight: 700;
-  opacity: 0.85;
-  letter-spacing: 0.02em;
 }
 
-h2 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  opacity: 0.5;
+}
+
+a {
+  color: var(--DARK-GREY);
   font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-h3 {
-  margin-top: 4em;
-  letter-spacing: 0.04em;
-}
-
-@media only screen and (max-width: 600px) {
-    h3 {
-        margin-top: 0;
-    }
-}
-
-main {
-  padding: 10vw;
-  padding-top: 0;
-}
-
-@media only screen and (max-width: 600px) {
-    main {
-        padding: 5vw;
-    }
-}
-
-@media only screen and (min-width: 1170px) {
-    main {
-        padding: calc(50vw - 500px);
-        padding-top: 0;
-    }
 }
 
 p {
   line-height: 1.5;
-  margin-bottom: 2em;
 }
 
-a {
-  color: #a7d3fd;
-  text-decoration: none;
-  transition: all .3s ease;
+.box {
+  background: var(--WHITE);
+  border-radius: 5px;
+  margin: 5vh 0;
+  max-width: 75%;
+  padding: 3vh 3vw;
 }
 
-a:hover {
-  color: #cfe3fd;
+header {
+  background-color: var(--DARK-GREY);
+  color: var(--WHITE);
+  padding: 5vw 5vh;
 }
 
-pre {
-  background-color: rgb(60, 82, 103);
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 3px;
-  padding: 6px 10px;
-  white-space: pre-wrap;
+header h2 {
+  font-weight: 300;
+
+  /*
+    This is so that there's a bigger gap between my name and my job description
+    when my name wraps onto two lines.
+  */
+  margin-top: 0.3em;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
