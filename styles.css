@@ -2,6 +2,7 @@ html {
   --WHITE: #fafafa;
   --LIGHT-GREY: #f2f2f2;
   --DARK-GREY: #3b525d;
+  --GREEN: #6DA5A5;
 }
 
 body {
@@ -16,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: var(--DARK-GREY);
+  color: var(--GREEN);
   font-weight: 500;
 }
 
