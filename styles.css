@@ -29,6 +29,10 @@ dt {
     margin-top: 1em;
 }
 
+li {
+    line-height: 1.4;
+}
+
 .box {
   background: var(--WHITE);
   border-radius: 5px;
