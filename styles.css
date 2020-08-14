@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: var(--GREEN);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 p {
@@ -29,17 +29,22 @@ dt {
     margin-top: 1em;
 }
 
+ol, ul {
+    padding-right: 20px;
+}
+
 li {
-    line-height: 1.4;
+    line-height: 1.5;
+    margin-bottom: .625em; /* i.e. 16px */
 }
 
 .box {
   background: var(--WHITE);
   border-radius: 5px;
-  margin: 5vh 0;
+  margin: 6vh 0 0 0;
   max-width: 75%;
-  padding: 3vh 3vw;
-}
+  padding: 2vh 2vw;
+  min-width: 400px;}
 
 header {
   background-color: var(--DARK-GREY);
@@ -57,8 +62,14 @@ header h2 {
   margin-top: 0.3em;
 }
 
+header a {
+    color: var(--WHITE);
+}
+
 main {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-bottom: 5vh;
 }
