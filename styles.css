@@ -53,7 +53,7 @@ ul li {
 header {
   background-color: var(--DARK-GREY);
   color: var(--WHITE);
-  padding: 5vw 5vh;
+  padding: min(8vw, 8vh) 3em;
 }
 
 header h2 {
