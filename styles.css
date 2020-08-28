@@ -35,7 +35,7 @@ ol, ul {
 
 li {
     line-height: 1.5;
-    margin-bottom: .625em; /* i.e. 16px */
+    margin-bottom: .625em; /* i.e. 10px @ 16px=1em */
 }
 
 ul li {
@@ -47,8 +47,9 @@ ul li {
   border-radius: 5px;
   margin: 6vh 0 0 0;
   max-width: 75%;
+  min-width: 400px;
   padding: 2vh 2vw;
-  min-width: 400px;}
+}
 
 header {
   background-color: var(--DARK-GREY);
@@ -73,7 +74,7 @@ header a {
 main {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   padding-bottom: 5vh;
 }
