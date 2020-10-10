@@ -45,10 +45,21 @@ ul li {
 .box {
   background: var(--WHITE);
   border-radius: 5px;
-  margin: 6vh 0 0 0;
-  max-width: 75%;
-  min-width: 400px;
-  padding: 2vh 2vw;
+  padding: 0.5em 0.8em;
+}
+
+.box.single {
+  grid-column-start: 1;
+  grid-column-end: span end;
+  justify-self: center;
+  max-width: 50em;
+}
+
+.column {
+  display: grid;
+  gap: 1em;
+  align-items: stretch;
+  justify-items: stretch;
 }
 
 header {
@@ -68,13 +79,37 @@ header h2 {
 }
 
 header a {
-    color: var(--WHITE);
+  color: var(--WHITE);
 }
 
 main {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding-bottom: 5vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  margin: min(10vw, 30px);
+  gap: 1em;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+@media only screen and (max-width: 1303px /* 1006px */) {
+  .column.switch {
+    grid-column-end: span 2;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+}
+@media only screen and (max-width: 850px) {
+  .column.switch {
+    grid-column-end: span 1;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  main {
+    grid-template-columns: repeat(auto-fill, minmax(80vw, 1fr));
+  }
+  .column.switch {
+    grid-column-end: span 1;
+    grid-template-columns: repeat(auto-fill, minmax(80vw, 1fr));
+  }
 }
